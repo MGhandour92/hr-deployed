@@ -1,0 +1,46 @@
+﻿<!--<form class="form-horizontal" name="myAddForm" ng-submit="generalForm.saveItem(myAddForm.$valid)" novalidate>
+    <div id="widget-widget" data-jarvis-widget data-widget-editbutton="false" data-widget-deletebutton="false" data-widget-colorbutton="false" class="no-margin-bottom">
+        <header class="header-background-color">
+            <h2><i>{{generalForm.FormSetup.MyForm.FormName || translate }}</i> - <strong>{{generalForm.translateText((generalForm.displayCreateNewTemplate)?'CreateNew':'Edit',generalForm.selectedViewSetup.ViewId) }}</strong></h2>
+            <div class="widget-toolbar">
+                <div class="btn-group">
+                    <button type="submit" class="btn btn-link btn-sm" data-page-id="{{generalForm.selectedViewSetup.ViewId}}" data-object-id="{{'Save-' + generalForm.selectedViewSetup.ViewId}}" ng-disabled="myAddForm.$invalid" data-toggle="tooltip" title="{{generalForm.translateText('Save', generalForm.selectedViewSetup.ViewId)}}">
+                        <i class="fa fa-save fa-lg"></i>
+                    </button>
+                    <a class="btn btn-sm" ng-click="generalForm.indexItemView();" data-page-id="{{generalForm.selectedViewSetup.ViewId}}" data-object-id="{{'Cancel-' + generalForm.selectedViewSetup.ViewId}}" data-toggle="tooltip" title="{{generalForm.translateText('Cancel', generalForm.selectedViewSetup.ViewId)}}">
+                        <i class="fa fa-reply fa-lg"></i>
+                    </a>
+                </div>
+            </div>
+        </header>
+        <div class="widget-body view-background-color">
+            <div class="form-group  row" ng-repeat="item in generalForm.selectedViewSetup.ViewFields" ng-class="{ 'item-hidden': item.IsHidden }" ng-hide="{{item.IsHidden}}" hcms-view-id="{{generalForm.selectedViewSetup.ViewId}}">
+                <ng-form name="innerForm" ng-class="{ 'has-error': innerForm.$invalid }">
+                    <div class="col-sm-2">
+                        <label class="control-label" for="inputcontrol" ng-show="item.ControlTypeName !=='checkbox' && item.ControlTypeName !=='check'" hcms-view-id="generalForm.selectedViewSetup.ViewId" hcms-translator="item.FieldName"></label>
+                    </div>
+                    <div class="col-sm-6">
+                        <hcms-generic ng-model="generalForm.dataItem[item.FieldName]" hc-options="item" hc-text="{{generalForm.translateText(item.FieldName, generalForm.selectedViewSetup.ViewId)}}">
+                        </hcms-generic>
+                    </div>
+                </ng-form>
+            </div>
+
+        </div>
+    </div>
+</form>-->
+
+        <div class="widget-body view-background-color">
+            <div class="form-group  row" ng-repeat="item in generalForm.selectedViewSetup.ViewFields" ng-class="::{ 'item-hidden': item.IsHidden }" ng-hide="{{::item.IsHidden}}" hcms-view-id="{{::generalForm.selectedViewSetup.ViewId}}">
+                <ng-form name="innerForm" ng-class="::{'has-error': innerForm.$invalid }">
+                    <div class="col-sm-2">
+                        <label class="control-label" for="inputcontrol" ng-if="::item.ControlTypeName !=='checkbox' && item.ControlTypeName !=='check'" hcms-view-id="::generalForm.selectedViewSetup.ViewId" hcms-translator="::item.FieldName"></label>
+                    </div>
+                    <div class="col-sm-6">
+                        <hcms-generic ng-model="generalForm.dataItem[item.FieldName]" hc-options="item" hc-text="{{::generalForm.translateText(item.FieldName, generalForm.selectedViewSetup.ViewId)}}">
+                        </hcms-generic>
+                    </div>
+                </ng-form>
+            </div>
+
+        </div>

@@ -1,0 +1,31 @@
+﻿<!--<div>
+    <div class="col-md-2 padding-right-2 RemovePaddingLeft">
+        <ul class="nav nav-tabs nav-stacked" id="test">
+            <li class="" ng-repeat="subForm in FormSetup.MyForm.SubForms">
+                <a href="#subFormTab-r{{FormSetup.MyForm.FormId + '-' + $index}}" data-toggle="tab">{{translateText(subForm.FormName)}}</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="col-md-10 RemovePaddingLeft">
+        <div class="tab-content">
+            <div ng-repeat="subForm in FormSetup.MyForm.SubForms" class="tab-pane" id="subFormTab-r{{FormSetup.MyForm.FormId + '-' + $index}}">
+                <hcms-dynamic-form controller-name="{{subForm.JsController}}" controller-as="{{subForm.JsControllerAs}}" form-id="subForm.FormId" parent-id-field-name="parentIdFieldName" parent-item="parentItem" form-template-url="subForm.StartView"></hcms-dynamic-form>
+            </div>
+        </div>
+    </div>
+
+</div>-->
+
+<div>
+    <uib-tabset active="FormSetup.activeFormIndex" >
+        <uib-tab index="$index" ng-repeat="subStackForm in FormSetup.MyForm.SubForms" active="subStackForm.active" disable="subStackForm.disabled">
+            <uib-tab-heading style="padding:2px;">
+                <a class="btn btn-xs" style="padding:2px;margin:1px;">
+                </a>
+                <span style="margin:2px; padding:3px;">{{translateText(subStackForm.FormName)}}</span>
+            </uib-tab-heading>
+            <hcms-dynamic-form controller-name="{{subStackForm.JsController}}" controller-as="{{subStackForm.JsControllerAs}}" form-id="subStackForm.FormId" parent-id-field-name="parentIdFieldName" parent-item="parentItem" form-template-url="subStackForm.StartView"></hcms-dynamic-form>
+        </uib-tab>
+    </uib-tabset>
+</div>

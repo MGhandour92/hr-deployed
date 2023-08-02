@@ -1,0 +1,91 @@
+﻿
+<form class="form-horizontal" name="empPayrollVariableItemExcelForm" ng-submit="uploadDueAdjustment.saveItemList(empPayrollVariableItemExcelForm.$valid)" novalidate>
+
+    <div id="content RemovePaddingLeft ">
+        <section id="widget-grid" data-widget-grid>
+            <div class="row">
+                <article class="col-xs-12">
+
+                    <div id="widget-emp-address" data-jarvis-widget data-widget-editbutton="false" data-widget-deletebutton="false" data-widget-colorbutton="false" class="no-margin-bottom">
+                        <header class="header-background-color">
+                            <h2><strong>{{uploadDueAdjustment.FormSetup.MyForm.FormName || translate }}</strong></h2>
+
+                            <div class="widget-toolbar">
+                                <div class="btn-group">
+                                    <!--<a class="btn btn-sm" ng-click="uploadDueAdjustment.loadByRefNo();" data-page-id="{{uploadDueAdjustment.selectedViewSetup.ViewId}}" data-object-id="{{'Load-' + uploadDueAdjustment.selectedViewSetup.ViewId}}" data-toggle="tooltip" title="{{uploadDueAdjustment.translateText('Load', uploadDueAdjustment.selectedViewSetup.ViewId)}}">
+                                        <i class="fa fa-refresh fa-lg"></i>
+                                    </a>-->
+                                    <a class="btn btn-sm" ng-click="uploadDueAdjustment.createNew();" data-page-id="{{uploadDueAdjustment.selectedViewSetup.ViewId}}" data-object-id="{{'CreateNew-' + uploadDueAdjustment.selectedViewSetup.ViewId}}" data-toggle="tooltip" title="{{uploadDueAdjustment.translateText('CreateNew', uploadDueAdjustment.selectedViewSetup.ViewId)}}">
+                                        <i class="fa fa-plus fa-lg"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="widget-toolbar">
+                                <div class="btn-group">
+                                    <a class="btn btn-sm" ng-click="uploadDueAdjustment.unPostItemList();" data-page-id="{{uploadDueAdjustment.selectedViewSetup.ViewId}}" data-object-id="{{'UnPost-' + uploadDueAdjustment.selectedViewSetup.ViewId}}" data-toggle="tooltip" title="{{uploadDueAdjustment.translateText('UnPost', uploadDueAdjustment.selectedViewSetup.ViewId)}}">
+                                        <i class="fa fa-undo fa-lg"></i>
+                                    </a>
+                                    <a class="btn btn-sm" ng-click="uploadDueAdjustment.postItemList();" data-page-id="{{uploadDueAdjustment.selectedViewSetup.ViewId}}" data-object-id="{{'Post-' + uploadDueAdjustment.selectedViewSetup.ViewId}}" data-toggle="tooltip" title="{{uploadDueAdjustment.translateText('Post', uploadDueAdjustment.selectedViewSetup.ViewId)}}">
+                                        <i class="fa fa-share-square-o fa-lg"></i>
+                                    </a>
+                                    <a class="btn btn-sm" ng-click="uploadDueAdjustment.deleteRefNo();" data-page-id="{{uploadDueAdjustment.selectedViewSetup.ViewId}}" data-object-id="{{'Delete-' + uploadDueAdjustment.selectedViewSetup.ViewId}}" data-toggle="tooltip" title="{{uploadDueAdjustment.translateText('Delete', uploadDueAdjustment.selectedViewSetup.ViewId)}}">
+                                        <i class="fa fa-trash fa-lg"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="widget-toolbar">
+                                <div class="btn-group">
+                                    <a class="btn btn-sm" href="templates/VacationAdjust.xlsx" target="_blank" data-page-id="{{uploadVariableItems.selectedViewSetup.ViewId}}" data-object-id="{{'DownloadTemplate-' + uploadVariableItems.selectedViewSetup.ViewId}}" data-toggle="tooltip" title="{{uploadVariableItems.translateText('DownloadTemplate', uploadVariableItems.selectedViewSetup.ViewId)}}">
+                                        <i class="fa fa-file-excel-o fa-lg"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+
+                        </header>
+                        <div class="widget-body view-background-color">
+                            <div class="form-group row">
+                                <ng-form name="refNo" ng-class="{ 'has-error': refNo.$invalid }">
+                                    <div class="col-sm-2">
+                                        <label class="control-label">{{uploadDueAdjustment.translateText('RefNo',uploadDueAdjustment.selectedViewSetup.ViewId)}}</label>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <input type="number" ng-model="uploadDueAdjustment.RefNo" />
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <button type="button" class="btn btn-sm" ng-click="uploadDueAdjustment.loadByRefNo()" data-page-id="{{uploadDueAdjustment.selectedViewSetup.ViewId}}" data-object-id="{{'Load-' + uploadDueAdjustment.selectedViewSetup.ViewId}}" data-toggle="tooltip" title="{{uploadDueAdjustment.translateText('Load', uploadDueAdjustment.selectedViewSetup.ViewId)}}">
+                                            <i class="fa fa-refresh fa-lg"></i>
+                                        </button>
+                                    </div>
+                                </ng-form>
+                            </div>
+                            <div class="form-group row">
+                                <ng-form name="frileName" ng-class="{ 'has-error': refNo.$invalid }">
+                                    <div class="col-sm-2">
+                                        <label class="control-label">{{uploadDueAdjustment.translateText('FileName',uploadDueAdjustment.selectedViewSetup.ViewId)}}</label>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <input id="inputExcelFile" type="file" class="form-control" import-from-excel="" xls-options="uploadDueAdjustment.xlsOptions" />
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <button type="button" class="btn btn-sm" ng-click="uploadDueAdjustment.LoadFromExcel()" data-page-id="{{uploadDueAdjustment.selectedViewSetup.ViewId}}" data-object-id="{{'Reload-' + uploadDueAdjustment.selectedViewSetup.ViewId}}" data-toggle="tooltip" title="{{uploadDueAdjustment.translateText('LoadFromExcel', uploadDueAdjustment.selectedViewSetup.ViewId)}}">
+                                            <i class="fa fa-upload fa-lg"></i>
+                                        </button>
+
+                                    </div>
+                                </ng-form>
+                            </div>
+                            <div class="row">
+                                <div class="sm"></div>
+                            </div>
+                            <smart-grid id="grd" name="gridName" data="uploadDueAdjustment.dataList" options="uploadDueAdjustment.grid.gridOptions" column-defs="uploadDueAdjustment.grid.gridColumnDefs" style="height:500px;"></smart-grid>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </div>
+
+</form>

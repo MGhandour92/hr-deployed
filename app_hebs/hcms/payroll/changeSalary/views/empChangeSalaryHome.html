@@ -1,0 +1,77 @@
+﻿<!--<div>
+    <div class="row">
+        <div class="col-md-12">
+            <ul class="nav nav-tabs ">
+                <li class="active">
+                    <a href="#empChangeSalaryTransHomeSearch" data-toggle="tab">{{empChangeSalaryHome.translateText('Home',empChangeSalaryHome.selectedViewSetup.ViewId)}}</a>
+                </li>
+                <li>
+                    <a href="#empChangeSalarySelectedProfile" data-toggle="tab">{{empChangeSalaryHome.translateText('Profile',empChangeSalaryHome.selectedViewSetup.ViewId)}}</a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane active" id="empChangeSalaryTransHomeSearch">
+
+                    <div id="widget-empChangeSalaryTransHome" data-jarvis-widget data-widget-editbutton="false" data-widget-deletebutton="false" data-widget-colorbutton="false" class="no-margin-bottom">
+                        <header class="header-background-color">
+                            <h2><strong>{{empChangeSalaryHome.translateText(empChangeSalaryHome.FormSetup.FormName,empChangeSalaryHome.selectedViewSetup.ViewId) }}</strong></h2>
+                            <div class="widget-toolbar">
+                                <a href-void class="btn" ng-click="empChangeSalaryHome.addNewClicked()"><i class="fa fa-plus"></i> {{empChangeSalaryHome.translateText('CreateNew', empChangeSalaryHome.selectedViewSetup.ViewId)}} </a>
+                            </div>
+                        </header>
+                        <div class="widget-body view-background-color">
+                            <emp-default-assignemnt-list options="empChangeSalaryHome.listOptions"></emp-default-assignemnt-list>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="empChangeSalarySelectedProfile">
+                    <div ng-include src="'app_hebs/hcms/payroll/changeSalary/views/empChangeSalarySelectedProfile.html'"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>-->
+
+
+
+<div>
+    <div class="row">
+        <div class="col-md-12">
+
+            <uib-tabset active="empChangeSalaryHome.activeTabIndex" class="nav nav-tabs">
+                <uib-tab index="0">
+                    <uib-tab-heading style="padding:2px;">
+                        <a class="btn btn-xs" style="padding:2px;margin:1px;">
+                        </a>
+                        <span style="margin:2px; padding:3px;">{{empChangeSalaryHome.translateText('Home',empChangeSalaryHome.selectedViewSetup.ViewId)}}</span>
+                    </uib-tab-heading>
+                    <div id="widget-empChangeSalaryHome" data-jarvis-widget data-widget-editbutton="false" data-widget-deletebutton="false" data-widget-colorbutton="false" class="no-margin-bottom">
+                        <header class="header-background-color">
+                            <h2><strong>{{empChangeSalaryHome.translateText(empChangeSalaryHome.FormSetup.FormName,empChangeSalaryHome.selectedViewSetup.ViewId) }}</strong></h2>
+                            <div class="widget-toolbar">
+                                <a href-void class="btn" ng-click="empChangeSalaryHome.addNewClicked()"><i class="fa fa-plus"></i> {{empChangeSalaryHome.translateText('CreateNew', empChangeSalaryHome.selectedViewSetup.ViewId)}} </a>
+                            </div>
+                        </header>
+                        <div class="widget-body view-background-color">
+                            <emp-default-assignemnt-list options="empChangeSalaryHome.listOptions"></emp-default-assignemnt-list>
+                        </div>
+                    </div>
+                </uib-tab>
+                <uib-tab index="1">
+                    <uib-tab-heading style="padding:2px;">
+                        <a class="btn btn-xs" style="padding:2px;margin:1px;">
+                        </a>
+                        <span style="margin:2px; padding:3px;">{{empChangeSalaryHome.translateText('Profile',empChangeSalaryHome.selectedViewSetup.ViewId)}}</span>
+                    </uib-tab-heading>
+                    <div ng-include src="'app_hebs/hcms/payroll/changeSalary/views/empChangeSalarySelectedProfile.html'"></div>
+                </uib-tab>
+            </uib-tabset>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+

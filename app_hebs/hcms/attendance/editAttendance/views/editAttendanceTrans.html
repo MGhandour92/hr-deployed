@@ -1,0 +1,137 @@
+﻿
+<form class="form-horizontal" name="editAttendanceTransAddForm" novalidate>
+
+    <div id="content RemovePaddingLeft ">
+        <section id="widget-grid" data-widget-grid>
+            <div class="row">
+                <article class="col-xs-12">
+
+                    <div id="widget-vac-trans" data-jarvis-widget data-widget-editbutton="false" data-widget-deletebutton="false" data-widget-colorbutton="false" class="no-margin-bottom">
+                        <header class="header-background-color">
+                            <h2><strong>{{editAttendanceTrans.FormSetup.MyForm.FormName || translate }}</strong></h2>
+                            <div class="widget-toolbar">
+                                <div class="btn-group">
+                                    <a href-void ng-click="editAttendanceTrans.saveModifiedData(editAttendanceTransAddForm.$valid)" class="btn btn-link btn-sm" data-page-id="{{editAttendanceTrans.selectedViewSetup.ViewId}}" data-object-id="{{'Save-' + editAttendanceTrans.selectedViewSetup.ViewId}}" ng-disabled="editAttendanceTransAddForm.$invalid" data-toggle="tooltip" title="{{editAttendanceTrans.translateText('Save', editAttendanceTrans.selectedViewSetup.ViewId)}}">
+                                        <i class="fa fa-save fa-lg"></i>
+                                    </a>
+                                    <!--<a href-void ng-click="" data-page-id="{{editAttendanceTrans.selectedViewSetup.ViewId}}" data-object-id="{{'Cancel-' + editAttendanceTrans.selectedViewSetup.ViewId}}" data-toggle="tooltip" title="{{editAttendanceTrans.translateText('Cancel', editAttendanceTrans.selectedViewSetup.ViewId)}}">
+                                        <i class="fa fa-reply fa-lg"></i>
+                                    </a>-->
+                                </div>
+                            </div>
+                            <div class="widget-toolbar">
+                                <button type="button" class="btn btn-link btn-sm" ng-click="editAttendanceTrans.displayAttendanceTransData()" ng-disabled="importCloseAttendanceForm.$invalid" data-page-id="{{editAttendanceTrans.selectedViewSetup.ViewId}}" data-object-id="{{'Display-' + editAttendanceTrans.selectedViewSetup.ViewId}}" data-toggle="tooltip" title="{{editAttendanceTrans.translateText('Display', editAttendanceTrans.selectedViewSetup.ViewId)}}">
+                                    <i class="fa fa-eye fa-lg"></i>
+                                </button>
+
+                                <!--<a href-void ng-click=""><i class="fa fa-plus"></i> {{editAttendanceTrans.translateText('CreateNew', editAttendanceTrans.selectedViewSetup.ViewId)}} </a>-->
+                            </div>
+                        </header>
+                        <div class="widget-body view-background-color">
+
+                            <div class="form-group  row">
+
+                                <!--FromDate-->
+                                <ng-form name="fromDate" ng-class="{ 'has-error': fromDate.$invalid }">
+                                    <div class="col-sm-2">
+
+                                        <label class="control-label">{{editAttendanceTrans.translateText('FromDate',editAttendanceTrans.selectedViewSetup.viewSetup.ViewId)}}</label>
+                                    </div>
+                                    <div class="col-sm-4">
+
+                                        <hcms-generic ng-model="editAttendanceTrans.header.fromDate.value" hc-options="editAttendanceTrans.header.fromDate.options"></hcms-generic>
+                                    </div>
+                                </ng-form>
+                            </div>
+
+                            <div class="form-group  row">
+
+                                <!--ToDate-->
+                                <ng-form name="toDate" ng-class="{ 'has-error': toDate.$invalid }">
+                                    <div class="col-sm-2">
+
+                                        <label class="control-label">{{editAttendanceTrans.translateText('ToDate',editAttendanceTrans.selectedViewSetup.viewSetup.ViewId)}}</label>
+                                    </div>
+                                    <div class="col-sm-4">
+
+                                        <hcms-generic ng-model="editAttendanceTrans.header.toDate.value" hc-options="editAttendanceTrans.header.toDate.options"></hcms-generic>
+                                    </div>
+                                </ng-form>
+
+                            </div>
+
+                            <div>
+                                <!--<button class="btn btn-default" type="button" ng-click="editAttendanceTrans.displayAttendanceTransData()">
+                                    {{editAttendanceTrans.translateText('DisplayData',editAttendanceTrans.selectedViewSetup.viewSetup.ViewId)}}
+                                </button>-->
+
+                            </div>
+
+                            <div>
+                                <smart-grid id="grdEditAttendance" name="grdEditAttendance" data="editAttendanceTrans.dataList" options="editAttendanceTrans.grid.gridOptions" column-defs="editAttendanceTrans.grid.gridColumnDefs" style="height:500px;"></smart-grid>
+                            </div>
+
+                            <!--<div>
+                                <table class="table table-hover table-bordered ">
+                                    <thead>
+                                        <tr class="row">
+                                            <th class="col-sm-2">
+                                                {{editAttendanceTrans.translateText('TransactionDate',editAttendanceTrans.selectedViewSetup.viewSetup.ViewId)}}
+                                            </th>
+                                            <th class="col-sm-2">
+                                                {{editAttendanceTrans.translateText('EmpTimeIn',editAttendanceTrans.selectedViewSetup.viewSetup.ViewId)}}
+                                            </th>
+                                            <th class="col-sm-2">
+                                                {{editAttendanceTrans.translateText('EmpTimeOut',editAttendanceTrans.selectedViewSetup.viewSetup.ViewId)}}
+                                            </th>
+                                            <th class="col-sm-1">
+                                                {{editAttendanceTrans.translateText('EmpTimeInOriginal',editAttendanceTrans.selectedViewSetup.viewSetup.ViewId)}}
+                                            </th>
+                                            <th class="col-sm-1">
+                                                {{editAttendanceTrans.translateText('EmpTimeOutOriginal',editAttendanceTrans.selectedViewSetup.viewSetup.ViewId)}}
+                                            </th>
+                                            <th class="col-sm-2">
+                                                {{editAttendanceTrans.translateText('CreatedBy',editAttendanceTrans.selectedViewSetup.viewSetup.ViewId)}}
+                                            </th>
+                                            <th class="col-sm-2">
+                                                {{editAttendanceTrans.translateText('ModifiedBy',editAttendanceTrans.selectedViewSetup.viewSetup.ViewId)}}
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="row" ng-repeat="item in editAttendanceTrans.dataList">
+                                            <td class="col-sm-2">
+                                                {{::item.TransactionDate | date : 'yyyy/MM/dd' }}
+                                            </td>
+                                            <td class="col-sm-2">
+                                                {{::item.EmpTimeIn}}
+                                            </td>
+                                            <td class="col-sm-2">
+                                                {{::item.EmpTimeIn}}
+                                            </td>
+                                            <td class="col-sm-1">
+                                                {{::item.EmpTimeInOriginal}}
+                                            </td>
+                                            <td class="col-sm-1">
+                                                {{::item.EmpTimeOutOriginal}}
+                                            </td>
+                                            <td class="col-sm-2">
+                                                {{::item.CreatedBy}}
+                                            </td>
+                                            <td class="col-sm-2">
+                                                {{::item.ModifiedBy}}
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>-->
+
+
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </div>
+
+</form>

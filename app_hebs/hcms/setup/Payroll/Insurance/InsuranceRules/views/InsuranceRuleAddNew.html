@@ -1,0 +1,113 @@
+﻿<div class="form-group  row">
+    <div class="widget-toolbar">
+        <div class="btn-group">
+            <button type="submit" class="btn btn-link btn-sm" data-page-id="{{insuranceRulesHome.selectedViewSetup.ViewId}}" data-object-id="{{'Save-' + insuranceRulesHome.selectedViewSetup.ViewId}}" ng-disabled="insuranceRuleAddForm.$invalid" data-toggle="tooltip" title="{{insuranceRulesHome.translateText('Save', insuranceRulesHome.selectedViewSetup.ViewId)}}">
+                <i class="fa fa-save fa-lg"></i>
+            </button>
+            <a class="btn btn-sm" ng-click="insuranceRulesHome.indexItemView();" data-page-id="{{insuranceRulesHome.selectedViewSetup.ViewId}}" data-object-id="{{'Cancel-' + insuranceRulesHome.selectedViewSetup.ViewId}}" data-toggle="tooltip" title="{{insuranceRulesHome.translateText('Cancel', insuranceRulesHome.selectedViewSetup.ViewId)}}">
+                <i class="fa fa-reply fa-lg"></i>
+            </a>
+        </div>
+    </div>
+    </div>
+
+    <div class="form-group  row">
+        <!--InsuranceRuleId-->
+        <ng-form name="InsuranceRuleId" ng-class="{ 'has-error': InsuranceRuleId.$invalid }" ng-hide="insuranceRulesHome.selectedViewSetup.ViewFieldsObject['InsuranceRuleId'].IsHidden">
+            <div class="col-sm-2">
+
+                <label class="control-label">{{insuranceRulesHome.translateText(insuranceRulesHome.selectedViewSetup.ViewFieldsObject["InsuranceRuleId"].FieldName,insuranceRulesHome.selectedViewSetup.viewSetup.ViewId)}}</label>
+            </div>
+            <div class="col-sm-4">
+
+                <hcms-generic ng-model="insuranceRulesHome.dataItem.InsuranceRuleId" hc-options="insuranceRulesHome.selectedViewSetup.ViewFieldsObject['InsuranceRuleId']"></hcms-generic>
+            </div>
+        </ng-form>
+
+        <!--InsuranceRuleCode-->
+        <ng-form name="InsuranceRuleCode" ng-class="{ 'has-error': InsuranceRuleCode.$invalid }" ng-hide="insuranceRulesHome.selectedViewSetup.ViewFieldsObject['InsuranceRuleCode'].IsHidden">
+            <div class="col-sm-2">
+
+                <label class="control-label">{{insuranceRulesHome.translateText(insuranceRulesHome.selectedViewSetup.ViewFieldsObject["InsuranceRuleCode"].FieldName,insuranceRulesHome.selectedViewSetup.viewSetup.ViewId)}}</label>
+            </div>
+            <div class="col-sm-4">
+
+                <hcms-generic ng-model="insuranceRulesHome.dataItem.InsuranceRuleCode" hc-options="insuranceRulesHome.selectedViewSetup.ViewFieldsObject['InsuranceRuleCode']"></hcms-generic>
+            </div>
+        </ng-form>
+    </div>
+    <div class="form-group  row">
+        <!--InsuranceRuleName-->
+        <ng-form name="InsuranceRuleName" ng-class="{ 'has-error': InsuranceRuleName.$invalid }" ng-hide="insuranceRulesHome.selectedViewSetup.ViewFieldsObject['InsuranceRuleName'].IsHidden">
+            <div class="col-sm-2">
+
+                <label class="control-label">{{insuranceRulesHome.translateText(insuranceRulesHome.selectedViewSetup.ViewFieldsObject["InsuranceRuleName"].FieldName,insuranceRulesHome.selectedViewSetup.viewSetup.ViewId)}}</label>
+            </div>
+            <div class="col-sm-4">
+
+                <hcms-generic ng-model="insuranceRulesHome.dataItem.InsuranceRuleName" hc-options="insuranceRulesHome.selectedViewSetup.ViewFieldsObject['InsuranceRuleName']"></hcms-generic>
+            </div>
+        </ng-form>
+
+        <!--InsuranceRuleName_-->
+        <ng-form name="InsuranceRuleName_" ng-class="{ 'has-error': InsuranceRuleName_.$invalid }" ng-hide="insuranceRulesHome.selectedViewSetup.ViewFieldsObject['InsuranceRuleName_'].IsHidden">
+            <div class="col-sm-2">
+
+                <label class="control-label">{{insuranceRulesHome.translateText(insuranceRulesHome.selectedViewSetup.ViewFieldsObject["InsuranceRuleName_"].FieldName,insuranceRulesHome.selectedViewSetup.viewSetup.ViewId)}}</label>
+            </div>
+            <div class="col-sm-4">
+
+                <hcms-generic ng-model="insuranceRulesHome.dataItem.InsuranceRuleName_" hc-options="insuranceRulesHome.selectedViewSetup.ViewFieldsObject['InsuranceRuleName_']"></hcms-generic>
+            </div>
+        </ng-form>
+    </div>
+    <div class="form-group  row">
+        <!--StartDate-->
+        <ng-form name="StartDate" ng-class="{ 'has-error': StartDate.$invalid }" ng-hide="insuranceRulesHome.selectedViewSetup.ViewFieldsObject['StartDate'].IsHidden">
+            <div class="col-sm-2">
+
+                <label class="control-label">{{insuranceRulesHome.translateText(insuranceRulesHome.selectedViewSetup.ViewFieldsObject["StartDate"].FieldName,insuranceRulesHome.selectedViewSetup.viewSetup.ViewId)}}</label>
+            </div>
+            <div class="col-sm-4">
+
+                <hcms-generic ng-model="insuranceRulesHome.dataItem.StartDate" hc-options="insuranceRulesHome.selectedViewSetup.ViewFieldsObject['StartDate']"></hcms-generic>
+            </div>
+        </ng-form>
+
+        <!--EndDate-->
+        <ng-form name="EndDate" ng-class="{ 'has-error': EndDate.$invalid }" ng-hide="insuranceRulesHome.selectedViewSetup.ViewFieldsObject['EndDate'].IsHidden">
+            <div class="col-sm-2">
+
+                <label class="control-label">{{insuranceRulesHome.translateText(insuranceRulesHome.selectedViewSetup.ViewFieldsObject["EndDate"].FieldName,insuranceRulesHome.selectedViewSetup.viewSetup.ViewId)}}</label>
+            </div>
+            <div class="col-sm-4">
+
+                <hcms-generic ng-model="insuranceRulesHome.dataItem.EndDate" hc-options="insuranceRulesHome.selectedViewSetup.ViewFieldsObject['EndDate']"></hcms-generic>
+            </div>
+        </ng-form>
+    </div>
+    <div class="form-group  row">
+        <!--Disabled-->
+        <ng-form name="Disabled" ng-class="{ 'has-error': Disabled.$invalid }" ng-hide="insuranceRulesHome.selectedViewSetup.ViewFieldsObject['Disabled'].IsHidden">
+            <div class="col-sm-2">
+
+                <label class="control-label">{{insuranceRulesHome.translateText(insuranceRulesHome.selectedViewSetup.ViewFieldsObject["Disabled"].FieldName,insuranceRulesHome.selectedViewSetup.viewSetup.ViewId)}}</label>
+            </div>
+            <div class="col-sm-4">
+
+                <hcms-generic ng-model="insuranceRulesHome.dataItem.Disabled" hc-options="insuranceRulesHome.selectedViewSetup.ViewFieldsObject['Disabled']"></hcms-generic>
+            </div>
+        </ng-form>
+
+        <!--OrderNo-->
+        <ng-form name="OrderNo" ng-class="{ 'has-error': OrderNo.$invalid }" ng-hide="insuranceRulesHome.selectedViewSetup.ViewFieldsObject['OrderNo'].IsHidden">
+            <div class="col-sm-2">
+
+                <label class="control-label">{{insuranceRulesHome.translateText(insuranceRulesHome.selectedViewSetup.ViewFieldsObject["OrderNo"].FieldName,insuranceRulesHome.selectedViewSetup.viewSetup.ViewId)}}</label>
+            </div>
+            <div class="col-sm-4">
+
+                <hcms-generic ng-model="insuranceRulesHome.dataItem.OrderNo" hc-options="insuranceRulesHome.selectedViewSetup.ViewFieldsObject['OrderNo']"></hcms-generic>
+            </div>
+        </ng-form>
+    </div>

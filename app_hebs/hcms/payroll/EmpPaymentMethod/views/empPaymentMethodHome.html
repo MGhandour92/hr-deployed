@@ -1,0 +1,74 @@
+﻿<!--<div>
+    <div class="row">
+        <div class="col-md-12">
+            <ul class="nav nav-tabs ">
+                <li class="active">
+                    <a href="#empPaymentMethodHomeSearch" data-toggle="tab">{{empPaymentMethodHome.translateText('Home',empPaymentMethodHome.selectedViewSetup.ViewId)}}</a>
+                </li>
+                <li>
+                    <a href="#selectedEmpPaymentMethod" data-toggle="tab">{{empPaymentMethodHome.translateText('Profile',empPaymentMethodHome.selectedViewSetup.ViewId)}}</a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane active" id="empPaymentMethodHomeSearch">
+
+                    <div id="widget-empPaymentMethodHome" data-jarvis-widget data-widget-editbutton="false" data-widget-deletebutton="false" data-widget-colorbutton="false" class="no-margin-bottom">
+                        <header class="header-background-color">
+                            <h2><strong>{{empPaymentMethodHome.translateText(empPaymentMethodHome.FormSetup.FormName,empPaymentMethodHome.selectedViewSetup.ViewId) }}</strong></h2>
+                            <div class="widget-toolbar">
+                            </div>
+                        </header>
+                        <div class="widget-body view-background-color">
+                            <emp-default-assignemnt-list options="empPaymentMethodHome.listOptions"></emp-default-assignemnt-list>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="selectedEmpPaymentMethod">
+                    <div ng-include src="'app_hebs/hcms/payroll/EmpPaymentMethod/views/empPaymentMethodSelectedProfile.html'"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>-->
+
+
+
+<div>
+    <div class="row">
+        <div class="col-md-12">
+            <uib-tabset active="empPaymentMethodHome.activeTabIndex" class="nav nav-tabs">
+                <uib-tab index="0">
+                    <uib-tab-heading style="padding:2px;">
+                        <a class="btn btn-xs" style="padding:2px;margin:1px;">
+                        </a>
+                        <span style="margin:2px; padding:3px;">{{empPaymentMethodHome.translateText('Home',empPaymentMethodHome.selectedViewSetup.ViewId)}}</span>
+                    </uib-tab-heading>
+                    <div id="widget-empPaymentMethodHome" data-jarvis-widget data-widget-editbutton="false" data-widget-deletebutton="false" data-widget-colorbutton="false" class="no-margin-bottom">
+                        <header class="header-background-color">
+                            <h2><strong>{{empPaymentMethodHome.translateText(empPaymentMethodHome.FormSetup.FormName,empPaymentMethodHome.selectedViewSetup.ViewId) }}</strong></h2>
+                            <div class="widget-toolbar">
+                                <a href-void class="btn" ng-click="empPaymentMethodHome.addNewClicked()"><i class="fa fa-plus"></i> {{empPaymentMethodHome.translateText('CreateNew', empPaymentMethodHome.selectedViewSetup.ViewId)}} </a>
+                            </div>
+                        </header>
+                        <div class="widget-body view-background-color">
+                            <emp-default-assignemnt-list options="empPaymentMethodHome.listOptions"></emp-default-assignemnt-list>
+                        </div>
+                    </div>
+                </uib-tab>
+                <uib-tab index="1">
+                    <uib-tab-heading style="padding:2px;">
+                        <a class="btn btn-xs" style="padding:2px;margin:1px;">
+                        </a>
+                        <span style="margin:2px; padding:3px;">{{empPaymentMethodHome.translateText('Profile',empPaymentMethodHome.selectedViewSetup.ViewId)}}</span>
+                    </uib-tab-heading>
+                    <div ng-include src="'app_hebs/hcms/payroll/EmpPaymentMethod/views/empPaymentMethodSelectedProfile.html'"></div>
+                </uib-tab>
+            </uib-tabset>
+        </div>
+    </div>
+</div>
+
+
+
+
+

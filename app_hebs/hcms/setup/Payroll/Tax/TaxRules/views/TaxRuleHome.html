@@ -1,0 +1,73 @@
+﻿
+<!--<div>
+    <div class="row">
+        <div class="col-md-12">
+            <ul class="nav nav-tabs ">
+                <li class="active">
+                    <a href="#taxRulesHomeSearch" data-toggle="tab">{{taxRulesHome.translateText('Home',taxRulesHome.selectedViewSetup.ViewId)}}</a>
+                </li>
+                <li>
+                    <a href="#selectedtaxRule" data-toggle="tab">{{taxRulesHome.translateText('Profile',taxRulesHome.selectedViewSetup.ViewId)}}</a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane active" id="taxRulesHomeSearch">
+
+                    <div id="widget-taxRulesHome" data-jarvis-widget data-widget-editbutton="false" data-widget-deletebutton="false" data-widget-colorbutton="false" class="no-margin-bottom">
+                        <header class="header-background-color">
+                            <h2><strong>{{taxRulesHome.translateText(taxRulesHome.FormSetup.FormName,taxRulesHome.selectedViewSetup.ViewId) }}</strong></h2>
+                            <div class="widget-toolbar">
+                                <a href-void class="btn" ng-click="taxRulesHome.addNewClicked()"><i class="fa fa-plus"></i> {{taxRulesHome.translateText('CreateNew', taxRulesHome.selectedViewSetup.ViewId)}} </a>
+                            </div>
+                        </header>
+                        <div class="widget-body view-background-color">
+                            <smart-grid id="grd" name="gridName" data="taxRulesHome.dataList" options="taxRulesHome.grid.gridOptions" column-defs="taxRulesHome.grid.gridColumnDefs" style="height:500px;"></smart-grid>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="selectedtaxRule">
+                    <div ng-include src="'app_hebs/hcms/setup/Payroll/Tax/TaxRules/views/TaxSelectedRule.html'"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>-->
+
+
+
+<div>
+    <div class="row">
+        <div class="col-md-12">
+            <uib-tabset active="taxRulesHome.activeTabIndex" class="nav nav-tabs">
+                <uib-tab index="0">
+                    <uib-tab-heading style="padding:2px;">
+                        <a class="btn btn-xs" style="padding:2px;margin:1px;">
+                        </a>
+                        <span style="margin:2px; padding:3px;">{{taxRulesHome.translateText('Home',taxRulesHome.selectedViewSetup.ViewId)}}</span>
+                    </uib-tab-heading>
+                    <div id="widget-taxRulesHome" data-jarvis-widget data-widget-editbutton="false" data-widget-deletebutton="false" data-widget-colorbutton="false" class="no-margin-bottom">
+                        <header class="header-background-color">
+                            <h2><strong>{{taxRulesHome.translateText(taxRulesHome.FormSetup.FormName,taxRulesHome.selectedViewSetup.ViewId) }}</strong></h2>
+                            <div class="widget-toolbar">
+                                <a href-void class="btn" ng-click="taxRulesHome.addNewClicked()"><i class="fa fa-plus"></i> {{taxRulesHome.translateText('CreateNew', taxRulesHome.selectedViewSetup.ViewId)}} </a>
+                            </div>
+                        </header>
+                        <div class="widget-body view-background-color">
+                            <smart-grid id="grd" name="gridName" data="taxRulesHome.dataList" options="taxRulesHome.grid.gridOptions" column-defs="taxRulesHome.grid.gridColumnDefs" style="height:500px;"></smart-grid>
+                        </div>
+                    </div>
+                </uib-tab>
+                <uib-tab index="1">
+                    <uib-tab-heading style="padding:2px;">
+                        <a class="btn btn-xs" style="padding:2px;margin:1px;">
+                        </a>
+                        <span style="margin:2px; padding:3px;">{{taxRulesHome.translateText('Profile',taxRulesHome.selectedViewSetup.ViewId)}}</span>
+                    </uib-tab-heading>
+                    <div ng-include src="'app_hebs/hcms/setup/Payroll/Tax/TaxRules/views/TaxSelectedRule.html'"></div>
+                </uib-tab>
+            </uib-tabset>
+              </div>
+    </div>
+</div>
+
+

@@ -1,0 +1,16 @@
+﻿<div class="row">
+    <div class="col-md-3">
+        <a ng-click="importCloseAttendance.dailyCloseDay.dayTypeFilterChanged(-1)" class="btn btn-xs" style="padding:2px;margin:1px;">
+            <i class="fa fa-square-o">
+            </i>
+            <span style="margin:2px; padding:3px;">{{importCloseAttendance.translateText('All', importCloseAttendance.createViewSetup.ViewId)}}</span>
+        </a>
+    </div>
+    <div class="col-md-3" ng-repeat="dayType in ::importCloseAttendance.dailyCloseDay.dayTypes">
+        <a ng-click="importCloseAttendance.dailyCloseDay.dayTypeFilterChanged(dayType.AttendanceDayTypeId)" class="btn btn-xs" style="padding:2px;margin:1px;">
+            <i class="fa fa-square" ng-style="{'color' : dayType.AttendanceDayTypeColor }">
+            </i>
+            <span style="margin:2px; padding:3px;">{{importCloseAttendance.translateService.AE(dayType.AttendanceDayTypeName_,dayType.AttendanceDayTypeName)}}</span>
+        </a>
+    </div>
+</div>

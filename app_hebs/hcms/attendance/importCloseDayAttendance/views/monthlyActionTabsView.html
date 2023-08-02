@@ -1,0 +1,223 @@
+﻿<uib-tabset active="importCloseAttendance.activeGroupActionSubTabIndex" class="tab-animation">
+    <uib-tab index="0" active="importCloseAttendance.activeGroupActionSubTabIndex==0">
+        <uib-tab-heading style="padding:2px;">
+            <span style="margin:2px; padding:3px;">{{importCloseAttendance.translateText('Attendance')}}</span>
+        </uib-tab-heading>
+        <div>
+
+            <!--<section id="widget-AttendanceMonthlyAttendance-grid" data-widget-grid>
+                <div class="row">
+                    <article class="col-xs-12">
+
+                        <div id="widget-AttendanceMonthlyAttendance" data-jarvis-widget data-widget-editbutton="false" data-widget-deletebutton="false" data-widget-colorbutton="false" class="no-margin-bottom">
+
+                            <header class="header-background-color">
+                                <div class="widget-toolbar">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-link btn-sm" ng-click="importCloseAttendance.displayMonthlyAttendanceData()" ng-disabled="importCloseAttendanceForm.$invalid" data-page-id="{{importCloseAttendance.createViewSetup.ViewId}}" data-object-id="{{'DisplayMonthlyAttendance-' + importCloseAttendance.createViewSetup.ViewId}}" data-toggle="tooltip" title="{{importCloseAttendance.translateText('Display', importCloseAttendance.createViewSetup.ViewId)}}">
+                                            <i class="fa fa-eye fa-lg"></i>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="widget-toolbar">
+                                    <div class="btn-group">
+                                        <a class="btn btn-sm" ng-click="importCloseAttendance.unPostMonthlyAttendanceData();" data-page-id="{{importCloseAttendance.selectedViewSetup.ViewId}}" data-object-id="{{'UnPostMonthlyAttendance-' + importCloseAttendance.selectedViewSetup.ViewId}}" data-toggle="tooltip" title="{{importCloseAttendance.translateText('UnPost', importCloseAttendance.selectedViewSetup.ViewId)}}">
+                                            <i class="fa fa-undo fa-lg"></i>
+                                        </a>
+                                        <a class="btn btn-sm" ng-click="importCloseAttendance.postMonthlyAttendanceData();" data-page-id="{{importCloseAttendance.selectedViewSetup.ViewId}}" data-object-id="{{'PostMonthlyAttendance-' + importCloseAttendance.selectedViewSetup.ViewId}}" data-toggle="tooltip" title="{{importCloseAttendance.translateText('Post', importCloseAttendance.selectedViewSetup.ViewId)}}">
+                                            <i class="fa fa-share-square-o fa-lg"></i>
+                                        </a>
+                                    </div>
+                                </div>
+
+                            </header>
+
+                            <div class="widget-body view-background-color">
+                                <smart-grid id="grd" name="gridName" data="importCloseAttendance.monthlyData.attendanceDataList" options="importCloseAttendance.monthlyAttendance.attendanceGrid.gridOptions" column-defs="importCloseAttendance.monthlyAttendance.attendanceGrid.gridColumnDefs" style="height:500px;"></smart-grid>
+                            </div>
+
+                        </div>
+                    </article>
+                </div>
+            </section>-->
+
+            <section id="widget-SalaryMonthlyAttendance-grid" data-widget-grid>
+                <div class="row">
+                    <article class="col-xs-12">
+
+                        <div id="widget-SalaryMonthlyAttendance" data-jarvis-widget data-widget-editbutton="false" data-widget-deletebutton="false" data-widget-colorbutton="false" class="no-margin-bottom">
+
+                            <header class="header-background-color">
+                                <div class="widget-toolbar">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-link btn-sm" ng-click="importCloseAttendance.displayMonthlyAttendanceData()" ng-disabled="importCloseAttendanceForm.$invalid" data-page-id="{{importCloseAttendance.createViewSetup.ViewId}}" data-object-id="{{'DisplayMonthlyAttendance-' + importCloseAttendance.createViewSetup.ViewId}}" data-toggle="tooltip" title="{{importCloseAttendance.translateText('Display', importCloseAttendance.createViewSetup.ViewId)}}">
+                                            <i class="fa fa-eye fa-lg"></i>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="widget-toolbar">
+                                    <div class="btn-group">
+                                        <a class="btn btn-sm" ng-click="importCloseAttendance.unPostMonthlyAttendanceData();" data-page-id="{{importCloseAttendance.selectedViewSetup.ViewId}}" data-object-id="{{'UnPostMonthlyAttendance-' + importCloseAttendance.selectedViewSetup.ViewId}}" data-toggle="tooltip" title="{{importCloseAttendance.translateText('UnPost', importCloseAttendance.selectedViewSetup.ViewId)}}">
+                                            <i class="fa fa-undo fa-lg"></i>
+                                        </a>
+                                        <a class="btn btn-sm" ng-click="importCloseAttendance.postMonthlyAttendanceData();" data-page-id="{{importCloseAttendance.selectedViewSetup.ViewId}}" data-object-id="{{'PostMonthlyAttendance-' + importCloseAttendance.selectedViewSetup.ViewId}}" data-toggle="tooltip" title="{{importCloseAttendance.translateText('Post', importCloseAttendance.selectedViewSetup.ViewId)}}">
+                                            <i class="fa fa-share-square-o fa-lg"></i>
+                                        </a>
+                                    </div>
+                                </div>
+
+                            </header>
+
+                            <div class="widget-body view-background-color">
+                                <smart-grid id="grd" name="gridName" data="importCloseAttendance.monthlyData.attendanceDataList" options="importCloseAttendance.monthlyAttendance.attendanceGrid.gridOptions" column-defs="importCloseAttendance.monthlyAttendance.attendanceGrid.gridColumnDefs" style="height:500px;"></smart-grid>
+                            </div>
+
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+        </div>
+    </uib-tab>
+
+    <uib-tab index="1" active="importCloseAttendance.activeGroupActionSubTabIndex==1">
+        <uib-tab-heading style="padding:2px;">
+            <span style="margin:2px; padding:3px;">{{importCloseAttendance.translateText('Penalties')}}</span>
+        </uib-tab-heading>
+        <div>
+
+            <section id="widget-PenaltyMonthlyAttendance-grid" data-widget-grid>
+                <div class="row">
+                    <article class="col-xs-12">
+
+                        <div id="widget-PenaltyMonthlyAttendance" data-jarvis-widget data-widget-editbutton="false" data-widget-deletebutton="false" data-widget-colorbutton="false" class="no-margin-bottom">
+
+                            <header class="header-background-color">
+                                <div class="widget-toolbar">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-link btn-sm" ng-click="importCloseAttendance.displayMonthlyPenaltyData()" ng-disabled="importCloseAttendanceForm.$invalid" data-page-id="{{importCloseAttendance.createViewSetup.ViewId}}" data-object-id="{{'DisplayMonthlyPenalty-' + importCloseAttendance.createViewSetup.ViewId}}" data-toggle="tooltip" title="{{importCloseAttendance.translateText('Display', importCloseAttendance.createViewSetup.ViewId)}}">
+                                            <i class="fa fa-eye fa-lg"></i>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="widget-toolbar">
+                                    <div class="btn-group">
+                                        <a class="btn btn-sm" ng-click="importCloseAttendance.unPostMonthlyPenaltyData();" data-page-id="{{importCloseAttendance.selectedViewSetup.ViewId}}" data-object-id="{{'UnPostMonthlyPenalty-' + importCloseAttendance.selectedViewSetup.ViewId}}" data-toggle="tooltip" title="{{importCloseAttendance.translateText('UnPost', importCloseAttendance.selectedViewSetup.ViewId)}}">
+                                            <i class="fa fa-undo fa-lg"></i>
+                                        </a>
+                                        <a class="btn btn-sm" ng-click="importCloseAttendance.postMonthlyPenaltyData();" data-page-id="{{importCloseAttendance.selectedViewSetup.ViewId}}" data-object-id="{{'PostMonthlyPenalty-' + importCloseAttendance.selectedViewSetup.ViewId}}" data-toggle="tooltip" title="{{importCloseAttendance.translateText('Post', importCloseAttendance.selectedViewSetup.ViewId)}}">
+                                            <i class="fa fa-share-square-o fa-lg"></i>
+                                        </a>
+                                    </div>
+                                </div>
+
+                            </header>
+
+                            <div class="widget-body view-background-color">
+                                <smart-grid id="grd" name="gridName" data="importCloseAttendance.monthlyData.penaltyDataList" options="importCloseAttendance.monthlyPenalties.penaltyGrid.gridOptions" column-defs="importCloseAttendance.monthlyPenalties.penaltyGrid.gridColumnDefs" style="height:500px;"></smart-grid>
+                            </div>
+
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+        </div>
+    </uib-tab>
+
+    <uib-tab index="2" active="importCloseAttendance.activeGroupActionSubTabIndex==1">
+        <uib-tab-heading style="padding:2px;">
+            <span style="margin:2px; padding:3px;">{{importCloseAttendance.translateText('Vacations')}}</span>
+        </uib-tab-heading>
+        <div>
+
+            <section id="widget-VacationMonthlyAttendance-grid" data-widget-grid>
+                <div class="row">
+                    <article class="col-xs-12">
+
+                        <div id="widget-VacationMonthlyAttendance" data-jarvis-widget data-widget-editbutton="false" data-widget-deletebutton="false" data-widget-colorbutton="false" class="no-margin-bottom">
+
+                            <header class="header-background-color">
+                                <div class="widget-toolbar">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-link btn-sm" ng-click="importCloseAttendance.displayMonthlyVacationData()" ng-disabled="importCloseAttendanceForm.$invalid" data-page-id="{{importCloseAttendance.createViewSetup.ViewId}}" data-object-id="{{'DisplayMonthlyVacation-' + importCloseAttendance.createViewSetup.ViewId}}" data-toggle="tooltip" title="{{importCloseAttendance.translateText('Display', importCloseAttendance.createViewSetup.ViewId)}}">
+                                            <i class="fa fa-eye fa-lg"></i>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="widget-toolbar">
+                                    <div class="btn-group">
+                                        <a class="btn btn-sm" ng-click="importCloseAttendance.unPostMonthlyVacationData();" data-page-id="{{importCloseAttendance.selectedViewSetup.ViewId}}" data-object-id="{{'UnPostMonthlyVacation-' + importCloseAttendance.selectedViewSetup.ViewId}}" data-toggle="tooltip" title="{{importCloseAttendance.translateText('UnPost', importCloseAttendance.selectedViewSetup.ViewId)}}">
+                                            <i class="fa fa-undo fa-lg"></i>
+                                        </a>
+                                        <a class="btn btn-sm" ng-click="importCloseAttendance.postMonthlyVacationData();" data-page-id="{{importCloseAttendance.selectedViewSetup.ViewId}}" data-object-id="{{'PostMonthlyVacation-' + importCloseAttendance.selectedViewSetup.ViewId}}" data-toggle="tooltip" title="{{importCloseAttendance.translateText('Post', importCloseAttendance.selectedViewSetup.ViewId)}}">
+                                            <i class="fa fa-share-square-o fa-lg"></i>
+                                        </a>
+                                    </div>
+                                </div>
+
+                            </header>
+
+                            <div class="widget-body view-background-color">
+                                <smart-grid id="grd" name="gridName" data="importCloseAttendance.monthlyData.vacationDataList" options="importCloseAttendance.monthlyVacations.vacationGrid.gridOptions" column-defs="importCloseAttendance.monthlyVacations.vacationGrid.gridColumnDefs" style="height:500px;"></smart-grid>
+                            </div>
+
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+        </div>
+    </uib-tab>
+
+    <uib-tab index="3" active="importCloseAttendance.activeGroupActionSubTabIndex==3">
+        <uib-tab-heading style="padding:2px;">
+            <span style="margin:2px; padding:3px;">{{importCloseAttendance.translateText('Salary')}}</span>
+        </uib-tab-heading>
+        <div>
+
+            <section id="widget-SalaryMonthlyAttendance-grid" data-widget-grid>
+                <div class="row">
+                    <article class="col-xs-12">
+
+                        <div id="widget-SalaryMonthlyAttendance" data-jarvis-widget data-widget-editbutton="false" data-widget-deletebutton="false" data-widget-colorbutton="false" class="no-margin-bottom">
+
+                            <header class="header-background-color">
+                                <div class="widget-toolbar">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-link btn-sm" ng-click="importCloseAttendance.displayMonthlySalaryData()" ng-disabled="importCloseAttendanceForm.$invalid" data-page-id="{{importCloseAttendance.createViewSetup.ViewId}}" data-object-id="{{'DisplayMonthlySalary-' + importCloseAttendance.createViewSetup.ViewId}}" data-toggle="tooltip" title="{{importCloseAttendance.translateText('Display', importCloseAttendance.createViewSetup.ViewId)}}">
+                                            <i class="fa fa-eye fa-lg"></i>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="widget-toolbar">
+                                    <div class="btn-group">
+                                        <a class="btn btn-sm" ng-click="importCloseAttendance.unPostMonthlySalaryData();" data-page-id="{{importCloseAttendance.selectedViewSetup.ViewId}}" data-object-id="{{'UnPostMonthlySalary-' + importCloseAttendance.selectedViewSetup.ViewId}}" data-toggle="tooltip" title="{{importCloseAttendance.translateText('UnPost', importCloseAttendance.selectedViewSetup.ViewId)}}">
+                                            <i class="fa fa-undo fa-lg"></i>
+                                        </a>
+                                        <a class="btn btn-sm" ng-click="importCloseAttendance.postMonthlySalaryData();" data-page-id="{{importCloseAttendance.selectedViewSetup.ViewId}}" data-object-id="{{'PostMonthlySalary-' + importCloseAttendance.selectedViewSetup.ViewId}}" data-toggle="tooltip" title="{{importCloseAttendance.translateText('Post', importCloseAttendance.selectedViewSetup.ViewId)}}">
+                                            <i class="fa fa-share-square-o fa-lg"></i>
+                                        </a>
+                                    </div>
+                                </div>
+
+                            </header>
+
+                            <div class="widget-body view-background-color">
+                                <smart-grid id="grd" name="gridName" data="importCloseAttendance.monthlyData.salaryDataList" options="importCloseAttendance.monthlySalary.salaryGrid.gridOptions" column-defs="importCloseAttendance.monthlySalary.salaryGrid.gridColumnDefs" style="height:500px;"></smart-grid>
+                            </div>
+
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+        </div>
+    </uib-tab>
+
+</uib-tabset>

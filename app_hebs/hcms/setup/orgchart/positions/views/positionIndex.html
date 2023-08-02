@@ -1,0 +1,38 @@
+﻿
+<form class="form-horizontal" name="jobAddForm" ng-submit="positionsHome.saveItem(jobAddForm.$valid)" novalidate>
+
+    <div id="content RemovePaddingLeft ">
+        <section id="widget-grid" data-widget-grid>
+            <div class="row">
+                <article class="col-xs-12">
+
+                    <div id="widget-job" data-jarvis-widget data-widget-editbutton="false" data-widget-deletebutton="false" data-widget-colorbutton="false" class="no-margin-bottom">
+                        <header class="header-background-color">
+                            <h2><strong>{{positionsHome.FormSetup.MyForm.FormName || translate }}</strong></h2>
+                            <div class="widget-toolbar">
+                                <div class="btn-group">
+                                    <button type="submit" class="btn btn-link btn-sm" data-page-id="{{positionsHome.selectedViewSetup.ViewId}}" data-object-id="{{'Save-' + positionsHome.selectedViewSetup.ViewId}}" ng-disabled="jobAddForm.$invalid" data-toggle="tooltip" title="{{positionsHome.translateText('Save', positionsHome.selectedViewSetup.ViewId)}}">
+                                        <i class="fa fa-save fa-lg"></i>
+                                    </button>
+                                    <a class="btn btn-sm" ng-click="positionsHome.indexItemView();" data-page-id="{{positionsHome.selectedViewSetup.ViewId}}" data-object-id="{{'Cancel-' + positionsHome.selectedViewSetup.ViewId}}" data-toggle="tooltip" title="{{positionsHome.translateText('Cancel', positionsHome.selectedViewSetup.ViewId)}}">
+                                        <i class="fa fa-reply fa-lg"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="widget-toolbar">
+                           .     <a href-void class="btn" ng-click="positionsHome.addItemView()"><i class="fa fa-plus"></i> {{positionsHome.translateText('CreateNew', positionsHome.selectedViewSetup.ViewId)}} </a>
+                            </div>
+                        </header>
+                        <div class="widget-body view-background-color">
+                            <div ng-include src="'app_hebs/hcms/setup/orgchart/positions/views/positionAddNew.html'" ng-show='positionsHome.displayCreateNewTemplate || positionsHome.displayEditTemplate'></div>
+
+                            <smart-grid id="grd" name="gridName" data="positionsHome.dataList" options="positionsHome.grid.gridOptions" column-defs="positionsHome.grid.gridColumnDefs" style="height:500px;"></smart-grid>
+
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </div>
+
+</form>

@@ -1,0 +1,114 @@
+﻿
+<style type="text/css">
+    body {
+        height: 100%;
+        overflow:  hidden;
+        /*background-color:#343131;*/
+    }
+    @media (max-width: 1000px) { 
+  .leftColumn{
+    display:none;
+  }
+  
+}
+</style>
+<div  dir="ltr"  class="row" style="position:fixed;width:100%;height:100%;margin:0 auto;padding:0px;">
+    <div class="col-md-8 leftColumn" style="height:100%;margin:0 auto;padding:0px;">
+        <img src="styles/img/LoginBG.jpg" style="width:100%;min-height:100%;object-fit: cover; " />
+    </div>
+    <div class="col-md-4">
+        <div style="margin:0 auto;margin-top:50px;width:350px;height:350px;">
+            <form id="loginForm" name="loginForm" novalidate ng-submit="vm.login(loginForm.$valid)" role="form" class="smart-form client-form" data-smart-validate-form>
+                <header>
+                    <!--<div class="col-xs-12 col-sm-12 col-md-7 col-lg-8 hidden-xs hidden-sm">-->
+                    <h1 style="font-size:larger;text-align:center">HCMS</h1>
+                    <!--</div>-->
+                </header>
+                <fieldset>
+                    <section>
+                        <label class="label">User Name</label>
+                        <label class="input">
+                            <i class="icon-append fa fa-user"></i>
+                            <input type="text" name="username"
+                                   data-smart-validate-input
+                                   data-required
+                                   data-message-required="Please enter your user name" ng-model="vm.account.username">
+                            <b class="tooltip tooltip-top-right">
+                                <i class="fa fa-user txt-color-teal"></i>
+                                Please enter username
+                            </b>
+                        </label>
+                    </section>
+                    <section>
+                        <label class="label">Password</label>
+                        <label class="input">
+                            <i class="icon-append fa fa-lock"></i>
+                            <input type="password" name="password"
+                                   data-smart-validate-input
+                                   data-required
+                                   data-minlength="1"
+                                   data-maxnlength="20"
+                                   data-message="Please enter your password" ng-model="vm.account.password">
+                            <b class="tooltip tooltip-top-right">
+                                <i class="fa fa-lock txt-color-teal"></i> Enter
+                                your password
+                            </b>
+                        </label>
+
+                        <div class="note">
+                            <a ui-sref="forgotPassword">Forgot password?</a>
+                        </div>
+                    </section>
+                    <section>
+                        <label class="label">Languange</label>
+                        <hcms-select ng-model="vm.account.langId" hc-api-url="'/LoginLanguage/GetAll'" hc-options="{SelectDisplayName:'LangName',SelectDisplayValue:'LangId',IsRequired:true,dataMessageRequired:'Please Select Language'}"></hcms-select>
+                        <b class="tooltip tooltip-top-right">
+                            <i class="fa fa-user txt-color-teal"></i>
+                            Please Select Language
+                        </b>
+                    </section>
+                    <section>
+
+                        <label class="label">Company</label>
+                        <hcms-select ng-model="vm.account.companyId" hc-api-url="'/LoginCompany/GetAll'" hc-options="{SelectDisplayName:'CompanyName',SelectDisplayValue:'CompanyId',IsRequired:true,dataMessageRequired:'Please Select Company'}"></hcms-select>
+                        <b class="tooltip tooltip-top-right">
+                            <i class="fa fa-user txt-color-teal"></i>
+                            Please Select Company
+                        </b>
+                    </section>
+                    <section>
+
+                        <label class="label">Database Profile</label>
+                        <hcms-select ng-model="vm.account.databaseProfileId" hc-api-url="'/DatabaseProfile/GetAll'" hc-options="{SelectDisplayName:'DatabaseProfileName',SelectDisplayValue:'DatabaseProfileId',IsRequired:true,dataMessageRequired:'Please Select Database Profile'}"></hcms-select>
+                        <b class="tooltip tooltip-top-right">
+                            <i class="fa fa-user txt-color-teal"></i>
+                            Please Select Database Profile
+                        </b>
+                    </section>
+                    <!--<section>
+                        <label class="label">tree</label>
+                        <select-tree class="form-control" ng-model="vm.selectedTree" tree-options="{ formId:32, userId: 1, langId: 1, treeId: 1, valueField: 'TreeNodeId', textField: 'content' }"></select-tree>
+                        <b> {{vm.selectedTree}}
+                        </b>
+                    </section>-->
+                    <!--<section>
+                        <label class="checkbox">
+                            <input type="checkbox" name="remember" checked>
+                            <i></i>Stay signed in
+                        </label>
+                    </section>-->
+                </fieldset>
+                <footer>
+                    <button type="submit" class="btn btn-primary">
+                        Sign in
+                    </button>
+                </footer>
+            </form>
+
+        </div>
+
+    </div>
+</div>
+
+
+

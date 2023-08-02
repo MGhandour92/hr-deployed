@@ -1,0 +1,38 @@
+﻿ 
+    <div class="row" ng-controller="totalSalaryChartByYear as salaryChartForm">
+        <!-- NEW WIDGET START -->
+        <article class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <!-- Widget ID (each widget will need unique ID)-->
+            <div id="totalSalryChart-widget-widget" data-jarvis-widget role="widget">
+                <!-- widget options:
+                    usage: <div data-jarvis-widget id="wid-id-0" data-widget-editbutton="false">
+                    data-widget-colorbutton="false"
+                    data-widget-editbutton="false"
+                    data-widget-togglebutton="false"
+                    data-widget-deletebutton="false"
+                    data-widget-fullscreenbutton="false"
+                    data-widget-custombutton="false"
+                    data-widget-collapsed="true"
+                    data-widget-sortable="false"
+                -->
+                <header>
+                    <h2><strong>Total</strong> <i>Salary</i></h2>
+                </header>
+                <!-- widget div-->
+                <div>
+                    <!-- widget content -->
+                    <div class="widget-body">
+
+                        <hcms-high-chart hc-options="salaryChartForm.chartOptions"></hcms-high-chart>
+
+                    </div>
+                    <!-- end widget content -->
+                </div>
+                <!-- end widget div -->
+            </div>
+            <!-- end widget -->
+        </article>
+        <!-- WIDGET END -->
+
+    </div>
+ 

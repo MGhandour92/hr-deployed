@@ -1,0 +1,37 @@
+<aside id="left-panel">
+
+    <!-- test user info -->
+    <div login-information></div>
+    <!-- end user info -->
+     
+    <nav> 
+        <!-- NOTE: Notice the gaps after each icon usage <i></i>..
+        Please note that these links work a bit different than
+        traditional href="" links. See documentation for details. 
+        -->
+        <script type="text/ng-template" id="treeMenu">
+            <a href="#" ng-click="sysMenus.openMenu(menu)" title="{{::menu.MenuId}}">
+                <i class="fa fa-lg fa-fw fa-home {{::menu.MenuIconURL}}">
+                    <!--<em ng-show="sysMenus.getChildMenus(menu.MenuId).length > 0 ">{{::sysMenus.getChildMenus(menu.MenuId).length}}</em>-->
+                </i>
+                <span ng-class="::{'menu-item-parent':sysMenus.getChildMenus(menu.MenuId).length>0}">{{sysMenus.translate(menu.MenuId)}}</span>
+                <!--{{'menu-' + menu.MenuId | translate }}-->
+            </a>
+            <ul ng-if="::sysMenus.getChildMenus(menu.MenuId).length > 0">
+                <li data-ui-sref-active="{{::sysMenus.getChildMenus(menu.MenuId).length>0 && '' || 'active' }}" ng-repea ng-repeat="menu in sysMenus.getChildMenus(menu.MenuId)" ng-include="'treeMenu'" ng-attr-data-menu-collapse="{{::sysMenus.getChildMenus(menu.MenuId).length>0}}"></li>
+            </ul>
+        </script>
+
+        <ul data-smart-menu>
+            <li ng-repeat="menu in sysMenus.getChildMenus()" ng-include="'treeMenu'" data-ui-sref-active="{{::sysMenus.getChildMenus(menu.MenuId).length>0 && '' || 'active' }}" ng-attr-data-menu-collapse="{{::sysMenus.getChildMenus(menu.MenuId).length>0}}"></li>
+        </ul>
+
+        <!-- NOTE: This allows you to pull menu items from server -->
+        <!-- <ul data-smart-menu-items="/api/menu-items.json"></ul> -->
+    </nav>
+
+    <span class="minifyme" data-action="minifyMenu" minify-menu>
+        <i class="fa fa-arrow-circle-left hit"></i>
+    </span>
+
+</aside>

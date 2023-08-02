@@ -1,0 +1,365 @@
+﻿<div class="view">
+    <form class="form-horizontal" name="myAddVacationRuleForm" ng-submit="vacationRule.saveItem(myAddVacationRuleForm.$valid)" novalidate>
+        <div class="form-group  row">
+            <!--VacationRuleCode-->
+            <ng-form name="VacationRuleCode" ng-class="{ 'has-error': VacationRuleCode.$invalid }">
+                <div class="col-sm-2">
+                    <label class="control-label">{{vacationRule.translateText(vacationRule.selectedViewSetup.ViewFieldsObject["VacationRuleCode"].FieldName , vacationRule.selectedViewSetup.viewSetup.ViewId)}}</label>
+                </div>
+                <div class="col-sm-4">
+                    <hcms-generic ng-model="vacationRule.dataItem.VacationRuleCode" hc-options="vacationRule.selectedViewSetup.ViewFieldsObject['VacationRuleCode']"></hcms-generic>
+                </div>
+            </ng-form>
+        </div>
+        <div class="form-group  row">
+            <!--VacationRuleName-->
+            <ng-form name="VacationRuleName" ng-class="{ 'has-error': VacationRuleName.$invalid }">
+                <div class="col-sm-2">
+                    <label class="control-label">{{vacationRule.translateText(vacationRule.selectedViewSetup.ViewFieldsObject["VacationRuleName"].FieldName , vacationRule.selectedViewSetup.viewSetup.ViewId)}}</label>
+                </div>
+                <div class="col-sm-4">
+                    <hcms-generic ng-model="vacationRule.dataItem.VacationRuleName" hc-options="vacationRule.selectedViewSetup.ViewFieldsObject['VacationRuleName']"></hcms-generic>
+                </div>
+            </ng-form>
+            <!--VacationRuleName_-->
+            <ng-form name="VacationRuleName_" ng-class="{ 'has-error': VacationRuleName_.$invalid }">
+                <div class="col-sm-2">
+                    <label class="control-label">{{vacationRule.translateText(vacationRule.selectedViewSetup.ViewFieldsObject["VacationRuleName_"].FieldName , vacationRule.selectedViewSetup.viewSetup.ViewId)}}</label>
+                </div>
+                <div class="col-sm-4">
+                    <hcms-generic ng-model="vacationRule.dataItem.VacationRuleName_" hc-options="vacationRule.selectedViewSetup.ViewFieldsObject['VacationRuleName_']"></hcms-generic>
+                </div>
+            </ng-form>
+        </div>
+        <div class="form-group  row">
+            <!--StartFromHireDays-->
+            <ng-form name="StartFromHireDays" ng-class="{ 'has-error': StartFromHireDays.$invalid }">
+                <div class="col-sm-2">
+                    <label class="control-label">{{vacationRule.translateText(vacationRule.selectedViewSetup.ViewFieldsObject["StartFromHireDays"].FieldName , vacationRule.selectedViewSetup.viewSetup.ViewId)}}</label>
+                </div>
+                <div class="col-sm-4">
+                    <hcms-generic ng-model="vacationRule.dataItem.StartFromHireDays" hc-options="vacationRule.selectedViewSetup.ViewFieldsObject['StartFromHireDays']" hc-text="{{vacationRule.translateText(vacationRule.selectedViewSetup.ViewFieldsObject['StartFromHireDays'].FieldName , vacationRule.selectedViewSetup.viewSetup.ViewId)}}"></hcms-generic>
+                </div>
+            </ng-form>
+        </div>
+
+        <div class="form-group  row">
+            <!--IsLengthRange-->
+            <ng-form name="IsLengthRange" ng-class="{ 'has-error': IsLengthRange.$invalid }">
+                <div class="col-sm-2">
+                    <hcms-generic ng-model="vacationRule.dataItem.IsLengthRange" hc-options="vacationRule.selectedViewSetup.ViewFieldsObject['IsLengthRange']" hc-text="{{vacationRule.translateText(vacationRule.selectedViewSetup.ViewFieldsObject['IsLengthRange'].FieldName , vacationRule.selectedViewSetup.viewSetup.ViewId)}}"></hcms-generic>
+                </div>
+            </ng-form>
+            <!--IsLengthRangePrevent-->
+            <ng-form name="IsLengthRangePrevent" ng-class="{ 'has-error': IsLengthRangePrevent.$invalid }">
+                <div class="col-sm-2">
+                    <hcms-generic ng-model="vacationRule.dataItem.IsLengthRangePrevent" hc-options="vacationRule.selectedViewSetup.ViewFieldsObject['IsLengthRangePrevent']" hc-text="{{vacationRule.translateText(vacationRule.selectedViewSetup.ViewFieldsObject['IsLengthRangePrevent'].FieldName , vacationRule.selectedViewSetup.viewSetup.ViewId)}}"></hcms-generic>
+                </div>
+            </ng-form>
+
+            <!--MinLengthDays-->
+            <ng-form name="MinLengthDays" ng-class="{ 'has-error': MinLengthDays.$invalid }">
+                <div class="col-sm-2">
+                    <label class="control-label">{{vacationRule.translateText(vacationRule.selectedViewSetup.ViewFieldsObject["MinLengthDays"].FieldName , vacationRule.selectedViewSetup.viewSetup.ViewId)}}</label>
+                </div>
+                <div class="col-sm-2">
+                    <hcms-generic ng-model="vacationRule.dataItem.MinLengthDays" hc-options="vacationRule.selectedViewSetup.ViewFieldsObject['MinLengthDays']"></hcms-generic>
+                </div>
+            </ng-form>
+            <!--MaxLengthDays-->
+            <ng-form name="MaxLengthDays" ng-class="{ 'has-error': MaxLengthDays.$invalid }">
+                <div class="col-sm-2">
+                    <label class="control-label">{{vacationRule.translateText(vacationRule.selectedViewSetup.ViewFieldsObject["MaxLengthDays"].FieldName , vacationRule.selectedViewSetup.viewSetup.ViewId)}}</label>
+                </div>
+                <div class="col-sm-2">
+                    <hcms-generic ng-model="vacationRule.dataItem.MaxLengthDays" hc-options="vacationRule.selectedViewSetup.ViewFieldsObject['MaxLengthDays']"></hcms-generic>
+                </div>
+            </ng-form>
+
+        </div>
+        <div class="form-group  row">
+            <!--IsBalanceRange-->
+            <ng-form name="IsBalanceRange" ng-class="{ 'has-error': IsBalanceRange.$invalid }">
+                <div class="col-sm-2">
+                    <hcms-generic ng-model="vacationRule.dataItem.IsBalanceRange" hc-options="vacationRule.selectedViewSetup.ViewFieldsObject['IsBalanceRange']" hc-text="{{vacationRule.translateText(vacationRule.selectedViewSetup.ViewFieldsObject['IsBalanceRange'].FieldName , vacationRule.selectedViewSetup.viewSetup.ViewId)}}"></hcms-generic>
+                </div>
+            </ng-form>
+            <!--IsBalanceRangePrevent-->
+            <ng-form name="IsBalanceRangePrevent" ng-class="{ 'has-error': IsBalanceRangePrevent.$invalid }">
+                <div class="col-sm-2">
+                    <hcms-generic ng-model="vacationRule.dataItem.IsBalanceRangePrevent" hc-options="vacationRule.selectedViewSetup.ViewFieldsObject['IsBalanceRangePrevent']" hc-text="{{vacationRule.translateText(vacationRule.selectedViewSetup.ViewFieldsObject['IsBalanceRangePrevent'].FieldName , vacationRule.selectedViewSetup.viewSetup.ViewId)}}"></hcms-generic>
+                </div>
+            </ng-form>
+            <!--MinBalanceBefore-->
+            <ng-form name="MinBalanceBefore" ng-class="{ 'has-error': MinBalanceBefore.$invalid }">
+                <div class="col-sm-2">
+                    <label class="control-label">{{vacationRule.translateText(vacationRule.selectedViewSetup.ViewFieldsObject["MinBalanceBefore"].FieldName , vacationRule.selectedViewSetup.viewSetup.ViewId)}}</label>
+                </div>
+                <div class="col-sm-2">
+                    <hcms-generic ng-model="vacationRule.dataItem.MinBalanceBefore" hc-options="vacationRule.selectedViewSetup.ViewFieldsObject['MinBalanceBefore']"></hcms-generic>
+                </div>
+            </ng-form>
+            <!--MinBalanceAfter-->
+            <ng-form name="MinBalanceAfter" ng-class="{ 'has-error': MinBalanceAfter.$invalid }">
+                <div class="col-sm-2">
+                    <label class="control-label">{{vacationRule.translateText(vacationRule.selectedViewSetup.ViewFieldsObject["MinBalanceAfter"].FieldName , vacationRule.selectedViewSetup.viewSetup.ViewId)}}</label>
+                </div>
+                <div class="col-sm-2">
+                    <hcms-generic ng-model="vacationRule.dataItem.MinBalanceAfter" hc-options="vacationRule.selectedViewSetup.ViewFieldsObject['MinBalanceAfter']"></hcms-generic>
+                </div>
+            </ng-form>
+        </div>
+        <div class="form-group  row">
+            <!--IsOccurrenceLimit-->
+            <ng-form name="IsOccurrenceLimit" ng-class="{ 'has-error': IsOccurrenceLimit.$invalid }">
+                <div class="col-sm-2">
+                    <hcms-generic ng-model="vacationRule.dataItem.IsOccurrenceLimit" hc-options="vacationRule.selectedViewSetup.ViewFieldsObject['IsOccurrenceLimit']" hc-text="{{vacationRule.translateText(vacationRule.selectedViewSetup.ViewFieldsObject['IsOccurrenceLimit'].FieldName , vacationRule.selectedViewSetup.viewSetup.ViewId)}}"></hcms-generic>
+                </div>
+            </ng-form>
+            <!--IsOccurrenceLimitPrevent-->
+            <ng-form name="IsOccurrenceLimitPrevent" ng-class="{ 'has-error': IsOccurrenceLimitPrevent.$invalid }">
+                <div class="col-sm-2">
+                    <hcms-generic ng-model="vacationRule.dataItem.IsOccurrenceLimitPrevent" hc-options="vacationRule.selectedViewSetup.ViewFieldsObject['IsOccurrenceLimitPrevent']" hc-text="{{vacationRule.translateText(vacationRule.selectedViewSetup.ViewFieldsObject['IsOccurrenceLimitPrevent'].FieldName , vacationRule.selectedViewSetup.viewSetup.ViewId)}}"></hcms-generic>
+                </div>
+            </ng-form>
+            <!--MaxOccurrenceNo-->
+            <ng-form name="MaxOccurrenceNo" ng-class="{ 'has-error': MaxOccurrenceNo.$invalid }">
+                <div class="col-sm-2">
+                    <label class="control-label">{{vacationRule.translateText(vacationRule.selectedViewSetup.ViewFieldsObject["MaxOccurrenceNo"].FieldName , vacationRule.selectedViewSetup.viewSetup.ViewId)}}</label>
+                </div>
+                <div class="col-sm-2">
+                    <hcms-generic ng-model="vacationRule.dataItem.MaxOccurrenceNo" hc-options="vacationRule.selectedViewSetup.ViewFieldsObject['MaxOccurrenceNo']"></hcms-generic>
+                </div>
+            </ng-form>
+            <!--MaxOccurrenceEvery-->
+            <ng-form name="MaxOccurrenceEvery" ng-class="{ 'has-error': MaxOccurrenceEvery.$invalid }">
+                <div class="col-sm-2">
+                    <label class="control-label">{{vacationRule.translateText(vacationRule.selectedViewSetup.ViewFieldsObject["MaxOccurrenceEvery"].FieldName , vacationRule.selectedViewSetup.viewSetup.ViewId)}}</label>
+                </div>
+                <div class="col-sm-2">
+                    <hcms-generic ng-model="vacationRule.dataItem.MaxOccurrenceEvery" hc-options="vacationRule.selectedViewSetup.ViewFieldsObject['MaxOccurrenceEvery']"></hcms-generic>
+                </div>
+            </ng-form>
+        </div>
+        <div class="form-group  row">
+            <!--OccurrenceUnitId-->
+            <ng-form name="OccurrenceUnitId" ng-class="{ 'has-error': OccurrenceUnitId.$invalid }">
+                <div class="col-sm-2">
+                    <label class="control-label">{{vacationRule.translateText(vacationRule.selectedViewSetup.ViewFieldsObject["OccurrenceUnitId"].FieldName , vacationRule.selectedViewSetup.viewSetup.ViewId)}}</label>
+                </div>
+                <div class="col-sm-4">
+                    <hcms-generic ng-model="vacationRule.dataItem.OccurrenceUnitId" hc-options="vacationRule.selectedViewSetup.ViewFieldsObject['OccurrenceUnitId']"></hcms-generic>
+                </div>
+            </ng-form>
+            <!--OccurrenceDateVariableId-->
+            <ng-form name="OccurrenceDateVariableId" ng-class="{ 'has-error': OccurrenceDateVariableId.$invalid }">
+                <div class="col-sm-2">
+                    <label class="control-label">{{vacationRule.translateText(vacationRule.selectedViewSetup.ViewFieldsObject["OccurrenceDateVariableId"].FieldName , vacationRule.selectedViewSetup.viewSetup.ViewId)}}</label>
+                </div>
+                <div class="col-sm-4">
+                    <hcms-generic ng-model="vacationRule.dataItem.OccurrenceDateVariableId" hc-options="vacationRule.selectedViewSetup.ViewFieldsObject['OccurrenceDateVariableId']"></hcms-generic>
+                </div>
+            </ng-form>
+        </div>
+
+        <div class="form-group  row">
+            <!--IsDayFactor-->
+            <ng-form name="IsDayFactor" ng-class="{ 'has-error': IsDayFactor.$invalid }">
+                <div class="col-sm-2">
+                    <hcms-generic ng-model="vacationRule.dataItem.IsDayFactor" hc-options="vacationRule.selectedViewSetup.ViewFieldsObject['IsDayFactor']" hc-text="{{vacationRule.translateText(vacationRule.selectedViewSetup.ViewFieldsObject['IsDayFactor'].FieldName , vacationRule.selectedViewSetup.viewSetup.ViewId)}}"></hcms-generic>
+                </div>
+            </ng-form>
+            <!--DayFactor-->
+            <ng-form name="DayFactor" ng-class="{ 'has-error': DayFactor.$invalid }">
+                <div class="col-sm-2">
+                    <label class="control-label">{{vacationRule.translateText(vacationRule.selectedViewSetup.ViewFieldsObject["DayFactor"].FieldName , vacationRule.selectedViewSetup.viewSetup.ViewId)}}</label>
+                </div>
+                <div class="col-sm-2">
+                    <hcms-generic ng-model="vacationRule.dataItem.DayFactor" hc-options="vacationRule.selectedViewSetup.ViewFieldsObject['DayFactor']"></hcms-generic>
+                </div>
+            </ng-form>
+            <!--IsDayFraction-->
+            <ng-form name="IsDayFraction" ng-class="{ 'has-error': IsDayFraction.$invalid }" ng-hide="vacationRule.selectedViewSetup.ViewFieldsObject['IsDayFraction'].IsHidden">
+                <div class="col-sm-2">
+                    <hcms-generic ng-model="vacationRule.dataItem.IsDayFraction" hc-options="vacationRule.selectedViewSetup.ViewFieldsObject['IsDayFraction']" hc-text="{{vacationRule.translateText(vacationRule.selectedViewSetup.ViewFieldsObject['IsDayFraction'].FieldName,vacationRule.selectedViewSetup.viewSetup.ViewId)}}"></hcms-generic>
+                </div>
+            </ng-form>
+            <!--DayFractions-->
+            <ng-form name="DayFractions" ng-class="{ 'has-error': DayFractions.$invalid }" ng-hide="vacationRule.selectedViewSetup.ViewFieldsObject['DayFractions'].IsHidden">
+                <div class="col-sm-2">
+                    <label class="control-label">{{vacationRule.translateText(vacationRule.selectedViewSetup.ViewFieldsObject["DayFractions"].FieldName,vacationRule.selectedViewSetup.viewSetup.ViewId)}}</label>
+                </div>
+                <div class="col-sm-2">
+                    <hcms-generic ng-model="vacationRule.dataItem.DayFractions" hc-options="vacationRule.selectedViewSetup.ViewFieldsObject['DayFractions']"></hcms-generic>
+                </div>
+            </ng-form>
+</div>
+        <div class="form-group  row">
+            <!--IsYearDaysLimit-->
+            <ng-form name="IsYearDaysLimit" ng-class="{ 'has-error': IsYearDaysLimit.$invalid }">
+                <div class="col-sm-2">
+                    <hcms-generic ng-model="vacationRule.dataItem.IsYearDaysLimit" hc-options="vacationRule.selectedViewSetup.ViewFieldsObject['IsYearDaysLimit']" hc-text="{{vacationRule.translateText(vacationRule.selectedViewSetup.ViewFieldsObject['IsYearDaysLimit'].FieldName , vacationRule.selectedViewSetup.viewSetup.ViewId)}}"></hcms-generic>
+                </div>
+            </ng-form>
+            <!--MaxYearDays-->
+            <ng-form name="MaxYearDays" ng-class="{ 'has-error': MaxYearDays.$invalid }">
+                <div class="col-sm-2">
+                    <label class="control-label">{{vacationRule.translateText(vacationRule.selectedViewSetup.ViewFieldsObject["MaxYearDays"].FieldName , vacationRule.selectedViewSetup.viewSetup.ViewId)}}</label>
+                </div>
+                <div class="col-sm-2">
+                    <hcms-generic ng-model="vacationRule.dataItem.MaxYearDays" hc-options="vacationRule.selectedViewSetup.ViewFieldsObject['MaxYearDays']"></hcms-generic>
+                </div>
+            </ng-form>
+
+        </div>
+        <div class="form-group  row">
+            <!--DoNotCountDayoff-->
+            <ng-form name="DoNotCountDayoff" ng-class="{ 'has-error': DoNotCountDayoff.$invalid }">
+                <div class="col-sm-2">
+                    <hcms-generic ng-model="vacationRule.dataItem.DoNotCountDayoff" hc-options="vacationRule.selectedViewSetup.ViewFieldsObject['DoNotCountDayoff']" hc-text="{{vacationRule.translateText(vacationRule.selectedViewSetup.ViewFieldsObject['DoNotCountDayoff'].FieldName , vacationRule.selectedViewSetup.viewSetup.ViewId)}}"></hcms-generic>
+                </div>
+            </ng-form>
+            <!--DoNotCountSecondaryDayoff-->
+            <ng-form name="DoNotCountSecondaryDayoff" ng-class="{ 'has-error': DoNotCountSecondaryDayoff.$invalid }">
+                <div class="col-sm-2">
+                    <hcms-generic ng-model="vacationRule.dataItem.DoNotCountSecondaryDayoff" hc-options="vacationRule.selectedViewSetup.ViewFieldsObject['DoNotCountSecondaryDayoff']" hc-text="{{vacationRule.translateText(vacationRule.selectedViewSetup.ViewFieldsObject['DoNotCountSecondaryDayoff'].FieldName , vacationRule.selectedViewSetup.viewSetup.ViewId)}}"></hcms-generic>
+                </div>
+            </ng-form>
+            <!--DoNotCountHoliday-->
+            <ng-form name="DoNotCountHoliday" ng-class="{ 'has-error': DoNotCountHoliday.$invalid }">
+                <div class="col-sm-2">
+                    <hcms-generic ng-model="vacationRule.dataItem.DoNotCountHoliday" hc-options="vacationRule.selectedViewSetup.ViewFieldsObject['DoNotCountHoliday']" hc-text="{{vacationRule.translateText(vacationRule.selectedViewSetup.ViewFieldsObject['DoNotCountHoliday'].FieldName , vacationRule.selectedViewSetup.viewSetup.ViewId)}}"></hcms-generic>
+                </div>
+            </ng-form>
+
+        </div>
+        <div class="form-group  row">
+            <!--IsYearlyReset-->
+            <ng-form name="IsYearlyReset" ng-class="{ 'has-error': IsYearlyReset.$invalid }">
+                <div class="col-sm-2">
+                    <hcms-generic ng-model="vacationRule.dataItem.IsYearlyReset" hc-options="vacationRule.selectedViewSetup.ViewFieldsObject['IsYearlyReset']" hc-text="{{vacationRule.translateText(vacationRule.selectedViewSetup.ViewFieldsObject['IsYearlyReset'].FieldName , vacationRule.selectedViewSetup.viewSetup.ViewId)}}"></hcms-generic>
+                </div>
+            </ng-form>
+            <!--IsReplacement-->
+            <ng-form name="IsReplacement" ng-class="{ 'has-error': IsReplacement.$invalid }">
+                <div class="col-sm-2">
+                    <hcms-generic ng-model="vacationRule.dataItem.IsReplacement" hc-options="vacationRule.selectedViewSetup.ViewFieldsObject['IsReplacement']" hc-text="{{vacationRule.translateText(vacationRule.selectedViewSetup.ViewFieldsObject['IsReplacement'].FieldName , vacationRule.selectedViewSetup.viewSetup.ViewId)}}"></hcms-generic>
+                </div>
+            </ng-form>
+            <!--IsEncashment-->
+            <ng-form name="IsEncashment" ng-class="{ 'has-error': IsEncashment.$invalid }">
+                <div class="col-sm-2">
+                    <hcms-generic ng-model="vacationRule.dataItem.IsEncashment" hc-options="vacationRule.selectedViewSetup.ViewFieldsObject['IsEncashment']" hc-text="{{vacationRule.translateText(vacationRule.selectedViewSetup.ViewFieldsObject['IsEncashment'].FieldName , vacationRule.selectedViewSetup.viewSetup.ViewId)}}"></hcms-generic>
+                </div>
+            </ng-form>
+
+        </div>
+
+        <div class="form-group  row">
+            <!--IsNegativeBalanceMonthly-->
+            <ng-form name="IsNegativeBalanceMonthly" ng-class="{ 'has-error': IsNegativeBalanceMonthly.$invalid }">
+                <div class="col-sm-2">
+                    <hcms-generic ng-model="vacationRule.dataItem.IsNegativeBalanceMonthly" hc-options="vacationRule.selectedViewSetup.ViewFieldsObject['IsNegativeBalanceMonthly']" hc-text="{{vacationRule.translateText(vacationRule.selectedViewSetup.ViewFieldsObject['IsNegativeBalanceMonthly'].FieldName , vacationRule.selectedViewSetup.viewSetup.ViewId)}}"></hcms-generic>
+                </div>
+            </ng-form>
+            <!--IsNegativeBalanceYear-->
+            <ng-form name="IsNegativeBalanceYear" ng-class="{ 'has-error': IsNegativeBalanceYear.$invalid }">
+                <div class="col-sm-2">
+                    <hcms-generic ng-model="vacationRule.dataItem.IsNegativeBalanceYear" hc-options="vacationRule.selectedViewSetup.ViewFieldsObject['IsNegativeBalanceYear']" hc-text="{{vacationRule.translateText(vacationRule.selectedViewSetup.ViewFieldsObject['IsNegativeBalanceYear'].FieldName , vacationRule.selectedViewSetup.viewSetup.ViewId)}}"></hcms-generic>
+                </div>
+            </ng-form>
+
+        </div>
+        <div class="form-group  row">
+            <!--IsUseInWorkfolw-->
+            <ng-form name="IsUseInWorkfolw" ng-class="{ 'has-error': IsUseInWorkfolw.$invalid }">
+                <div class="col-sm-2">
+                    <hcms-generic ng-model="vacationRule.dataItem.IsUseInWorkfolw" hc-options="vacationRule.selectedViewSetup.ViewFieldsObject['IsUseInWorkfolw']" hc-text="{{vacationRule.translateText(vacationRule.selectedViewSetup.ViewFieldsObject['IsUseInWorkfolw'].FieldName , vacationRule.selectedViewSetup.viewSetup.ViewId)}}"></hcms-generic>
+                </div>
+            </ng-form>
+            <!--IsVacationToPayroll-->
+            <ng-form name="IsVacationToPayroll" ng-class="{ 'has-error': IsVacationToPayroll.$invalid }">
+                <div class="col-sm-2">
+                    <hcms-generic ng-model="vacationRule.dataItem.IsVacationToPayroll" hc-options="vacationRule.selectedViewSetup.ViewFieldsObject['IsVacationToPayroll']" hc-text="{{vacationRule.translateText(vacationRule.selectedViewSetup.ViewFieldsObject['IsVacationToPayroll'].FieldName , vacationRule.selectedViewSetup.viewSetup.ViewId)}}"></hcms-generic>
+                </div>
+            </ng-form>
+        </div>
+        <div class="form-group  row">
+            <!--IsDeductionFromDue-->
+            <ng-form name="IsDeductionFromDue" ng-class="{ 'has-error': IsDeductionFromDue.$invalid }">
+                <div class="col-sm-2">
+                    <hcms-generic ng-model="vacationRule.dataItem.IsDeductionFromDue" hc-options="vacationRule.selectedViewSetup.ViewFieldsObject['IsDeductionFromDue']" hc-text="{{vacationRule.translateText(vacationRule.selectedViewSetup.ViewFieldsObject['IsDeductionFromDue'].FieldName , vacationRule.selectedViewSetup.viewSetup.ViewId)}}"></hcms-generic>
+                </div>
+            </ng-form>
+            <!--IsAccrual-->
+            <ng-form name="IsAccrual" ng-class="{ 'has-error': IsAccrual.$invalid }">
+                <div class="col-sm-2">
+                    <hcms-generic ng-model="vacationRule.dataItem.IsAccrual" hc-options="vacationRule.selectedViewSetup.ViewFieldsObject['IsAccrual']" hc-text="{{vacationRule.translateText(vacationRule.selectedViewSetup.ViewFieldsObject['IsAccrual'].FieldName , vacationRule.selectedViewSetup.viewSetup.ViewId)}}"></hcms-generic>
+                </div>
+            </ng-form>
+        </div>
+        <div class="form-group  row">
+            <!--IsConsumedZero-->
+            <ng-form name="IsConsumedZero" ng-class="{ 'has-error': IsDeductionFromDue.$invalid }">
+                <div class="col-sm-2">
+                    <hcms-generic ng-model="vacationRule.dataItem.IsConsumedZero" hc-options="vacationRule.selectedViewSetup.ViewFieldsObject['IsConsumedZero']" hc-text="{{vacationRule.translateText(vacationRule.selectedViewSetup.ViewFieldsObject['IsConsumedZero'].FieldName , vacationRule.selectedViewSetup.viewSetup.ViewId)}}"></hcms-generic>
+                </div>
+            </ng-form>
+            <!--IsAccrual-->
+            <ng-form name="IsConsumedZeroPrevent" ng-class="{ 'has-error': IsAccrual.$invalid }">
+                <div class="col-sm-2">
+                    <hcms-generic ng-model="vacationRule.dataItem.IsConsumedZeroPrevent" hc-options="vacationRule.selectedViewSetup.ViewFieldsObject['IsConsumedZeroPrevent']" hc-text="{{vacationRule.translateText(vacationRule.selectedViewSetup.ViewFieldsObject['IsConsumedZeroPrevent'].FieldName , vacationRule.selectedViewSetup.viewSetup.ViewId)}}"></hcms-generic>
+                </div>
+            </ng-form>
+        </div>
+        <div class="form-group  row">
+            <!--StartDate-->
+            <ng-form name="StartDate" ng-class="{ 'has-error': StartDate.$invalid }">
+                <div class="col-sm-2">
+                    <label class="control-label">{{vacationRule.translateText(vacationRule.selectedViewSetup.ViewFieldsObject["StartDate"].FieldName , vacationRule.selectedViewSetup.viewSetup.ViewId)}}</label>
+                </div>
+                <div class="col-sm-4">
+                    <hcms-generic ng-model="vacationRule.dataItem.StartDate" hc-options="vacationRule.selectedViewSetup.ViewFieldsObject['StartDate']"></hcms-generic>
+                </div>
+            </ng-form>
+
+            <!--EndDate-->
+            <ng-form name="EndDate" ng-class="{ 'has-error': EndDate.$invalid }">
+                <div class="col-sm-2">
+                    <label class="control-label">{{vacationRule.translateText(vacationRule.selectedViewSetup.ViewFieldsObject["EndDate"].FieldName , vacationRule.selectedViewSetup.viewSetup.ViewId)}}</label>
+                </div>
+                <div class="col-sm-4">
+                    <hcms-generic ng-model="vacationRule.dataItem.EndDate" hc-options="vacationRule.selectedViewSetup.ViewFieldsObject['EndDate']"></hcms-generic>
+                </div>
+            </ng-form>
+        </div>
+        <div class="form-group  row">
+            <!--Disabled-->
+            <ng-form name="Disabled" ng-class="{ 'has-error': Disabled.$invalid }">
+                <div class="col-sm-2">
+                    <hcms-generic ng-model="vacationRule.dataItem.Disabled" hc-options="vacationRule.selectedViewSetup.ViewFieldsObject['Disabled']" hc-text="{{vacationRule.translateText(vacationRule.selectedViewSetup.ViewFieldsObject['Disabled'].FieldName , vacationRule.selectedViewSetup.viewSetup.ViewId)}}"></hcms-generic>
+                </div>
+            </ng-form>
+
+         <!--OrderNo-->
+            <ng-form name="OrderNo" ng-class="{ 'has-error': OrderNo.$invalid }">
+                <div class="col-sm-2">
+                    <label class="control-label">{{vacationRule.translateText(vacationRule.selectedViewSetup.ViewFieldsObject["OrderNo"].FieldName , vacationRule.selectedViewSetup.viewSetup.ViewId)}}</label>
+                </div>
+                <div class="col-sm-2">
+                    <hcms-generic ng-model="vacationRule.dataItem.OrderNo" hc-options="vacationRule.selectedViewSetup.ViewFieldsObject['OrderNo']"></hcms-generic>
+                </div>
+            </ng-form>
+
+        </div>
+
+        <!--Save & Cancel Buttons-->
+        <div class="row">
+            <div class="col-sm-offset-2 col-sm-10">
+                <input type="submit" class="btn btn-primary" value="{{vacationRule.translateText('Save', vacationRule.selectedViewSetup.viewSetup.ViewId)}}" ng-disabled="myAddVacationRuleForm.$invalid" />
+                <button type="button" class="btn btn-default" ng-click="vacationRule.indexItemView()">{{vacationRule.translateText('Cancel', vacationRule.selectedViewSetup.viewSetup.ViewId)}}</button>
+            </div>
+        </div>
+
+    </form>
+</div>

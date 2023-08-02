@@ -1,0 +1,209 @@
+﻿<div class="widget-body view-background-color">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <div class="view">
+                <form class="form-horizontal" name="payrollCalcTransForm" novalidate>
+                    <div class="form-group  row">
+
+                        <!--Year-->
+                        <ng-form name="PayrollYear" ng-class="{ 'has-error': PayrollYear.$invalid }">
+                            <div class="col-sm-2">
+                                <label class="control-label">{{payrollCalcTrans.translateText('Year',payrollCalcTrans.createViewSetup.viewSetup.ViewId)}}</label>
+                            </div>
+                            <div class="col-sm-2">
+                                <hcms-generic ng-model="payrollCalcTrans.dataItem.PayrollYear" hc-options="payrollCalcTrans.createViewSetup.ViewFieldsObject['PayrollYear']" hc-events="payrollCalcTrans.payrollTransYearEvents"></hcms-generic>
+                            </div>
+                        </ng-form>
+
+                        <!--Month-->
+                        <ng-form name="PayrollMonth" ng-class="{ 'has-error': PayrollMonth.$invalid }">
+                            <div class="col-sm-1">
+                                <label class="control-label">{{payrollCalcTrans.translateText('Month',payrollCalcTrans.createViewSetup.viewSetup.ViewId)}}</label>
+                            </div>
+                            <div class="col-sm-1">
+                                <hcms-generic ng-model="payrollCalcTrans.dataItem.PayrollMonth" hc-options="payrollCalcTrans.createViewSetup.ViewFieldsObject['PayrollMonth']" hc-events="payrollCalcTrans.payrollTransMonthEvents"></hcms-generic>
+                            </div>
+                        </ng-form>
+                    </div>
+
+                    <div class="form-group  row">
+                        <!--PayrollRunId-->
+                        <ng-form name="PayrollRunId" ng-class="{ 'has-error': PayrollRunId.$invalid }">
+                            <div class="col-sm-2">
+                                <label class="control-label">{{payrollCalcTrans.translateText('PayrollRunId',payrollCalcTrans.createViewSetup.viewSetup.ViewId)}}</label>
+                            </div>
+                            <div class="col-sm-4">
+                                <hcms-generic ng-model="payrollCalcTrans.dataItem.PayrollRunId" hc-options="payrollCalcTrans.createViewSetup.ViewFieldsObject['PayrollRunId']" hc-events="payrollCalcTrans.payrollTransRunIdEvents"></hcms-generic>
+                            </div>
+                        </ng-form>
+                    </div>
+
+                    <div class="form-group  row">
+                        <!--PayrollGroupId-->
+                        <ng-form name="PayrollGroupId" ng-class="{ 'has-error': RunNo.$invalid }">
+                            <div class="col-sm-2">
+                                <label class="control-label">{{payrollCalcTrans.translateText('PayrollGroupId',payrollCalcTrans.createViewSetup.viewSetup.ViewId)}}</label>
+                            </div>
+                            <div class="col-sm-4">
+                                <hcms-generic ng-model="payrollCalcTrans.dataItem.PayrollGroupId" hc-options="payrollCalcTrans.createViewSetup.ViewFieldsObject['PayrollGroupId']" hc-events="payrollCalcTrans.payrollTransPayrollGroupIdEvents"></hcms-generic>
+                            </div>
+                        </ng-form>
+                    </div>
+
+                    <div class="form-group  row">
+                        <!--PayrollTransactionTypeId-->
+                        <ng-form name="PayrollTransactionTypeId" ng-class="{ 'has-error': RunNo.$invalid }">
+                            <div class="col-sm-2">
+                                <label class="control-label">{{payrollCalcTrans.translateText('PayrollTransactionTypeId',payrollCalcTrans.createViewSetup.viewSetup.ViewId)}}</label>
+                            </div>
+                            <div class="col-sm-4">
+                                <hcms-generic ng-model="payrollCalcTrans.dataItem.PayrollTransactionTypeId" hc-options="payrollCalcTrans.createViewSetup.ViewFieldsObject['PayrollTransactionTypeId']" hc-events="payrollCalcTrans.payrollTransTypeIdEvents"></hcms-generic>
+                            </div>
+                        </ng-form>
+                    </div>
+
+
+                    <div class="form-group  row">
+                        <!--EmpAssignmentId-->
+                        <ng-form name="EmpAssignmentId" ng-class="{ 'has-error': EmpAssignmentId.$invalid }">
+                            <div class="col-sm-2">
+                                <label class="control-label">{{payrollCalcTrans.translateText('EmpAssignmentId',payrollCalcTrans.createViewSetup.viewSetup.ViewId)}}</label>
+                            </div>
+                            <div class="col-sm-4">
+                                <hcms-generic ng-model="payrollCalcTrans.dataItem.EmpAssignmentId" hc-options="payrollCalcTrans.createViewSetup.ViewFieldsObject['EmpAssignmentId']"></hcms-generic>
+                            </div>
+                        </ng-form>
+                    </div>
+
+
+
+                    <!--Save & Cancel Buttons-->
+                    <!--<div class="form-group  row">
+                        <div class="row">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <input type="submit" id="runBtn" class="btn btn-primary" value="{{payrollCalcTrans.translateText('Run')}}" ng-disabled="payrollCalcTransForm.$invalid" />
+                                <button type="button" class="btn btn-default" ng-click="payrollCalcTrans.stopCalc()">{{payrollCalcTrans.translateText('StopCalculation')}}</button>
+                            </div>
+                        </div>
+                    </div>-->
+
+                </form>
+
+                <!--<div>
+                    <button class="btn btn-default" data-toggle="modal" data-target="#payrollCalcTransModal">
+                        {{payrollCalcTrans.translateText('Show Progress')}}
+                    </button>
+                    <button class="btn btn-primary" ng-click="payrollCalcTrans.displayPayrollTransactionData()" ng-disabled="payrollCalcTransForm.$invalid">
+                        {{payrollCalcTrans.translateText('Display Payroll Transactions')}}
+                    </button>
+                </div>
+                <div>
+                    <button id="openBtn" class="btn btn-primary" ng-click="payrollCalcTrans.openPayrollTransaction()" ng-disabled="payrollCalcTransForm.$invalid">
+                        {{payrollCalcTrans.translateText('Open')}}
+                    </button>
+                    <button id="closeBtn" class="btn btn-primary" ng-click="payrollCalcTrans.closePayrollTransaction()" ng-disabled="payrollCalcTransForm.$invalid">
+                        {{payrollCalcTrans.translateText('Close')}}
+                    </button>
+                </div>-->
+
+                <div id="payrollCalcTransModal" class="modal fade" role="dialog" aria-hidden="true">
+                    <hcms-progress-calc hc-options="payrollCalcTrans.progressCalcOptions" progress-id="payrollCalcTrans.progressId" progress-type-id="payrollCalcTrans.progressTypeId"></hcms-progress-calc>
+                </div>
+
+
+            </div>
+        </div>
+        <div class="panel-body">
+
+
+
+
+            <section id="widget-calcTrans-grid" data-widget-grid>
+                <div class="row">
+                    <article class="col-xs-12">
+                        <div id="widget-calc-trans" data-jarvis-widget data-widget-editbutton="false" data-widget-deletebutton="false" data-widget-colorbutton="false" class="no-margin-bottom">
+                            <header class="header-background-color">
+                                <div class="widget-toolbar">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-link btn-sm" data-page-id="{{payrollCalcTrans.createViewSetup.ViewId}}" data-object-id="{{'ShowProgress-' + payrollCalcTrans.createViewSetup.ViewId}}" data-toggle="modal" data-target="#payrollCalcTransModal" title="{{payrollCalcTrans.translateText('ShowProgress', payrollCalcTrans.createViewSetup.ViewId)}}">
+                                            <i class="fa fa-spinner fa-lg"></i>
+                                        </button>
+                                        <button type="button" class="btn btn-link btn-sm" ng-click="payrollCalcTrans.displayPayrollTransactionData()" ng-disabled="payrollCalcTransForm.$invalid" data-page-id="{{payrollCalcTrans.createViewSetup.ViewId}}" data-object-id="{{'Display-' + payrollCalcTrans.createViewSetup.ViewId}}" data-toggle="tooltip" title="{{payrollCalcTrans.translateText('Display', payrollCalcTrans.createViewSetup.ViewId)}}">
+                                            <i class="fa fa-eye fa-lg"></i>
+                                        </button>
+                                    </div>
+                                </div>
+
+
+                                <div class="widget-toolbar">
+                                    <button type="button" id="closeBtn" class="btn btn-link btn-sm" ng-click="payrollCalcTrans.closePayrollTransaction()" ng-disabled="payrollCalcTransForm.$invalid" data-page-id="{{payrollCalcTrans.createViewSetup.ViewId}}" data-object-id="{{'Close-' + payrollCalcTrans.createViewSetup.ViewId}}" data-toggle="tooltip" title="{{payrollCalcTrans.translateText('LockTransactions', payrollCalcTrans.createViewSetup.ViewId)}}">
+                                        <i class="fa fa-lock fa-lg"></i>
+                                    </button>
+                                    <button type="button" id="openBtn" class="btn btn-link btn-sm" ng-click="payrollCalcTrans.openPayrollTransaction()" ng-disabled="payrollCalcTransForm.$invalid" data-page-id="{{payrollCalcTrans.createViewSetup.ViewId}}" data-object-id="{{'OpenEmployee-' + payrollCalcTrans.createViewSetup.ViewId}}" data-toggle="tooltip" title="{{payrollCalcTrans.translateText('UnlockTransactions', payrollCalcTrans.createViewSetup.ViewId)}}">
+                                        <i class="fa fa-unlock-alt fa-lg"></i>
+                                    </button>
+                                </div>
+                                <div class="widget-toolbar">
+                                    <button type="button" id="runBtn" class="btn btn-link btn-sm" ng-click="payrollCalcTrans.run(payrollCalcTransForm.$valid)" ng-disabled="payrollCalcTransForm.$invalid" data-page-id="{{payrollCalcTrans.createViewSetup.ViewId}}" data-object-id="{{'Run-' + payrollCalcTrans.createViewSetup.ViewId}}" data-toggle="tooltip" title="{{payrollCalcTrans.translateText('StartCalculation', payrollCalcTrans.createViewSetup.ViewId)}}">
+                                        <i class="fa fa-play-circle fa-lg"></i>
+                                    </button>
+                                    <button type="button" id="stopRunBtn" class="btn btn-link btn-sm" ng-click="payrollCalcTrans.stopCalc()" data-page-id="{{payrollCalcTrans.createViewSetup.ViewId}}" data-object-id="{{'StopRun-' + payrollCalcTrans.createViewSetup.ViewId}}" data-toggle="tooltip" title="{{payrollCalcTrans.translateText('StopCalculation', payrollCalcTrans.createViewSetup.ViewId)}}">
+                                        <i class="fa fa-stop-circle fa-lg"></i>
+                                    </button>
+                                </div>
+                            </header>
+                            <div class="widget-body view-background-color">
+
+                                <!--<ul class="nav nav-tabs">
+                                    <li>
+                                        <a href="#payrollTransactionHeaderData" data-toggle="tab">{{payrollCalcTrans.translateText('payrollTransactionHeader', payrollCalcTrans.selectedViewSetup.viewSetup.ViewId)}}</a>
+                                    </li>
+                                    <li>
+                                        <a href="#payrollTransactionDetailsData" data-toggle="tab">{{payrollCalcTrans.translateText('payrollTransactionDetails', payrollCalcTrans.selectedViewSetup.viewSetup.ViewId)}}</a>
+                                    </li>
+                                </ul>
+
+                                <div class="tab-content">
+                                    <div class="tab-pane" id="payrollTransactionHeaderData">
+                                        <smart-grid id="grd" name="gridName" data="payrollCalcTrans.payrollTransactionHeaderData" options="payrollCalcTrans.grid.gridOptions" column-defs="payrollCalcTrans.grid.gridColumnDefs" style="height:500px;"></smart-grid>
+                                    </div>
+                                    <div class="tab-pane" id="payrollTransactionDetailsData">
+                                        <smart-grid id="gridDetails" name="gridDetails" data="payrollCalcTrans.detailsData" options="payrollCalcTrans.detailsGrid.gridOptions" column-defs="payrollCalcTrans.detailsGrid.gridColumnDefs" style="height:500px;"></smart-grid>
+                                    </div>
+                                </div>-->
+
+                                <uib-tabset active="payrollCalcTrans.activeTabIndex" class="nav nav-tabs">
+                                    <uib-tab index="0">
+                                        <uib-tab-heading style="padding:2px;">
+                                            <a class="btn btn-xs" style="padding:2px;margin:1px;">
+                                            </a>
+                                            <span style="margin:2px; padding:3px;">{{payrollCalcTrans.translateText('payrollTransactionHeader',payrollCalcTrans.selectedViewSetup.ViewId)}}</span>
+                                        </uib-tab-heading>
+                                        <smart-grid id="grd" name="gridName" data="payrollCalcTrans.payrollTransactionHeaderData" options="payrollCalcTrans.grid.gridOptions" column-defs="payrollCalcTrans.grid.gridColumnDefs" style="height:500px;"></smart-grid>
+                                    </uib-tab>
+                                    <uib-tab index="1">
+                                        <uib-tab-heading style="padding:2px;">
+                                            <a class="btn btn-xs" style="padding:2px;margin:1px;">
+                                            </a>
+                                            <span style="margin:2px; padding:3px;">{{payrollCalcTrans.translateText('payrollTransactionDetails',payrollCalcTrans.selectedViewSetup.ViewId)}}</span>
+                                        </uib-tab-heading>
+                                        <smart-grid id="gridDetails" name="gridDetails" data="payrollCalcTrans.detailsData" options="payrollCalcTrans.detailsGrid.gridOptions" column-defs="payrollCalcTrans.detailsGrid.gridColumnDefs" style="height:500px;"></smart-grid>
+                                    </uib-tab>
+                                </uib-tabset>
+
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+
+
+        </div>
+
+        <div class="panel-footer">
+
+        </div>
+    </div>
+
+</div>

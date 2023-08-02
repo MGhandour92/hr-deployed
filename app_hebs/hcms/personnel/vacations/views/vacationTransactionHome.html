@@ -1,0 +1,71 @@
+﻿<!--<div>
+    <div class="row">
+        <div class="col-md-12">
+            <ul class="nav nav-tabs ">
+                <li class="active">
+                    <a href="#vacationHomeSearch" data-toggle="tab">{{vacTransHome.translateText('Home',vacTransHome.selectedViewSetup.ViewId)}}</a>
+                </li>
+                <li>
+                    <a href="#selectedVacationProfile" data-toggle="tab">{{vacTransHome.translateText('Profile',vacTransHome.selectedViewSetup.ViewId)}}</a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane active" id="vacationHomeSearch">
+
+                    <div id="widget-vacTransHome" data-jarvis-widget data-widget-editbutton="false" data-widget-deletebutton="false" data-widget-colorbutton="false" class="no-margin-bottom">
+                        <header class="header-background-color">
+                            <h2><strong>{{vacTransHome.translateText(vacTransHome.FormSetup.FormName,vacTransHome.selectedViewSetup.ViewId) }}</strong></h2>
+                            <div class="widget-toolbar">
+                                <a href-void class="btn" ng-click="vacTransHome.addNewClicked()"><i class="fa fa-plus"></i> {{vacTransHome.translateText('CreateNew', vacTransHome.selectedViewSetup.ViewId)}} </a>
+                            </div>
+                        </header>
+                        <div class="widget-body view-background-color">
+                            <emp-default-assignemnt-list options="vacTransHome.listOptions"></emp-default-assignemnt-list>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="selectedVacationProfile">
+                    <div ng-include src="'app_hebs/hcms/personnel/vacations/views/vacationSelectedProfile.html'"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>-->
+
+
+<div>
+    <div class="row">
+        <div class="col-md-12">
+            <uib-tabset active="vacTransHome.activeTabIndex" class="nav nav-tabs">
+                <uib-tab index="0">
+                    <uib-tab-heading style="padding:2px;">
+                        <a class="btn btn-xs" style="padding:2px;margin:1px;">
+                        </a>
+                        <span style="margin:2px; padding:3px;">{{vacTransHome.translateText('Home',vacTransHome.selectedViewSetup.ViewId)}}</span>
+                    </uib-tab-heading>
+                    <div id="widget-vacTransHome" data-jarvis-widget data-widget-editbutton="false" data-widget-deletebutton="false" data-widget-colorbutton="false" class="no-margin-bottom">
+                        <header class="header-background-color">
+                            <h2><strong>{{vacTransHome.translateText(vacTransHome.FormSetup.FormName,vacTransHome.selectedViewSetup.ViewId) }}</strong></h2>
+                            <div class="widget-toolbar">
+                                <a href-void class="btn" ng-click="vacTransHome.addNewClicked()"><i class="fa fa-plus"></i> {{vacTransHome.translateText('CreateNew', vacTransHome.selectedViewSetup.ViewId)}} </a>
+                            </div>
+                        </header>
+                        <div class="widget-body view-background-color">
+                            <emp-default-assignemnt-list options="vacTransHome.listOptions"></emp-default-assignemnt-list>
+                        </div>
+                    </div>
+                </uib-tab>
+                <uib-tab index="1">
+                    <uib-tab-heading style="padding:2px;">
+                        <a class="btn btn-xs" style="padding:2px;margin:1px;">
+                        </a>
+                        <span style="margin:2px; padding:3px;">{{vacTransHome.translateText('Profile',vacTransHome.selectedViewSetup.ViewId)}}</span>
+                    </uib-tab-heading>
+                    <div ng-include src="'app_hebs/hcms/personnel/vacations/views/vacationSelectedProfile.html'"></div>
+                </uib-tab>
+            </uib-tabset>
+
+        </div>
+    </div>
+</div>
+

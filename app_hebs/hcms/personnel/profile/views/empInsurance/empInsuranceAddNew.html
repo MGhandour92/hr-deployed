@@ -1,0 +1,82 @@
+﻿<div class="widget-body view-background-color">
+
+    <div class="form-group  row">
+        <!--InsuranceRuleId-->
+        <ng-form name="InsuranceRuleId" ng-class="{ 'has-error': InsuranceRuleId.$invalid }">
+            <div class="col-sm-2">
+                <label class="control-label">{{dynamicForm.translateText(dynamicForm.selectedViewSetup.ViewFieldsObject["InsuranceRuleId"].FieldName , dynamicForm.selectedViewSetup.ViewId)}}</label>
+            </div>
+            <div class="col-sm-4">
+                <hcms-generic ng-model="dynamicForm.dataItem.InsuranceRuleId" hc-options="dynamicForm.selectedViewSetup.ViewFieldsObject['InsuranceRuleId']"></hcms-generic>
+            </div>
+        </ng-form>
+
+
+    </div>
+    <div class="form-group  row">
+        <!--EmpInsuranceNumber-->
+        <ng-form name="EmpInsuranceNumber" ng-class="{ 'has-error': EmpInsuranceNumber.$invalid }">
+            <div class="col-sm-2">
+                <label class="control-label">{{dynamicForm.translateText(dynamicForm.selectedViewSetup.ViewFieldsObject["EmpInsuranceNumber"].FieldName , dynamicForm.selectedViewSetup.ViewId)}}</label>
+            </div>
+            <div class="col-sm-4">
+                <hcms-generic ng-model="dynamicForm.dataItem.EmpInsuranceNumber" hc-options="dynamicForm.selectedViewSetup.ViewFieldsObject['EmpInsuranceNumber']"></hcms-generic>
+            </div>
+        </ng-form>
+        <!--InsuranceOfficeId-->
+        <ng-form name="InsuranceOfficeId" ng-class="{ 'has-error': InsuranceOfficeId.$invalid }">
+            <div class="col-sm-2">
+                <label class="control-label">{{dynamicForm.translateText(dynamicForm.selectedViewSetup.ViewFieldsObject["InsuranceOfficeId"].FieldName , dynamicForm.selectedViewSetup.ViewId)}}</label>
+            </div>
+            <div class="col-sm-4">
+                <hcms-generic ng-model="dynamicForm.dataItem.InsuranceOfficeId" hc-options="dynamicForm.selectedViewSetup.ViewFieldsObject['InsuranceOfficeId']"></hcms-generic>
+            </div>
+        </ng-form>
+
+    </div>
+    <div class="form-group  row">
+        <!--EmpInsuranceStartDate-->
+        <ng-form name="EmpInsuranceStartDate" ng-class="{ 'has-error': EmpInsuranceStartDate.$invalid }">
+            <div class="col-sm-2">
+                <label class="control-label">{{dynamicForm.translateText(dynamicForm.selectedViewSetup.ViewFieldsObject["EmpInsuranceStartDate"].FieldName , dynamicForm.selectedViewSetup.ViewId)}}</label>
+            </div>
+            <div class="col-sm-4">
+                <hcms-generic ng-model="dynamicForm.dataItem.EmpInsuranceStartDate" hc-options="dynamicForm.selectedViewSetup.ViewFieldsObject['EmpInsuranceStartDate']"></hcms-generic>
+            </div>
+        </ng-form>
+        <!--EmpInsuranceEndDate-->
+        <ng-form name="EmpInsuranceEndDate" ng-class="{ 'has-error': EmpInsuranceEndDate.$invalid }">
+            <div class="col-sm-2">
+                <label class="control-label">{{dynamicForm.translateText(dynamicForm.selectedViewSetup.ViewFieldsObject["EmpInsuranceEndDate"].FieldName , dynamicForm.selectedViewSetup.ViewId)}}</label>
+            </div>
+            <div class="col-sm-4">
+                <hcms-generic ng-model="dynamicForm.dataItem.EmpInsuranceEndDate" hc-options="dynamicForm.selectedViewSetup.ViewFieldsObject['EmpInsuranceEndDate']"></hcms-generic>
+            </div>
+        </ng-form>
+    </div>
+
+
+
+    <div class="form-group  row">
+        <!--Disabled-->
+        <ng-form name="Disabled" ng-class="{ 'has-error': Disabled.$invalid }">
+            <div class="col-sm-2">
+                <label class="control-label">{{dynamicForm.translateText(dynamicForm.selectedViewSetup.ViewFieldsObject["Disabled"].FieldName , dynamicForm.selectedViewSetup.ViewId)}}</label>
+            </div>
+            <div class="col-sm-4">
+                <hcms-generic ng-model="dynamicForm.dataItem.Disabled" hc-options="dynamicForm.selectedViewSetup.ViewFieldsObject['Disabled']"></hcms-generic>
+            </div>
+        </ng-form>
+    </div>
+
+    <!--Save & Cancel Buttons-->
+    <!--<div class="row">
+        <div class="col-sm-offset-2 col-sm-10">
+            <input type="submit" class="btn btn-primary" value="{{dynamicForm.translateText('Save' , dynamicForm.selectedViewSetup.ViewId)}}" ng-disabled="myEmpInsuranceAddForm.$invalid" />
+            <button type="button" class="btn btn-default" ng-click="dynamicForm.indexItemView()">{{dynamicForm.translateText('Cancel' , dynamicForm.selectedViewSetup.ViewId)}}</button>
+        </div>
+    </div>-->
+
+
+</div>
+<!--/.container (DON'T NEST) -->

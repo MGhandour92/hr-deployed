@@ -1,0 +1,20 @@
+﻿
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <span class="panel-title">{{dynamicForm.translateText(dynamicForm.FormSetup.MyForm.FormName , dynamicForm.selectedViewSetup.ViewId)}}</span>
+    </div>
+    <div class="panel-body">
+        <div ng-include src="'app_hebs/forms/recuritment/applicant/views/applicantCourse/applicantCourseAddNew.html'" ng-show='dynamicForm.displayCreateNewTemplate || dynamicForm.displayEditTemplate'></div>
+        <!--<div ng-include src="'app_hcms/personnel/profile/dynamicForm/views/dynamicFormEdit.html'" ng-show='dynamicForm.displayEditTemplate'></div>-->
+
+        <div>
+            <a href="#" ng-click="dynamicForm.addItemView()">{{dynamicForm.translateText('CreateNew' , dynamicForm.selectedViewSetup.ViewId)}}</a>
+        </div>
+        <div class="table-primary">
+
+            <smart-grid id="grd" name="gridName" data="dynamicForm.dataList" options="dynamicForm.grid.gridOptions" column-defs="dynamicForm.grid.gridColumnDefs" style="height:500px;"></smart-grid>
+
+        </div>
+    </div>
+</div>

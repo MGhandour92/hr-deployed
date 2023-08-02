@@ -1,0 +1,59 @@
+﻿<div class="panel panel-default">
+
+    <div class="panel-body">
+
+        <section id="widget-importCloseAttendance-grid" data-widget-grid>
+            <div class="row">
+                <article class="col-xs-12">
+
+                    <div id="widget-importCloseAttendance" data-jarvis-widget data-widget-editbutton="false" data-widget-deletebutton="false" data-widget-colorbutton="false" class="no-margin-bottom">
+
+                        <header class="header-background-color">
+                            <div class="widget-toolbar">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-link btn-sm" ng-click="importCloseAttendance.displayAllDailyData()" ng-disabled="importCloseAttendanceForm.$invalid" data-page-id="{{importCloseAttendance.createViewSetup.ViewId}}" data-object-id="{{'DisplayAllDaily-' + importCloseAttendance.createViewSetup.ViewId}}" data-toggle="tooltip" title="{{importCloseAttendance.translateText('Display', importCloseAttendance.createViewSetup.ViewId)}}">
+                                        <i class="fa fa-eye fa-lg"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="widget-toolbar">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-link btn-sm" data-page-id="{{importCloseAttendance.createViewSetup.ViewId}}" data-object-id="{{'ShowProgress-' + importCloseAttendance.createViewSetup.ViewId}}" data-toggle="modal" data-target="#importCloseAttendanceModal" title="{{importCloseAttendance.translateText('ShowProgress', payrollCalcTrans.createViewSetup.ViewId)}}">
+                                        <i class="fa fa-spinner fa-lg"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="widget-toolbar">
+                                <button type="button" id="runBtn" class="btn btn-link btn-sm" ng-click="importCloseAttendance.run(importCloseAttendanceForm.$valid)" ng-disabled="importCloseAttendanceForm.$invalid" data-page-id="{{importCloseAttendance.createViewSetup.ViewId}}" data-object-id="{{'Run-' + importCloseAttendance.createViewSetup.ViewId}}" data-toggle="tooltip" title="{{importCloseAttendance.translateText('StartCalculation', importCloseAttendance.createViewSetup.ViewId)}}">
+                                    <i class="fa fa-play-circle fa-lg"></i>
+                                </button>
+                                <button type="button" id="stopRunBtn" class="btn btn-link btn-sm" ng-click="importCloseAttendance.stopCalc()" data-page-id="{{importCloseAttendance.createViewSetup.ViewId}}" data-object-id="{{'StopRun-' + importCloseAttendance.createViewSetup.ViewId}}" data-toggle="tooltip" title="{{importCloseAttendance.translateText('StopCalculation', importCloseAttendance.createViewSetup.ViewId)}}">
+                                    <i class="fa fa-stop-circle fa-lg"></i>
+                                </button>
+                            </div>
+                            <div class="widget-toolbar">
+                                <label>
+                                    <input type="checkbox" ng-model="importCloseAttendance.useImport" />
+                                    {{importCloseAttendance.translateText('Import', importCloseAttendance.createViewSetup.ViewId)}}
+                                </label>
+                                <label>
+                                    <input type="checkbox" ng-model="importCloseAttendance.useCloseDay" />
+                                    {{importCloseAttendance.translateText('CloseDay', importCloseAttendance.createViewSetup.ViewId)}}
+                                </label>
+                            </div>
+
+                        </header>
+
+                        <div class="widget-body view-background-color">
+                            <div ng-include src="'app_hebs/hcms/attendance/importCloseDayAttendance/views/dailyActionTabsView.html'"></div>
+                        </div>
+
+                    </div>
+                </article>
+            </div>
+        </section>
+
+    </div>
+
+</div>

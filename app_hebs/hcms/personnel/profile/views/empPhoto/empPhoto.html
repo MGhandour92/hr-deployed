@@ -1,0 +1,40 @@
+﻿
+<div>
+    <form name="myEmpPhotoForm">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <div>
+                    <div ng-hide="empPhoto.isNewProfile()" class="btn-group" role="group">
+                        <button class="btn btn-sm center-block btn-primary" ng-disabled="!myEmpPhotoForm.$valid"
+                                ng-click="empPhoto.uploadPic(empPhoto.picFile)">
+                            {{empPhoto.translateText('Save')}}
+                        </button>
+                        <button class="btn btn-sm center-block btn-danger" ng-click="empPhoto.clearPhoto();" ng-show="!empPhoto.isCleared()">{{empPhoto.translateText('Remove')}}</button>
+                    </div>
+                    <div class="progress" ng-show="empPhoto.picFile.progress >= 0 && empPhoto.picFile.progress < 100">
+                        <div style="width:{{empPhoto.picFile.progress}}%"
+                             ng-bind="empPhoto.picFile.progress + '%'">
+                        </div>
+                    </div>
+                    <span ng-show="empPhoto.picFile.result">{{empPhoto.translateText('UploadSuccessfully')}}</span>
+                    <span class="err" ng-show="empPhoto.errorMsg">{{empPhoto.errorMsg}}</span>
+                </div>
+            </div>
+            <div class="panel-body empImage">
+                <div class="empImage">
+                    <img class="img-thumbnail center-block empImage" ngf-thumbnail="empPhoto.picFile" ngf-select="" ngf-drop="" ngf-accept="acceptSelect" ngf-resize="{width: 1000, height: 1000, centerCrop: true}" ng-model="empPhoto.picFile" name="file"
+                         accept="image/*" ngf-max-size="2MB"
+                         ngf-model-invalid="empPhoto.errorFile">
+                    <!--<i ng-show="myEmpPhotoForm.file.$error.maxSize">
+                        {{empPhoto.translateText('FileTooLarge')}}
+                        {{errorFile.size / 1000000|number:1}}MB: max 2M
+                    </i>-->
+                </div>
+            </div>
+
+        </div>
+    </form>
+</div>
+
+
+

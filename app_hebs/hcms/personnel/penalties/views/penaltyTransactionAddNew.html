@@ -1,0 +1,151 @@
+﻿<div class="widget-body view-background-color">
+ 
+    <div class="form-group  row">
+
+        <!--EmpPenaltyCode-->
+        <ng-form name="EmpPenaltyCode" ng-class="{ 'has-error': EmpPenaltyCode.$invalid }">
+            <div class="col-sm-2">
+                <label class="control-label">{{dynamicForm.translateText(dynamicForm.selectedViewSetup.ViewFieldsObject["EmpPenaltyCode"].FieldName , dynamicForm.selectedViewSetup.viewSetup.ViewId)}}</label>
+            </div>
+            <div class="col-sm-4">
+                <hcms-generic ng-model="dynamicForm.dataItem.EmpPenaltyCode" hc-options="dynamicForm.selectedViewSetup.ViewFieldsObject['EmpPenaltyCode']"></hcms-generic>
+            </div>
+        </ng-form>
+
+        <!--EmpPenaltyRequestDate-->
+        <!--<ng-form name="EmpPenaltyRequestDate" ng-class="{ 'has-error': EmpPenaltyRequestDate.$invalid }">
+            <div class="col-sm-2">
+                <label class="control-label">{{dynamicForm.translateText(dynamicForm.selectedViewSetup.ViewFieldsObject["EmpPenaltyRequestDate"].FieldName , dynamicForm.selectedViewSetup.viewSetup.ViewId)}}</label>
+            </div>
+            <div class="col-sm-4">
+                <hcms-generic ng-model="dynamicForm.dataItem.EmpPenaltyRequestDate" hc-options="dynamicForm.selectedViewSetup.ViewFieldsObject['EmpPenaltyRequestDate']"></hcms-generic>
+            </div>
+        </ng-form>-->
+
+
+
+    </div>
+    <div class="form-group  row">
+        <!--EmpPenaltyDate-->
+        <ng-form name="EmpPenaltyDate" ng-class="{ 'has-error': EmpPenaltyDate.$invalid }">
+            <div class="col-sm-2">
+                <label class="control-label">{{dynamicForm.translateText(dynamicForm.selectedViewSetup.ViewFieldsObject["EmpPenaltyDate"].FieldName , dynamicForm.selectedViewSetup.viewSetup.ViewId)}}</label>
+            </div>
+            <div class="col-sm-4">
+                <hcms-generic ng-model="dynamicForm.dataItem.EmpPenaltyDate" hc-options="dynamicForm.selectedViewSetup.ViewFieldsObject['EmpPenaltyDate']" hc-events="dynamicForm.penaltyDateEvents"></hcms-generic>
+            </div>
+        </ng-form>
+        <!--EmpPenaltyValidDate-->
+        <ng-form name="EmpPenaltyValidDate" ng-class="{ 'has-error': EmpPenaltyValidDate.$invalid }">
+            <div class="col-sm-2">
+                <label class="control-label">{{dynamicForm.translateText(dynamicForm.selectedViewSetup.ViewFieldsObject["EmpPenaltyValidDate"].FieldName , dynamicForm.selectedViewSetup.viewSetup.ViewId)}}</label>
+            </div>
+            <div class="col-sm-4">
+                <hcms-generic ng-model="dynamicForm.dataItem.EmpPenaltyValidDate" hc-options="dynamicForm.selectedViewSetup.ViewFieldsObject['EmpPenaltyValidDate']"></hcms-generic>
+            </div>
+        </ng-form>
+    </div>
+    <div class="form-group  row">
+        <!--PenaltyId-->
+        <ng-form name="PenaltyId" ng-class="{ 'has-error': PenaltyId.$invalid }">
+            <div class="col-sm-2">
+                <label class="control-label">{{dynamicForm.translateText(dynamicForm.selectedViewSetup.ViewFieldsObject["PenaltyId"].FieldName , dynamicForm.selectedViewSetup.viewSetup.ViewId)}}</label>
+            </div>
+            <div class="col-sm-4">
+                <hcms-generic ng-model="dynamicForm.dataItem.PenaltyId" hc-options="dynamicForm.selectedViewSetup.ViewFieldsObject['PenaltyId']" hc-events="dynamicForm.penaltyIdEvents"></hcms-generic>
+            </div>
+        </ng-form>
+        <!--PenaltyActionId-->
+        <ng-form name="PenaltyActionId" ng-class="{ 'has-error': PenaltyActionId.$invalid }">
+            <div class="col-sm-2">
+                <label class="control-label">{{dynamicForm.translateText(dynamicForm.selectedViewSetup.ViewFieldsObject["PenaltyActionId"].FieldName , dynamicForm.selectedViewSetup.viewSetup.ViewId)}}</label>
+            </div>
+            <div class="col-sm-4">
+                <hcms-generic ng-model="dynamicForm.dataItem.PenaltyActionId" hc-options="dynamicForm.selectedViewSetup.ViewFieldsObject['PenaltyActionId']"></hcms-generic>
+            </div>
+        </ng-form>
+
+    </div>
+    <div class="form-group  row">
+        <!--PenaltyAmount-->
+        <ng-form name="PenaltyAmount" ng-class="{ 'has-error': PenaltyAmount.$invalid }">
+            <div class="col-sm-2">
+                <label class="control-label">{{dynamicForm.translateText(dynamicForm.selectedViewSetup.ViewFieldsObject["PenaltyAmount"].FieldName , dynamicForm.selectedViewSetup.viewSetup.ViewId)}}</label>
+            </div>
+            <div class="col-sm-2">
+                <hcms-generic ng-model="dynamicForm.dataItem.PenaltyAmount" hc-options="dynamicForm.selectedViewSetup.ViewFieldsObject['PenaltyAmount']"></hcms-generic>
+            </div>
+        </ng-form>
+        <!--PenaltyUnitId-->
+        <ng-form name="PenaltyUnitId" ng-class="{ 'has-error': PenaltyUnitId.$invalid }">
+            <div class="col-sm-2">
+                <label class="control-label">{{dynamicForm.translateText(dynamicForm.selectedViewSetup.ViewFieldsObject["PenaltyUnitId"].FieldName , dynamicForm.selectedViewSetup.viewSetup.ViewId)}}</label>
+            </div>
+            <div class="col-sm-2">
+                <hcms-generic ng-model="dynamicForm.dataItem.PenaltyUnitId" hc-options="dynamicForm.selectedViewSetup.ViewFieldsObject['PenaltyUnitId']"></hcms-generic>
+            </div>
+        </ng-form>
+        <!--RepetitionNumber-->
+        <ng-form name="RepetitionNumber" ng-class="{ 'has-error': RepetitionNumber.$invalid }">
+            <div class="col-sm-2">
+                <label class="control-label">{{dynamicForm.translateText(dynamicForm.selectedViewSetup.ViewFieldsObject["RepetitionNumber"].FieldName , dynamicForm.selectedViewSetup.viewSetup.ViewId)}}</label>
+            </div>
+            <div class="col-sm-2">
+                <hcms-generic ng-model="dynamicForm.dataItem.RepetitionNumber" hc-options="dynamicForm.selectedViewSetup.ViewFieldsObject['RepetitionNumber']"></hcms-generic>
+            </div>
+        </ng-form>
+    </div>
+
+
+    <div class="form-group  row">
+        <!--EmpPenaltyComment-->
+        <ng-form name="EmpPenaltyComment" ng-class="{ 'has-error': EmpPenaltyComment.$invalid }">
+            <div class="col-sm-2">
+                <label class="control-label">{{dynamicForm.translateText(dynamicForm.selectedViewSetup.ViewFieldsObject["EmpPenaltyComment"].FieldName , dynamicForm.selectedViewSetup.viewSetup.ViewId)}}</label>
+            </div>
+            <div class="col-sm-10">
+                <hcms-generic ng-model="dynamicForm.dataItem.EmpPenaltyComment" hc-options="dynamicForm.selectedViewSetup.ViewFieldsObject['EmpPenaltyComment']"></hcms-generic>
+            </div>
+        </ng-form>
+    </div>
+    <div class="form-group  row">
+        <!--EmpPenaltyInvestigation-->
+        <ng-form name="EmpPenaltyInvestigation" ng-class="{ 'has-error': EmpPenaltyInvestigation.$invalid }">
+            <div class="col-sm-2">
+                <label class="control-label">{{dynamicForm.translateText(dynamicForm.selectedViewSetup.ViewFieldsObject["EmpPenaltyInvestigation"].FieldName , dynamicForm.selectedViewSetup.viewSetup.ViewId)}}</label>
+            </div>
+            <div class="col-sm-4">
+                <hcms-generic ng-model="dynamicForm.dataItem.EmpPenaltyInvestigation" hc-options="dynamicForm.selectedViewSetup.ViewFieldsObject['EmpPenaltyInvestigation']"></hcms-generic>
+            </div>
+        </ng-form>
+
+        <!--EmpPenaltyDiscipline-->
+        <ng-form name="EmpPenaltyDiscipline" ng-class="{ 'has-error': EmpPenaltyDiscipline.$invalid }">
+            <div class="col-sm-2">
+                <label class="control-label">{{dynamicForm.translateText(dynamicForm.selectedViewSetup.ViewFieldsObject["EmpPenaltyDiscipline"].FieldName , dynamicForm.selectedViewSetup.viewSetup.ViewId)}}</label>
+            </div>
+            <div class="col-sm-4">
+                <hcms-generic ng-model="dynamicForm.dataItem.EmpPenaltyDiscipline" hc-options="dynamicForm.selectedViewSetup.ViewFieldsObject['EmpPenaltyDiscipline']"></hcms-generic>
+            </div>
+        </ng-form>
+    </div>
+    <div class="form-group  row">
+        <!--Disabled-->
+        <ng-form name="Disabled" ng-class="{ 'has-error': Disabled.$invalid }">
+            <div class=" col-sm-offset-2 col-sm-4">
+                <hcms-generic ng-model="dynamicForm.dataItem.Disabled" hc-options="dynamicForm.selectedViewSetup.ViewFieldsObject['Disabled']" hc-text="{{dynamicForm.translateText(dynamicForm.selectedViewSetup.ViewFieldsObject['Disabled'].FieldName , dynamicForm.selectedViewSetup.viewSetup.ViewId)}}"></hcms-generic>
+            </div>
+        </ng-form>
+        <!--Closed-->
+        <ng-form name="Closed" ng-class="{ 'has-error': Closed.$invalid }">
+            <div class=" col-sm-offset-2 col-sm-4">
+                <hcms-generic ng-model="dynamicForm.dataItem.Closed" hc-options="dynamicForm.selectedViewSetup.ViewFieldsObject['Closed']" hc-text="{{dynamicForm.translateText(dynamicForm.selectedViewSetup.ViewFieldsObject['Closed'].FieldName , dynamicForm.selectedViewSetup.viewSetup.ViewId)}}"></hcms-generic>
+            </div>
+        </ng-form>
+    </div>
+   
+
+     
+
+</div>
+    

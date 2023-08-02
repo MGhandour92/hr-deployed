@@ -1,0 +1,56 @@
+﻿
+<form class="form-horizontal" name="vacTransAddForm" ng-submit="dynamicForm.saveItem(vacTransAddForm.$valid)" novalidate>
+
+    <div id="content RemovePaddingLeft ">
+        <section id="widget-grid" data-widget-grid>
+            <div class="row">
+                <article class="col-xs-12">
+
+                    <div id="widget-vac-trans" data-jarvis-widget data-widget-editbutton="false" data-widget-deletebutton="false" data-widget-colorbutton="false" class="no-margin-bottom">
+                        <header class="header-background-color">
+                            <h2><strong>{{dynamicForm.FormSetup.MyForm.FormName || translate }}</strong></h2>
+                            <div class="widget-toolbar">
+                                <div class="btn-group">
+                                    <button type="submit" class="btn btn-link btn-sm" data-page-id="{{dynamicForm.selectedViewSetup.ViewId}}" data-object-id="{{'Save-' + dynamicForm.selectedViewSetup.ViewId}}" ng-disabled="vacTransAddForm.$invalid" data-toggle="tooltip" title="{{dynamicForm.translateText('Save', dynamicForm.selectedViewSetup.ViewId)}}">
+                                        <i class="fa fa-save fa-lg"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                        </header>
+                        <div class="widget-body view-background-color">
+
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <div class="row">
+                                        <div class="col-sm-2">
+                                            {{'Year' | translate}}
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <hcms-year ng-model="dynamicForm.selectedYear" hc-options="dynamicForm.yearOptions"></hcms-year>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-2">
+                                            <label class="form-label">
+                                                {{'Calendar' | translate}}
+                                            </label>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <hcms-select ng-model="dynamicForm.selectedCalendar" hc-options="dynamicForm.calendarOptions"></hcms-select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel-body">
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </div>
+
+</form>

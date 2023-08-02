@@ -1,0 +1,78 @@
+﻿
+<!--<div>
+    <div class="row">
+        <div class="col-md-12">
+            <ul class="nav nav-tabs ">
+                <li class="active">
+                    <a href="#excelHeaderVacTransHomeSearch" data-toggle="tab">{{excelHeaderHome.translateText('Home',excelHeaderHome.selectedViewSetup.ViewId)}}</a>
+                </li>
+                <li>
+                    <a href="#selectedexcelVacTransHeader" data-toggle="tab">{{excelHeaderHome.translateText('Excel',excelHeaderHome.selectedViewSetup.ViewId)}}</a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane active" id="excelHeaderVacTransHomeSearch">
+
+                    <div id="widget-excelHeaderHome" data-jarvis-widget data-widget-editbutton="false" data-widget-deletebutton="false" data-widget-colorbutton="false" class="no-margin-bottom">
+                        <header class="header-background-color">
+                            <h2><strong>{{excelHeaderHome.translateText(excelHeaderHome.FormSetup.FormName,excelHeaderHome.selectedViewSetup.ViewId) }}</strong></h2>
+                            <div class="widget-toolbar">
+                                <a href-void class="btn" ng-click="excelHeaderHome.addNewClicked()"><i class="fa fa-plus"></i> {{excelHeaderHome.translateText('CreateNew', excelHeaderHome.selectedViewSetup.ViewId)}} </a>
+                            </div>
+                        </header>
+                        <div class="widget-body view-background-color">
+                            <smart-grid id="grd" name="gridName" data="excelHeaderHome.dataList" options="excelHeaderHome.grid.gridOptions" column-defs="excelHeaderHome.grid.gridColumnDefs" style="height:500px;"></smart-grid>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="selectedexcelVacTransHeader">
+                    <div ng-repeat="subNavForm in excelHeaderHome.FormSetup.MyForm.SubForms">
+                        <hcms-dynamic-form controller-name="{{subNavForm.JsController}}" controller-as="{{subNavForm.JsControllerAs}}" form-id="subNavForm.FormId" parent-id-field-name="'RefNo'" parent-item="excelHeaderHome.dataItem" form-template-url="subNavForm.StartView"></hcms-dynamic-form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>-->
+
+
+
+<div>
+    <div class="row">
+        <div class="col-md-12">
+            <uib-tabset active="excelHeaderHome.activeTabIndex" class="nav nav-tabs">
+                <uib-tab index="0">
+                    <uib-tab-heading style="padding:2px;">
+                        <a class="btn btn-xs" style="padding:2px;margin:1px;">
+                        </a>
+                        <span style="margin:2px; padding:3px;">{{excelHeaderHome.translateText('Home',excelHeaderHome.selectedViewSetup.ViewId)}}</span>
+                    </uib-tab-heading>
+                    <div id="widget-excelHeaderHome" data-jarvis-widget data-widget-editbutton="false" data-widget-deletebutton="false" data-widget-colorbutton="false" class="no-margin-bottom">
+                        <header class="header-background-color">
+                            <h2><strong>{{excelHeaderHome.translateText(excelHeaderHome.FormSetup.FormName,excelHeaderHome.selectedViewSetup.ViewId) }}</strong></h2>
+                            <div class="widget-toolbar">
+                                <a href-void class="btn" ng-click="excelHeaderHome.addNewClicked()"><i class="fa fa-plus"></i> {{excelHeaderHome.translateText('CreateNew', excelHeaderHome.selectedViewSetup.ViewId)}} </a>
+                            </div>
+                        </header>
+                        <div class="widget-body view-background-color">
+                            <smart-grid id="grd" name="gridName" data="excelHeaderHome.dataList" options="excelHeaderHome.grid.gridOptions" column-defs="excelHeaderHome.grid.gridColumnDefs" style="height:500px;"></smart-grid>
+                        </div>
+                    </div>
+                </uib-tab>
+                <uib-tab index="1">
+                    <uib-tab-heading style="padding:2px;">
+                        <a class="btn btn-xs" style="padding:2px;margin:1px;">
+                        </a>
+                        <span style="margin:2px; padding:3px;">{{excelHeaderHome.translateText('Excel',excelHeaderHome.selectedViewSetup.ViewId)}}</span>
+                    </uib-tab-heading>
+                    <div ng-repeat="subNavForm in excelHeaderHome.FormSetup.MyForm.SubForms">
+                        <hcms-dynamic-form controller-name="{{subNavForm.JsController}}" controller-as="{{subNavForm.JsControllerAs}}" form-id="subNavForm.FormId" parent-id-field-name="'RefNo'" parent-item="excelHeaderHome.dataItem" form-template-url="subNavForm.StartView"></hcms-dynamic-form>
+                    </div>
+                </uib-tab>
+            </uib-tabset>        </div>
+    </div>
+</div>
+
+
+
+

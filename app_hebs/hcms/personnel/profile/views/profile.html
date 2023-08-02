@@ -1,0 +1,21 @@
+﻿<div class="row ">
+    <div class="col-xs-12">
+        <div class="row">
+            <div class="col-xs-12 col-sm-4 col-md-2 RemovePaddingright">
+                <hcms-dynamic-form controller-name="profilePhotoController" controller-as="empPhoto" form-id="0" parent-id-field-name="'ProfileId'" parent-item="allProfiles.dataItem" form-template-url="'app_hebs/hcms/personnel/profile/views/empPhoto/empPhoto.html'"></hcms-dynamic-form>
+            </div>
+            <div class="col-xs-12 col-sm-8 col-md-10 RemovePaddingLeft">
+                <div ng-include src="'app_hebs/hcms/personnel/profile/views/profileHeader/profileHeader.html'"></div>
+            </div>
+        </div>
+
+
+        <div class="row"  ng-show="allProfiles.displayEditTemplate">
+            <div class="col-md-12">
+                <form-nav-tabs form-id="allProfiles.FormSetup.MyForm.FormId" parent-id-field-name="'ProfileId'" parent-item="allProfiles.dataItem" hc-options="allProfiles.navTabOptions"></form-nav-tabs>
+            </div>
+        </div>
+    </div>
+</div>
+
+

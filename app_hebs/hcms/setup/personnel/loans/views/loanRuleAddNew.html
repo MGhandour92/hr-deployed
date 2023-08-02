@@ -1,0 +1,296 @@
+﻿<div class="view">
+    <form class="form-horizontal" name="myAddLoanRuleForm" ng-submit="loanRule.saveItem(myAddLoanRuleForm.$valid)" novalidate>
+        
+        <div class="form-group  row">
+            <!--LoanRuleCode-->
+            <ng-form name="LoanRuleCode" ng-class="{ 'has-error': LoanRuleCode.$invalid }">
+                <div class="col-sm-2">
+                    <label class="control-label">{{loanRule.translateText(loanRule.selectedViewSetup.ViewFieldsObject["LoanRuleCode"].FieldName , loanRule.selectedViewSetup.viewSetup.ViewId)}}</label>
+                </div>
+                <div class="col-sm-4">
+                    <hcms-generic ng-model="loanRule.dataItem.LoanRuleCode" hc-options="loanRule.selectedViewSetup.ViewFieldsObject['LoanRuleCode']"></hcms-generic>
+                </div>
+            </ng-form>
+        </div>
+        <div class="form-group  row">
+            <!--LoanRuleName-->
+            <ng-form name="LoanRuleName" ng-class="{ 'has-error': LoanRuleName.$invalid }">
+                <div class="col-sm-2">
+                    <label class="control-label">{{loanRule.translateText(loanRule.selectedViewSetup.ViewFieldsObject["LoanRuleName"].FieldName , loanRule.selectedViewSetup.viewSetup.ViewId)}}</label>
+                </div>
+                <div class="col-sm-4">
+                    <hcms-generic ng-model="loanRule.dataItem.LoanRuleName" hc-options="loanRule.selectedViewSetup.ViewFieldsObject['LoanRuleName']"></hcms-generic>
+                </div>
+            </ng-form>
+            <!--LoanRuleName_-->
+            <ng-form name="LoanRuleName_" ng-class="{ 'has-error': LoanRuleName_.$invalid }">
+                <div class="col-sm-2">
+                    <label class="control-label">{{loanRule.translateText(loanRule.selectedViewSetup.ViewFieldsObject["LoanRuleName_"].FieldName , loanRule.selectedViewSetup.viewSetup.ViewId)}}</label>
+                </div>
+                <div class="col-sm-4">
+                    <hcms-generic ng-model="loanRule.dataItem.LoanRuleName_" hc-options="loanRule.selectedViewSetup.ViewFieldsObject['LoanRuleName_']"></hcms-generic>
+                </div>
+            </ng-form>
+        </div>
+        <div class="form-group  row">
+            <!--IsGuarantors-->
+            <ng-form name="IsGuarantors" ng-class="{ 'has-error': IsGuarantors.$invalid }">
+                <div class="col-sm-offset-2 col-sm-2">
+                    <hcms-generic ng-model="loanRule.dataItem.IsGuarantors" hc-options="loanRule.selectedViewSetup.ViewFieldsObject['IsGuarantors']" hc-text="{{loanRule.translateText(loanRule.selectedViewSetup.ViewFieldsObject['IsGuarantors'].FieldName , loanRule.selectedViewSetup.viewSetup.ViewId)}}"></hcms-generic>
+                </div>
+            </ng-form>
+            <!--IsGuarantorsPrevent-->
+            <ng-form name="IsGuarantorsPrevent" ng-class="{ 'has-error': IsGuarantorsPrevent.$invalid }">
+                <div class="col-sm-2">
+                    <hcms-generic ng-model="loanRule.dataItem.IsGuarantorsPrevent" hc-options="loanRule.selectedViewSetup.ViewFieldsObject['IsGuarantorsPrevent']" hc-text="{{loanRule.translateText(loanRule.selectedViewSetup.ViewFieldsObject['IsGuarantorsPrevent'].FieldName , loanRule.selectedViewSetup.viewSetup.ViewId)}}"></hcms-generic>
+                </div>
+            </ng-form>
+        </div>
+        <div class="form-group  row">
+            <!--IsAmountLimit-->
+            <ng-form name="IsAmountLimit" ng-class="{ 'has-error': IsAmountLimit.$invalid }">
+                <div class=" col-sm-offset-2 col-sm-2">
+                    <hcms-generic ng-model="loanRule.dataItem.IsAmountLimit" hc-options="loanRule.selectedViewSetup.ViewFieldsObject['IsAmountLimit']" hc-text="{{loanRule.translateText(loanRule.selectedViewSetup.ViewFieldsObject['IsAmountLimit'].FieldName , loanRule.selectedViewSetup.viewSetup.ViewId)}}"></hcms-generic>
+                </div>
+            </ng-form>
+            <!--IsAmountLimitPrevent-->
+            <ng-form name="IsAmountLimitPrevent" ng-class="{ 'has-error': IsAmountLimitPrevent.$invalid }">
+                <div class="col-sm-2">
+                    <hcms-generic ng-model="loanRule.dataItem.IsAmountLimitPrevent" hc-options="loanRule.selectedViewSetup.ViewFieldsObject['IsAmountLimitPrevent']" hc-text="{{loanRule.translateText(loanRule.selectedViewSetup.ViewFieldsObject['IsAmountLimitPrevent'].FieldName , loanRule.selectedViewSetup.viewSetup.ViewId)}}"></hcms-generic>
+                </div>
+            </ng-form>
+            <!--MaxAmount-->
+            <ng-form name="MaxAmount" ng-class="{ 'has-error': MaxAmount.$invalid }">
+                <div class="col-sm-2">
+                    <label class="control-label">{{loanRule.translateText(loanRule.selectedViewSetup.ViewFieldsObject["MaxAmount"].FieldName , loanRule.selectedViewSetup.viewSetup.ViewId)}}</label>
+                </div>
+                <div class="col-sm-2">
+                    <hcms-generic ng-model="loanRule.dataItem.MaxAmount" hc-options="loanRule.selectedViewSetup.ViewFieldsObject['MaxAmount']"></hcms-generic>
+                </div>
+            </ng-form>
+        </div>
+        <div class="form-group  row">
+            <!--IsMonthlyInstallmentInterval-->
+            <ng-form name="IsMonthlyInstallmentInterval" ng-class="{ 'has-error': IsMonthlyInstallmentInterval.$invalid }">
+                <div class="col-sm-offset-2 col-sm-2">
+                    <hcms-generic ng-model="loanRule.dataItem.IsMonthlyInstallmentInterval" hc-options="loanRule.selectedViewSetup.ViewFieldsObject['IsMonthlyInstallmentInterval']" hc-text="{{loanRule.translateText(loanRule.selectedViewSetup.ViewFieldsObject['IsMonthlyInstallmentInterval'].FieldName , loanRule.selectedViewSetup.viewSetup.ViewId)}}"></hcms-generic>
+                </div>
+            </ng-form>
+            <!--IsMonthlyInstallmentIntervalPrevent-->
+            <ng-form name="IsMonthlyInstallmentIntervalPrevent" ng-class="{ 'has-error': IsMonthlyInstallmentIntervalPrevent.$invalid }">
+                <div class="col-sm-2">
+                    <hcms-generic ng-model="loanRule.dataItem.IsMonthlyInstallmentIntervalPrevent" hc-options="loanRule.selectedViewSetup.ViewFieldsObject['IsMonthlyInstallmentIntervalPrevent']" hc-text="{{loanRule.translateText(loanRule.selectedViewSetup.ViewFieldsObject['IsMonthlyInstallmentIntervalPrevent'].FieldName , loanRule.selectedViewSetup.viewSetup.ViewId)}}"></hcms-generic>
+                </div>
+            </ng-form>
+            <!--MonthlyInstallmentInterval-->
+            <ng-form name="MonthlyInstallmentInterval" ng-class="{ 'has-error': MonthlyInstallmentInterval.$invalid }">
+                <div class="col-sm-2">
+                    <label class="control-label">{{loanRule.translateText(loanRule.selectedViewSetup.ViewFieldsObject["MonthlyInstallmentInterval"].FieldName , loanRule.selectedViewSetup.viewSetup.ViewId)}}</label>
+                </div>
+                <div class="col-sm-2">
+                    <hcms-generic ng-model="loanRule.dataItem.MonthlyInstallmentInterval" hc-options="loanRule.selectedViewSetup.ViewFieldsObject['MonthlyInstallmentInterval']"></hcms-generic>
+                </div>
+            </ng-form>
+        </div>
+        <div class="form-group  row">
+            <!--IsMaxOccurrence-->
+            <ng-form name="IsMaxOccurrence" ng-class="{ 'has-error': IsMaxOccurrence.$invalid }">
+                <div class="col-sm-offset-2 col-sm-2">
+                    <hcms-generic ng-model="loanRule.dataItem.IsMaxOccurrence" hc-options="loanRule.selectedViewSetup.ViewFieldsObject['IsMaxOccurrence']" hc-text="{{loanRule.translateText(loanRule.selectedViewSetup.ViewFieldsObject['IsMaxOccurrence'].FieldName , loanRule.selectedViewSetup.viewSetup.ViewId)}}"></hcms-generic>
+                </div>
+            </ng-form>
+            <!--IsMaxOccurrencePrevent-->
+            <ng-form name="IsMaxOccurrencePrevent" ng-class="{ 'has-error': IsMaxOccurrencePrevent.$invalid }">
+                <div class="col-sm-2">
+                    <hcms-generic ng-model="loanRule.dataItem.IsMaxOccurrencePrevent" hc-options="loanRule.selectedViewSetup.ViewFieldsObject['IsMaxOccurrencePrevent']" hc-text="{{loanRule.translateText(loanRule.selectedViewSetup.ViewFieldsObject['IsMaxOccurrencePrevent'].FieldName , loanRule.selectedViewSetup.viewSetup.ViewId)}}"></hcms-generic>
+                </div>
+            </ng-form>
+            <!--MaxOccurrenceNo-->
+            <ng-form name="MaxOccurrenceNo" ng-class="{ 'has-error': MaxOccurrenceNo.$invalid }">
+                <div class="col-sm-2">
+                    <label class="control-label">{{loanRule.translateText(loanRule.selectedViewSetup.ViewFieldsObject["MaxOccurrenceNo"].FieldName , loanRule.selectedViewSetup.viewSetup.ViewId)}}</label>
+                </div>
+                <div class="col-sm-2">
+                    <hcms-generic ng-model="loanRule.dataItem.MaxOccurrenceNo" hc-options="loanRule.selectedViewSetup.ViewFieldsObject['MaxOccurrenceNo']"></hcms-generic>
+                </div>
+            </ng-form>
+        </div>
+        <div class="form-group  row">
+            <!--MaxOccurrenceEvery-->
+            <ng-form name="MaxOccurrenceEvery" ng-class="{ 'has-error': MaxOccurrenceEvery.$invalid }">
+                <div class="col-sm-2">
+                    <label class="control-label">{{loanRule.translateText(loanRule.selectedViewSetup.ViewFieldsObject["MaxOccurrenceEvery"].FieldName , loanRule.selectedViewSetup.viewSetup.ViewId)}}</label>
+                </div>
+                <div class="col-sm-2">
+                    <hcms-generic ng-model="loanRule.dataItem.MaxOccurrenceEvery" hc-options="loanRule.selectedViewSetup.ViewFieldsObject['MaxOccurrenceEvery']"></hcms-generic>
+                </div>
+            </ng-form>
+            <!--OccurrenceUnitId-->
+            <ng-form name="OccurrenceUnitId" ng-class="{ 'has-error': OccurrenceUnitId.$invalid }">
+                <div class="col-sm-2">
+                    <label class="control-label">{{loanRule.translateText(loanRule.selectedViewSetup.ViewFieldsObject["OccurrenceUnitId"].FieldName , loanRule.selectedViewSetup.viewSetup.ViewId)}}</label>
+                </div>
+                <div class="col-sm-2">
+                    <hcms-generic ng-model="loanRule.dataItem.OccurrenceUnitId" hc-options="loanRule.selectedViewSetup.ViewFieldsObject['OccurrenceUnitId']"></hcms-generic>
+                </div>
+            </ng-form>
+            <!--OccurrenceVariableId-->
+            <ng-form name="OccurrenceVariableId" ng-class="{ 'has-error': OccurrenceVariableId.$invalid }">
+                <div class="col-sm-2">
+                    <label class="control-label">{{loanRule.translateText(loanRule.selectedViewSetup.ViewFieldsObject["OccurrenceVariableId"].FieldName , loanRule.selectedViewSetup.viewSetup.ViewId)}}</label>
+                </div>
+                <div class="col-sm-2">
+                    <hcms-generic ng-model="loanRule.dataItem.OccurrenceVariableId" hc-options="loanRule.selectedViewSetup.ViewFieldsObject['OccurrenceVariableId']"></hcms-generic>
+                </div>
+            </ng-form>
+        </div>
+        <div class="form-group  row">
+            <!--IsStartFromLimit-->
+            <ng-form name="IsStartFromLimit" ng-class="{ 'has-error': IsStartFromLimit.$invalid }">
+                <div class="col-sm-offset-2 col-sm-2">
+                    <hcms-generic ng-model="loanRule.dataItem.IsStartFromLimit" hc-options="loanRule.selectedViewSetup.ViewFieldsObject['IsStartFromLimit']" hc-text="{{loanRule.translateText(loanRule.selectedViewSetup.ViewFieldsObject['IsStartFromLimit'].FieldName , loanRule.selectedViewSetup.viewSetup.ViewId)}}"></hcms-generic>
+                </div>
+            </ng-form>
+            <!--IsStartFromPrevent-->
+            <ng-form name="IsStartFromPrevent" ng-class="{ 'has-error': IsStartFromPrevent.$invalid }">
+                <div class="col-sm-2">
+                    <hcms-generic ng-model="loanRule.dataItem.IsStartFromPrevent" hc-options="loanRule.selectedViewSetup.ViewFieldsObject['IsStartFromPrevent']" hc-text="{{loanRule.translateText(loanRule.selectedViewSetup.ViewFieldsObject['IsStartFromPrevent'].FieldName , loanRule.selectedViewSetup.viewSetup.ViewId)}}"></hcms-generic>
+                </div>
+            </ng-form>
+            <!--StartFromDay-->
+            <ng-form name="StartFromDay" ng-class="{ 'has-error': StartFromDay.$invalid }">
+                <div class="col-sm-2">
+                    <label class="control-label">{{loanRule.translateText(loanRule.selectedViewSetup.ViewFieldsObject["StartFromDay"].FieldName , loanRule.selectedViewSetup.viewSetup.ViewId)}}</label>
+                </div>
+                <div class="col-sm-2">
+                    <hcms-generic ng-model="loanRule.dataItem.StartFromDay" hc-options="loanRule.selectedViewSetup.ViewFieldsObject['StartFromDay']"></hcms-generic>
+                </div>
+            </ng-form>
+        </div>
+
+        <div class="form-group  row">
+            <!--IsOpenedLoanLimit-->
+            <ng-form name="IsOpenedLoanLimit" ng-class="{ 'has-error': IsOpenedLoanLimit.$invalid }">               
+                <div class= "col-sm-offset-2 col-sm-2">
+                    <hcms-generic ng-model="loanRule.dataItem.IsOpenedLoanLimit" hc-options="loanRule.selectedViewSetup.ViewFieldsObject['IsOpenedLoanLimit']" hc-text="{{loanRule.translateText(loanRule.selectedViewSetup.ViewFieldsObject['IsOpenedLoanLimit'].FieldName , loanRule.selectedViewSetup.viewSetup.ViewId)}}"></hcms-generic>
+                </div>
+            </ng-form>
+            <!--IsOpenedLoanLimitPrevent-->
+            <ng-form name="IsOpenedLoanLimitPrevent" ng-class="{ 'has-error': IsOpenedLoanLimitPrevent.$invalid }">
+                <div class="col-sm-2">
+                    <hcms-generic ng-model="loanRule.dataItem.IsOpenedLoanLimitPrevent" hc-options="loanRule.selectedViewSetup.ViewFieldsObject['IsOpenedLoanLimitPrevent']" hc-text="{{loanRule.translateText(loanRule.selectedViewSetup.ViewFieldsObject['IsOpenedLoanLimitPrevent'].FieldName , loanRule.selectedViewSetup.viewSetup.ViewId)}}"></hcms-generic>
+                </div>
+            </ng-form>
+            <!--MaxOccurrenceOpenedNo-->
+            <ng-form name="MaxOccurrenceOpenedNo" ng-class="{ 'has-error': MaxOccurrenceOpenedNo.$invalid }">
+                <div class="col-sm-2">
+                    <label class="control-label">{{loanRule.translateText(loanRule.selectedViewSetup.ViewFieldsObject["MaxOccurrenceOpenedNo"].FieldName , loanRule.selectedViewSetup.viewSetup.ViewId)}}</label>
+                </div>
+                <div class="col-sm-2">
+                    <hcms-generic ng-model="loanRule.dataItem.MaxOccurrenceOpenedNo" hc-options="loanRule.selectedViewSetup.ViewFieldsObject['MaxOccurrenceOpenedNo']"></hcms-generic>
+                </div>
+            </ng-form>
+        </div>
+        <div class="form-group  row">
+            <!--IsMaxInstallmentMonth-->
+            <ng-form name="IsMaxInstallmentMonth" ng-class="{ 'has-error': IsMaxInstallmentMonth.$invalid }">
+                <div class="col-sm-offset-2 col-sm-2">
+                    <hcms-generic ng-model="loanRule.dataItem.IsMaxInstallmentMonth" hc-options="loanRule.selectedViewSetup.ViewFieldsObject['IsMaxInstallmentMonth']" hc-text="{{loanRule.translateText(loanRule.selectedViewSetup.ViewFieldsObject['IsMaxInstallmentMonth'].FieldName , loanRule.selectedViewSetup.viewSetup.ViewId)}}"></hcms-generic>
+                </div>
+            </ng-form>
+            <!--IsMaxInstallmentMonthPrevent-->
+            <ng-form name="IsMaxInstallmentMonthPrevent" ng-class="{ 'has-error': IsMaxInstallmentMonthPrevent.$invalid }">
+                <div class="col-sm-2">
+                    <hcms-generic ng-model="loanRule.dataItem.IsMaxInstallmentMonthPrevent" hc-options="loanRule.selectedViewSetup.ViewFieldsObject['IsMaxInstallmentMonthPrevent']" hc-text="{{loanRule.translateText(loanRule.selectedViewSetup.ViewFieldsObject['IsMaxInstallmentMonthPrevent'].FieldName , loanRule.selectedViewSetup.viewSetup.ViewId)}}"></hcms-generic>
+                </div>
+            </ng-form>
+            <!--MaxInstallmentMonth-->
+            <ng-form name="MaxInstallmentMonth" ng-class="{ 'has-error': MaxInstallmentMonth.$invalid }">
+                <div class="col-sm-2">
+                    <label class="control-label">{{loanRule.translateText(loanRule.selectedViewSetup.ViewFieldsObject["MaxInstallmentMonth"].FieldName , loanRule.selectedViewSetup.viewSetup.ViewId)}}</label>
+                </div>
+                <div class="col-sm-2">
+                    <hcms-generic ng-model="loanRule.dataItem.MaxInstallmentMonth" hc-options="loanRule.selectedViewSetup.ViewFieldsObject['MaxInstallmentMonth']"></hcms-generic>
+                </div>
+            </ng-form>
+        </div>
+        <div class="form-group  row">
+            <!--IsMaxPercentage-->
+            <ng-form name="IsMaxPercentage" ng-class="{ 'has-error': IsMaxPercentage.$invalid }">
+                <div class="col-sm-offset-2 col-sm-2">
+                    <hcms-generic ng-model="loanRule.dataItem.IsMaxPercentage" hc-options="loanRule.selectedViewSetup.ViewFieldsObject['IsMaxPercentage']" hc-text="{{loanRule.translateText(loanRule.selectedViewSetup.ViewFieldsObject['IsMaxPercentage'].FieldName , loanRule.selectedViewSetup.viewSetup.ViewId)}}"></hcms-generic>
+                </div>
+            </ng-form>
+            <!--IsMaxPercentagePrevent-->
+            <ng-form name="IsMaxPercentagePrevent" ng-class="{ 'has-error': IsMaxPercentagePrevent.$invalid }">
+                <div class="col-sm-2">
+                    <hcms-generic ng-model="loanRule.dataItem.IsMaxPercentagePrevent" hc-options="loanRule.selectedViewSetup.ViewFieldsObject['IsMaxPercentagePrevent']" hc-text="{{loanRule.translateText(loanRule.selectedViewSetup.ViewFieldsObject['IsMaxPercentagePrevent'].FieldName , loanRule.selectedViewSetup.viewSetup.ViewId)}}"></hcms-generic>
+                </div>
+            </ng-form>
+        </div>
+        <div class="form-group  row">
+            <!--MaxPercentage-->
+            <ng-form name="MaxPercentage" ng-class="{ 'has-error': MaxPercentage.$invalid }">
+                <div class="col-sm-2">
+                    <label class="control-label">{{loanRule.translateText(loanRule.selectedViewSetup.ViewFieldsObject["MaxPercentage"].FieldName , loanRule.selectedViewSetup.viewSetup.ViewId)}}</label>
+                </div>
+                <div class="col-sm-4">
+                    <hcms-generic ng-model="loanRule.dataItem.MaxPercentage" hc-options="loanRule.selectedViewSetup.ViewFieldsObject['MaxPercentage']"></hcms-generic>
+                </div>
+            </ng-form>
+            <!--PercentageFromPayItemId-->
+            <ng-form name="PercentageFromPayItemId" ng-class="{ 'has-error': PercentageFromPayItemId.$invalid }">
+                <div class="col-sm-2">
+                    <label class="control-label">{{loanRule.translateText(loanRule.selectedViewSetup.ViewFieldsObject["PercentageFromPayItemId"].FieldName , loanRule.selectedViewSetup.viewSetup.ViewId)}}</label>
+                </div>
+                <div class="col-sm-4">
+                    <hcms-generic ng-model="loanRule.dataItem.PercentageFromPayItemId" hc-options="loanRule.selectedViewSetup.ViewFieldsObject['PercentageFromPayItemId']"></hcms-generic>
+                </div>
+            </ng-form>
+        </div>
+        <div class="form-group  row">
+            <!--IsUseInWorkfolw-->
+            <ng-form name="IsUseInWorkfolw" ng-class="{ 'has-error': IsUseInWorkfolw.$invalid }">
+                <div class="col-sm-offset-2 col-sm-2">
+                    <hcms-generic ng-model="loanRule.dataItem.IsUseInWorkfolw" hc-options="loanRule.selectedViewSetup.ViewFieldsObject['IsUseInWorkfolw']" hc-text="{{loanRule.translateText(loanRule.selectedViewSetup.ViewFieldsObject['IsUseInWorkfolw'].FieldName , loanRule.selectedViewSetup.viewSetup.ViewId)}}"></hcms-generic>
+                </div>
+            </ng-form>
+            <!--Disabled-->
+            <ng-form name="Disabled" ng-class="{ 'has-error': Disabled.$invalid }">
+                <div class="col-sm-4">
+                    <hcms-generic ng-model="loanRule.dataItem.Disabled" hc-options="loanRule.selectedViewSetup.ViewFieldsObject['Disabled']" hc-text="{{loanRule.translateText(loanRule.selectedViewSetup.ViewFieldsObject['Disabled'].FieldName , loanRule.selectedViewSetup.viewSetup.ViewId)}}"></hcms-generic>
+                </div>
+            </ng-form>
+        </div>
+        <div class="form-group  row">
+            <!--StartDate-->
+            <ng-form name="StartDate" ng-class="{ 'has-error': StartDate.$invalid }">
+                <div class="col-sm-2">
+                    <label class="control-label">{{loanRule.translateText(loanRule.selectedViewSetup.ViewFieldsObject["StartDate"].FieldName , loanRule.selectedViewSetup.viewSetup.ViewId)}}</label>
+                </div>
+                <div class="col-sm-4">
+                    <hcms-generic ng-model="loanRule.dataItem.StartDate" hc-options="loanRule.selectedViewSetup.ViewFieldsObject['StartDate']"></hcms-generic>
+                </div>
+            </ng-form>
+            <!--EndDate-->
+            <ng-form name="EndDate" ng-class="{ 'has-error': EndDate.$invalid }">
+                <div class="col-sm-2">
+                    <label class="control-label">{{loanRule.translateText(loanRule.selectedViewSetup.ViewFieldsObject["EndDate"].FieldName , loanRule.selectedViewSetup.viewSetup.ViewId)}}</label>
+                </div>
+                <div class="col-sm-4">
+                    <hcms-generic ng-model="loanRule.dataItem.EndDate" hc-options="loanRule.selectedViewSetup.ViewFieldsObject['EndDate']"></hcms-generic>
+                </div>
+            </ng-form>
+        </div>
+
+
+        <!--Save & Cancel Buttons-->
+        <div class="row">
+            <div class="col-sm-offset-2 col-sm-10">
+                <input type="submit" class="btn btn-primary" value="{{loanRule.translateText('Save', loanRule.selectedViewSetup.viewSetup.ViewId)}}" ng-disabled="myAddLoanRuleForm.$invalid" />
+                <button type="button" class="btn btn-default" ng-click="loanRule.indexItemView()">{{loanRule.translateText('Cancel', loanRule.selectedViewSetup.viewSetup.ViewId)}}</button>
+            </div>
+        </div>
+
+    </form>
+</div>

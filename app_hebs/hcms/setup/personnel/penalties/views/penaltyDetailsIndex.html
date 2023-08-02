@@ -1,0 +1,19 @@
+﻿
+
+<div class="panel">
+
+    <div class="panel-body" ng-show='penaltySetupDetails.displayCreateNewTemplate || penaltySetupDetails.displayEditTemplate'>
+
+        <div ng-include src="'app_hebs/hcms/setup/personnel/penalties/views/penaltyDetailsAddNew.html'" ng-show='penaltySetupDetails.displayCreateNewTemplate || penaltySetupDetails.displayEditTemplate'></div>
+
+
+    </div>
+    <div class="panel-footer">
+        <div class="table-primary">
+            <div>
+                <a href="#" ng-click="penaltySetupDetails.addSubFormView()">{{penaltySetupDetails.translateText('CreateNew', penaltySetupDetails.selectedViewSetup.viewSetup.ViewId)}}</a>
+            </div>
+            <smart-grid id="grd" name="gridName" data="penaltySetupDetails.dataList" options="penaltySetupDetails.grid.gridOptions" column-defs="penaltySetupDetails.grid.gridColumnDefs" hide-common-search="true" style="height:500px;"></smart-grid>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,265 @@
+﻿<div class="position-header">
+
+    <div class="form-group  row">
+        <!--PositionId-->
+        <ng-form name="PositionId" ng-class="{ 'has-error': PositionId.$invalid }" ng-hide="positionsHome.selectedViewSetup.ViewFieldsObject['PositionId'].IsHidden">
+            <div class="col-sm-2">
+                <label class="control-label">{{positionsHome.translateText(positionsHome.selectedViewSetup.ViewFieldsObject["PositionId"].FieldName,positionsHome.selectedViewSetup.viewSetup.ViewId)}}</label>
+            </div>
+            <div class="col-sm-4">
+                <hcms-generic ng-model="positionsHome.dataItem.PositionId" hc-options="positionsHome.selectedViewSetup.ViewFieldsObject['PositionId']"></hcms-generic>
+            </div>
+        </ng-form>
+        <!--PositionCode-->
+        <ng-form name="PositionCode" ng-class="{ 'has-error': PositionCode.$invalid }" ng-hide="positionsHome.selectedViewSetup.ViewFieldsObject['PositionCode'].IsHidden">
+            <div class="col-sm-2">
+                <label class="control-label">{{positionsHome.translateText(positionsHome.selectedViewSetup.ViewFieldsObject["PositionCode"].FieldName,positionsHome.selectedViewSetup.viewSetup.ViewId)}}</label>
+            </div>
+            <div class="col-sm-4">
+                <hcms-generic ng-model="positionsHome.dataItem.PositionCode" hc-options="positionsHome.selectedViewSetup.ViewFieldsObject['PositionCode']"></hcms-generic>
+            </div>
+        </ng-form>
+    </div>
+    <div class="form-group  row">
+        <!--PositionName-->
+        <ng-form name="PositionName" ng-class="{ 'has-error': PositionName.$invalid }" ng-hide="positionsHome.selectedViewSetup.ViewFieldsObject['PositionName'].IsHidden">
+            <div class="col-sm-2">
+                <label class="control-label">{{positionsHome.translateText(positionsHome.selectedViewSetup.ViewFieldsObject["PositionName"].FieldName,positionsHome.selectedViewSetup.viewSetup.ViewId)}}</label>
+            </div>
+            <div class="col-sm-4">
+                <hcms-generic ng-model="positionsHome.dataItem.PositionName" hc-options="positionsHome.selectedViewSetup.ViewFieldsObject['PositionName']"></hcms-generic>
+            </div>
+        </ng-form>
+        <!--PositionName_-->
+        <ng-form name="PositionName_" ng-class="{ 'has-error': PositionName_.$invalid }" ng-hide="positionsHome.selectedViewSetup.ViewFieldsObject['PositionName_'].IsHidden">
+            <div class="col-sm-2">
+                <label class="control-label">{{positionsHome.translateText(positionsHome.selectedViewSetup.ViewFieldsObject["PositionName_"].FieldName,positionsHome.selectedViewSetup.viewSetup.ViewId)}}</label>
+            </div>
+            <div class="col-sm-4">
+                <hcms-generic ng-model="positionsHome.dataItem.PositionName_" hc-options="positionsHome.selectedViewSetup.ViewFieldsObject['PositionName_']"></hcms-generic>
+            </div>
+        </ng-form>
+    </div>
+    <div class="form-group  row">
+       
+        <!--HideTreeView-->
+        <ng-form name="HideTreeView" ng-class="{ 'has-error': HideTreeView.$invalid }" ng-hide="positionsHome.selectedViewSetup.ViewFieldsObject['HideTreeView'].IsHidden">
+            <div class="col-sm-2">
+                <label class="control-label">{{positionsHome.translateText(positionsHome.selectedViewSetup.ViewFieldsObject["HideTreeView"].FieldName,positionsHome.selectedViewSetup.viewSetup.ViewId)}}</label>
+            </div>
+            <div class="col-sm-4">
+                <hcms-generic ng-model="positionsHome.dataItem.HideTreeView" hc-options="positionsHome.selectedViewSetup.ViewFieldsObject['HideTreeView']"></hcms-generic>
+            </div>
+        </ng-form>
+    </div>
+    <div class="form-group  row">
+        <!--PositionDuties-->
+        <ng-form name="PositionDuties" ng-class="{ 'has-error': PositionDuties.$invalid }" ng-hide="positionsHome.selectedViewSetup.ViewFieldsObject['PositionDuties'].IsHidden">
+            <div class="col-sm-2">
+                <label class="control-label">{{positionsHome.translateText(positionsHome.selectedViewSetup.ViewFieldsObject["PositionDuties"].FieldName,positionsHome.selectedViewSetup.viewSetup.ViewId)}}</label>
+            </div>
+            <div class="col-sm-4">
+                <hcms-generic ng-model="positionsHome.dataItem.PositionDuties" hc-options="positionsHome.selectedViewSetup.ViewFieldsObject['PositionDuties']"></hcms-generic>
+            </div>
+        </ng-form>
+        <!--PositionDuties_-->
+        <ng-form name="PositionDuties_" ng-class="{ 'has-error': PositionDuties_.$invalid }" ng-hide="positionsHome.selectedViewSetup.ViewFieldsObject['PositionDuties_'].IsHidden">
+            <div class="col-sm-2">
+                <label class="control-label">{{positionsHome.translateText(positionsHome.selectedViewSetup.ViewFieldsObject["PositionDuties_"].FieldName,positionsHome.selectedViewSetup.viewSetup.ViewId)}}</label>
+            </div>
+            <div class="col-sm-4">
+                <hcms-generic ng-model="positionsHome.dataItem.PositionDuties_" hc-options="positionsHome.selectedViewSetup.ViewFieldsObject['PositionDuties_']"></hcms-generic>
+            </div>
+        </ng-form>
+    </div>
+    <div class="form-group  row">
+        <!--PositionDesc-->
+        <ng-form name="PositionDesc" ng-class="{ 'has-error': PositionDesc.$invalid }" ng-hide="positionsHome.selectedViewSetup.ViewFieldsObject['PositionDesc'].IsHidden">
+            <div class="col-sm-2">
+                <label class="control-label">{{positionsHome.translateText(positionsHome.selectedViewSetup.ViewFieldsObject["PositionDesc"].FieldName,positionsHome.selectedViewSetup.viewSetup.ViewId)}}</label>
+            </div>
+            <div class="col-sm-4">
+                <hcms-generic ng-model="positionsHome.dataItem.PositionDesc" hc-options="positionsHome.selectedViewSetup.ViewFieldsObject['PositionDesc']"></hcms-generic>
+            </div>
+        </ng-form>
+        <!--PositionDesc_-->
+        <ng-form name="PositionDesc_" ng-class="{ 'has-error': PositionDesc_.$invalid }" ng-hide="positionsHome.selectedViewSetup.ViewFieldsObject['PositionDesc_'].IsHidden">
+            <div class="col-sm-2">
+                <label class="control-label">{{positionsHome.translateText(positionsHome.selectedViewSetup.ViewFieldsObject["PositionDesc_"].FieldName,positionsHome.selectedViewSetup.viewSetup.ViewId)}}</label>
+            </div>
+            <div class="col-sm-4">
+                <hcms-generic ng-model="positionsHome.dataItem.PositionDesc_" hc-options="positionsHome.selectedViewSetup.ViewFieldsObject['PositionDesc_']"></hcms-generic>
+            </div>
+        </ng-form>
+    </div>
+    <div class="form-group  row">
+        <!--PositionSerial-->
+        <ng-form name="PositionSerial" ng-class="{ 'has-error': PositionSerial.$invalid }" ng-hide="positionsHome.selectedViewSetup.ViewFieldsObject['PositionSerial'].IsHidden">
+            <div class="col-sm-2">
+                <label class="control-label">{{positionsHome.translateText(positionsHome.selectedViewSetup.ViewFieldsObject["PositionSerial"].FieldName,positionsHome.selectedViewSetup.viewSetup.ViewId)}}</label>
+            </div>
+            <div class="col-sm-4">
+                <hcms-generic ng-model="positionsHome.dataItem.PositionSerial" hc-options="positionsHome.selectedViewSetup.ViewFieldsObject['PositionSerial']"></hcms-generic>
+            </div>
+        </ng-form>
+        <!--PositionComment-->
+        <ng-form name="PositionComment" ng-class="{ 'has-error': PositionComment.$invalid }" ng-hide="positionsHome.selectedViewSetup.ViewFieldsObject['PositionComment'].IsHidden">
+            <div class="col-sm-2">
+                <label class="control-label">{{positionsHome.translateText(positionsHome.selectedViewSetup.ViewFieldsObject["PositionComment"].FieldName,positionsHome.selectedViewSetup.viewSetup.ViewId)}}</label>
+            </div>
+            <div class="col-sm-4">
+                <hcms-generic ng-model="positionsHome.dataItem.PositionComment" hc-options="positionsHome.selectedViewSetup.ViewFieldsObject['PositionComment']"></hcms-generic>
+            </div>
+        </ng-form>
+    </div>
+    <div class="form-group  row">
+        <!--PositionShortName-->
+        <ng-form name="PositionShortName" ng-class="{ 'has-error': PositionShortName.$invalid }" ng-hide="positionsHome.selectedViewSetup.ViewFieldsObject['PositionShortName'].IsHidden">
+            <div class="col-sm-2">
+                <label class="control-label">{{positionsHome.translateText(positionsHome.selectedViewSetup.ViewFieldsObject["PositionShortName"].FieldName,positionsHome.selectedViewSetup.viewSetup.ViewId)}}</label>
+            </div>
+            <div class="col-sm-4">
+                <hcms-generic ng-model="positionsHome.dataItem.PositionShortName" hc-options="positionsHome.selectedViewSetup.ViewFieldsObject['PositionShortName']"></hcms-generic>
+            </div>
+        </ng-form>
+        <!--OrderNo-->
+        <ng-form name="OrderNo" ng-class="{ 'has-error': OrderNo.$invalid }" ng-hide="positionsHome.selectedViewSetup.ViewFieldsObject['OrderNo'].IsHidden">
+            <div class="col-sm-2">
+                <label class="control-label">{{positionsHome.translateText(positionsHome.selectedViewSetup.ViewFieldsObject["OrderNo"].FieldName,positionsHome.selectedViewSetup.viewSetup.ViewId)}}</label>
+            </div>
+            <div class="col-sm-4">
+                <hcms-generic ng-model="positionsHome.dataItem.OrderNo" hc-options="positionsHome.selectedViewSetup.ViewFieldsObject['OrderNo']"></hcms-generic>
+            </div>
+        </ng-form>
+    </div>
+    <div class="form-group  row">
+        <!--StartDate-->
+        <ng-form name="StartDate" ng-class="{ 'has-error': StartDate.$invalid }" ng-hide="positionsHome.selectedViewSetup.ViewFieldsObject['StartDate'].IsHidden">
+            <div class="col-sm-2">
+                <label class="control-label">{{positionsHome.translateText(positionsHome.selectedViewSetup.ViewFieldsObject["StartDate"].FieldName,positionsHome.selectedViewSetup.viewSetup.ViewId)}}</label>
+            </div>
+            <div class="col-sm-4">
+                <hcms-generic ng-model="positionsHome.dataItem.StartDate" hc-options="positionsHome.selectedViewSetup.ViewFieldsObject['StartDate']"></hcms-generic>
+            </div>
+        </ng-form>
+        <!--EndDate-->
+        <ng-form name="EndDate" ng-class="{ 'has-error': EndDate.$invalid }" ng-hide="positionsHome.selectedViewSetup.ViewFieldsObject['EndDate'].IsHidden">
+            <div class="col-sm-2">
+                <label class="control-label">{{positionsHome.translateText(positionsHome.selectedViewSetup.ViewFieldsObject["EndDate"].FieldName,positionsHome.selectedViewSetup.viewSetup.ViewId)}}</label>
+            </div>
+            <div class="col-sm-4">
+                <hcms-generic ng-model="positionsHome.dataItem.EndDate" hc-options="positionsHome.selectedViewSetup.ViewFieldsObject['EndDate']"></hcms-generic>
+            </div>
+        </ng-form>
+    </div>
+    <div class="form-group  row">
+        <!--Disabled-->
+        <ng-form name="Disabled" ng-class="{ 'has-error': Disabled.$invalid }" ng-hide="positionsHome.selectedViewSetup.ViewFieldsObject['Disabled'].IsHidden">
+            <div class="col-sm-2">
+                <label class="control-label">{{positionsHome.translateText(positionsHome.selectedViewSetup.ViewFieldsObject["Disabled"].FieldName,positionsHome.selectedViewSetup.viewSetup.ViewId)}}</label>
+            </div>
+            <div class="col-sm-4">
+                <hcms-generic ng-model="positionsHome.dataItem.Disabled" hc-options="positionsHome.selectedViewSetup.ViewFieldsObject['Disabled']"></hcms-generic>
+            </div>
+        </ng-form>
+    </div>
+
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading">Position Details Assignments</div>
+    <div class="panel-body">
+        <div class="form-group  row">
+            <!--PositionParentId-->
+
+            <ng-form name="PositionParentId" ng-class="{ 'has-error': PositionParentId.$invalid }" ng-hide="positionsHome.selectedViewSetup.ViewFieldsObject['PositionParentId'].IsHidden">
+                <div class="col-sm-2">
+
+
+                    <label class="control-label">{{positionsHome.translateText(positionsHome.selectedViewSetup.ViewFieldsObject["PositionParentId"].FieldName,positionsHome.selectedViewSetup.viewSetup.ViewId)}}</label>
+                </div>
+
+                <div class="col-sm-4">
+
+
+                    <hcms-generic ng-model="positionsHome.dataItem.PositionParentId" hc-options="positionsHome.selectedViewSetup.ViewFieldsObject['PositionParentId']"></hcms-generic>
+
+                </div>
+
+            </ng-form>
+
+            <!--CostCenterId-->
+
+            <ng-form name="CostCenterId" ng-class="{ 'has-error': CostCenterId.$invalid }" ng-hide="positionsHome.selectedViewSetup.ViewFieldsObject['CostCenterId'].IsHidden">
+                <div class="col-sm-2">
+
+
+                    <label class="control-label">{{positionsHome.translateText(positionsHome.selectedViewSetup.ViewFieldsObject["CostCenterId"].FieldName,positionsHome.selectedViewSetup.viewSetup.ViewId)}}</label>
+                </div>
+
+                <div class="col-sm-4">
+
+
+                    <hcms-generic ng-model="positionsHome.dataItem.CostCenterId" hc-options="positionsHome.selectedViewSetup.ViewFieldsObject['CostCenterId']"></hcms-generic>
+
+                </div>
+
+            </ng-form>
+        </div>
+        <div class="form-group  row">
+            <!--GradeId-->
+
+            <ng-form name="GradeId" ng-class="{ 'has-error': GradeId.$invalid }" ng-hide="positionsHome.selectedViewSetup.ViewFieldsObject['GradeId'].IsHidden">
+                <div class="col-sm-2">
+
+
+                    <label class="control-label">{{positionsHome.translateText(positionsHome.selectedViewSetup.ViewFieldsObject["GradeId"].FieldName,positionsHome.selectedViewSetup.viewSetup.ViewId)}}</label>
+                </div>
+
+                <div class="col-sm-4">
+
+
+                    <hcms-generic ng-model="positionsHome.dataItem.GradeId" hc-options="positionsHome.selectedViewSetup.ViewFieldsObject['GradeId']"></hcms-generic>
+
+                </div>
+
+            </ng-form>
+
+            <!--JobId-->
+
+            <ng-form name="JobId" ng-class="{ 'has-error': JobId.$invalid }" ng-hide="positionsHome.selectedViewSetup.ViewFieldsObject['JobId'].IsHidden">
+                <div class="col-sm-2">
+
+
+                    <label class="control-label">{{positionsHome.translateText(positionsHome.selectedViewSetup.ViewFieldsObject["JobId"].FieldName,positionsHome.selectedViewSetup.viewSetup.ViewId)}}</label>
+                </div>
+
+                <div class="col-sm-4">
+
+
+                    <hcms-generic ng-model="positionsHome.dataItem.JobId" hc-options="positionsHome.selectedViewSetup.ViewFieldsObject['JobId']"></hcms-generic>
+
+                </div>
+
+            </ng-form>
+        </div>
+        <div class="form-group  row">
+            <!--RecordNo-->
+
+            <ng-form name="RecordNo" ng-class="{ 'has-error': RecordNo.$invalid }" ng-hide="positionsHome.selectedViewSetup.ViewFieldsObject['RecordNo'].IsHidden">
+                <div class="col-sm-2">
+
+
+                    <label class="control-label">{{positionsHome.translateText(positionsHome.selectedViewSetup.ViewFieldsObject["RecordNo"].FieldName,positionsHome.selectedViewSetup.viewSetup.ViewId)}}</label>
+                </div>
+
+                <div class="col-sm-4">
+
+
+                    <hcms-generic ng-model="positionsHome.dataItem.RecordNo" hc-options="positionsHome.selectedViewSetup.ViewFieldsObject['RecordNo']"></hcms-generic>
+
+                </div>
+            </ng-form>
+        </div>
+
+    </div>
+</div>

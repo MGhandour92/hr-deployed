@@ -1,0 +1,75 @@
+﻿<div class="widget-body view-background-color">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <div class="view">
+                <form class="form-horizontal" name="payrollCloseCalcSalaryForm" ng-submit="payrollCloseCalcSalary.run(payrollCloseCalcSalaryForm.$valid)" novalidate>
+                    <div class="form-group  row">
+
+                        <!--Year-->
+                        <ng-form name="PayrollYear" ng-class="{ 'has-error': PayrollYear.$invalid }">
+                            <div class="col-sm-2">
+                                <label class="control-label">{{payrollCloseCalcSalary.translateText('Year',payrollCloseCalcSalary.selectedViewSetup.viewSetup.ViewId)}}</label>
+                            </div>
+                            <div class="col-sm-2">
+                                <hcms-generic ng-model="payrollCloseCalcSalary.dataItem.PayrollYear" hc-options="payrollCloseCalcSalary.selectedViewSetup.ViewFieldsObject['PayrollYear']" hc-events="payrollCloseCalcSalary.payrollTransYearEvents"></hcms-generic>
+                            </div>
+                        </ng-form>
+
+                        <!--Month-->
+                        <ng-form name="PayrollMonth" ng-class="{ 'has-error': PayrollMonth.$invalid }">
+                            <div class="col-sm-1">
+                                <label class="control-label">{{payrollCloseCalcSalary.translateText('Month',payrollCloseCalcSalary.selectedViewSetup.viewSetup.ViewId)}}</label>
+                            </div>
+                            <div class="col-sm-1">
+                                <hcms-generic ng-model="payrollCloseCalcSalary.dataItem.PayrollMonth" hc-options="payrollCloseCalcSalary.selectedViewSetup.ViewFieldsObject['PayrollMonth']" hc-events="payrollCloseCalcSalary.payrollTransMonthEvents"></hcms-generic>
+                            </div>
+                        </ng-form>
+                    </div>
+
+                    <div class="form-group  row">
+                        <!--PayrollRunId-->
+                        <ng-form name="PayrollRunId" ng-class="{ 'has-error': PayrollRunId.$invalid }">
+                            <div class="col-sm-2">
+                                <label class="control-label">{{payrollCloseCalcSalary.translateText('PayrollRunId',payrollCloseCalcSalary.selectedViewSetup.viewSetup.ViewId)}}</label>
+                            </div>
+                            <div class="col-sm-4">
+                                <hcms-generic ng-model="payrollCloseCalcSalary.dataItem.PayrollRunId" hc-options="payrollCloseCalcSalary.selectedViewSetup.ViewFieldsObject['PayrollRunId']" hc-events="payrollCloseCalcSalary.payrollTransRunIdEvents"></hcms-generic>
+                            </div>
+                        </ng-form>
+                    </div>
+
+                    <div class="form-group  row">
+                        <!--PayrollGroupId-->
+                        <ng-form name="PayrollGroupId" ng-class="{ 'has-error': RunNo.$invalid }">
+                            <div class="col-sm-2">
+                                <label class="control-label">{{payrollCloseCalcSalary.translateText('PayrollGroupId',payrollCloseCalcSalary.selectedViewSetup.viewSetup.ViewId)}}</label>
+                            </div>
+                            <div class="col-sm-4">
+                                <hcms-generic ng-model="payrollCloseCalcSalary.dataItem.PayrollGroupId" hc-options="payrollCloseCalcSalary.selectedViewSetup.ViewFieldsObject['PayrollGroupId']" hc-events="payrollCloseCalcSalary.payrollTransPayrollGroupIdEvents"></hcms-generic>
+                            </div>
+                        </ng-form>
+                    </div>
+
+                </form>
+
+                <div>
+                    <button id="openBtn" class="btn btn-primary" ng-click="payrollCloseCalcSalary.openPayrollSalary()" ng-disabled="payrollCloseCalcSalaryForm.$invalid">
+                        {{payrollCloseCalcSalary.translateText('Open')}}
+                    </button>
+                    <button id="closeBtn" class="btn btn-primary" ng-click="payrollCloseCalcSalary.closePayrollSalary()" ng-disabled="payrollCloseCalcSalaryForm.$invalid">
+                        {{payrollCloseCalcSalary.translateText('Close')}}
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="widget-body view-background-color">
+
+            <smart-grid id="grd" name="gridName" data="payrollCloseCalcSalary.PayrollSalaryHeaderData" options="payrollCloseCalcSalary.grid.gridOptions" column-defs="payrollCloseCalcSalary.grid.gridColumnDefs" style="height:500px;"></smart-grid>
+
+        </div>
+        <div class="panel-footer">
+
+        </div>
+    </div>
+
+</div>

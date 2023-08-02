@@ -1,0 +1,146 @@
+﻿.chart-container {
+    position: relative;
+    display: inline-block;
+    top: 10px;
+    left: 10px;
+    height: 800px;
+    width: calc(100% - 24px);
+    border: 2px  solid #aaa;
+    border-radius: 5px;
+    overflow: auto;
+    text-align: center;
+}
+
+.orgchart {
+    background-image: none !important;
+     background: #fff !important ;
+}
+
+.orgchart td.left, .orgchart td.right, .orgchart td.top {
+  border-color: #aaa;
+}
+.orgchart td>.down {
+  background-color: #aaa;
+}
+.orgchart .level-1 .title {
+  background-color: #006699 !important;
+}
+.orgchart .level-1 .content {
+  border-color: #006699 !important;
+}
+.orgchart .level-2 .title {
+  background-color: #009933 !important;
+}
+.orgchart .level-2 .content {
+  border-color: #009933 !important;
+}
+.orgchart .level-3 .title {
+  background-color: #993366 !important;
+}
+.orgchart .level-3 .content {
+  border-color: #993366 !important;
+}
+.orgchart .level-4 .title {
+  background-color: #996633 !important;
+}
+.orgchart .level-4 .content {
+  border-color: #996633 !important;
+}
+.orgchart .level-5 .title {
+  background-color: #cc0066 !important;
+}
+.orgchart .level-5 .content {
+  border-color: #cc0066 !important;
+}
+
+.orgchart .level-6 .title {
+  background-color: #6b8490 !important;
+}
+.orgchart .level-6 .content {
+  border-color: #6b8490 !important;
+}
+.orgchart .level-7 .title {
+  background-color: #669c78 !important;
+}
+.orgchart .level-7 .content {
+  border-color: #669c78 !important;
+}
+.orgchart .level-8 .title {
+  background-color: #c38ea9 !important;
+}
+.orgchart .level-8 .content {
+  border-color: #c38ea9 !important;
+}
+.orgchart .level-9 .title {
+  background-color: #7d6973 !important;
+}
+.orgchart .level-9 .content {
+  border-color: #7d6973 !important;
+}
+.orgchart .level-10 .title {
+  background-color: #d8720c !important;
+}
+.orgchart .level-10 .content {
+  border-color: #d8720c !important;
+}
+.orgchart .level-11 .title {
+  background-color: #e8ac73 !important;
+}
+.orgchart .level-11 .content {
+  border-color: #e8ac73 !important;
+}
+.orgchart .level-12 .title {
+  background-color: #c17299 !important;
+}
+.orgchart .level-12 .content {
+  border-color: #c17299 !important;
+}
+.orgchart .level-13 .title {
+  background-color: #7ebfde !important;
+}
+.orgchart .level-13 .content {
+  border-color: #7ebfde !important;
+}
+.orgchart .level-14 .title {
+  background-color: #285637 !important;
+}
+.orgchart .level-14 .content {
+  border-color: #285637 !important;
+}
+.orgchart .level-15 .title {
+  background-color: #8a2a59 !important;
+}
+.orgchart .level-15 .content {
+  border-color: #8a2a59 !important;
+}
+
+.orgchart .level-16 .title {
+  background-color: #6e58ab !important;
+}
+.orgchart .level-16 .content {
+  border-color: #6e58ab !important;
+}
+.orgchart .level-17 .title {
+  background-color: #462121 !important;
+}
+.orgchart .level-17 .content {
+  border-color: #462121 !important;
+}
+.orgchart .level-18 .title {
+  background-color: #543617 !important;
+}
+.orgchart .level-18 .content {
+  border-color: #543617 !important;
+}
+.orgchart .level-19 .title {
+  background-color: #825b6e !important;
+}
+.orgchart .level-19 .content {
+  border-color: #825b6e !important;
+}
+.orgchart .level-20 .title {
+  background-color: #584d53 !important;
+}
+.orgchart .level-20 .content {
+  border-color: #584d53 !important;
+}

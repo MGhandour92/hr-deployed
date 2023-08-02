@@ -1,0 +1,37 @@
+﻿<form class="form-horizontal" name="myAddSubForm" ng-submit="generalSubForm.saveItem(myAddSubForm.$valid)" novalidate>
+
+    <div id="content RemovePaddingLeft">
+        <section ng-attr-id="{{'widget-genericDetailsSectionForm-' + generalSubForm.formId }}"  data-widget-grid>
+            <div class="row">
+                <article class="col-xs-12">
+
+                    <div on-widget-finish-render="{{'widget-genericDetailsDiVForm-' + generalSubForm.formId }}" data-jarvis-widget data-widget-editbutton="false" data-widget-deletebutton="false" data-widget-colorbutton="false" class="no-margin-bottom">
+                        <header class="header-background-color">
+                            <h2><strong>{{generalSubForm.FormSetup.MyForm.FormName || translate }}</strong></h2>
+                            <div class="widget-toolbar">
+                                <div class="btn-group">
+                                    <button type="submit" class="btn btn-link btn-sm" data-page-id="{{generalSubForm.selectedViewSetup.ViewId}}" data-object-id="{{'Save-' + generalSubForm.selectedViewSetup.ViewId}}" ng-disabled="myAddSubForm.$invalid" data-toggle="tooltip" title="{{generalSubForm.translateText('Save', generalSubForm.selectedViewSetup.ViewId)}}">
+                                        <i class="fa fa-save fa-lg"></i>
+                                    </button>
+                                    <a class="btn btn-sm" ng-click="generalSubForm.indexItemView();" data-page-id="{{generalSubForm.selectedViewSetup.ViewId}}" data-object-id="{{'Cancel-' + generalSubForm.selectedViewSetup.ViewId}}" data-toggle="tooltip" title="{{generalSubForm.translateText('Cancel', generalSubForm.selectedViewSetup.ViewId)}}">
+                                        <i class="fa fa-reply fa-lg"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="widget-toolbar">
+                                <a href-void class="btn" ng-click="generalSubForm.addItemView()"><i class="fa fa-plus"></i> {{generalSubForm.translateText('CreateNew', generalSubForm.selectedViewSetup.ViewId)}} </a>
+                            </div>
+                        </header>
+                        <div class="widget-body view-background-color">
+
+                            <div ng-include src="'app_hebs/forms/generalForms/views/genericDetailsAddNew.html'" ng-show='generalSubForm.displayCreateNewTemplate || generalSubForm.displayEditTemplate'></div>
+                            <smart-grid id="grd" name="gridName" data="generalSubForm.dataList" options="generalSubForm.grid.gridOptions" column-defs="generalSubForm.grid.gridColumnDefs" style="height:500px;"></smart-grid>
+
+                        </div>
+                    </div>
+
+                </article>
+            </div>
+        </section>
+    </div>
+</form>

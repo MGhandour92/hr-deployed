@@ -1,0 +1,16 @@
+﻿
+<div class="panel">
+    <div class="panel-heading">
+        <span class="panel-title">{{vacationRule.title}}</span>
+    </div>
+    <!--<div ui-view></div>-->
+    <div class="panel-body" ng-show='vacationRule.displayCreateNewTemplate || vacationRule.displayEditTemplate '>
+        <div ng-include src="'app_hebs/hcms/setup/personnel/vacations/views/vacationRuleAddNew.html'"></div>
+    </div>
+    <div class="panel-footer">
+        <div>
+            <a ng-click="vacationRule.addItemView()">{{vacationRule.translateText('CreateNew', vacationRule.selectedViewSetup.viewSetup.ViewId)}}</a>
+        </div>
+        <smart-grid id="grd" name="gridName" data="vacationRule.dataList" options="vacationRule.grid.gridOptions" column-defs="vacationRule.grid.gridColumnDefs" style="height:500px;"></smart-grid>
+    </div>
+</div>

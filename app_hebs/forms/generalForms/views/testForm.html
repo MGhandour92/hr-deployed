@@ -1,0 +1,19 @@
+﻿<div ng-controller="generalFormSetupController as testForm">
+    <div>{{testForm.FormSetup.MyForm.FormId}}</div>
+    <div>{{testForm.FormSetup.MyForm.FormName}}</div>
+
+    <div ng-repeat="form in testForm.FormSetup.MyForm.SubForms">
+        <div>{{form.FormName}}</div>
+    </div>
+
+    <pre>
+         {{testForm.FormSetup.MyForm.IndexView}}
+    </pre>
+    <pre>
+         {{testForm.FormSetup.MyForm.IndexView.ViewFields}}
+    </pre>
+    <pre>
+         {{testForm.FormSetup.MyForm.IndexView.GridSetup.MyGrid}}
+    </pre>
+
+</div>

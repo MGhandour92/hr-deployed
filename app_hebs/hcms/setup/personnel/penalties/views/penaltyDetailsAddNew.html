@@ -1,0 +1,119 @@
+﻿
+<div class="view">
+    <form class="form-horizontal" name="myAddpenaltySetupDetailsForm" ng-submit="penaltySetupDetails.saveItem(myAddpenaltySetupDetailsForm.$valid)" novalidate>
+
+
+        <div class="form-group  row">
+
+            <!--<ng-form name="PenaltyDetailsId" ng-class="{ 'has-error': PenaltyDetailsId.$invalid }">
+            <div class="col-sm-2">
+                <label class="control-label">{{penaltySetupDetails.translateText(penaltySetupDetails.selectedViewSetup.ViewFieldsObject["PenaltyDetailsId"].FieldName , penaltySetupDetails.selectedViewSetup.viewSetup.ViewId)}}</label>
+            </div>
+            <div class="col-sm-4">
+                <hcms-generic ng-model="penaltySetupDetails.dataItem.PenaltyDetailsId" hc-options="penaltySetupDetails.selectedViewSetup.ViewFieldsObject['PenaltyDetailsId']"></hcms-generic>
+            </div>
+        </ng-form>-->
+
+            <div class="form-group  row">
+                <!--PenaltyActionId-->
+                <ng-form name="PenaltyActionId" ng-class="{ 'has-error': PenaltyActionId.$invalid }">
+                    <div class="col-sm-2">
+                        <label class="control-label">{{penaltySetupDetails.translateText(penaltySetupDetails.selectedViewSetup.ViewFieldsObject["PenaltyActionId"].FieldName , penaltySetupDetails.selectedViewSetup.viewSetup.ViewId)}}</label>
+                    </div>
+                    <div class="col-sm-4">
+                        <hcms-generic ng-model="penaltySetupDetails.dataItem.PenaltyActionId" hc-options="penaltySetupDetails.selectedViewSetup.ViewFieldsObject['PenaltyActionId']"></hcms-generic>
+                    </div>
+                </ng-form>
+
+            </div>
+
+            <div class="form-group  row">
+                <!--PenaltyAmount-->
+                <ng-form name="PenaltyAmount" ng-class="{ 'has-error': PenaltyAmount.$invalid }">
+                    <div class="col-sm-2">
+                        <label class="control-label">{{penaltySetupDetails.translateText(penaltySetupDetails.selectedViewSetup.ViewFieldsObject["PenaltyAmount"].FieldName , penaltySetupDetails.selectedViewSetup.viewSetup.ViewId)}}</label>
+                    </div>
+                    <div class="col-sm-4">
+                        <hcms-generic ng-model="penaltySetupDetails.dataItem.PenaltyAmount" hc-options="penaltySetupDetails.selectedViewSetup.ViewFieldsObject['PenaltyAmount']"></hcms-generic>
+                    </div>
+                </ng-form>
+
+                <!--PenaltyUnitId-->
+                <ng-form name="PenaltyUnitId" ng-class="{ 'has-error': PenaltyUnitId.$invalid }">
+                    <div class="col-sm-2">
+                        <label class="control-label">{{penaltySetupDetails.translateText(penaltySetupDetails.selectedViewSetup.ViewFieldsObject["PenaltyUnitId"].FieldName , penaltySetupDetails.selectedViewSetup.viewSetup.ViewId)}}</label>
+                    </div>
+                    <div class="col-sm-4">
+                        <hcms-generic ng-model="penaltySetupDetails.dataItem.PenaltyUnitId" hc-options="penaltySetupDetails.selectedViewSetup.ViewFieldsObject['PenaltyUnitId']"></hcms-generic>
+                    </div>
+                </ng-form>
+            </div>
+
+            <div class="form-group  row">
+                <!--StartDate-->
+                <ng-form name="StartDate" ng-class="{ 'has-error': StartDate.$invalid }">
+                    <div class="col-sm-2">
+                        <label class="control-label">{{penaltySetupDetails.translateText(penaltySetupDetails.selectedViewSetup.ViewFieldsObject["StartDate"].FieldName , penaltySetupDetails.selectedViewSetup.viewSetup.ViewId)}}</label>
+                    </div>
+                    <div class="col-sm-4">
+                        <hcms-generic ng-model="penaltySetupDetails.dataItem.StartDate" hc-options="penaltySetupDetails.selectedViewSetup.ViewFieldsObject['StartDate']"></hcms-generic>
+                    </div>
+                </ng-form>
+                <!--EndDate-->
+                <ng-form name="EndDate" ng-class="{ 'has-error': EndDate.$invalid }">
+                    <div class="col-sm-2">
+                        <label class="control-label">{{penaltySetupDetails.translateText(penaltySetupDetails.selectedViewSetup.ViewFieldsObject["EndDate"].FieldName , penaltySetupDetails.selectedViewSetup.viewSetup.ViewId)}}</label>
+                    </div>
+                    <div class="col-sm-4">
+                        <hcms-generic ng-model="penaltySetupDetails.dataItem.EndDate" hc-options="penaltySetupDetails.selectedViewSetup.ViewFieldsObject['EndDate']"></hcms-generic>
+                    </div>
+                </ng-form>
+            </div>
+
+            <div class="form-group  row">
+                <!--Disabled-->
+                <ng-form name="Disabled" ng-class="{ 'has-error': Disabled.$invalid }">
+                    <!--<div class="col-sm-2">
+                <label class="control-label">{{penaltySetupDetails.translateText(penaltySetupDetails.selectedViewSetup.ViewFieldsObject["Disabled"].FieldName , penaltySetupDetails.selectedViewSetup.viewSetup.ViewId)}}</label>
+            </div>-->
+                    <div class="col-sm-4">
+                        <hcms-generic ng-model="penaltySetupDetails.dataItem.Disabled" hc-options="penaltySetupDetails.selectedViewSetup.ViewFieldsObject['Disabled']" hc-text="{{penaltySetupDetails.translateText(penaltySetupDetails.selectedViewSetup.ViewFieldsObject['Disabled'].FieldName , penaltySetupDetails.selectedViewSetup.viewSetup.ViewId)}}"></hcms-generic>
+                    </div>
+                </ng-form>
+
+                <!--PenaltyOrder-->
+                <ng-form name="PenaltyOrder" ng-class="{ 'has-error': PenaltyOrder.$invalid }">
+                    <div class="col-sm-2">
+                        <label class="control-label">{{penaltySetupDetails.translateText(penaltySetupDetails.selectedViewSetup.ViewFieldsObject["PenaltyOrder"].FieldName , penaltySetupDetails.selectedViewSetup.viewSetup.ViewId)}}</label>
+                    </div>
+                    <div class="col-sm-4">
+                        <hcms-generic ng-model="penaltySetupDetails.dataItem.PenaltyOrder" hc-options="penaltySetupDetails.selectedViewSetup.ViewFieldsObject['PenaltyOrder']"></hcms-generic>
+                    </div>
+                </ng-form>
+            </div>
+
+            <div class="form-group  row">
+                <!--PenaltyComment-->
+                <ng-form name="PenaltyComment" ng-class="{ 'has-error': PenaltyComment.$invalid }">
+                    <div class="col-sm-2">
+                        <label class="control-label">{{penaltySetupDetails.translateText(penaltySetupDetails.selectedViewSetup.ViewFieldsObject["PenaltyComment"].FieldName , penaltySetupDetails.selectedViewSetup.viewSetup.ViewId)}}</label>
+                    </div>
+                    <div class="col-sm-10">
+                        <hcms-generic ng-model="penaltySetupDetails.dataItem.PenaltyComment" hc-options="penaltySetupDetails.selectedViewSetup.ViewFieldsObject['PenaltyComment']"></hcms-generic>
+                    </div>
+                </ng-form>
+            </div>
+
+        </div>
+
+
+        <div class="row">
+            <div class="col-sm-offset-2 col-sm-10">
+                <input type="submit" class="btn btn-primary" value="{{penaltySetupDetails.translateText('Save', penaltySetupDetails.selectedViewSetup.viewSetup.ViewId)}}" ng-disabled="myAddpenaltySetupDetailsForm.$invalid" />
+                <button type="button" class="btn btn-default" ng-click="penaltySetupDetails.indexItemView()">{{penaltySetupDetails.translateText('Cancel', penaltySetupDetails.selectedViewSetup.viewSetup.ViewId)}}</button>
+            </div>
+        </div>
+
+
+    </form>
+</div>

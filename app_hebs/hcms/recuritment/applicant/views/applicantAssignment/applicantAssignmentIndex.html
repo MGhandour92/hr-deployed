@@ -1,0 +1,19 @@
+﻿
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <span class="panel-title">{{navForm.translateText(navForm.FormSetup.MyForm.FormName , navForm.selectedViewSetup.ViewId)}}</span>
+    </div>
+    <div class="panel-body">
+        <div ng-include src="'app_hebs/forms/recuritment/applicant/views/applicantAssignment/applicantAssignmentAddNew.html'" ng-show='navForm.displayCreateNewTemplate || navForm.displayEditTemplate'></div>
+        <!--<div ng-include src="'app_hcms/personnel/profile/navForm/views/navFormEdit.html'" ng-show='navForm.displayEditTemplate'></div>-->
+
+        <div>
+            <a href="#" ng-click="navForm.addItemView()">{{navForm.translateText('CreateNew' , navForm.selectedViewSetup.ViewId)}}</a>
+        </div>
+        <div class="table-primary">
+
+            <smart-grid id="grd" name="gridName" data="navForm.dataList" options="navForm.grid.gridOptions" column-defs="navForm.grid.gridColumnDefs" style="height:500px;"></smart-grid>
+
+        </div>
+    </div>
+</div>

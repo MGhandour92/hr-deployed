@@ -1,0 +1,224 @@
+﻿<div class="widget-body view-background-color">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <div class="view">
+                <form class="form-horizontal" name="payrollCalcSalaryForm" novalidate>
+                    <div class="form-group  row">
+                        <!--PayrollGroupId-->
+                        <ng-form name="PayrollGroupId" ng-class="{ 'has-error': RunNo.$invalid }">
+                            <div class="col-sm-2">
+                                <label class="control-label">{{payrollCalcSalary.translateText('PayrollGroupId',payrollCalcSalary.selectedViewSetup.viewSetup.ViewId)}}</label>
+                            </div>
+                            <div class="col-sm-4">
+                                <hcms-generic ng-model="payrollCalcSalary.dataItem.PayrollGroupId" hc-options="payrollCalcSalary.selectedViewSetup.ViewFieldsObject['PayrollGroupId']" hc-events="payrollCalcSalary.payrollGroupIdEvents"></hcms-generic>
+                            </div>
+                        </ng-form>
+                    </div>
+
+                    <div class="form-group  row">
+
+                        <!--Year-->
+                        <ng-form name="PayrollYear" ng-class="{ 'has-error': PayrollYear.$invalid }">
+                            <div class="col-sm-2">
+                                <label class="control-label">{{payrollCalcSalary.translateText('Year',payrollCalcSalary.selectedViewSetup.viewSetup.ViewId)}}</label>
+                            </div>
+                            <div class="col-sm-2">
+                                <hcms-generic ng-model="payrollCalcSalary.dataItem.PayrollYear" hc-options="payrollCalcSalary.selectedViewSetup.ViewFieldsObject['PayrollYear']"></hcms-generic>
+                            </div>
+                        </ng-form>
+
+                        <!--Month-->
+                        <ng-form name="PayrollMonth" ng-class="{ 'has-error': PayrollMonth.$invalid }">
+                            <div class="col-sm-1">
+                                <label class="control-label">{{payrollCalcSalary.translateText('Month',payrollCalcSalary.selectedViewSetup.viewSetup.ViewId)}}</label>
+                            </div>
+                            <div class="col-sm-1">
+                                <hcms-generic ng-model="payrollCalcSalary.dataItem.PayrollMonth" hc-options="payrollCalcSalary.selectedViewSetup.ViewFieldsObject['PayrollMonth']"></hcms-generic>
+                            </div>
+                        </ng-form>
+                    </div>
+
+                    <div class="form-group  row">
+                        <!--PayrollRunId-->
+                        <ng-form name="PayrollRunId" ng-class="{ 'has-error': PayrollRunId.$invalid }">
+                            <div class="col-sm-2">
+                                <label class="control-label">{{payrollCalcSalary.translateText('PayrollRunId',payrollCalcSalary.selectedViewSetup.viewSetup.ViewId)}}</label>
+                            </div>
+                            <div class="col-sm-4">
+                                <hcms-generic ng-model="payrollCalcSalary.dataItem.PayrollRunId" hc-options="payrollCalcSalary.selectedViewSetup.ViewFieldsObject['PayrollRunId']"></hcms-generic>
+                            </div>
+                        </ng-form>
+                    </div>
+
+
+                    <div class="form-group  row">
+                        <!--EmpAssignmentId-->
+                        <ng-form name="EmpAssignmentId" ng-class="{ 'has-error': EmpAssignmentId.$invalid }">
+                            <div class="col-sm-2">
+                                <label class="control-label">{{payrollCalcSalary.translateText('EmpAssignmentId',payrollCalcSalary.selectedViewSetup.viewSetup.ViewId)}}</label>
+                            </div>
+                            <div class="col-sm-4">
+                                <hcms-generic ng-model="payrollCalcSalary.dataItem.EmpAssignmentId" hc-options="payrollCalcSalary.selectedViewSetup.ViewFieldsObject['EmpAssignmentId']"></hcms-generic>
+                            </div>
+                        </ng-form>
+                    </div>
+
+
+
+                    <!--Save & Cancel Buttons-->
+                    <!--<div class="form-group  row">
+                        <div class="row">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <input type="submit" class="btn btn-primary" value="{{payrollCalcSalary.translateText('Run')}}" ng-disabled="payrollCalcSalaryForm.$invalid" />
+                                <button type="button" class="btn btn-default" ng-click="payrollCalcSalary.stopCalc()">{{payrollCalcSalary.translateText('StopCalculation')}}</button>
+                            </div>
+                        </div>
+                    </div>-->
+
+                </form>
+
+                <!--<div>
+                    <button class="btn btn-default" data-toggle="modal" data-target="#payrollCalcSalaryModal">
+                        {{payrollCalcSalary.translateText('ShowProgress')}}
+                    </button>
+                    <button class="btn btn-primary" ng-click="payrollCalcSalary.displaySalaryData()" ng-disabled="payrollCalcSalaryForm.$invalid">
+                        {{payrollCalcSalary.translateText('DisplaySalary')}}
+                    </button>
+                </div>-->
+
+                <div id="payrollCalcSalaryModal" class="modal fade" role="dialog" aria-hidden="true">
+                    <hcms-progress-calc hc-options="payrollCalcSalary.progressCalcOptions" progress-id="payrollCalcSalary.progressId" progress-type-id="payrollCalcSalary.progressTypeId"></hcms-progress-calc>
+                </div>
+
+
+            </div>
+        </div>
+        <div class="panel-body">
+
+            <section id="widget-calcSalary-grid" data-widget-grid>
+                <div class="row">
+                    <article class="col-xs-12">
+                        <div id="widget-calc-Salary" data-jarvis-widget data-widget-editbutton="false" data-widget-deletebutton="false" data-widget-colorbutton="false" class="no-margin-bottom">
+                            <header class="header-background-color">
+                                <div class="widget-toolbar">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-link btn-sm" data-page-id="{{payrollCalcSalary.createViewSetup.ViewId}}" data-object-id="{{'ShowProgress-' + payrollCalcSalary.createViewSetup.ViewId}}" data-toggle="modal" data-target="#payrollCalcSalaryModal" title="{{payrollCalcSalary.translateText('ShowProgress', payrollCalcTrans.createViewSetup.ViewId)}}">
+                                            <i class="fa fa-spinner fa-lg"></i>
+                                        </button>
+                                        <button type="button" class="btn btn-link btn-sm" ng-click="payrollCalcSalary.displaySalaryData()" ng-disabled="payrollCalcSalaryForm.$invalid" data-page-id="{{payrollCalcSalary.createViewSetup.ViewId}}" data-object-id="{{'Display-' + payrollCalcSalary.createViewSetup.ViewId}}" data-toggle="tooltip" title="{{payrollCalcSalary.translateText('Display', payrollCalcSalary.createViewSetup.ViewId)}}">
+                                            <i class="fa fa-eye fa-lg"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="widget-toolbar">
+                                    <button type="button" id="runBtn" class="btn btn-link btn-sm" ng-click="payrollCalcSalary.run(payrollCalcSalaryForm.$valid)" ng-disabled="payrollCalcSalaryForm.$invalid" data-page-id="{{payrollCalcSalary.createViewSetup.ViewId}}" data-object-id="{{'Run-' + payrollCalcSalary.createViewSetup.ViewId}}" data-toggle="tooltip" title="{{payrollCalcSalary.translateText('StartCalculation', payrollCalcSalary.createViewSetup.ViewId)}}">
+                                        <i class="fa fa-play-circle fa-lg"></i>
+                                    </button>
+                                    <button type="button" id="stopRunBtn" class="btn btn-link btn-sm" ng-click="payrollCalcSalary.stopCalc()" data-page-id="{{payrollCalcSalary.createViewSetup.ViewId}}" data-object-id="{{'StopRun-' + payrollCalcSalary.createViewSetup.ViewId}}" data-toggle="tooltip" title="{{payrollCalcSalary.translateText('StopCalculation', payrollCalcSalary.createViewSetup.ViewId)}}">
+                                        <i class="fa fa-stop-circle fa-lg"></i>
+                                    </button>
+                                </div>
+
+
+                            </header>
+                            <div class="widget-body view-background-color">
+
+                                <!--<ul class="nav nav-tabs">
+                                    <li>
+                                        <a href="#salaryHeaderData" data-toggle="tab">{{payrollCalcSalary.translateText('SalaryHeader', payrollCalcSalary.selectedViewSetup.viewSetup.ViewId)}}</a>
+                                    </li>
+                                    <li>
+                                        <a href="#salaryDetailsData" data-toggle="tab">{{payrollCalcSalary.translateText('SalaryDetails', payrollCalcSalary.selectedViewSetup.viewSetup.ViewId)}}</a>
+                                    </li>
+                                </ul>
+
+                                <div class="tab-content">
+                                    <div class="tab-pane" id="salaryHeaderData">
+                                        <smart-grid id="grd" name="gridName" data="payrollCalcSalary.salaryHeaderData" options="payrollCalcSalary.grid.gridOptions" column-defs="payrollCalcSalary.grid.gridColumnDefs" style="height:500px;"></smart-grid>
+                                    </div>
+                                    <div class="tab-pane" id="salaryDetailsData">
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <h2>{{payrollCalcSalary.selectedHeaderData.EmployeeCode + '   :   ' + payrollCalcSalary.selectedHeaderData.ProfileName }}</h2>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <h3>{{payrollCalcSalary.translateText('Earning')}}</h3>
+                                                <smart-grid id="grd" name="gridName" data="payrollCalcSalary.salaryEarningData" options="payrollCalcSalary.earningGrid.gridOptions" column-defs="payrollCalcSalary.earningGrid.gridColumnDefs" style="height:400px;width:100%;"></smart-grid>
+                                                <h4>{{payrollCalcSalary.translateText('TotalEarning') + ' :  ' + payrollCalcSalary.totalRunSalary.totalEarning }}</h4>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <h3>{{payrollCalcSalary.translateText('Deduction')}}</h3>
+                                                <smart-grid id="grd" name="gridName" data="payrollCalcSalary.salaryDeductionData" options="payrollCalcSalary.deductionGrid.gridOptions" column-defs="payrollCalcSalary.deductionGrid.gridColumnDefs" style="height:400px;"></smart-grid>
+                                                <h4>{{payrollCalcSalary.translateText('TotalDeduction') + ' :  ' + payrollCalcSalary.totalRunSalary.totalDeduction }}</h4>
+                                            </div>
+                                            <div class="col-sm-6 col-sm-offset-3">
+                                                <h3>{{payrollCalcSalary.translateText('NetSalary') + ' :  ' + payrollCalcSalary.totalRunSalary.totalNet }}</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>-->
+
+
+
+                                <uib-tabset active="payrollCalcSalary.activeTabIndex" class="nav nav-tabs">
+                                    <uib-tab index="0">
+                                        <uib-tab-heading style="padding:2px;">
+                                            <a class="btn btn-xs" style="padding:2px;margin:1px;">
+                                            </a>
+                                            <span style="margin:2px; padding:3px;">{{payrollCalcSalary.translateText('SalaryHeader',payrollCalcSalary.selectedViewSetup.ViewId)}}</span>
+                                        </uib-tab-heading>
+                                        <smart-grid id="grd" name="gridName" data="payrollCalcSalary.salaryHeaderData" options="payrollCalcSalary.grid.gridOptions" column-defs="payrollCalcSalary.grid.gridColumnDefs" style="height:500px;"></smart-grid>
+                                    </uib-tab>
+                                    <uib-tab index="1">
+                                        <uib-tab-heading style="padding:2px;">
+                                            <a class="btn btn-xs" style="padding:2px;margin:1px;">
+                                            </a>
+                                            <span style="margin:2px; padding:3px;">{{payrollCalcSalary.translateText('SalaryDetails',payrollCalcSalary.selectedViewSetup.ViewId)}}</span>
+                                        </uib-tab-heading>
+                                        <div>
+
+                                            <div class="row">
+                                                <div class="col-sm-12">
+                                                    <h2>{{payrollCalcSalary.selectedHeaderData.EmployeeCode + '   :   ' + payrollCalcSalary.selectedHeaderData.ProfileName }}</h2>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <h3>{{payrollCalcSalary.translateText('Earning')}}</h3>
+                                                    <smart-grid id="grd" name="gridName" data="payrollCalcSalary.salaryEarningData" options="payrollCalcSalary.earningGrid.gridOptions" column-defs="payrollCalcSalary.earningGrid.gridColumnDefs" style="height:400px;width:100%;"></smart-grid>
+                                                    <h4>{{payrollCalcSalary.translateText('TotalEarning') + ' :  ' + payrollCalcSalary.totalRunSalary.totalEarning }}</h4>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <h3>{{payrollCalcSalary.translateText('Deduction')}}</h3>
+                                                    <smart-grid id="grd" name="gridName" data="payrollCalcSalary.salaryDeductionData" options="payrollCalcSalary.deductionGrid.gridOptions" column-defs="payrollCalcSalary.deductionGrid.gridColumnDefs" style="height:400px;"></smart-grid>
+                                                    <h4>{{payrollCalcSalary.translateText('TotalDeduction') + ' :  ' + payrollCalcSalary.totalRunSalary.totalDeduction }}</h4>
+                                                </div>
+                                                <div class="col-sm-6 col-sm-offset-3">
+                                                    <h3>{{payrollCalcSalary.translateText('NetSalary') + ' :  ' + payrollCalcSalary.totalRunSalary.totalNet }}</h3>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </uib-tab>
+                                </uib-tabset>
+
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+
+
+
+
+
+
+
+
+        </div>
+
+        <div class="panel-footer">
+
+        </div>
+    </div>
+
+</div>

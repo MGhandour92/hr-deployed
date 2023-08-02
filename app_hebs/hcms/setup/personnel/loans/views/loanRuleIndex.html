@@ -1,0 +1,16 @@
+﻿
+<div class="panel">
+    <div class="panel-heading">
+        <span class="panel-title">{{loanRule.title}}</span>
+    </div>
+    <!--<div ui-view></div>-->
+    <div class="panel-body" ng-show='loanRule.displayCreateNewTemplate || loanRule.displayEditTemplate '>
+        <div ng-include src="'app_hebs/hcms/setup/personnel/loans/views/loanRuleAddNew.html'"></div>
+    </div>
+    <div class="panel-footer">
+        <div>
+            <a ng-click="loanRule.addItemView()">{{loanRule.translateText('CreateNew', loanRule.selectedViewSetup.viewSetup.ViewId)}}</a>
+        </div>
+        <smart-grid id="grd" name="gridName" data="loanRule.dataList" options="loanRule.grid.gridOptions" column-defs="loanRule.grid.gridColumnDefs" style="height:500px;"></smart-grid>
+    </div>
+</div>

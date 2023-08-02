@@ -1,0 +1,39 @@
+﻿<form class="form-horizontal" name="EmpAddressAddForm" ng-submit="dynamicForm.saveItem(EmpAddressAddForm.$valid)" novalidate>
+
+    <div id="content RemovePaddingLeft ">
+        <section id="widget-grid" data-widget-grid>
+            <div class="row">
+                <article class="col-xs-12">
+
+                    <div id="widget-emp-address" data-jarvis-widget data-widget-editbutton="false" data-widget-deletebutton="false" data-widget-colorbutton="false" class="no-margin-bottom">
+                        <header class="header-background-color">
+                            <h2><strong>{{dynamicForm.FormSetup.MyForm.FormName || translate }}</strong></h2>
+                            <div class="widget-toolbar">
+                                <div class="btn-group">
+                                    <button type="submit" class="btn btn-link btn-sm" data-page-id="{{dynamicForm.selectedViewSetup.ViewId}}" data-object-id="{{'Save-' + dynamicForm.selectedViewSetup.ViewId}}" ng-disabled="EmpAddressAddForm.$invalid" data-toggle="tooltip" title="{{dynamicForm.translateText('Save', dynamicForm.selectedViewSetup.ViewId)}}">
+                                        <i class="fa fa-save fa-lg"></i>
+                                    </button>
+                                    <a class="btn btn-sm" ng-click="dynamicForm.indexItemView();" data-page-id="{{dynamicForm.selectedViewSetup.ViewId}}" data-object-id="{{'Cancel-' + dynamicForm.selectedViewSetup.ViewId}}" data-toggle="tooltip" title="{{dynamicForm.translateText('Cancel', dynamicForm.selectedViewSetup.ViewId)}}">
+                                        <i class="fa fa-reply fa-lg"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="widget-toolbar">
+                                <a href-void class="btn" ng-click="dynamicForm.addItemView()"><i class="fa fa-plus"></i> {{dynamicForm.translateText('CreateNew', dynamicForm.selectedViewSetup.ViewId)}} </a>
+                            </div>
+                        </header>
+                        <div class="widget-body view-background-color">
+
+
+                            <div ng-include src="'app_hebs/hcms/personnel/profile/views/empAddress/empAddressAddNew.html'" ng-show='dynamicForm.displayCreateNewTemplate || dynamicForm.displayEditTemplate'></div>
+
+                            <smart-grid id="grd" name="gridName" data="dynamicForm.dataList" options="dynamicForm.grid.gridOptions" column-defs="dynamicForm.grid.gridColumnDefs" style="height:500px;"></smart-grid>
+
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </div>
+
+</form>

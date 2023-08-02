@@ -1,0 +1,113 @@
+﻿<div class="form-group  row">
+    <!--EmpPermissionCode-->
+    <ng-form name="EmpPermissionCode" ng-class="{ 'has-error': EmpPermissionCode.$invalid }" ng-hide="dynamicForm.selectedViewSetup.ViewFieldsObject['EmpPermissionCode'].IsHidden">
+        <div class="col-sm-2">
+
+            <label class="control-label">{{dynamicForm.translateText(dynamicForm.selectedViewSetup.ViewFieldsObject["EmpPermissionCode"].FieldName,dynamicForm.selectedViewSetup.viewSetup.ViewId)}}</label>
+        </div>
+        <div class="col-sm-4">
+
+            <hcms-generic ng-model="dynamicForm.dataItem.EmpPermissionCode" hc-options="dynamicForm.selectedViewSetup.ViewFieldsObject['EmpPermissionCode']"></hcms-generic>
+        </div>
+    </ng-form>
+</div>
+<div class="form-group  row">
+
+
+    <!--PermissionId-->
+    <ng-form name="PermissionId" ng-class="{ 'has-error': PermissionId.$invalid }" ng-hide="dynamicForm.selectedViewSetup.ViewFieldsObject['PermissionId'].IsHidden">
+        <div class="col-sm-2">
+
+            <label class="control-label">{{dynamicForm.translateText(dynamicForm.selectedViewSetup.ViewFieldsObject["PermissionId"].FieldName,dynamicForm.selectedViewSetup.viewSetup.ViewId)}}</label>
+        </div>
+        <div class="col-sm-4">
+
+            <hcms-generic ng-model="dynamicForm.dataItem.PermissionId" hc-options="dynamicForm.selectedViewSetup.ViewFieldsObject['PermissionId']"></hcms-generic>
+        </div>
+    </ng-form>
+
+
+    <!--PermissionDate-->
+    <ng-form name="PermissionDate" ng-class="{ 'has-error': PermissionDate.$invalid }" ng-hide="dynamicForm.selectedViewSetup.ViewFieldsObject['PermissionDate'].IsHidden">
+        <div class="col-sm-2">
+
+            <label class="control-label">{{dynamicForm.translateText(dynamicForm.selectedViewSetup.ViewFieldsObject["PermissionDate"].FieldName,dynamicForm.selectedViewSetup.viewSetup.ViewId)}}</label>
+        </div>
+        <div class="col-sm-4">
+
+            <hcms-generic ng-model="dynamicForm.dataItem.PermissionDate" hc-options="dynamicForm.selectedViewSetup.ViewFieldsObject['PermissionDate']"></hcms-generic>
+        </div>
+    </ng-form>
+</div>
+
+
+
+
+<div class="form-group  row">
+    <!--FromTime-->
+    <ng-form name="FromTime" ng-class="{ 'has-error': FromTime.$invalid }" ng-hide="dynamicForm.selectedViewSetup.ViewFieldsObject['FromTime'].IsHidden">
+        <div class="col-sm-2">
+
+            <label class="control-label">{{dynamicForm.translateText(dynamicForm.selectedViewSetup.ViewFieldsObject["FromTime"].FieldName,dynamicForm.selectedViewSetup.viewSetup.ViewId)}}</label>
+        </div>
+        <div class="col-sm-4">
+
+            <hcms-generic ng-model="dynamicForm.dataItem.FromTime" hc-options="dynamicForm.selectedViewSetup.ViewFieldsObject['FromTime']" hc-events="dynamicForm.permisionFromtimeEvents"></hcms-generic>
+        </div>
+    </ng-form>
+
+    <!--ToTime-->
+    <ng-form name="ToTime" ng-class="{ 'has-error': ToTime.$invalid }" ng-hide="dynamicForm.selectedViewSetup.ViewFieldsObject['ToTime'].IsHidden">
+        <div class="col-sm-2">
+
+            <label class="control-label">{{dynamicForm.translateText(dynamicForm.selectedViewSetup.ViewFieldsObject["ToTime"].FieldName,dynamicForm.selectedViewSetup.viewSetup.ViewId)}}</label>
+        </div>
+        <div class="col-sm-4">
+            <hcms-generic ng-model="dynamicForm.dataItem.ToTime" hc-options="dynamicForm.selectedViewSetup.ViewFieldsObject['ToTime']" hc-events="dynamicForm.permisionTotimeEvents"></hcms-generic>
+            <!--<input type="time" ng-model="dynamicForm.dataItem.ToTime">-->
+        </div>
+    </ng-form>
+</div>
+<div class="form-group  row">
+
+    <!--Duration-->
+    <ng-form name="Duration" ng-class="{ 'has-error': Duration.$invalid }" ng-hide="dynamicForm.selectedViewSetup.ViewFieldsObject['Duration'].IsHidden">
+        <div class="col-sm-2">
+
+            <label class="control-label">{{dynamicForm.translateText(dynamicForm.selectedViewSetup.ViewFieldsObject["Duration"].FieldName,dynamicForm.selectedViewSetup.viewSetup.ViewId)}}</label>
+        </div>
+        <div class="col-sm-4">
+
+            <hcms-generic ng-model="dynamicForm.dataItem.Duration" hc-options="dynamicForm.selectedViewSetup.ViewFieldsObject['Duration']" hc-events="dynamicForm.permisionDurationEvents"></hcms-generic>
+        </div>
+    </ng-form>
+</div>
+<div class="form-group  row">
+    <!--PermissionComment-->
+    <ng-form name="PermissionComment" ng-class="{ 'has-error': PermissionComment.$invalid }" ng-hide="dynamicForm.selectedViewSetup.ViewFieldsObject['PermissionComment'].IsHidden">
+        <div class="col-sm-2">
+
+            <label class="control-label">{{dynamicForm.translateText(dynamicForm.selectedViewSetup.ViewFieldsObject["PermissionComment"].FieldName,dynamicForm.selectedViewSetup.viewSetup.ViewId)}}</label>
+        </div>
+        <div class="col-sm-10">
+
+            <hcms-generic ng-model="dynamicForm.dataItem.PermissionComment" hc-options="dynamicForm.selectedViewSetup.ViewFieldsObject['PermissionComment']"></hcms-generic>
+        </div>
+    </ng-form>
+</div>
+
+
+
+<div class="form-group  row">
+    <!--Disabled-->
+    <ng-form name="Disabled" ng-class="{ 'has-error': Disabled.$invalid }" ng-hide="dynamicForm.selectedViewSetup.ViewFieldsObject['Disabled'].IsHidden">
+        <div class="col-sm-2">
+
+            <label class="control-label">{{dynamicForm.translateText(dynamicForm.selectedViewSetup.ViewFieldsObject["Disabled"].FieldName,dynamicForm.selectedViewSetup.viewSetup.ViewId)}}</label>
+        </div>
+        <div class="col-sm-4">
+
+            <hcms-generic ng-model="dynamicForm.dataItem.Disabled" hc-options="dynamicForm.selectedViewSetup.ViewFieldsObject['Disabled']"></hcms-generic>
+        </div>
+    </ng-form>
+</div>

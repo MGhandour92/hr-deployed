@@ -1,0 +1,228 @@
+﻿<div class="form-group  row">
+    <!--EmpLoanSettlementCode-->
+    <ng-form name="EmpLoanSettlementCode" ng-class="{ 'has-error': EmpLoanSettlementCode.$invalid }" ng-hide="dynamicForm.selectedViewSetup.ViewFieldsObject['EmpLoanSettlementCode'].IsHidden">
+        <div class="col-sm-2">
+
+            <label class="control-label">{{dynamicForm.translateText(dynamicForm.selectedViewSetup.ViewFieldsObject["EmpLoanSettlementCode"].FieldName,dynamicForm.selectedViewSetup.viewSetup.ViewId)}}</label>
+        </div>
+        <div class="col-sm-4">
+
+            <hcms-generic ng-model="dynamicForm.dataItem.EmpLoanSettlementCode" hc-options="dynamicForm.selectedViewSetup.ViewFieldsObject['EmpLoanSettlementCode']"></hcms-generic>
+        </div>
+    </ng-form>
+       
+</div>
+
+<div class="form-group  row">
+    <!--EmpLoanId-->
+    <ng-form name="EmpLoanId" ng-class="{ 'has-error': EmpLoanId.$invalid }" ng-hide="dynamicForm.selectedViewSetup.ViewFieldsObject['EmpLoanId'].IsHidden">
+        <div class="col-sm-2">
+
+            <label class="control-label">{{dynamicForm.translateText(dynamicForm.selectedViewSetup.ViewFieldsObject["EmpLoanId"].FieldName,dynamicForm.selectedViewSetup.viewSetup.ViewId)}}</label>
+        </div>
+        <div class="col-sm-4">
+
+            <hcms-generic ng-model="dynamicForm.dataItem.EmpLoanId" hc-options="dynamicForm.loanTransOptions" hc-events="dynamicForm.empLoanIdEvents"></hcms-generic>
+        </div>
+    </ng-form>
+
+    <!--SettlementDate-->
+    <ng-form name="SettlementDate" ng-class="{ 'has-error': SettlementDate.$invalid }" ng-hide="dynamicForm.selectedViewSetup.ViewFieldsObject['SettlementDate'].IsHidden">
+        <div class="col-sm-2">
+
+            <label class="control-label">{{dynamicForm.translateText(dynamicForm.selectedViewSetup.ViewFieldsObject["SettlementDate"].FieldName,dynamicForm.selectedViewSetup.viewSetup.ViewId)}}</label>
+        </div>
+        <div class="col-sm-4">
+
+            <hcms-generic ng-model="dynamicForm.dataItem.SettlementDate" hc-options="dynamicForm.selectedViewSetup.ViewFieldsObject['SettlementDate']"></hcms-generic>
+        </div>
+    </ng-form>
+</div>
+
+<div class="form-group  row">
+
+    <!--<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+        Launch demo modal
+    </button>-->
+
+    <!--LoanSettlementTypeId-->
+    <ng-form name="LoanSettlementTypeId" ng-class="{ 'has-error': LoanSettlementTypeId.$invalid }" ng-hide="dynamicForm.selectedViewSetup.ViewFieldsObject['LoanSettlementTypeId'].IsHidden">
+        <div class="col-sm-2">
+
+            <label class="control-label">{{dynamicForm.translateText(dynamicForm.selectedViewSetup.ViewFieldsObject["LoanSettlementTypeId"].FieldName,dynamicForm.selectedViewSetup.viewSetup.ViewId)}}</label>
+        </div>
+        <div class="col-sm-4">
+
+            <hcms-generic ng-model="dynamicForm.dataItem.LoanSettlementTypeId" hc-options="dynamicForm.selectedViewSetup.ViewFieldsObject['LoanSettlementTypeId']"></hcms-generic>
+        </div>
+    </ng-form>
+
+    <!--SystemLoanSettlementTypeId-->
+    <ng-form name="SystemLoanSettlementTypeId" ng-class="{ 'has-error': SystemLoanSettlementTypeId.$invalid }" ng-hide="dynamicForm.selectedViewSetup.ViewFieldsObject['SystemLoanSettlementTypeId'].IsHidden">
+        <div class="col-sm-2">
+
+            <label class="control-label">{{dynamicForm.translateText(dynamicForm.selectedViewSetup.ViewFieldsObject["SystemLoanSettlementTypeId"].FieldName,dynamicForm.selectedViewSetup.viewSetup.ViewId)}}</label>
+        </div>
+        <div class="col-sm-4">
+
+            <hcms-generic ng-model="dynamicForm.dataItem.SystemLoanSettlementTypeId" hc-options="dynamicForm.selectedViewSetup.ViewFieldsObject['SystemLoanSettlementTypeId']" hc-events="dynamicForm.systemLoansettlementType"></hcms-generic>
+        </div>
+    </ng-form>
+
+</div>
+
+<div class="form-group  row" ng-show="dynamicForm.displaySetllmentAmount">
+    <!--SettlementAmount-->
+    <ng-form name="SettlementAmount" ng-class="{ 'has-error': SettlementAmount.$invalid }" ng-hide="dynamicForm.selectedViewSetup.ViewFieldsObject['SettlementAmount'].IsHidden">
+        <div class="col-sm-2">
+
+            <label class="control-label">{{dynamicForm.translateText(dynamicForm.selectedViewSetup.ViewFieldsObject["SettlementAmount"].FieldName,dynamicForm.selectedViewSetup.viewSetup.ViewId)}}</label>
+        </div>
+        <div class="col-sm-4">
+
+            <hcms-generic ng-model="dynamicForm.dataItem.SettlementAmount" hc-options="dynamicForm.selectedViewSetup.ViewFieldsObject['SettlementAmount']" hc-events="dynamicForm.settlementAmountEvents"></hcms-generic>
+        </div>
+    </ng-form>
+
+    <!--SettlementInvoiceNumber-->
+    <ng-form name="SettlementInvoiceNumber" ng-class="{ 'has-error': SettlementInvoiceNumber.$invalid }" ng-hide="dynamicForm.selectedViewSetup.ViewFieldsObject['SettlementInvoiceNumber'].IsHidden">
+        <div class="col-sm-2">
+
+            <label class="control-label">{{dynamicForm.translateText(dynamicForm.selectedViewSetup.ViewFieldsObject["SettlementInvoiceNumber"].FieldName,dynamicForm.selectedViewSetup.viewSetup.ViewId)}}</label>
+        </div>
+        <div class="col-sm-4">
+
+            <hcms-generic ng-model="dynamicForm.dataItem.SettlementInvoiceNumber" hc-options="dynamicForm.selectedViewSetup.ViewFieldsObject['SettlementInvoiceNumber']"></hcms-generic>
+        </div>
+    </ng-form>
+</div>
+
+<div class="form-group  row">
+
+    <!--RemainingAmount-->
+    <ng-form name="RemainingAmount" ng-class="{ 'has-error': RemainingAmount.$invalid }" ng-hide="dynamicForm.selectedViewSetup.ViewFieldsObject['RemainingAmount'].IsHidden">
+        <div class="col-sm-2">
+
+            <label class="control-label">{{dynamicForm.translateText(dynamicForm.selectedViewSetup.ViewFieldsObject["RemainingAmount"].FieldName,dynamicForm.selectedViewSetup.viewSetup.ViewId)}}</label>
+        </div>
+        <div class="col-sm-4">
+
+            <hcms-generic ng-model="dynamicForm.dataItem.RemainingAmount" hc-options="dynamicForm.selectedViewSetup.ViewFieldsObject['RemainingAmount']"></hcms-generic>
+        </div>
+    </ng-form>
+    <!--LoanAmount-->
+    <ng-form name="LoanAmount" ng-class="{ 'has-error': LoanAmount.$invalid }" ng-hide="dynamicForm.selectedViewSetup.ViewFieldsObject['LoanAmount'].IsHidden">
+        <div class="col-sm-2">
+
+            <label class="control-label">{{dynamicForm.translateText(dynamicForm.selectedViewSetup.ViewFieldsObject["LoanAmount"].FieldName,dynamicForm.selectedViewSetup.viewSetup.ViewId)}}</label>
+        </div>
+        <div class="col-sm-4">
+
+            <hcms-generic ng-model="dynamicForm.dataItem.LoanAmount" hc-options="dynamicForm.selectedViewSetup.ViewFieldsObject['LoanAmount']"></hcms-generic>
+        </div>
+    </ng-form>
+
+</div>
+<div class="form-group  row">
+    <!--OriginalFromMonth-->
+    <ng-form name="OriginalFromMonth" ng-class="{ 'has-error': OriginalFromMonth.$invalid }" ng-hide="dynamicForm.selectedViewSetup.ViewFieldsObject['OriginalFromMonth'].IsHidden">
+        <div class="col-sm-2">
+
+            <label class="control-label">{{dynamicForm.translateText(dynamicForm.selectedViewSetup.ViewFieldsObject["OriginalFromMonth"].FieldName,dynamicForm.selectedViewSetup.viewSetup.ViewId)}}</label>
+        </div>
+        <div class="col-sm-4">
+
+            <hcms-generic ng-model="dynamicForm.dataItem.OriginalFromMonth" hc-options="dynamicForm.selectedViewSetup.ViewFieldsObject['OriginalFromMonth']"></hcms-generic>
+        </div>
+    </ng-form>
+    <!--OriginalFromYear-->
+    <ng-form name="OriginalFromYear" ng-class="{ 'has-error': OriginalFromYear.$invalid }" ng-hide="dynamicForm.selectedViewSetup.ViewFieldsObject['OriginalFromYear'].IsHidden">
+        <div class="col-sm-2">
+
+            <label class="control-label">{{dynamicForm.translateText(dynamicForm.selectedViewSetup.ViewFieldsObject["OriginalFromYear"].FieldName,dynamicForm.selectedViewSetup.viewSetup.ViewId)}}</label>
+        </div>
+        <div class="col-sm-4">
+
+            <hcms-generic ng-model="dynamicForm.dataItem.OriginalFromYear" hc-options="dynamicForm.selectedViewSetup.ViewFieldsObject['OriginalFromYear']"></hcms-generic>
+        </div>
+    </ng-form>
+</div>
+<div class="form-group  row" ng-show="dynamicForm.displayPostPonRange">
+    <!--FromMonth-->
+    <ng-form name="FromMonth" ng-class="{ 'has-error': FromMonth.$invalid }" ng-hide="dynamicForm.selectedViewSetup.ViewFieldsObject['FromMonth'].IsHidden">
+        <div class="col-sm-2">
+
+            <label class="control-label">{{dynamicForm.translateText(dynamicForm.selectedViewSetup.ViewFieldsObject["FromMonth"].FieldName,dynamicForm.selectedViewSetup.viewSetup.ViewId)}}</label>
+        </div>
+        <div class="col-sm-4">
+
+            <hcms-generic ng-model="dynamicForm.dataItem.FromMonth" hc-options="dynamicForm.selectedViewSetup.ViewFieldsObject['FromMonth']"></hcms-generic>
+        </div>
+    </ng-form>
+    <!--FromYear-->
+    <ng-form name="FromYear" ng-class="{ 'has-error': FromYear.$invalid }" ng-hide="dynamicForm.selectedViewSetup.ViewFieldsObject['FromYear'].IsHidden">
+        <div class="col-sm-2">
+
+            <label class="control-label">{{dynamicForm.translateText(dynamicForm.selectedViewSetup.ViewFieldsObject["FromYear"].FieldName,dynamicForm.selectedViewSetup.viewSetup.ViewId)}}</label>
+        </div>
+        <div class="col-sm-4">
+
+            <hcms-generic ng-model="dynamicForm.dataItem.FromYear" hc-options="dynamicForm.selectedViewSetup.ViewFieldsObject['FromYear']"></hcms-generic>
+        </div>
+    </ng-form>
+</div>
+
+
+
+<div class="form-group  row">
+    <!--Comment-->
+    <ng-form name="Comment" ng-class="{ 'has-error': Comment.$invalid }" ng-hide="dynamicForm.selectedViewSetup.ViewFieldsObject['Comment'].IsHidden">
+        <div class="col-sm-2">
+
+            <label class="control-label">{{dynamicForm.translateText(dynamicForm.selectedViewSetup.ViewFieldsObject["Comment"].FieldName,dynamicForm.selectedViewSetup.viewSetup.ViewId)}}</label>
+        </div>
+        <div class="col-sm-4">
+
+            <hcms-generic ng-model="dynamicForm.dataItem.Comment" hc-options="dynamicForm.selectedViewSetup.ViewFieldsObject['Comment']"></hcms-generic>
+        </div>
+    </ng-form>
+
+    <!--LoanSettlementStatusId-->
+    <ng-form name="LoanSettlementStatusId" ng-class="{ 'has-error': LoanSettlementStatusId.$invalid }" ng-hide="dynamicForm.selectedViewSetup.ViewFieldsObject['LoanSettlementStatusId'].IsHidden">
+        <div class="col-sm-2">
+
+            <label class="control-label">{{dynamicForm.translateText(dynamicForm.selectedViewSetup.ViewFieldsObject["LoanSettlementStatusId"].FieldName,dynamicForm.selectedViewSetup.viewSetup.ViewId)}}</label>
+        </div>
+        <div class="col-sm-4">
+
+            <hcms-generic ng-model="dynamicForm.dataItem.LoanSettlementStatusId" hc-options="dynamicForm.selectedViewSetup.ViewFieldsObject['LoanSettlementStatusId']"></hcms-generic>
+        </div>
+    </ng-form>
+</div>
+
+
+<!--<div class="modal fade" id="loanTransModal" tabindex="-1" role="dialog" aria-labelledby="loanTransModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content"> 
+
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    &times;
+                </button>
+                <h4 class="modal-title" id="loanTransModalLabel">{{dynamicForm.translateText('Loan Transactions')}}</h4>
+            </div>
+
+            <div class="modal-body">
+                <smart-grid id="LoanGrd" name="loanGridName" data="dynamicForm.loanTransactions" options="dynamicForm.loanTransGrid.gridOptions" column-defs="dynamicForm.loanTransGrid.gridColumnDefs" style="height:500px;"></smart-grid>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">
+                    {{dynamicForm.translateText('Cancel')}}
+                </button>
+                <button type="button" class="btn btn-primary">
+                    {{dynamicForm.translateText('Ok')}}
+                </button>
+            </div>
+        </div> 
+    </div> 
+</div>--> 

@@ -1,0 +1,100 @@
+﻿<div class="widget-body view-background-color">
+    
+    <div class="panel-heading">
+        <div class="view">
+            <form class="form-horizontal" name="loanPostTransForm" ng-submit="dynamicForm.run(loanPostTransForm.$valid)" novalidate>
+                <div class="form-group  row">
+
+                    <!--Year-->
+                    <ng-form name="PayrollYear" ng-class="{ 'has-error': PayrollYear.$invalid }">
+                        <div class="col-sm-2">
+                            <label class="control-label">{{dynamicForm.translateText('Year',dynamicForm.selectedViewSetup.ViewFieldsObject.viewSetup.ViewId)}}</label>
+                        </div>
+                        <div class="col-sm-2">
+                            <hcms-year ng-model="dynamicForm.dataItem.PayrollYear"></hcms-year>
+                        </div>
+                    </ng-form>
+
+                    <!--Month-->
+                    <ng-form name="PayrollMonth" ng-class="{ 'has-error': PayrollMonth.$invalid }">
+                        <div class="col-sm-2">
+                            <label class="control-label">{{dynamicForm.translateText('Month',dynamicForm.selectedViewSetup.ViewFieldsObject.viewSetup.ViewId)}}</label>
+                        </div>
+                        <div class="col-sm-2">
+                            <hcms-month ng-model="dynamicForm.dataItem.PayrollMonth"></hcms-month>
+                        </div>
+                    </ng-form>
+                </div>
+
+                <div class="form-group  row">
+                    <!--RunNo-->
+                    <ng-form name="RunNo" ng-class="{ 'has-error': RunNo.$invalid }">
+                        <div class="col-sm-2">
+                            <label class="control-label">{{dynamicForm.translateText('RunNo',dynamicForm.selectedViewSetup.ViewFieldsObject.viewSetup.ViewId)}}</label>
+                        </div>
+                        <div class="col-sm-4">
+                            <hcms-select ng-model="dynamicForm.dataItem.RunNo" hc-options="dynamicForm.runNoOptions" ng-mandatory="true"></hcms-select>
+                        </div>
+                    </ng-form>
+                </div>
+
+                <div class="form-group  row">
+                    <!--PayrollGroupID-->
+                    <ng-form name="PayrollGroupId" ng-class="{ 'has-error': RunNo.$invalid }">
+                        <div class="col-sm-2">
+                            <label class="control-label">{{dynamicForm.translateText('PayrollGroupId',dynamicForm.selectedViewSetup.ViewFieldsObject.viewSetup.ViewId)}}</label>
+                        </div>
+                        <div class="col-sm-4">
+                            <hcms-select ng-model="dynamicForm.dataItem.PayrollGroupId" hc-options="dynamicForm.payrollGroupIdOptions" ng-mandatory="true"></hcms-select>
+                        </div>
+                    </ng-form>
+                </div>
+
+                <div class="form-group  row">
+                    <!--LoanId-->
+                    <ng-form name="LoanId" ng-class="{ 'has-error': LoanId.$invalid }">
+                        <div class="col-sm-2">
+                            <label class="control-label">{{dynamicForm.translateText('LoanId',selectedViewSetup.ViewFieldsObject.viewSetup.ViewId)}}</label>
+                        </div>
+                        <div class="col-sm-4">
+                            <hcms-multi-select ng-model="dynamicForm.dataItem.LoanId" hc-options="dynamicForm.loanIdOptions"></hcms-multi-select>
+                        </div>
+                    </ng-form>
+                </div>
+
+
+
+                <div class="form-group  row">
+                    <!--Save & Cancel Buttons-->
+                    <div class="row">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <input type="submit" class="btn btn-primary" ng-disabled="dynamicForm.runStatus==false" value="{{dynamicForm.translateText('Run' , dynamicForm.selectedViewSetup.ViewFieldsObject.viewSetup.ViewId)}}" ng-disabled="loanPostTransForm.$invalid" />
+                            <button type="button" class="btn btn-default" ng-disabled="dynamicForm.stopStatus==false" ng-click="dynamicForm.stopCalc()">{{dynamicForm.translateText('Stop Calculation' , dynamicForm.selectedViewSetup.ViewFieldsObject.viewSetup.ViewId)}}</button>
+                            <button type="button" class="btn btn-default" ng-disabled="dynamicForm.displayDataStatus==false" ng-click="dynamicForm.getCalculatedData()">{{dynamicForm.translateText('DisplayData' , dynamicForm.selectedViewSetup.ViewFieldsObject.viewSetup.ViewId)}}</button>
+
+                        </div>
+                    </div>
+                </div>
+
+            </form>
+
+            <div>
+                <button class="btn btn-primary btn-lg" ng-disabled="dynamicForm.showProgressStatus==false" ng-click="dynamicForm.showProgress();">
+                    <!-- data-toggle="modal" data-target="#loanPostModal">-->
+                    Show Progress
+                </button>
+            </div>
+            <div id="loanPostModal" class="modal fade" role="dialog" aria-hidden="true">
+                <hcms-progress-calc hc-options="dynamicForm.progressCalcOptions"></hcms-progress-calc>
+            </div>
+        </div>
+    </div>
+    <div class="panel-body">
+        <div>
+            <smart-grid id="grd" name="gridName" data="dynamicForm.dataList" options="dynamicForm.gridOptions" column-defs="dynamicForm.gridColumns" style="height:500px;"></smart-grid>
+        </div>
+    </div>
+     
+
+</div>
+    

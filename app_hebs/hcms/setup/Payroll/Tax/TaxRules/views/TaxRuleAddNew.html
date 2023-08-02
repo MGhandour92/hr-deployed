@@ -1,0 +1,188 @@
+﻿<div class="form-group  row">
+    <div class="widget-toolbar">
+        <div class="btn-group">
+            <button type="submit" class="btn btn-link btn-sm" data-page-id="{{insuranceRulesHome.selectedViewSetup.ViewId}}" data-object-id="{{'Save-' + insuranceRulesHome.selectedViewSetup.ViewId}}" ng-disabled="insuranceRuleAddForm.$invalid" data-toggle="tooltip" title="{{insuranceRulesHome.translateText('Save', insuranceRulesHome.selectedViewSetup.ViewId)}}">
+                <i class="fa fa-save fa-lg"></i>
+            </button>
+            <a class="btn btn-sm" ng-click="insuranceRulesHome.indexItemView();" data-page-id="{{insuranceRulesHome.selectedViewSetup.ViewId}}" data-object-id="{{'Cancel-' + insuranceRulesHome.selectedViewSetup.ViewId}}" data-toggle="tooltip" title="{{insuranceRulesHome.translateText('Cancel', insuranceRulesHome.selectedViewSetup.ViewId)}}">
+                <i class="fa fa-reply fa-lg"></i>
+            </a>
+        </div>
+    </div>
+    </div>
+
+  <div class="form-group  row">
+    <!--TaxRuleId-->
+    <ng-form name="TaxRuleId" ng-class="{ 'has-error': TaxRuleId.$invalid }" ng-hide="taxRulesHome.selectedViewSetup.ViewFieldsObject['TaxRuleId'].IsHidden">
+        <div class="col-sm-2">
+
+            <label class="control-label">{{taxRulesHome.translateText(taxRulesHome.selectedViewSetup.ViewFieldsObject["TaxRuleId"].FieldName,taxRulesHome.selectedViewSetup.viewSetup.ViewId)}}</label>
+        </div>
+        <div class="col-sm-4">
+
+            <hcms-generic ng-model="taxRulesHome.dataItem.TaxRuleId" hc-options="taxRulesHome.selectedViewSetup.ViewFieldsObject['TaxRuleId']"></hcms-generic>
+        </div>
+    </ng-form>
+
+    <!--TaxRuleCode-->
+    <ng-form name="TaxRuleCode" ng-class="{ 'has-error': TaxRuleCode.$invalid }" ng-hide="taxRulesHome.selectedViewSetup.ViewFieldsObject['TaxRuleCode'].IsHidden">
+        <div class="col-sm-2">
+
+            <label class="control-label">{{taxRulesHome.translateText(taxRulesHome.selectedViewSetup.ViewFieldsObject["TaxRuleCode"].FieldName,taxRulesHome.selectedViewSetup.viewSetup.ViewId)}}</label>
+        </div>
+        <div class="col-sm-4">
+
+            <hcms-generic ng-model="taxRulesHome.dataItem.TaxRuleCode" hc-options="taxRulesHome.selectedViewSetup.ViewFieldsObject['TaxRuleCode']"></hcms-generic>
+        </div>
+    </ng-form>
+</div>
+<div class="form-group  row">
+    <!--TaxRuleName-->
+    <ng-form name="TaxRuleName" ng-class="{ 'has-error': TaxRuleName.$invalid }" ng-hide="taxRulesHome.selectedViewSetup.ViewFieldsObject['TaxRuleName'].IsHidden">
+        <div class="col-sm-2">
+
+            <label class="control-label">{{taxRulesHome.translateText(taxRulesHome.selectedViewSetup.ViewFieldsObject["TaxRuleName"].FieldName,taxRulesHome.selectedViewSetup.viewSetup.ViewId)}}</label>
+        </div>
+        <div class="col-sm-4">
+
+            <hcms-generic ng-model="taxRulesHome.dataItem.TaxRuleName" hc-options="taxRulesHome.selectedViewSetup.ViewFieldsObject['TaxRuleName']"></hcms-generic>
+        </div>
+    </ng-form>
+
+    <!--TaxRuleName_-->
+    <ng-form name="TaxRuleName_" ng-class="{ 'has-error': TaxRuleName_.$invalid }" ng-hide="taxRulesHome.selectedViewSetup.ViewFieldsObject['TaxRuleName_'].IsHidden">
+        <div class="col-sm-2">
+
+            <label class="control-label">{{taxRulesHome.translateText(taxRulesHome.selectedViewSetup.ViewFieldsObject["TaxRuleName_"].FieldName,taxRulesHome.selectedViewSetup.viewSetup.ViewId)}}</label>
+        </div>
+        <div class="col-sm-4">
+
+            <hcms-generic ng-model="taxRulesHome.dataItem.TaxRuleName_" hc-options="taxRulesHome.selectedViewSetup.ViewFieldsObject['TaxRuleName_']"></hcms-generic>
+        </div>
+    </ng-form>
+</div>
+<div class="form-group  row">
+    <!--PayItemId-->
+    <ng-form name="PayItemId" ng-class="{ 'has-error': PayItemId.$invalid }" ng-hide="taxRulesHome.selectedViewSetup.ViewFieldsObject['PayItemId'].IsHidden">
+        <div class="col-sm-2">
+
+            <label class="control-label">{{taxRulesHome.translateText(taxRulesHome.selectedViewSetup.ViewFieldsObject["PayItemId"].FieldName,taxRulesHome.selectedViewSetup.viewSetup.ViewId)}}</label>
+        </div>
+        <div class="col-sm-4">
+
+            <hcms-generic ng-model="taxRulesHome.dataItem.PayItemId" hc-options="taxRulesHome.selectedViewSetup.ViewFieldsObject['PayItemId']"></hcms-generic>
+        </div>
+    </ng-form>
+
+    <!--TaxSettlementPositivePayItemId-->
+    <ng-form name="TaxSettlementPositivePayItemId" ng-class="{ 'has-error': TaxSettlementPositivePayItemId.$invalid }" ng-hide="taxRulesHome.selectedViewSetup.ViewFieldsObject['TaxSettlementPositivePayItemId'].IsHidden">
+        <div class="col-sm-2">
+
+            <label class="control-label">{{taxRulesHome.translateText(taxRulesHome.selectedViewSetup.ViewFieldsObject["TaxSettlementPositivePayItemId"].FieldName,taxRulesHome.selectedViewSetup.viewSetup.ViewId)}}</label>
+        </div>
+        <div class="col-sm-4">
+
+            <hcms-generic ng-model="taxRulesHome.dataItem.TaxSettlementPositivePayItemId" hc-options="taxRulesHome.selectedViewSetup.ViewFieldsObject['TaxSettlementPositivePayItemId']"></hcms-generic>
+        </div>
+    </ng-form>
+</div>
+<div class="form-group  row">
+    <!--TaxSettlementNegativePayItemId-->
+    <ng-form name="TaxSettlementNegativePayItemId" ng-class="{ 'has-error': TaxSettlementNegativePayItemId.$invalid }" ng-hide="taxRulesHome.selectedViewSetup.ViewFieldsObject['TaxSettlementNegativePayItemId'].IsHidden">
+        <div class="col-sm-2">
+
+            <label class="control-label">{{taxRulesHome.translateText(taxRulesHome.selectedViewSetup.ViewFieldsObject["TaxSettlementNegativePayItemId"].FieldName,taxRulesHome.selectedViewSetup.viewSetup.ViewId)}}</label>
+        </div>
+        <div class="col-sm-4">
+
+            <hcms-generic ng-model="taxRulesHome.dataItem.TaxSettlementNegativePayItemId" hc-options="taxRulesHome.selectedViewSetup.ViewFieldsObject['TaxSettlementNegativePayItemId']"></hcms-generic>
+        </div>
+    </ng-form>
+
+    <!--AnnualExempted-->
+    <ng-form name="AnnualExempted" ng-class="{ 'has-error': AnnualExempted.$invalid }" ng-hide="taxRulesHome.selectedViewSetup.ViewFieldsObject['AnnualExempted'].IsHidden">
+        <div class="col-sm-2">
+
+            <label class="control-label">{{taxRulesHome.translateText(taxRulesHome.selectedViewSetup.ViewFieldsObject["AnnualExempted"].FieldName,taxRulesHome.selectedViewSetup.viewSetup.ViewId)}}</label>
+        </div>
+        <div class="col-sm-4">
+
+            <hcms-generic ng-model="taxRulesHome.dataItem.AnnualExempted" hc-options="taxRulesHome.selectedViewSetup.ViewFieldsObject['AnnualExempted']"></hcms-generic>
+        </div>
+    </ng-form>
+</div>
+<div class="form-group  row">
+    <!--SecondAnnualExempted-->
+    <ng-form name="SecondAnnualExempted" ng-class="{ 'has-error': SecondAnnualExempted.$invalid }" ng-hide="taxRulesHome.selectedViewSetup.ViewFieldsObject['SecondAnnualExempted'].IsHidden">
+        <div class="col-sm-2">
+
+            <label class="control-label">{{taxRulesHome.translateText(taxRulesHome.selectedViewSetup.ViewFieldsObject["SecondAnnualExempted"].FieldName,taxRulesHome.selectedViewSetup.viewSetup.ViewId)}}</label>
+        </div>
+        <div class="col-sm-4">
+
+            <hcms-generic ng-model="taxRulesHome.dataItem.SecondAnnualExempted" hc-options="taxRulesHome.selectedViewSetup.ViewFieldsObject['SecondAnnualExempted']"></hcms-generic>
+        </div>
+    </ng-form>
+
+    <!--FormulaId-->
+    <ng-form name="FormulaId" ng-class="{ 'has-error': FormulaId.$invalid }" ng-hide="taxRulesHome.selectedViewSetup.ViewFieldsObject['FormulaId'].IsHidden">
+        <div class="col-sm-2">
+
+            <label class="control-label">{{taxRulesHome.translateText(taxRulesHome.selectedViewSetup.ViewFieldsObject["FormulaId"].FieldName,taxRulesHome.selectedViewSetup.viewSetup.ViewId)}}</label>
+        </div>
+        <div class="col-sm-4">
+
+            <hcms-generic ng-model="taxRulesHome.dataItem.FormulaId" hc-options="taxRulesHome.selectedViewSetup.ViewFieldsObject['FormulaId']"></hcms-generic>
+        </div>
+    </ng-form>
+</div>
+<div class="form-group  row">
+    <!--StartDate-->
+    <ng-form name="StartDate" ng-class="{ 'has-error': StartDate.$invalid }" ng-hide="taxRulesHome.selectedViewSetup.ViewFieldsObject['StartDate'].IsHidden">
+        <div class="col-sm-2">
+
+            <label class="control-label">{{taxRulesHome.translateText(taxRulesHome.selectedViewSetup.ViewFieldsObject["StartDate"].FieldName,taxRulesHome.selectedViewSetup.viewSetup.ViewId)}}</label>
+        </div>
+        <div class="col-sm-4">
+
+            <hcms-generic ng-model="taxRulesHome.dataItem.StartDate" hc-options="taxRulesHome.selectedViewSetup.ViewFieldsObject['StartDate']"></hcms-generic>
+        </div>
+    </ng-form>
+
+    <!--EndDate-->
+    <ng-form name="EndDate" ng-class="{ 'has-error': EndDate.$invalid }" ng-hide="taxRulesHome.selectedViewSetup.ViewFieldsObject['EndDate'].IsHidden">
+        <div class="col-sm-2">
+
+            <label class="control-label">{{taxRulesHome.translateText(taxRulesHome.selectedViewSetup.ViewFieldsObject["EndDate"].FieldName,taxRulesHome.selectedViewSetup.viewSetup.ViewId)}}</label>
+        </div>
+        <div class="col-sm-4">
+
+            <hcms-generic ng-model="taxRulesHome.dataItem.EndDate" hc-options="taxRulesHome.selectedViewSetup.ViewFieldsObject['EndDate']"></hcms-generic>
+        </div>
+    </ng-form>
+</div>
+<div class="form-group  row">
+    <!--Disabled-->
+    <ng-form name="Disabled" ng-class="{ 'has-error': Disabled.$invalid }" ng-hide="taxRulesHome.selectedViewSetup.ViewFieldsObject['Disabled'].IsHidden">
+        <div class="col-sm-2">
+
+            <label class="control-label">{{taxRulesHome.translateText(taxRulesHome.selectedViewSetup.ViewFieldsObject["Disabled"].FieldName,taxRulesHome.selectedViewSetup.viewSetup.ViewId)}}</label>
+        </div>
+        <div class="col-sm-4">
+
+            <hcms-generic ng-model="taxRulesHome.dataItem.Disabled" hc-options="taxRulesHome.selectedViewSetup.ViewFieldsObject['Disabled']"></hcms-generic>
+        </div>
+    </ng-form>
+
+    <!--OrderNo-->
+    <ng-form name="OrderNo" ng-class="{ 'has-error': OrderNo.$invalid }" ng-hide="taxRulesHome.selectedViewSetup.ViewFieldsObject['OrderNo'].IsHidden">
+        <div class="col-sm-2">
+
+            <label class="control-label">{{taxRulesHome.translateText(taxRulesHome.selectedViewSetup.ViewFieldsObject["OrderNo"].FieldName,taxRulesHome.selectedViewSetup.viewSetup.ViewId)}}</label>
+        </div>
+        <div class="col-sm-4">
+
+            <hcms-generic ng-model="taxRulesHome.dataItem.OrderNo" hc-options="taxRulesHome.selectedViewSetup.ViewFieldsObject['OrderNo']"></hcms-generic>
+        </div>
+    </ng-form>
+</div>

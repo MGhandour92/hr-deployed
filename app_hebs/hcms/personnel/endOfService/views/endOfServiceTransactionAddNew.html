@@ -1,0 +1,99 @@
+﻿<div class="widget-body view-background-color">
+
+ 
+    <div class="form-group  row">
+         <!--EmpEndOfServiceCode-->
+        <ng-form name="EmpEndOfServiceCode" ng-class="{ 'has-error': EmpEndOfServiceCode.$invalid }" ng-hide="dynamicForm.selectedViewSetup.ViewFieldsObject['EmpEndOfServiceCode'].IsHidden">
+            <div class="col-sm-2">
+                <label class="control-label">{{dynamicForm.translateText(dynamicForm.selectedViewSetup.ViewFieldsObject["EmpEndOfServiceCode"].FieldName,dynamicForm.selectedViewSetup.viewSetup.ViewId)}}</label>
+            </div>
+            <div class="col-sm-4">
+                <hcms-generic ng-model="dynamicForm.dataItem.EmpEndOfServiceCode" hc-options="dynamicForm.selectedViewSetup.ViewFieldsObject['EmpEndOfServiceCode']"></hcms-generic>
+            </div>
+        </ng-form>
+
+        <!--EndOfServiceNoticeDate-->
+        <ng-form name="EndOfServiceNoticeDate" ng-class="{ 'has-error': EndOfServiceNoticeDate.$invalid }" ng-hide="dynamicForm.selectedViewSetup.ViewFieldsObject['EndOfServiceNoticeDate'].IsHidden">
+            <div class="col-sm-2">
+                <label class="control-label">{{dynamicForm.translateText(dynamicForm.selectedViewSetup.ViewFieldsObject["EndOfServiceNoticeDate"].FieldName,dynamicForm.selectedViewSetup.viewSetup.ViewId)}}</label>
+            </div>
+            <div class="col-sm-4">
+                <hcms-generic ng-model="dynamicForm.dataItem.EndOfServiceNoticeDate" hc-options="dynamicForm.selectedViewSetup.ViewFieldsObject['EndOfServiceNoticeDate']" hc-events="dynamicForm.endOfServiceNoticeDateEvents"></hcms-generic>
+            </div>
+        </ng-form>
+    </div>
+
+    <div class="form-group  row">
+        <!--EndOfServiceReasonId-->
+        <ng-form name="EndOfServiceReasonId" ng-class="{ 'has-error': EndOfServiceReasonId.$invalid }" ng-hide="dynamicForm.selectedViewSetup.ViewFieldsObject['EndOfServiceReasonId'].IsHidden">
+            <div class="col-sm-2">
+                <label class="control-label">{{dynamicForm.translateText(dynamicForm.selectedViewSetup.ViewFieldsObject["EndOfServiceReasonId"].FieldName,dynamicForm.selectedViewSetup.viewSetup.ViewId)}}</label>
+            </div>
+            <div class="col-sm-4">
+                <hcms-generic ng-model="dynamicForm.dataItem.EndOfServiceReasonId" hc-options="dynamicForm.selectedViewSetup.ViewFieldsObject['EndOfServiceReasonId']"></hcms-generic>
+            </div>
+        </ng-form>
+
+        <!--EndOfServiceNoticeDays-->
+        <ng-form name="EndOfServiceNoticeDays" ng-class="{ 'has-error': EndOfServiceNoticeDays.$invalid }" ng-hide="dynamicForm.selectedViewSetup.ViewFieldsObject['EndOfServiceNoticeDays'].IsHidden">
+            <div class="col-sm-2">
+                <label class="control-label">{{dynamicForm.translateText(dynamicForm.selectedViewSetup.ViewFieldsObject["EndOfServiceNoticeDays"].FieldName,dynamicForm.selectedViewSetup.viewSetup.ViewId)}}</label>
+            </div>
+            <div class="col-sm-4">
+                <hcms-generic ng-model="dynamicForm.dataItem.EndOfServiceNoticeDays" hc-options="dynamicForm.selectedViewSetup.ViewFieldsObject['EndOfServiceNoticeDays']" hc-events="dynamicForm.endOfServiceNoticeDaysEvents"></hcms-generic>
+            </div>
+        </ng-form>
+    </div>
+
+    <div class="form-group  row">
+ 
+        <!--Comment-->
+        <ng-form name="Comment" ng-class="{ 'has-error': Comment.$invalid }" ng-hide="dynamicForm.selectedViewSetup.ViewFieldsObject['Comment'].IsHidden">
+            <div class="col-sm-2">
+                <label class="control-label">{{dynamicForm.translateText(dynamicForm.selectedViewSetup.ViewFieldsObject["Comment"].FieldName,dynamicForm.selectedViewSetup.viewSetup.ViewId)}}</label>
+            </div>
+            <div class="col-sm-4">
+                <hcms-generic ng-model="dynamicForm.dataItem.Comment" hc-options="dynamicForm.selectedViewSetup.ViewFieldsObject['Comment']"></hcms-generic>
+            </div>
+        </ng-form>
+       
+
+    <!--EmpEndOfServiceDate-->
+    <ng-form name="EmpEndOfServiceDate" ng-class="{ 'has-error': EmpEndOfServiceDate.$invalid }" ng-hide="dynamicForm.selectedViewSetup.ViewFieldsObject['EmpEndOfServiceDate'].IsHidden">
+        <div class="col-sm-2">
+            <label class="control-label">{{dynamicForm.translateText(dynamicForm.selectedViewSetup.ViewFieldsObject["EmpEndOfServiceDate"].FieldName,dynamicForm.selectedViewSetup.viewSetup.ViewId)}}</label>
+        </div>
+        <div class="col-sm-4">
+            <hcms-generic ng-model="dynamicForm.dataItem.EmpEndOfServiceDate" hc-options="dynamicForm.selectedViewSetup.ViewFieldsObject['EmpEndOfServiceDate']" hc-events="dynamicForm.empEndOfServiceDateEvents"></hcms-generic>
+        </div>
+    </ng-form>
+</div>
+    
+    <div class="form-group  row">
+
+
+        <!--IsClose-->
+        <ng-form name="IsClose" ng-class="{ 'has-error': IsClose.$invalid }" ng-hide="dynamicForm.selectedViewSetup.ViewFieldsObject['IsClose'].IsHidden">
+            <div class="col-sm-2">
+                <label class="control-label">{{dynamicForm.translateText(dynamicForm.selectedViewSetup.ViewFieldsObject["IsClose"].FieldName,dynamicForm.selectedViewSetup.viewSetup.ViewId)}}</label>
+            </div>
+            <div class="col-sm-4">
+                <hcms-generic ng-model="dynamicForm.dataItem.IsClose" hc-options="dynamicForm.selectedViewSetup.ViewFieldsObject['IsClose']"></hcms-generic>
+            </div>
+        </ng-form>
+
+
+        <!--Disabled-->
+       <!-- <ng-form name="Disabled" ng-class="{ 'has-error': Disabled.$invalid }" ng-hide="dynamicForm.selectedViewSetup.ViewFieldsObject['Disabled'].IsHidden">
+            <div class="col-sm-2">
+                <label class="control-label">{{dynamicForm.translateText(dynamicForm.selectedViewSetup.ViewFieldsObject["Disabled"].FieldName,dynamicForm.selectedViewSetup.viewSetup.ViewId)}}</label>
+            </div>
+            <div class="col-sm-4">
+                <hcms-generic ng-model="dynamicForm.dataItem.Disabled" hc-options="dynamicForm.selectedViewSetup.ViewFieldsObject['Disabled']"></hcms-generic>
+            </div>
+        </ng-form>-->
+    </div>
+   
+
+</div>
+    

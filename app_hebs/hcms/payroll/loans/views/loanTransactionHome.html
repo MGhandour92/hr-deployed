@@ -1,0 +1,76 @@
+﻿
+<!--<div>
+    <div class="row">
+        <div class="col-md-12">
+            <ul class="nav nav-tabs ">
+                <li class="active">
+                    <a href="#loanTransHomeSearch" data-toggle="tab">{{loanTransHome.translateText('Home',loanTransHome.selectedViewSetup.ViewId)}}</a>
+                </li>
+                <li>
+                    <a href="#selectedLoanTransactionProfile" data-toggle="tab">{{loanTransHome.translateText('Profile',loanTransHome.selectedViewSetup.ViewId)}}</a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane active" id="loanTransHomeSearch">
+
+                    <div id="widget-loanTransHome" data-jarvis-widget data-widget-editbutton="false" data-widget-deletebutton="false" data-widget-colorbutton="false" class="no-margin-bottom">
+                        <header class="header-background-color">
+                            <h2><strong>{{loanTransHome.translateText(loanTransHome.FormSetup.FormName,loanTransHome.selectedViewSetup.ViewId) }}</strong></h2>
+                            <div class="widget-toolbar">
+                                <a href-void class="btn" ng-click="loanTransHome.addNewClicked()"><i class="fa fa-plus"></i> {{loanTransHome.translateText('CreateNew', loanTransHome.selectedViewSetup.ViewId)}} </a>
+                            </div>
+                        </header>
+                        <div class="widget-body view-background-color">
+                               <emp-default-assignemnt-list options="loanTransHome.listOptions"></emp-default-assignemnt-list>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="selectedLoanTransactionProfile">
+                    <div ng-include src="'app_hebs/hcms/payroll/loans/views/loanTransactionSelectedProfile.html'"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>-->
+
+
+<div>
+    <div class="row">
+        <div class="col-md-12">
+           
+            <uib-tabset active="loanTransHome.activeTabIndex" class="nav nav-tabs">
+                <uib-tab index="0">
+                    <uib-tab-heading style="padding:2px;">
+                        <a class="btn btn-xs" style="padding:2px;margin:1px;">
+                        </a>
+                        <span style="margin:2px; padding:3px;">{{loanTransHome.translateText('Home',loanTransHome.selectedViewSetup.ViewId)}}</span>
+                    </uib-tab-heading>
+                    <div id="widget-loanTransHome" data-jarvis-widget data-widget-editbutton="false" data-widget-deletebutton="false" data-widget-colorbutton="false" class="no-margin-bottom">
+                        <header class="header-background-color">
+                            <h2><strong>{{loanTransHome.translateText(loanTransHome.FormSetup.FormName,loanTransHome.selectedViewSetup.ViewId) }}</strong></h2>
+                            <div class="widget-toolbar">
+                                <a href-void class="btn" ng-click="loanTransHome.addNewClicked()"><i class="fa fa-plus"></i> {{loanTransHome.translateText('CreateNew', loanTransHome.selectedViewSetup.ViewId)}} </a>
+                            </div>
+                        </header>
+                        <div class="widget-body view-background-color">
+                            <emp-default-assignemnt-list options="loanTransHome.listOptions"></emp-default-assignemnt-list>
+                        </div>
+                    </div>
+                </uib-tab>
+                <uib-tab index="1">
+                    <uib-tab-heading style="padding:2px;">
+                        <a class="btn btn-xs" style="padding:2px;margin:1px;">
+                        </a>
+                        <span style="margin:2px; padding:3px;">{{loanTransHome.translateText('Profile',loanTransHome.selectedViewSetup.ViewId)}}</span>
+                    </uib-tab-heading>
+                    <div ng-include src="'app_hebs/hcms/payroll/loans/views/loanTransactionSelectedProfile.html'"></div>
+                </uib-tab>
+            </uib-tabset>
+
+        </div>
+    </div>
+</div>
+
+
+
+

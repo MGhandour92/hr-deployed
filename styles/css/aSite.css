@@ -1,0 +1,620 @@
+
+.smart-style-100 #header {
+    background-image: none;
+    background-color: #337ab7;
+}
+
+
+.smart-style-100 .page-footer, .smart-style-100 .superbox-show, .smart-style-100 aside {
+    background: #1d4b73;
+}
+
+.smart-style-100 .header-dropdown-list a.dropdown-toggle {
+    color: #FFF;
+    text-decoration: none;
+}
+
+
+.smart-style-100 .login-info a, .smart-style-100 .login-info strong, .smart-style-100 nav ul li a {
+    color: #d7dce8;
+}
+
+.smart-style-100 nav ul li.open {
+}
+
+.smart-style-100 nav ul ul {
+    background: #143f65;
+}
+
+.smart-style-100 nav ul b {
+    font-size: 14px;
+    margin-top: 0;
+}
+
+.smart-style-100 nav > ul > li > a b {
+    /*right: 17px;*/
+    top: 12px;
+}
+
+/*.smart-rtl.smart-style-100 nav > ul > li > a b {
+    right:auto;
+    left: 17px;
+    top: 12px;
+}*/
+
+
+.smart-style-100 a {
+    transition: color .1s linear 0s,background-color .1s linear 0s !important;
+}
+
+.smart-style-100 nav ul li a:hover {
+    color: #b2bcc3;
+}
+
+
+.smart-style-100 .btn-header > :first-child > a {
+    background: #165f9e;
+    border: 1px solid #165f9e;
+    color: #fff !important;
+    cursor: pointer !important;
+}
+
+.smart-style-100 #logo-group span#activity {
+    background: #165f9e;
+    border: 1px solid #165f9e;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+.smart-style-100 nav ul b .fa-plus-square-o:before {
+    content: "\f104";
+}
+
+.smart-style-100 nav ul b .fa-minus-square-o:before {
+    content: "\f107";
+}
+
+
+
+
+.smart-style-100 .nav-tabs {
+    background-color: #165f9e !important;
+    color: #FFFFFF;
+}
+
+    .smart-style-100 .nav-tabs > li > a {
+        color: #FFFFFF;
+    }
+
+        .smart-style-100 .nav-tabs > li > a:hover {
+            background-color: #165690 !important;
+            border: none;
+            color: #FFFFFF;
+        }
+
+    .smart-style-100 .nav-tabs > li.active > a {
+        background-color: #134067;
+        !important;
+        border: none;
+        color: #FFFFFF !important;
+    }
+
+.smart-style-100 .tab-content {
+    background-color: whitesmoke;
+    color: black;
+    /*padding: 5px;*/
+}
+
+
+.smart-style-100 .jarviswidget > header.header-background-color {
+    background-color: #eaeff3 !important;
+}
+
+
+
+.smart-style-100.minified nav > ul > li > ul {
+    background: #165f9e;
+}
+
+    .smart-style-100.minified nav > ul > li > ul, .smart-style-100.minified nav > ul > li > ul > li, .smart-style-100.minified nav > ul > li > ul > li > ul > li {
+        background: #294379 !important;
+    }
+
+.smart-style-100.minified nav ul li a:hover {
+    background-color: #184769;
+}
+
+
+
+
+
+
+
+.employee-card {
+}
+
+    .employee-card .employee-card-img {
+        float: left;
+        width: 110px;
+        height: 110px;
+        padding: 7px;
+    }
+
+.smart-rtl .employee-card .employee-card-img {
+    float: right;
+}
+
+.employee-card .employee-card-body {
+    color: #615b5b;
+    padding: 7px;
+    display: table-cell;
+    border-left: 1px dashed #AAAAAA;
+    border-right: 1px dashed #AAAAAA;
+    border-top: 1px dashed #AAAAAA;
+    border-bottom: 1px dashed #AAAAAA;
+    min-width: 700px;
+}
+
+.smart-rtl .employee-card .employee-card-body {
+    border-right: 1px solid black;
+    border-left: none;
+}
+
+
+
+
+
+.container .fixed-tabs-bottom ul {
+    max-width: 950px;
+}
+
+
+.font-warning {
+    color: red;
+}
+
+
+@media only screen and (max-device-width: 480px) {
+    .mydiv {
+        display: none;
+    }
+}
+
+
+
+
+
+/*html, body {
+      width: 100% !important;
+      height: 100% !important;
+    }*/
+
+body {
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+}
+
+.tab-close-button {
+    color: white;
+}
+
+    .tab-close-button:hover {
+        /*border: solid;
+        border-radius: 50%;
+        border-color: red;*/
+        color: #da2f2f;
+    }
+
+
+.fixed-tabs-bottom {
+    width: 100% !important;
+}
+
+    .fixed-tabs-bottom > ul {
+        position: fixed;
+        bottom: 0px;
+        width: 100%;
+        z-index: 902;
+    }
+/*.container .fixed-tabs-bottom ul {
+   max-width:1164px !important;
+}*/
+.tabs-bottom > .nav-tabs > li {
+    margin-top: -1px;
+    margin-bottom: 0;
+}
+
+.no-margin-bottom {
+    margin-bottom: 0px !important;
+}
+
+.view-background-color {
+    background-color: #eee !important;
+}
+
+.jarviswidget > div.view-background-color {
+    background-color: #eee !important;
+}
+
+.jarviswidget > header.header-background-color {
+    background-color: #dcdcdc !important;
+}
+
+/* set reference point */
+.tab-animation > .tab-content {
+    position: relative;
+}
+
+    /* set animate effect */
+    .tab-animation > .tab-content > .tab-pane {
+        transition: 0.2s linear opacity;
+    }
+
+        /* overwrite display: none and remove from document flow */
+        .tab-animation > .tab-content > .tab-pane.active-remove {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            display: block;
+        }
+
+        /* opacity=0 when removing "active" class */
+        .tab-animation > .tab-content > .tab-pane.active-remove-active {
+            opacity: 0;
+        }
+
+        /* opacity=0 when adding "active" class */
+        .tab-animation > .tab-content > .tab-pane.active-add {
+            opacity: 0;
+        }
+
+/*.form-control {
+    font-size:14px !important;
+    height: 15px !important;
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+}*/
+
+/*label class*/
+.control-label {
+    font-size: 14px !important;
+    height: 15px !important;
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+    align-content: center !important;
+}
+
+.select2 {
+    font-size: 12px !important;
+    /*height: 15px !important;*/
+    /*padding-top: 5px !important;
+    padding-bottom: 5px !important;*/
+}
+
+.selection {
+    height: 15px !important;
+}
+
+/*panel*/
+/*.panel-body {
+    padding-left: 1px !important;
+    padding-right: 1px !important;
+    padding-top: 5px !important;
+}
+
+.panel-heading {
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+    padding-bottom: 0px !important;
+    padding-top: 0px !important;
+}
+
+.panel-title {
+    font-size: 14px;
+    font-weight: bolder;
+}*/
+
+
+/*form profileHead page*/
+.RemovePaddingLeft {
+    padding-left: 0px;
+}
+
+.RemovePaddingright {
+    padding-right: 0px;
+}
+
+.FixedHeight {
+    min-height: 100px !important;
+}
+
+.row {
+    margin-bottom: 5px !important;
+}
+
+.empImage {
+    min-height: 100%;
+    min-width: 90%;
+    height: 120px !important;
+    width: 25px !important;
+    margin-bottom: 20px !important;
+    /*border:thin black;*/
+}
+
+.button_example {
+    border: 1px solid #7eb9d0;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    font-size: 12px;
+    font-family: arial, helvetica, sans-serif;
+    padding: 10px 10px 10px 10px;
+    text-decoration: none;
+    display: inline-block;
+    text-shadow: -1px -1px 0 rgba(0,0,0,0.3);
+    font-weight: bold;
+    color: #FFFFFF;
+    background-color: #a7cfdf;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#a7cfdf), to(#23538a));
+    background-image: -webkit-linear-gradient(top, #a7cfdf, #23538a);
+    background-image: -moz-linear-gradient(top, #a7cfdf, #23538a);
+    background-image: -ms-linear-gradient(top, #a7cfdf, #23538a);
+    background-image: -o-linear-gradient(top, #a7cfdf, #23538a);
+    background-image: linear-gradient(to bottom, #a7cfdf, #23538a);
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#a7cfdf, endColorstr=#23538a);
+}
+
+    .button_example:hover {
+        border: 1px solid #5ca6c4;
+        background-color: #82bbd1;
+        background-image: -webkit-gradient(linear, left top, left bottom, from(#82bbd1), to(#193b61));
+        background-image: -webkit-linear-gradient(top, #82bbd1, #193b61);
+        background-image: -moz-linear-gradient(top, #82bbd1, #193b61);
+        background-image: -ms-linear-gradient(top, #82bbd1, #193b61);
+        background-image: -o-linear-gradient(top, #82bbd1, #193b61);
+        background-image: linear-gradient(to bottom, #82bbd1, #193b61);
+        /*filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#82bbd1, endColorstr=#193b61);*/
+    }
+
+
+.smart-style-1 .nav-tabs {
+    background-color: #3c4148 !important;
+    /*filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#a7cfdf, endColorstr=#23538a);*/
+    color: #FFFFFF;
+}
+
+    .smart-style-1 .nav-tabs > li > a {
+        /*border: solid thin gray;*/
+        /*margin: 0px;*/
+        color: #FFFFFF;
+    }
+
+        .smart-style-1 .nav-tabs > li > a:hover {
+            background-color: #2f3b52 !important;
+            /*background-image: -webkit-gradient(linear, left top, left bottom, from(#82bbd1), to(#193b61));
+            background-image: -webkit-linear-gradient(top, #82bbd1, #193b61);
+            background-image: -moz-linear-gradient(top, #82bbd1, #193b61);
+            background-image: -ms-linear-gradient(top, #82bbd1, #193b61);
+            background-image: -o-linear-gradient(top, #82bbd1, #193b61);
+            background-image: linear-gradient(to bottom, #82bbd1, #193b61);*/
+            /*filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#82bbd1, endColorstr=#193b61);*/
+            /*border: medium none;
+            border-radius: 0;*/
+            color: #FFFFFF;
+        }
+
+    .smart-style-1 .nav-tabs > li.active > a {
+        background-color: #1c222b !important;
+        /*background-image: -webkit-gradient(linear, left top, left bottom, from(#82bbd1), to(#193b61));
+        background-image: -webkit-linear-gradient(top, #82bbd1, #193b61);
+        background-image: -moz-linear-gradient(top, #82bbd1, #193b61);
+        background-image: -ms-linear-gradient(top, #82bbd1, #193b61);
+        background-image: -o-linear-gradient(top, #82bbd1, #193b61);
+        background-image: linear-gradient(to bottom, #82bbd1, #193b61);*/
+        /*filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#82bbd1, endColorstr=#193b61);*/
+        /*border: medium none;
+        border-radius: 0;*/
+        color: #FFFFFF !important;
+    }
+
+.smart-style-1 .tab-content {
+    background-color: whitesmoke;
+    color: black;
+    /*padding: 5px;*/
+}
+
+.input-xs, .input-sm {
+    font-size: 14px !important;
+    height: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+/*.well {
+    background-color:#FAFAFA;
+    border-radius: 3px;
+    color: black;
+}*/
+
+.padding-right-2 {
+    padding-right: 2px;
+}
+
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+
+/* smart table select row*/
+.st-selected {
+    border-left: 4px solid black;
+}
+
+
+.clearSelect {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px 10px;
+    position: absolute;
+    right: 30px;
+    top: 3px;
+}
+
+.select-page {
+    width: 50px;
+    text-align: center;
+    border-style: solid !important;
+    border-width: thin;
+    border-color: inherit;
+}
+
+.pagination li a input {
+    padding: 0;
+    margin: -5px 0;
+}
+
+a {
+    cursor: pointer;
+}
+
+/*.table-container {
+    overflow-x: scroll;
+}*/
+
+/*====Start of Login Form Styles=====*/
+.form-signin {
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
+}
+
+    .form-signin .form-signin-heading, .form-signin .checkbox {
+        margin-bottom: 10px;
+    }
+
+    .form-signin .checkbox {
+        font-weight: normal;
+    }
+
+    .form-signin .form-control {
+        position: relative;
+        font-size: 16px;
+        height: auto;
+        padding: 10px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+        .form-signin .form-control:focus {
+            z-index: 2;
+        }
+
+    .form-signin input[type="text"] {
+        margin-bottom: -1px;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    .form-signin input[type="password"] {
+        margin-bottom: 10px;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+
+.account-wall {
+    margin-top: 20px;
+    padding: 40px 0px 20px 0px;
+    background-color: #f7f7f7;
+    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.login-title {
+    color: #555;
+    font-size: 18px;
+    font-weight: 400;
+    display: block;
+}
+
+.profile-img {
+    width: 96px;
+    height: 96px;
+    margin: 0 auto 10px;
+    display: block;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+
+.need-help {
+    margin-top: 10px;
+}
+
+.new-account {
+    display: block;
+    margin-top: 10px;
+}
+
+
+/*=====End of Login Form Styles====*/
+
+/*.panel {
+
+    background: linear-gradient(to bottom,#5bb5e0,#e4f5fc,#5bb5e0) !important;
+}
+
+.well {
+
+    background: linear-gradient(to bottom,#5bb5e0,#e4f5fc,#5bb5e0) !important; 
+
+}*/
+
+/*Animation in States*/
+
+/* Have to set height explicity on ui-view 
+to prevent collapsing during animation*/
+
+
+/*.ui-view-container {
+    position: relative !important;
+}*/
+
+
+/*[ui-view].ng-enter, [ui-view].ng-leave {
+  position: absolute;  
+}*/
+
+/*[ui-view].ng-enter {
+  opacity: 0;
+  -webkit-transform:scale3d(0.5, 0.5, 0.5);
+  -moz-transform:scale3d(0.5, 0.5, 0.5);
+  transform:scale3d(0.5, 0.5, 0.5);
+}
+
+[ui-view].ng-enter-active {
+  opacity: 1;
+  -webkit-transform:scale3d(1, 1, 1);
+  -moz-transform:scale3d(1, 1, 1);
+  transform:scale3d(1, 1, 1);
+}
+
+[ui-view].ng-leave {
+  opacity: 1; 
+  -webkit-transform:translate3d(0, 0, 0);
+  -moz-transform:translate3d(0, 0, 0);
+  transform:translate3d(0, 0, 0);
+}
+
+[ui-view].ng-leave-active {
+  opacity: 0;
+  -webkit-transform:translate3d(100px, 0, 0);
+  -moz-transform:translate3d(100px, 0, 0);
+  transform:translate3d(100px, 0, 0);
+}*/

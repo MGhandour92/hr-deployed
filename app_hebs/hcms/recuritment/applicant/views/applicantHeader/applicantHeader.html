@@ -1,0 +1,114 @@
+﻿
+<div class="view">
+
+    <form class="form-horizontal" name="myEmployeeHeaderForm" ng-submit="allApplicants.saveItem(myEmployeeHeaderForm.$valid)" novalidate>
+        <div class="panel">
+            <!--<div class="panel-heading">
+                <p>Employee Information</p>
+            </div>-->
+            <fieldset class="panel-body">
+                <div>
+                    <div class="row col-md-12">
+
+                      
+
+                        <div class="form-group  row" ng-hide="allApplicants.selectedHeaderView.ViewFieldsObject['ProfileTypeId'].IsHidden">
+                            <!--Profile Type Id-->
+                            <div>
+                                <ng-form name="ProfileTypeId" ng-class="{ 'has-error': CompanyId.$invalid }">
+                                    <label class="control-label col-sm-2">{{allApplicants.translateText(allApplicants.selectedHeaderView.ViewFieldsObject["ProfileTypeId"].FieldName , allApplicants.selectedHeaderView.ViewId)}}</label>
+                                    <div class="col-sm-4">
+                                        <hcms-generic ng-model="allApplicants.dataItem.ProfileTypeId" hc-options="allApplicants.selectedHeaderView.ViewFieldsObject['ProfileTypeId']"></hcms-generic>
+                                    </div>
+                                </ng-form>
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-group  row" ng-hide="allApplicants.selectedHeaderView.ViewFieldsObject['ProfileCode'].IsHidden">
+                            <div>
+                                <ng-form name="ProfileCode" ng-class="{ 'has-error': ProfileCode.$invalid }">
+                                    <label class="control-label col-sm-2">{{allApplicants.translateText(allApplicants.selectedHeaderView.ViewFieldsObject["ProfileCode"].FieldName , allApplicants.selectedHeaderView.ViewId)}}</label>
+                                    <div class="col-sm-2">
+                                        <hcms-generic ng-model="allApplicants.dataItem.ProfileCode" hc-options="allApplicants.selectedHeaderView.ViewFieldsObject['ProfileCode']"></hcms-generic>
+                                    </div>
+                                </ng-form>
+                            </div>
+                        </div>
+                        <div class="form-group  row" ng-hide="allApplicants.selectedHeaderView.ViewFieldsObject['NamePrefixId'].IsHidden">
+                            <!--Name Prefix-->
+                            <div>
+                                <ng-form name="NamePrefixId" ng-class="{ 'has-error': NamePrefixId.$invalid }">
+                                    <label class="control-label col-sm-2">{{allApplicants.translateText(allApplicants.selectedHeaderView.ViewFieldsObject["NamePrefixId"].FieldName , allApplicants.selectedHeaderView.ViewId)}}</label>
+                                    <div class="col-sm-2">
+                                        <hcms-generic ng-model="allApplicants.dataItem.NamePrefixId" hc-options="allApplicants.selectedHeaderView.ViewFieldsObject['NamePrefixId']"></hcms-generic>
+                                    </div>
+                                </ng-form>
+                            </div>
+                        </div>
+                        <!--English Name-->
+                        <div class="form-group row" ng-hide="allApplicants.selectedHeaderView.ViewFieldsObject['ProfileName'].IsHidden">
+                            <label class="control-label col-sm-2">{{allApplicants.translateText(allApplicants.selectedHeaderView.ViewFieldsObject["ProfileName"].FieldName , allApplicants.selectedHeaderView.ViewId)}}</label>
+                            <ng-form name="ProfileFirstName" ng-class="{ 'has-error': ProfileFirstName.$invalid }" ng-hide="allApplicants.selectedHeaderView.ViewFieldsObject['ProfileFirstName'].IsHidden">
+                                <div class="col-sm-2">
+                                    <hcms-generic ng-model="allApplicants.dataItem.ProfileFirstName" hc-options="allApplicants.selectedHeaderView.ViewFieldsObject['ProfileFirstName']"></hcms-generic>
+                                </div>
+                            </ng-form>
+                            <ng-form name="ProfileSecondName" ng-class="{ 'has-error': ProfileSecondName.$invalid }" ng-hide="allApplicants.selectedHeaderView.ViewFieldsObject['ProfileSecondName'].IsHidden">
+                                <div class="col-sm-2">
+                                    <hcms-generic ng-model="allApplicants.dataItem.ProfileSecondName" hc-options="allApplicants.selectedHeaderView.ViewFieldsObject['ProfileSecondName']"></hcms-generic>
+                                </div>
+                            </ng-form>
+                            <ng-form name="ProfileThirdName" ng-class="{ 'has-error': ProfileThirdName.$invalid }" ng-hide="allApplicants.selectedHeaderView.ViewFieldsObject['ProfileThirdName'].IsHidden">
+                                <div class="col-sm-2">
+                                    <hcms-generic ng-model="allApplicants.dataItem.ProfileThirdName" hc-options="allApplicants.selectedHeaderView.ViewFieldsObject['ProfileThirdName']"></hcms-generic>
+                                </div>
+                            </ng-form>
+                            <ng-form name="ProfileFourthName" ng-class="{ 'has-error': ProfileFourthName.$invalid }" ng-hide="allApplicants.selectedHeaderView.ViewFieldsObject['ProfileFourthName'].IsHidden">
+                                <div class="col-sm-2">
+                                    <hcms-generic ng-model="allApplicants.dataItem.ProfileFourthName" hc-options="allApplicants.selectedHeaderView.ViewFieldsObject['ProfileFourthName']"></hcms-generic>
+                                </div>
+                            </ng-form>
+
+                        </div>
+
+                        <div class="form-group row" ng-hide="allApplicants.selectedHeaderView.ViewFieldsObject['ProfileName_'].IsHidden">
+                            <label class="control-label col-sm-2">{{allApplicants.translateText(allApplicants.selectedHeaderView.ViewFieldsObject["ProfileName_"].FieldName , allApplicants.selectedHeaderView.ViewId)}}</label>
+
+                            <ng-form name="ProfileFirstName_" ng-class="{ 'has-error': ProfileFirstName_.$invalid }" ng-hide="allApplicants.selectedHeaderView.ViewFieldsObject['ProfileFirstName_'].IsHidden">
+                                <div class="col-sm-2">
+                                    <hcms-generic ng-model="allApplicants.dataItem.ProfileFirstName_" hc-options="allApplicants.selectedHeaderView.ViewFieldsObject['ProfileFirstName_']"></hcms-generic>
+                                </div>
+                            </ng-form>
+                            <ng-form name="ProfileSecondName_" ng-class="{ 'has-error': ProfileSecondName_.$invalid }" ng-hide="allApplicants.selectedHeaderView.ViewFieldsObject['ProfileSecondName_'].IsHidden">
+                                <div class="col-sm-2">
+                                    <hcms-generic ng-model="allApplicants.dataItem.ProfileSecondName_" hc-options="allApplicants.selectedHeaderView.ViewFieldsObject['ProfileSecondName_']"></hcms-generic>
+                                </div>
+                            </ng-form>
+                            <ng-form name="ProfileThirdName_" ng-class="{ 'has-error': ProfileThirdName_.$invalid }" ng-hide="allApplicants.selectedHeaderView.ViewFieldsObject['ProfileThirdName_'].IsHidden">
+                                <div class="col-sm-2">
+                                    <hcms-generic ng-model="allApplicants.dataItem.ProfileThirdName_" hc-options="allApplicants.selectedHeaderView.ViewFieldsObject['ProfileThirdName_']"></hcms-generic>
+                                </div>
+                            </ng-form>
+                            <ng-form name="ProfileFourthName_" ng-class="{ 'has-error': ProfileFourthName_.$invalid }" ng-hide="allApplicants.selectedHeaderView.ViewFieldsObject['ProfileFourthName_'].IsHidden">
+                                <div class="col-sm-2">
+                                    <hcms-generic ng-model="allApplicants.dataItem.ProfileFourthName_" hc-options="allApplicants.selectedHeaderView.ViewFieldsObject['ProfileFourthName_']"></hcms-generic>
+                                </div>
+                            </ng-form>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </fieldset>
+            <div class="panel-footer">
+                <div>
+                    <input data-page-id="{{allApplicants.selectedHeaderView.ViewId}}" d data-object-id="{{'Save-' + allApplicants.selectedHeaderView.ViewId}}" t type="submit" class="btn btn-primary btn-rounded" value="{{allApplicants.translateText('Save',allApplicants.selectedHeaderView.ViewId)}}" ng-disabled="myEmployeeHeaderForm.$invalid" />
+                    <!--<button data-page-id="{{allApplicants.selectedHeaderView.ViewId}}" data-object-id="{{'Cancel-' + allApplicants.selectedHeaderView.ViewId}}" t type="button" class="btn btn-default btn-rounded" ng-click="allApplicants.cancelClicked();">{{allApplicants.translateText('Cancel',allApplicants.selectedHeaderView.ViewId)}}</button>-->
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

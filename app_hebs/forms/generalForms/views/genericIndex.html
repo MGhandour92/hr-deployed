@@ -1,0 +1,66 @@
+﻿<!--<div id="content">
+    <div class="row">
+        <div class="col-xs-12">
+            <section id="widget-grid" data-widget-grid>
+                <div class="row">
+                    <article class="col-xs-12">
+                        <div ng-show='generalForm.displayCreateNewTemplate || generalForm.displayEditTemplate '>
+                            <div ng-include src="'app_hebs/forms/generalForms/views/genericAddNew.html'"></div>
+                            <form-nav-tabs form-id="generalForm.FormSetup.MyForm.FormId" parent-id-field-name="generalForm.parentIdFieldName" parent-item="generalForm.dataItem"></form-nav-tabs>
+                        </div>
+                        <div id="widget-widget" data-jarvis-widget  data-widget-editbutton="false" data-widget-deletebutton="false" data-widget-colorbutton="false">
+                            <header class="header-background-color">
+                                <h2><strong>{{generalForm.FormSetup.MyForm.FormName || translate }}</strong></h2>
+                                <div class="widget-toolbar">
+                                    <a href-void class="btn" ng-click="generalForm.addItemView()"><i class="fa fa-plus"></i> {{generalForm.translateText('CreateNew', generalForm.selectedViewSetup.ViewId)}} </a>
+                                </div>
+                            </header>
+                            <div class="widget-body view-background-color">
+                                <smart-grid id="grd" name="gridName" data="generalForm.dataList" options="generalForm.grid.gridOptions" column-defs="generalForm.grid.gridColumnDefs" style="height:500px;"></smart-grid>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </div>
+    </div>
+
+</div>-->
+<form class="form-horizontal" name="myAddForm" ng-submit="generalForm.saveItem(myAddForm.$valid)" novalidate>
+    <div id="content">
+        <section ng-attr-id="{{'widget-genericSectionForm-' + generalForm.formId }}" data-widget-grid >
+            <div class="row">
+                <article class="col-xs-12">
+
+                    <div ng-attr-id="{{'widget-genericDivForm-' + generalForm.formId }}"  data-jarvis-widget data-widget-editbutton="false" data-widget-deletebutton="false" data-widget-colorbutton="false" class="no-margin-bottom">
+                        <header class="header-background-color">
+                            <h2><strong>{{generalForm.FormSetup.MyForm.FormName || translate }}</strong></h2>
+                            <div class="widget-toolbar">
+                                <div class="btn-group">
+                                    <button type="submit" class="btn btn-link btn-sm" data-page-id="{{generalForm.selectedViewSetup.ViewId}}" data-object-id="{{'Save-' + generalForm.selectedViewSetup.ViewId}}" ng-disabled="myAddForm.$invalid" data-toggle="tooltip" title="{{generalForm.translateText('Save', generalForm.selectedViewSetup.ViewId)}}">
+                                        <i class="fa fa-save fa-lg"></i>
+                                    </button>
+                                    <a class="btn btn-sm" ng-click="generalForm.indexItemView();" data-page-id="{{generalForm.selectedViewSetup.ViewId}}" data-object-id="{{'Cancel-' + generalForm.selectedViewSetup.ViewId}}" data-toggle="tooltip" title="{{generalForm.translateText('Cancel', generalForm.selectedViewSetup.ViewId)}}">
+                                        <i class="fa fa-reply fa-lg"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="widget-toolbar">
+                                <a href-void class="btn" ng-click="generalForm.addItemView()"><i class="fa fa-plus"></i> {{generalForm.translateText('CreateNew', generalForm.selectedViewSetup.ViewId)}} </a>
+                            </div>
+                        </header>
+                        <div class="widget-body view-background-color">
+                            <div ng-show='generalForm.displayCreateNewTemplate || generalForm.displayEditTemplate '>
+                                <div ng-include src="'app_hebs/forms/generalForms/views/genericAddNew.html'"></div>
+                                <form-nav-tabs form-id="generalForm.FormSetup.MyForm.FormId" parent-id-field-name="generalForm.parentIdFieldName" parent-item="generalForm.dataItem"></form-nav-tabs>
+                            </div>
+                            <smart-grid id="grd" name="gridName" data="generalForm.dataList" options="generalForm.grid.gridOptions" column-defs="generalForm.grid.gridColumnDefs" style="height:500px;"></smart-grid>
+                        </div>
+                    </div>
+
+
+                </article>
+            </div>
+        </section>
+    </div>
+</form>

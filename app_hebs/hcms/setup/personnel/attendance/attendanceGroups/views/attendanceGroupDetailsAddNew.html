@@ -1,0 +1,40 @@
+﻿<div class="form-group  row">
+    <!--AttendanceGroupDetailsId-->
+    <ng-form name="AttendanceGroupDetailsId" ng-class="{ 'has-error': AttendanceGroupDetailsId.$invalid }" ng-hide="dynamicForm.selectedViewSetup.ViewFieldsObject['AttendanceGroupDetailsId'].IsHidden">
+        <div class="col-sm-2">
+            <label class="control-label">{{dynamicForm.translateText(dynamicForm.selectedViewSetup.ViewFieldsObject["AttendanceGroupDetailsId"].FieldName,dynamicForm.selectedViewSetup.viewSetup.ViewId)}}</label>
+        </div>
+        <div class="col-sm-4">
+            <hcms-generic ng-model="dynamicForm.dataItem.AttendanceGroupDetailsId" hc-options="dynamicForm.selectedViewSetup.ViewFieldsObject['AttendanceGroupDetailsId']"></hcms-generic>
+        </div>
+    </ng-form>
+    <!--AttendanceGroupId-->
+    <ng-form name="AttendanceGroupId" ng-class="{ 'has-error': AttendanceGroupId.$invalid }" ng-hide="dynamicForm.selectedViewSetup.ViewFieldsObject['AttendanceGroupId'].IsHidden">
+        <div class="col-sm-2">
+            <label class="control-label">{{dynamicForm.translateText(dynamicForm.selectedViewSetup.ViewFieldsObject["AttendanceGroupId"].FieldName,dynamicForm.selectedViewSetup.viewSetup.ViewId)}}</label>
+        </div>
+        <div class="col-sm-4">
+            <hcms-generic ng-model="dynamicForm.dataItem.AttendanceGroupId" hc-options="dynamicForm.selectedViewSetup.ViewFieldsObject['AttendanceGroupId']"></hcms-generic>
+        </div>
+    </ng-form>
+</div>
+<div class="form-group  row">
+    <!--CalendarId-->
+    <ng-form name="CalendarId" ng-class="{ 'has-error': CalendarId.$invalid }" ng-hide="dynamicForm.selectedViewSetup.ViewFieldsObject['CalendarId'].IsHidden">
+        <div class="col-sm-2">
+            <label class="control-label">{{dynamicForm.translateText(dynamicForm.selectedViewSetup.ViewFieldsObject["CalendarId"].FieldName,dynamicForm.selectedViewSetup.viewSetup.ViewId)}}</label>
+        </div>
+        <div class="col-sm-4">
+            <hcms-generic ng-model="dynamicForm.dataItem.CalendarId" hc-options="dynamicForm.selectedViewSetup.ViewFieldsObject['CalendarId']"></hcms-generic>
+        </div>
+    </ng-form>
+    <!--CalendarDate-->
+    <ng-form name="CalendarDate" ng-class="{ 'has-error': CalendarDate.$invalid }" ng-hide="dynamicForm.selectedViewSetup.ViewFieldsObject['CalendarDate'].IsHidden">
+        <div class="col-sm-2">
+            <label class="control-label">{{dynamicForm.translateText(dynamicForm.selectedViewSetup.ViewFieldsObject["CalendarDate"].FieldName,dynamicForm.selectedViewSetup.viewSetup.ViewId)}}</label>
+        </div>
+        <div class="col-sm-4">
+            <hcms-generic ng-model="dynamicForm.dataItem.CalendarDate" hc-options="dynamicForm.selectedViewSetup.ViewFieldsObject['CalendarDate']"></hcms-generic>
+        </div>
+    </ng-form>
+</div>

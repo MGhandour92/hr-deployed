@@ -1,0 +1,103 @@
+﻿<form class="form-horizontal" name="attendanceTemplatesAddForm" ng-submit="attendanceTemplatesHome.saveItem(attendanceTemplatesAddForm.$valid)" novalidate>
+
+    <article class="col-xs-12">
+
+        <div id="widget-att-templateAddNew" data-jarvis-widget data-widget-editbutton="false" data-widget-deletebutton="false" data-widget-colorbutton="false" class="no-margin-bottom">
+            <header class="header-background-color">
+                <h2><strong>{{attendanceTemplatesHome.FormSetup.MyForm.FormName || translate }}</strong></h2>
+                <div class="widget-toolbar">
+                    <div class="btn-group">
+                        <button type="submit" class="btn btn-link btn-sm" data-page-id="{{attendanceTemplatesHome.selectedViewSetup.ViewId}}" data-object-id="{{'Save-' + attendanceTemplatesHome.selectedViewSetup.ViewId}}" ng-disabled="attendanceTemplatesAddForm.$invalid" data-toggle="tooltip" title="{{attendanceTemplatesHome.translateText('Save', attendanceTemplatesHome.selectedViewSetup.ViewId)}}">
+                            <i class="fa fa-save fa-lg"></i>
+                        </button>
+                        <a class="btn btn-sm" ng-click="attendanceTemplatesHome.indexItemView();" data-page-id="{{attendanceTemplatesHome.selectedViewSetup.ViewId}}" data-object-id="{{'Cancel-' + attendanceTemplatesHome.selectedViewSetup.ViewId}}" data-toggle="tooltip" title="{{attendanceTemplatesHome.translateText('Cancel', attendanceTemplatesHome.selectedViewSetup.ViewId)}}">
+                            <i class="fa fa-reply fa-lg"></i>
+                        </a>
+                    </div>
+                </div>
+            </header>
+            <div class="widget-body view-background-color">
+
+
+
+                <div class="form-group  row">
+                    <!--AttendanceTemplateCode-->
+                    <ng-form name="AttendanceTemplateCode" ng-class="{ 'has-error': AttendanceTemplateCode.$invalid }" ng-hide="attendanceTemplatesHome.selectedViewSetup.ViewFieldsObject['AttendanceTemplateCode'].IsHidden">
+                        <div class="col-sm-2">
+                            <label class="control-label">{{attendanceTemplatesHome.translateText(attendanceTemplatesHome.selectedViewSetup.ViewFieldsObject["AttendanceTemplateCode"].FieldName,attendanceTemplatesHome.selectedViewSetup.viewSetup.ViewId)}}</label>
+                        </div>
+                        <div class="col-sm-4">
+                            <hcms-generic ng-model="attendanceTemplatesHome.dataItem.AttendanceTemplateCode" hc-options="attendanceTemplatesHome.selectedViewSetup.ViewFieldsObject['AttendanceTemplateCode']"></hcms-generic>
+                        </div>
+                    </ng-form>
+                </div>
+                <div class="form-group  row">
+                    <!--AttendanceTemplateName-->
+                    <ng-form name="AttendanceTemplateName" ng-class="{ 'has-error': AttendanceTemplateName.$invalid }" ng-hide="attendanceTemplatesHome.selectedViewSetup.ViewFieldsObject['AttendanceTemplateName'].IsHidden">
+                        <div class="col-sm-2">
+                            <label class="control-label">{{attendanceTemplatesHome.translateText(attendanceTemplatesHome.selectedViewSetup.ViewFieldsObject["AttendanceTemplateName"].FieldName,attendanceTemplatesHome.selectedViewSetup.viewSetup.ViewId)}}</label>
+                        </div>
+                        <div class="col-sm-4">
+                            <hcms-generic ng-model="attendanceTemplatesHome.dataItem.AttendanceTemplateName" hc-options="attendanceTemplatesHome.selectedViewSetup.ViewFieldsObject['AttendanceTemplateName']"></hcms-generic>
+                        </div>
+                    </ng-form>
+                    <!--AttendanceTemplateName_-->
+                    <ng-form name="AttendanceTemplateName_" ng-class="{ 'has-error': AttendanceTemplateName_.$invalid }" ng-hide="attendanceTemplatesHome.selectedViewSetup.ViewFieldsObject['AttendanceTemplateName_'].IsHidden">
+                        <div class="col-sm-2">
+                            <label class="control-label">{{attendanceTemplatesHome.translateText(attendanceTemplatesHome.selectedViewSetup.ViewFieldsObject["AttendanceTemplateName_"].FieldName,attendanceTemplatesHome.selectedViewSetup.viewSetup.ViewId)}}</label>
+                        </div>
+                        <div class="col-sm-4">
+                            <hcms-generic ng-model="attendanceTemplatesHome.dataItem.AttendanceTemplateName_" hc-options="attendanceTemplatesHome.selectedViewSetup.ViewFieldsObject['AttendanceTemplateName_']"></hcms-generic>
+                        </div>
+                    </ng-form>
+                </div>
+                <div class="form-group  row">
+
+                    <!--StartDate-->
+                    <ng-form name="StartDate" ng-class="{ 'has-error': StartDate.$invalid }" ng-hide="attendanceTemplatesHome.selectedViewSetup.ViewFieldsObject['StartDate'].IsHidden">
+                        <div class="col-sm-2">
+                            <label class="control-label">{{attendanceTemplatesHome.translateText(attendanceTemplatesHome.selectedViewSetup.ViewFieldsObject["StartDate"].FieldName,attendanceTemplatesHome.selectedViewSetup.viewSetup.ViewId)}}</label>
+                        </div>
+                        <div class="col-sm-4">
+                            <hcms-generic ng-model="attendanceTemplatesHome.dataItem.StartDate" hc-options="attendanceTemplatesHome.selectedViewSetup.ViewFieldsObject['StartDate']"></hcms-generic>
+                        </div>
+                    </ng-form>
+
+                    <!--EndDate-->
+                    <ng-form name="EndDate" ng-class="{ 'has-error': EndDate.$invalid }" ng-hide="attendanceTemplatesHome.selectedViewSetup.ViewFieldsObject['EndDate'].IsHidden">
+                        <div class="col-sm-2">
+                            <label class="control-label">{{attendanceTemplatesHome.translateText(attendanceTemplatesHome.selectedViewSetup.ViewFieldsObject["EndDate"].FieldName,attendanceTemplatesHome.selectedViewSetup.viewSetup.ViewId)}}</label>
+                        </div>
+                        <div class="col-sm-4">
+                            <hcms-generic ng-model="attendanceTemplatesHome.dataItem.EndDate" hc-options="attendanceTemplatesHome.selectedViewSetup.ViewFieldsObject['EndDate']"></hcms-generic>
+                        </div>
+                    </ng-form>
+                </div>
+                <div class="form-group  row">
+                    <!--OrderNo-->
+                    <ng-form name="OrderNo" ng-class="{ 'has-error': OrderNo.$invalid }" ng-hide="attendanceTemplatesHome.selectedViewSetup.ViewFieldsObject['OrderNo'].IsHidden">
+                        <div class="col-sm-2">
+                            <label class="control-label">{{attendanceTemplatesHome.translateText(attendanceTemplatesHome.selectedViewSetup.ViewFieldsObject["OrderNo"].FieldName,attendanceTemplatesHome.selectedViewSetup.viewSetup.ViewId)}}</label>
+                        </div>
+                        <div class="col-sm-4">
+                            <hcms-generic ng-model="attendanceTemplatesHome.dataItem.OrderNo" hc-options="attendanceTemplatesHome.selectedViewSetup.ViewFieldsObject['OrderNo']"></hcms-generic>
+                        </div>
+                    </ng-form>
+                    <!--Disabled-->
+                    <ng-form name="Disabled" ng-class="{ 'has-error': Disabled.$invalid }" ng-hide="attendanceTemplatesHome.selectedViewSetup.ViewFieldsObject['Disabled'].IsHidden">
+                        <div class="col-sm-2">
+                            <label class="control-label">{{attendanceTemplatesHome.translateText(attendanceTemplatesHome.selectedViewSetup.ViewFieldsObject["Disabled"].FieldName,attendanceTemplatesHome.selectedViewSetup.viewSetup.ViewId)}}</label>
+                        </div>
+                        <div class="col-sm-4">
+                            <hcms-generic ng-model="attendanceTemplatesHome.dataItem.Disabled" hc-options="attendanceTemplatesHome.selectedViewSetup.ViewFieldsObject['Disabled']"></hcms-generic>
+                        </div>
+                    </ng-form>
+                </div>
+
+
+            </div>
+        </div>
+    </article>
+
+
+</form>

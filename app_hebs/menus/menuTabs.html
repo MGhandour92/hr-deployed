@@ -1,0 +1,25 @@
+﻿
+
+<uib-tabset active="menuTabs.activeTabIndex" class="tab-animation fixed-tabs-bottom">
+    <uib-tab index="$index" ng-repeat="tab in menuTabs.tabs" active="tab.active" disable="tab.disabled">
+        <uib-tab-heading style="padding:2px;">
+            <a ng-click="menuTabs.closeTab($index)" class="btn btn-xs" style="padding:2px;margin:1px;">
+                <!--<i class="glyphicon glyphicon-remove"></i>-->
+                <i class="fa fa-times center-block tab-close-button" ></i>
+            </a>
+            <i class="fa {{::tab.MenuItem.MenuIconURL}}"></i>
+           <span style="margin:2px; padding:3px;">{{menuTabs.translateText(tab.MenuItem.MenuName)}}</span> 
+
+            <!--<span class="btn-label"><i class="glyphicon glyphicon-remove"></i></span>-->
+            <!--<a ng-click="menuTabs.closeTab($index)" class="btn btn-xs"><span class="fa fa-times center-block" style="color:red;"></span></a>-->
+            <!--<a ng-click="menuTabs.closeTab($index)" class="btn btn-xs btn-default">
+                <i class="fa fa-times center-block"></i>
+            </a>-->
+            <!--<a href-void class="btn btn-labeled btn-danger"> <span class="btn-label"><i class="glyphicon glyphicon-remove"></i></span>{{menuTabs.translateText(tab.MenuItem.MenuName)}} </a>-->
+        </uib-tab-heading>
+        <div ui-view="view{{tab.MenuItem.MenuId}}"></div>
+    </uib-tab>
+</uib-tabset>
+
+
+ 

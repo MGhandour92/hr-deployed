@@ -1,0 +1,184 @@
+﻿<div class="widget-body view-background-color">
+    <div class="form-group  row">
+        <!--EmpVacationCode-->
+        <ng-form name="EmpVacationCode" ng-class="{ 'has-error': EmpVacationCode.$invalid }">
+            <div class="col-sm-2">
+                <label class="control-label">{{dynamicForm.translateText(dynamicForm.selectedViewSetup.ViewFieldsObject["EmpVacationCode"].FieldName , dynamicForm.selectedViewSetup.viewSetup.ViewId)}}</label>
+            </div>
+            <div class="col-sm-4">
+                <hcms-generic ng-model="dynamicForm.dataItem.EmpVacationCode" hc-options="dynamicForm.selectedViewSetup.ViewFieldsObject['EmpVacationCode']"></hcms-generic>
+            </div>
+        </ng-form>
+        <!--VacationDate-->
+        <!--<ng-form name="VacationDate" ng-class="{ 'has-error': VacationDate.$invalid }">
+            <div class="col-sm-2">
+                <label class="control-label">{{dynamicForm.translateText(dynamicForm.selectedViewSetup.ViewFieldsObject["VacationDate"].FieldName , dynamicForm.selectedViewSetup.viewSetup.ViewId)}}</label>
+            </div>
+            <div class="col-sm-4">
+                <hcms-generic ng-model="dynamicForm.dataItem.VacationDate" hc-options="dynamicForm.selectedViewSetup.ViewFieldsObject['VacationDate']"></hcms-generic>
+            </div>
+        </ng-form>-->
+
+    </div>
+    <div class="form-group  row">
+        <!--VacationId-->
+        <ng-form name="VacationId" ng-class="{ 'has-error': VacationId.$invalid }">
+            <div class="col-sm-2">
+                <label class="control-label">{{dynamicForm.translateText(dynamicForm.selectedViewSetup.ViewFieldsObject["VacationId"].FieldName , dynamicForm.selectedViewSetup.viewSetup.ViewId)}}</label>
+            </div>
+            <div class="col-sm-4">
+                <hcms-generic ng-model="dynamicForm.dataItem.VacationId" hc-options="dynamicForm.selectedViewSetup.ViewFieldsObject['VacationId']" hc-events="dynamicForm.vacationIdEvents"></hcms-generic>
+            </div>
+        </ng-form>
+        <!--VacationReferenceNo-->
+        <ng-form name="VacationReferenceNo" ng-class="{ 'has-error': VacationReferenceNo.$invalid }">
+            <div class="col-sm-2">
+                <label class="control-label">{{dynamicForm.translateText(dynamicForm.selectedViewSetup.ViewFieldsObject["VacationReferenceNo"].FieldName , dynamicForm.selectedViewSetup.viewSetup.ViewId)}}</label>
+            </div>
+            <div class="col-sm-4">
+                <hcms-generic ng-model="dynamicForm.dataItem.VacationReferenceNo" hc-options="dynamicForm.selectedViewSetup.ViewFieldsObject['VacationReferenceNo']"></hcms-generic>
+            </div>
+        </ng-form>
+
+    </div>
+    <div class="form-group  row">
+        <!--VacationBalance-->
+        <ng-form name="VacationBalance" ng-class="{ 'has-error': VacationBalance.$invalid }">
+            <div class="col-sm-2">
+                <label class="control-label">{{dynamicForm.translateText(dynamicForm.selectedViewSetup.ViewFieldsObject["VacationBalance"].FieldName , dynamicForm.selectedViewSetup.viewSetup.ViewId)}}</label>
+            </div>
+            <div class="col-sm-4">
+                <hcms-generic ng-model="dynamicForm.dataItem.VacationBalance" hc-options="dynamicForm.selectedViewSetup.ViewFieldsObject['VacationBalance']"></hcms-generic>
+            </div>
+        </ng-form>
+        <!--VacationConsumed-->
+        <ng-form name="VacationConsumed" ng-class="{ 'has-error': VacationConsumed.$invalid }">
+            <div class="col-sm-2">
+                <label class="control-label">{{dynamicForm.translateText(dynamicForm.selectedViewSetup.ViewFieldsObject["VacationConsumed"].FieldName , dynamicForm.selectedViewSetup.viewSetup.ViewId)}}</label>
+            </div>
+            <div class="col-sm-4">
+                <hcms-generic ng-model="dynamicForm.dataItem.VacationConsumed" hc-options="dynamicForm.selectedViewSetup.ViewFieldsObject['VacationConsumed']"></hcms-generic>
+            </div>
+        </ng-form>
+    </div>
+    <div class="form-group  row">
+        <!--VacationFromDate-->
+        <ng-form name="VacationFromDate" ng-class="{ 'has-error': VacationFromDate.$invalid }">
+            <div class="col-sm-2">
+                <label class="control-label">{{dynamicForm.translateText(dynamicForm.selectedViewSetup.ViewFieldsObject["VacationFromDate"].FieldName , dynamicForm.selectedViewSetup.viewSetup.ViewId)}}</label>
+            </div>
+            <div class="col-sm-4">
+                <hcms-generic ng-model="dynamicForm.dataItem.VacationFromDate" hc-options="dynamicForm.selectedViewSetup.ViewFieldsObject['VacationFromDate']" hc-events="dynamicForm.vacationFromDateEvents"></hcms-generic>
+            </div>
+        </ng-form>
+        <!--VacationToDate-->
+        <ng-form name="VacationToDate" ng-class="{ 'has-error': VacationToDate.$invalid }">
+            <div class="col-sm-2">
+                <label class="control-label">{{dynamicForm.translateText(dynamicForm.selectedViewSetup.ViewFieldsObject["VacationToDate"].FieldName , dynamicForm.selectedViewSetup.viewSetup.ViewId)}}</label>
+            </div>
+            <div class="col-sm-4">
+                <hcms-generic ng-model="dynamicForm.dataItem.VacationToDate" hc-options="dynamicForm.selectedViewSetup.ViewFieldsObject['VacationToDate']" hc-events="dynamicForm.vacationToDateEvents"></hcms-generic>
+            </div>
+        </ng-form>
+    </div>
+    <div class="form-group  row">
+        <!--VacationDays-->
+        <ng-form name="VacationDays" ng-class="{ 'has-error': VacationDays.$invalid }">
+            <div class="col-sm-2">
+                <label class="control-label">{{dynamicForm.translateText(dynamicForm.selectedViewSetup.ViewFieldsObject["VacationDays"].FieldName , dynamicForm.selectedViewSetup.viewSetup.ViewId)}}</label>
+            </div>
+            <div class="col-sm-4">
+                <hcms-generic ng-model="dynamicForm.dataItem.VacationDays" hc-options="dynamicForm.selectedViewSetup.ViewFieldsObject['VacationDays']" hc-events="dynamicForm.vacationDaysEvents"></hcms-generic>
+            </div>
+        </ng-form>
+        <!--VacationReturn-->
+        <ng-form name="VacationReturn" ng-class="{ 'has-error': VacationReturn.$invalid }">
+            <div class="col-sm-2">
+                <label class="control-label">{{dynamicForm.translateText(dynamicForm.selectedViewSetup.ViewFieldsObject["VacationReturn"].FieldName , dynamicForm.selectedViewSetup.viewSetup.ViewId)}}</label>
+            </div>
+            <div class="col-sm-4">
+                <hcms-generic ng-model="dynamicForm.dataItem.VacationReturn" hc-options="dynamicForm.selectedViewSetup.ViewFieldsObject['VacationReturn']"></hcms-generic>
+            </div>
+        </ng-form>
+    </div>
+    <div class="form-group  row">
+        <!--ContactAddress-->
+        <ng-form name="ContactAddress" ng-class="{ 'has-error': ContactAddress.$invalid }">
+            <div class="col-sm-2">
+                <label class="control-label">{{dynamicForm.translateText(dynamicForm.selectedViewSetup.ViewFieldsObject["ContactAddress"].FieldName , dynamicForm.selectedViewSetup.viewSetup.ViewId)}}</label>
+            </div>
+            <div class="col-sm-4">
+                <hcms-generic ng-model="dynamicForm.dataItem.ContactAddress" hc-options="dynamicForm.selectedViewSetup.ViewFieldsObject['ContactAddress']"></hcms-generic>
+            </div>
+        </ng-form>
+
+        <div class="form-group  row">
+
+            <ng-form name="VacationPartDate" ng-class="{ 'has-error': VacationPartDate.$invalid }">
+                <div class="col-sm-2">
+                    <label class="control-label">{{dynamicForm.translateText(dynamicForm.selectedViewSetup.ViewFieldsObject["VacationPartDate"].FieldName , dynamicForm.selectedViewSetup.viewSetup.ViewId)}}</label>
+                </div>
+                <div class="col-sm-4">
+                    <hcms-generic ng-model="dynamicForm.dataItem.VacationPartDate" hc-options="dynamicForm.selectedViewSetup.ViewFieldsObject['VacationPartDate']" hc-events="dynamicForm.vacationPartDateEvents"></hcms-generic>
+                </div>
+            </ng-form>
+        </div>
+    </div>
+   
+    <div class="form-group  row" ng-show="dynamicForm.displayTimeRange">
+
+        <ng-form name="VacationFromTime" ng-class="{ 'has-error': VacationFromTime.$invalid }">
+            <div class="col-sm-2">
+                <label class="control-label">{{dynamicForm.translateText(dynamicForm.selectedViewSetup.ViewFieldsObject["VacationFromTime"].FieldName , dynamicForm.selectedViewSetup.viewSetup.ViewId)}}</label>
+            </div>
+            <div class="col-sm-4">
+                <hcms-generic ng-model="dynamicForm.dataItem.VacationFromTime" hc-options="dynamicForm.selectedViewSetup.ViewFieldsObject['VacationFromTime']" hc-events="dynamicForm.vacationFromTimeEvents"></hcms-generic>
+            </div>
+        </ng-form>
+
+        <ng-form name="VacationToTime" ng-class="{ 'has-error': VacationToTime.$invalid }">
+            <div class="col-sm-2">
+                <label class="control-label">{{dynamicForm.translateText(dynamicForm.selectedViewSetup.ViewFieldsObject["VacationToTime"].FieldName , dynamicForm.selectedViewSetup.viewSetup.ViewId)}}</label>
+            </div>
+            <div class="col-sm-4">
+                <hcms-generic ng-model="dynamicForm.dataItem.VacationToTime" hc-options="dynamicForm.selectedViewSetup.ViewFieldsObject['VacationToTime']" hc-events="dynamicForm.vacationToTimeEvents"></hcms-generic>
+            </div>
+        </ng-form>
+    </div>
+    <div class="form-group  row">
+        <!--VacationNote-->
+        <ng-form name="VacationNote" ng-class="{ 'has-error': VacationNote.$invalid }">
+            <div class="col-sm-2">
+                <label class="control-label">{{dynamicForm.translateText(dynamicForm.selectedViewSetup.ViewFieldsObject["VacationNote"].FieldName , dynamicForm.selectedViewSetup.viewSetup.ViewId)}}</label>
+            </div>
+            <div class="col-sm-10">
+                <hcms-generic ng-model="dynamicForm.dataItem.VacationNote" hc-options="dynamicForm.selectedViewSetup.ViewFieldsObject['VacationNote']"></hcms-generic>
+            </div>
+        </ng-form>
+    </div>
+    <!--<div class="form-group  row">
+
+        <ng-form name="ProfileReplaceId" ng-class="{ 'has-error': ProfileReplaceId.$invalid }">
+            <div class="col-sm-2">
+                <label class="control-label">{{dynamicForm.translateText(dynamicForm.selectedViewSetup.ViewFieldsObject["ProfileReplaceId"].FieldName , dynamicForm.selectedViewSetup.viewSetup.ViewId)}}</label>
+            </div>
+            <div class="col-sm-4">
+                <hcms-generic ng-model="dynamicForm.dataItem.ProfileReplaceId" hc-options="dynamicForm.selectedViewSetup.ViewFieldsObject['ProfileReplaceId']"></hcms-generic>
+            </div>
+        </ng-form>
+
+        <ng-form name="VacationReplacementDate" ng-class="{ 'has-error': VacationReplacementDate.$invalid }" ng-hide="dynamicForm.selectedViewSetup.ViewFieldsObject['VacationReplacementDate'].IsHidden">
+            <div class="col-sm-2">
+                <label class="control-label">{{dynamicForm.translateText(dynamicForm.selectedViewSetup.ViewFieldsObject["VacationReplacementDate"].FieldName , dynamicForm.selectedViewSetup.viewSetup.ViewId)}}</label>
+            </div>
+            <div class="col-sm-4">
+                <hcms-generic ng-model="dynamicForm.dataItem.VacationReplacementDate" hc-options="dynamicForm.selectedViewSetup.ViewFieldsObject['VacationReplacementDate']"></hcms-generic>
+            </div>
+        </ng-form>
+    </div>-->
+
+
+     
+
+</div>
+    

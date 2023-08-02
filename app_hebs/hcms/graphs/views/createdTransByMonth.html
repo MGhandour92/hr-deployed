@@ -1,0 +1,29 @@
+﻿ 
+    <div class="row" ng-controller="createdTransByMonth as transChartForm">
+        <!-- NEW WIDGET START -->
+        <article class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <!-- Widget ID (each widget will need unique ID)-->
+            <div id="totalTransChart-widget-widget" data-jarvis-widget role="widget">
+                
+                <header>
+                    <h2><strong>Total</strong> <i>Transations</i></h2>
+                </header>
+                <!-- widget div-->
+                <div>
+                    <!-- widget content -->
+                    <div class="widget-body">
+
+                        <hcms-high-chart hc-options="transChartForm.chartOptions"></hcms-high-chart>
+
+                    </div>
+                    <!-- end widget content -->
+                </div>
+                <!-- end widget div -->
+            </div>
+            <!-- end widget -->
+        </article>
+        <!-- WIDGET END -->
+
+    </div>
+
+  

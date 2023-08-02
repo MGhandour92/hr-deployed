@@ -1,0 +1,55 @@
+﻿
+
+<div class="container">
+       <button type="button" class="btn btn-active" data-toggle="collapse" data-target="#demo">Genearte By Template</button>
+    <div id="demo" class="collapse">
+        <div class="form-group  row">
+
+            <!--FromDate-->
+            <ng-form name="fromDate" ng-class="{ 'has-error': fromDate.$invalid }">
+                <div class="col-sm-2">
+
+                    <label class="control-label">{{dynamicForm.translateText('FromDate',dynamicForm.selectedViewSetup.viewSetup.ViewId)}}</label>
+                </div>
+                <div class="col-sm-4">
+
+                    <hcms-generic ng-model="dynamicForm.header.fromDate.value" hc-options="dynamicForm.header.fromDate.options"></hcms-generic>
+                </div>
+            </ng-form>
+            <!--ToDate-->
+            <ng-form name="toDate" ng-class="{ 'has-error': toDate.$invalid }">
+                <div class="col-sm-2">
+
+                    <label class="control-label">{{dynamicForm.translateText('ToDate',dynamicForm.selectedViewSetup.viewSetup.ViewId)}}</label>
+                </div>
+                <div class="col-sm-4">
+
+                    <hcms-generic ng-model="dynamicForm.header.toDate.value" hc-options="dynamicForm.header.toDate.options"></hcms-generic>
+                </div>
+            </ng-form>
+        </div>
+
+        <div class="form-group  row">
+
+            <!--AttendanceTemplateId-->
+            <ng-form name="attendanceTemplate" ng-class="{ 'has-error': attendanceTemplate.$invalid }">
+                <div class="col-sm-2">
+
+                    <label class="control-label">{{dynamicForm.translateText('AttendanceTemplateId',dynamicForm.selectedViewSetup.viewSetup.ViewId)}}</label>
+                </div>
+                <div class="col-sm-4">
+                    <!--<hcms-select ng-model="dynamicForm.selectedPayItemId" hc-options="dynamicForm.payItemOptions" hc-events="dynamicForm.payItemChangeEvent"></hcms-select>-->
+                    <hcms-select ng-model="dynamicForm.header.attendanceTemplate.value" hc-options="dynamicForm.header.attendanceTemplate"></hcms-select>
+                </div>
+            </ng-form>
+
+        </div>
+
+        <div>
+            <button  class="btn btn-info" type="button" ng-click="dynamicForm.generateByTemplate()" ng-disabled="attendanceTemplate.$invalid || fromDate.$invalid || toDate.$invalid">
+                {{dynamicForm.translateText('DisplayData',dynamicForm.selectedViewSetup.viewSetup.ViewId)}}
+            </button>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,46 @@
+﻿<div class="widget-body view-background-color">
+
+    <!--ContactTypeId-->
+    <div class="form-group  row" ng-hide="dynamicForm.selectedViewSetup.ViewFieldsObject['ContactTypeId'].IsHidden">
+        <ng-form name="ContactTypeId" ng-class="{ 'has-error': ProfileId.$invalid }">
+            <label class="control-label col-sm-2">{{dynamicForm.translateText(dynamicForm.selectedViewSetup.ViewFieldsObject["ContactTypeId"].FieldName , dynamicForm.selectedViewSetup.ViewId)}}</label>
+            <div class="col-sm-6">
+                <hcms-generic ng-model="dynamicForm.dataItem.ContactTypeId" hc-options="dynamicForm.selectedViewSetup.ViewFieldsObject['ContactTypeId']"></hcms-generic>
+            </div>
+        </ng-form>
+    </div>
+
+    <!--ContactData-->
+    <div class="form-group  row" ng-hide="dynamicForm.selectedViewSetup.ViewFieldsObject['ContactData'].IsHidden">
+        <ng-form name="ContactData" ng-class="{ 'has-error': ProfileId.$invalid }">
+            <label class="control-label col-sm-2">{{dynamicForm.translateText(dynamicForm.selectedViewSetup.ViewFieldsObject["ContactData"].FieldName , dynamicForm.selectedViewSetup.ViewId)}}</label>
+            <div class="col-sm-6">
+                <hcms-generic ng-model="dynamicForm.dataItem.ContactData" hc-options="dynamicForm.selectedViewSetup.ViewFieldsObject['ContactData']"></hcms-generic>
+            </div>
+        </ng-form>
+    </div>
+
+    <!--ContactNote-->
+    <div class="form-group  row" ng-hide="dynamicForm.selectedViewSetup.ViewFieldsObject['ContactNote'].IsHidden">
+        <ng-form name="ContactNote" ng-class="{ 'has-error': ContactNote.$invalid }">
+            <label class="control-label col-sm-2">{{dynamicForm.translateText(dynamicForm.selectedViewSetup.ViewFieldsObject["ContactNote"].FieldName , dynamicForm.selectedViewSetup.ViewId)}}</label>
+            <div class="col-sm-6">
+                <hcms-generic ng-model="dynamicForm.dataItem.ContactNote" hc-options="dynamicForm.selectedViewSetup.ViewFieldsObject['ContactNote']"></hcms-generic>
+            </div>
+        </ng-form>
+    </div>
+
+
+
+    <!--Save & Cancel Buttons-->
+    <!--<div class="row">
+        <div class="col-sm-offset-2 col-sm-10">
+            <input type="submit" class="btn btn-primary" value="{{dynamicForm.translateText('Save' , dynamicForm.selectedViewSetup.ViewId)}}" ng-disabled="empContactAddForm.$invalid" />
+            <button type="button" class="btn btn-default" ng-click="dynamicForm.indexItemView()">{{dynamicForm.translateText('Cancel' , dynamicForm.selectedViewSetup.ViewId)}}</button>
+        </div>
+    </div>-->
+
+
+
+</div>
+<!--/.container (DON'T NEST) -->

@@ -1,0 +1,73 @@
+﻿
+<!--<div>
+    <div class="row">
+        <div class="col-md-12">
+            <ul class="nav nav-tabs ">
+                <li class="active">
+                    <a href="#attendanceGroupsHomeSearch" data-toggle="tab">{{attendanceGroupsHome.translateText('Home',attendanceGroupsHome.selectedViewSetup.ViewId)}}</a>
+                </li>
+                <li>
+                    <a href="#selectedAttendanceGroup" data-toggle="tab">{{attendanceGroupsHome.translateText('Profile',attendanceGroupsHome.selectedViewSetup.ViewId)}}</a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane active" id="attendanceGroupsHomeSearch">
+
+                    <div id="widget-attendanceGroupsHome" data-jarvis-widget data-widget-editbutton="false" data-widget-deletebutton="false" data-widget-colorbutton="false" class="no-margin-bottom">
+                        <header class="header-background-color">
+                            <h2><strong>{{attendanceGroupsHome.translateText(attendanceGroupsHome.FormSetup.FormName,attendanceGroupsHome.selectedViewSetup.ViewId) }}</strong></h2>
+                            <div class="widget-toolbar">
+                                <a href-void class="btn" ng-click="attendanceGroupsHome.addNewClicked()"><i class="fa fa-plus"></i> {{attendanceGroupsHome.translateText('CreateNew', attendanceGroupsHome.selectedViewSetup.ViewId)}} </a>
+                            </div>
+                        </header>
+                        <div class="widget-body view-background-color">
+                            <smart-grid id="grd" name="gridName" data="attendanceGroupsHome.dataList" options="attendanceGroupsHome.grid.gridOptions" column-defs="attendanceGroupsHome.grid.gridColumnDefs" style="height:500px;"></smart-grid>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="selectedAttendanceGroup">
+                    <div ng-include src="'app_hebs/hcms/setup/personnel/attendance/attendanceGroups/views/attendanceGroupSelected.html'"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>-->
+
+
+
+<div>
+    <div class="row">
+        <div class="col-md-12">
+            <uib-tabset active="attendanceGroupsHome.activeTabIndex" class="nav nav-tabs">
+                <uib-tab index="0">
+                    <uib-tab-heading style="padding:2px;">
+                        <a class="btn btn-xs" style="padding:2px;margin:1px;">
+                        </a>
+                        <span style="margin:2px; padding:3px;">{{attendanceGroupsHome.translateText('Home',attendanceGroupsHome.selectedViewSetup.ViewId)}}</span>
+                    </uib-tab-heading>
+                    <div id="widget-attendanceGroupsHome" data-jarvis-widget data-widget-editbutton="false" data-widget-deletebutton="false" data-widget-colorbutton="false" class="no-margin-bottom">
+                        <header class="header-background-color">
+                            <h2><strong>{{attendanceGroupsHome.translateText(attendanceGroupsHome.FormSetup.FormName,attendanceGroupsHome.selectedViewSetup.ViewId) }}</strong></h2>
+                            <div class="widget-toolbar">
+                                <a href-void class="btn" ng-click="attendanceGroupsHome.addNewClicked()"><i class="fa fa-plus"></i> {{attendanceGroupsHome.translateText('CreateNew', attendanceGroupsHome.selectedViewSetup.ViewId)}} </a>
+                            </div>
+                        </header>
+                        <div class="widget-body view-background-color">
+                            <smart-grid id="grd" name="gridName" data="attendanceGroupsHome.dataList" options="attendanceGroupsHome.grid.gridOptions" column-defs="attendanceGroupsHome.grid.gridColumnDefs" style="height:500px;"></smart-grid>
+                        </div>
+                    </div>
+                </uib-tab>
+                <uib-tab index="1">
+                    <uib-tab-heading style="padding:2px;">
+                        <a class="btn btn-xs" style="padding:2px;margin:1px;">
+                        </a>
+                        <span style="margin:2px; padding:3px;">{{attendanceGroupsHome.translateText('Profile',attendanceGroupsHome.selectedViewSetup.ViewId)}}</span>
+                    </uib-tab-heading>
+                    <div ng-include src="'app_hebs/hcms/setup/personnel/attendance/attendanceGroups/views/attendanceGroupSelected.html'"></div>
+                </uib-tab>
+            </uib-tabset>
+        </div>
+    </div>
+</div>
+
+

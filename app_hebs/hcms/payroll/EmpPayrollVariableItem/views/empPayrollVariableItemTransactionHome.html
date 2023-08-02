@@ -1,0 +1,75 @@
+﻿<!--<div>
+    <div class="row">
+        <div class="col-md-12">
+            <ul class="nav nav-tabs ">
+                <li class="active">
+                    <a href="#empPayrollVariableItemTransHomeSearch" data-toggle="tab">{{empPayrollVariableItemTransHome.translateText('Home',empPayrollVariableItemTransHome.selectedViewSetup.ViewId)}}</a>
+                </li>
+                <li>
+                    <a href="#selectedEmpPayrollVariableItemTransactionProfile" data-toggle="tab">{{empPayrollVariableItemTransHome.translateText('Profile',empPayrollVariableItemTransHome.selectedViewSetup.ViewId)}}</a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane active" id="empPayrollVariableItemTransHomeSearch">
+
+                    <div id="widget-empPayrollVariableItemTransHome" data-jarvis-widget data-widget-editbutton="false" data-widget-deletebutton="false" data-widget-colorbutton="false" class="no-margin-bottom">
+                        <header class="header-background-color">
+                            <h2><strong>{{empPayrollVariableItemTransHome.translateText(empPayrollVariableItemTransHome.FormSetup.FormName,empPayrollVariableItemTransHome.selectedViewSetup.ViewId) }}</strong></h2>
+                            <div class="widget-toolbar">
+                                <a href-void class="btn" ng-click="empPayrollVariableItemTransHome.addNewClicked()"><i class="fa fa-plus"></i> {{empPayrollVariableItemTransHome.translateText('CreateNew', empPayrollVariableItemTransHome.selectedViewSetup.ViewId)}} </a>
+                            </div>
+                        </header>
+                        <div class="widget-body view-background-color">
+                            <emp-default-assignemnt-list options="empPayrollVariableItemTransHome.listOptions"></emp-default-assignemnt-list>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="selectedEmpPayrollVariableItemTransactionProfile">
+                    <div ng-include src="'app_hebs/hcms/payroll/EmpPayrollVariableItem/views/empPayrollVariableItemSelectedProfile.html'"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>-->
+
+
+
+<div>
+    <div class="row">
+        <div class="col-md-12">
+            <uib-tabset active="empPayrollVariableItemTransHome.activeTabIndex" class="nav nav-tabs">
+                <uib-tab index="0">
+                    <uib-tab-heading style="padding:2px;">
+                        <a class="btn btn-xs" style="padding:2px;margin:1px;">
+                        </a>
+                        <span style="margin:2px; padding:3px;">{{empPayrollVariableItemTransHome.translateText('Home',empPayrollVariableItemTransHome.selectedViewSetup.ViewId)}}</span>
+                    </uib-tab-heading>
+                    <div id="widget-empPayrollVariableItemTransHome" data-jarvis-widget data-widget-editbutton="false" data-widget-deletebutton="false" data-widget-colorbutton="false" class="no-margin-bottom">
+                        <header class="header-background-color">
+                            <h2><strong>{{empPayrollVariableItemTransHome.translateText(empPayrollVariableItemTransHome.FormSetup.FormName,empPayrollVariableItemTransHome.selectedViewSetup.ViewId) }}</strong></h2>
+                            <div class="widget-toolbar">
+                                <a href-void class="btn" ng-click="empPayrollVariableItemTransHome.addNewClicked()"><i class="fa fa-plus"></i> {{empPayrollVariableItemTransHome.translateText('CreateNew', empPayrollVariableItemTransHome.selectedViewSetup.ViewId)}} </a>
+                            </div>
+                        </header>
+                        <div class="widget-body view-background-color">
+                            <emp-default-assignemnt-list options="empPayrollVariableItemTransHome.listOptions"></emp-default-assignemnt-list>
+                        </div>
+                    </div>
+                </uib-tab>
+                <uib-tab index="1">
+                    <uib-tab-heading style="padding:2px;">
+                        <a class="btn btn-xs" style="padding:2px;margin:1px;">
+                        </a>
+                        <span style="margin:2px; padding:3px;">{{empPayrollVariableItemTransHome.translateText('Profile',empPayrollVariableItemTransHome.selectedViewSetup.ViewId)}}</span>
+                    </uib-tab-heading>
+                    <div ng-include src="'app_hebs/hcms/payroll/EmpPayrollVariableItem/views/empPayrollVariableItemSelectedProfile.html'"></div>
+                </uib-tab>
+            </uib-tabset>
+        </div>
+    </div>
+</div>
+
+
+
+
+

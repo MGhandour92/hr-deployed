@@ -1,0 +1,123 @@
+﻿<form class="form-horizontal" name="attendanceGroupsAddForm" ng-submit="attendanceGroupsHome.saveItem(attendanceGroupsAddForm.$valid)" novalidate>
+
+    <article class="col-xs-12">
+
+        <div id="widget-att-GroupAddNew" data-jarvis-widget data-widget-editbutton="false" data-widget-deletebutton="false" data-widget-colorbutton="false" class="no-margin-bottom">
+            <header class="header-background-color">
+                <h2><strong>{{attendanceGroupsHome.FormSetup.MyForm.FormName || translate }}</strong></h2>
+                <div class="widget-toolbar">
+                    <div class="btn-group">
+                        <button type="submit" class="btn btn-link btn-sm" data-page-id="{{attendanceGroupsHome.selectedViewSetup.ViewId}}" data-object-id="{{'Save-' + attendanceGroupsHome.selectedViewSetup.ViewId}}" ng-disabled="attendanceGroupsAddForm.$invalid" data-toggle="tooltip" title="{{attendanceGroupsHome.translateText('Save', attendanceGroupsHome.selectedViewSetup.ViewId)}}">
+                            <i class="fa fa-save fa-lg"></i>
+                        </button>
+                        <a class="btn btn-sm" ng-click="attendanceGroupsHome.indexItemView();" data-page-id="{{attendanceGroupsHome.selectedViewSetup.ViewId}}" data-object-id="{{'Cancel-' + attendanceGroupsHome.selectedViewSetup.ViewId}}" data-toggle="tooltip" title="{{attendanceGroupsHome.translateText('Cancel', attendanceGroupsHome.selectedViewSetup.ViewId)}}">
+                            <i class="fa fa-reply fa-lg"></i>
+                        </a>
+                    </div>
+                </div>
+            </header>
+            <div class="widget-body view-background-color">
+
+
+
+                <div class="form-group  row">
+                    <!--AttendanceGroupCode-->
+                    <ng-form name="AttendanceGroupCode" ng-class="{ 'has-error': AttendanceGroupCode.$invalid }" ng-hide="attendanceGroupsHome.selectedViewSetup.ViewFieldsObject['AttendanceGroupCode'].IsHidden">
+                        <div class="col-sm-2">
+                            <label class="control-label">{{attendanceGroupsHome.translateText(attendanceGroupsHome.selectedViewSetup.ViewFieldsObject["AttendanceGroupCode"].FieldName,attendanceGroupsHome.selectedViewSetup.viewSetup.ViewId)}}</label>
+                        </div>
+                        <div class="col-sm-4">
+                            <hcms-generic ng-model="attendanceGroupsHome.dataItem.AttendanceGroupCode" hc-options="attendanceGroupsHome.selectedViewSetup.ViewFieldsObject['AttendanceGroupCode']"></hcms-generic>
+                        </div>
+                    </ng-form>
+                </div>
+                <div class="form-group  row">
+                    <!--AttendanceGroupShortName-->
+                    <ng-form name="AttendanceGroupShortName" ng-class="{ 'has-error': AttendanceGroupShortName.$invalid }" ng-hide="attendanceGroupsHome.selectedViewSetup.ViewFieldsObject['AttendanceGroupShortName'].IsHidden">
+                        <div class="col-sm-2">
+                            <label class="control-label">{{attendanceGroupsHome.translateText(attendanceGroupsHome.selectedViewSetup.ViewFieldsObject["AttendanceGroupShortName"].FieldName,attendanceGroupsHome.selectedViewSetup.viewSetup.ViewId)}}</label>
+                        </div>
+                        <div class="col-sm-4">
+                            <hcms-generic ng-model="attendanceGroupsHome.dataItem.AttendanceGroupShortName" hc-options="attendanceGroupsHome.selectedViewSetup.ViewFieldsObject['AttendanceGroupShortName']"></hcms-generic>
+                        </div>
+                    </ng-form>
+                    <!--AttendanceGroupShortName_-->
+                    <ng-form name="AttendanceGroupShortName_" ng-class="{ 'has-error': AttendanceGroupShortName_.$invalid }" ng-hide="attendanceGroupsHome.selectedViewSetup.ViewFieldsObject['AttendanceGroupShortName_'].IsHidden">
+                        <div class="col-sm-2">
+                            <label class="control-label">{{attendanceGroupsHome.translateText(attendanceGroupsHome.selectedViewSetup.ViewFieldsObject["AttendanceGroupShortName_"].FieldName,attendanceGroupsHome.selectedViewSetup.viewSetup.ViewId)}}</label>
+                        </div>
+                        <div class="col-sm-4">
+                            <hcms-generic ng-model="attendanceGroupsHome.dataItem.AttendanceGroupShortName_" hc-options="attendanceGroupsHome.selectedViewSetup.ViewFieldsObject['AttendanceGroupShortName_']"></hcms-generic>
+                        </div>
+                    </ng-form>
+                </div>
+                <div class="form-group  row">
+                    <!--AttendanceGroupName-->
+                    <ng-form name="AttendanceGroupName" ng-class="{ 'has-error': AttendanceGroupName.$invalid }" ng-hide="attendanceGroupsHome.selectedViewSetup.ViewFieldsObject['AttendanceGroupName'].IsHidden">
+                        <div class="col-sm-2">
+                            <label class="control-label">{{attendanceGroupsHome.translateText(attendanceGroupsHome.selectedViewSetup.ViewFieldsObject["AttendanceGroupName"].FieldName,attendanceGroupsHome.selectedViewSetup.viewSetup.ViewId)}}</label>
+                        </div>
+                        <div class="col-sm-4">
+                            <hcms-generic ng-model="attendanceGroupsHome.dataItem.AttendanceGroupName" hc-options="attendanceGroupsHome.selectedViewSetup.ViewFieldsObject['AttendanceGroupName']"></hcms-generic>
+                        </div>
+                    </ng-form>
+                    <!--AttendanceGroupName_-->
+                    <ng-form name="AttendanceGroupName_" ng-class="{ 'has-error': AttendanceGroupName_.$invalid }" ng-hide="attendanceGroupsHome.selectedViewSetup.ViewFieldsObject['AttendanceGroupName_'].IsHidden">
+                        <div class="col-sm-2">
+                            <label class="control-label">{{attendanceGroupsHome.translateText(attendanceGroupsHome.selectedViewSetup.ViewFieldsObject["AttendanceGroupName_"].FieldName,attendanceGroupsHome.selectedViewSetup.viewSetup.ViewId)}}</label>
+                        </div>
+                        <div class="col-sm-4">
+                            <hcms-generic ng-model="attendanceGroupsHome.dataItem.AttendanceGroupName_" hc-options="attendanceGroupsHome.selectedViewSetup.ViewFieldsObject['AttendanceGroupName_']"></hcms-generic>
+                        </div>
+                    </ng-form>
+                </div>
+                <div class="form-group  row">
+
+                    <!--StartDate-->
+                    <ng-form name="StartDate" ng-class="{ 'has-error': StartDate.$invalid }" ng-hide="attendanceGroupsHome.selectedViewSetup.ViewFieldsObject['StartDate'].IsHidden">
+                        <div class="col-sm-2">
+                            <label class="control-label">{{attendanceGroupsHome.translateText(attendanceGroupsHome.selectedViewSetup.ViewFieldsObject["StartDate"].FieldName,attendanceGroupsHome.selectedViewSetup.viewSetup.ViewId)}}</label>
+                        </div>
+                        <div class="col-sm-4">
+                            <hcms-generic ng-model="attendanceGroupsHome.dataItem.StartDate" hc-options="attendanceGroupsHome.selectedViewSetup.ViewFieldsObject['StartDate']"></hcms-generic>
+                        </div>
+                    </ng-form>
+
+                    <!--EndDate-->
+                    <ng-form name="EndDate" ng-class="{ 'has-error': EndDate.$invalid }" ng-hide="attendanceGroupsHome.selectedViewSetup.ViewFieldsObject['EndDate'].IsHidden">
+                        <div class="col-sm-2">
+                            <label class="control-label">{{attendanceGroupsHome.translateText(attendanceGroupsHome.selectedViewSetup.ViewFieldsObject["EndDate"].FieldName,attendanceGroupsHome.selectedViewSetup.viewSetup.ViewId)}}</label>
+                        </div>
+                        <div class="col-sm-4">
+                            <hcms-generic ng-model="attendanceGroupsHome.dataItem.EndDate" hc-options="attendanceGroupsHome.selectedViewSetup.ViewFieldsObject['EndDate']"></hcms-generic>
+                        </div>
+                    </ng-form>
+                </div>
+                <div class="form-group  row">
+                    <!--OrderNo-->
+                    <ng-form name="OrderNo" ng-class="{ 'has-error': OrderNo.$invalid }" ng-hide="attendanceGroupsHome.selectedViewSetup.ViewFieldsObject['OrderNo'].IsHidden">
+                        <div class="col-sm-2">
+                            <label class="control-label">{{attendanceGroupsHome.translateText(attendanceGroupsHome.selectedViewSetup.ViewFieldsObject["OrderNo"].FieldName,attendanceGroupsHome.selectedViewSetup.viewSetup.ViewId)}}</label>
+                        </div>
+                        <div class="col-sm-4">
+                            <hcms-generic ng-model="attendanceGroupsHome.dataItem.OrderNo" hc-options="attendanceGroupsHome.selectedViewSetup.ViewFieldsObject['OrderNo']"></hcms-generic>
+                        </div>
+                    </ng-form>
+                    <!--Disabled-->
+                    <ng-form name="Disabled" ng-class="{ 'has-error': Disabled.$invalid }" ng-hide="attendanceGroupsHome.selectedViewSetup.ViewFieldsObject['Disabled'].IsHidden">
+                        <div class="col-sm-2">
+                            <label class="control-label">{{attendanceGroupsHome.translateText(attendanceGroupsHome.selectedViewSetup.ViewFieldsObject["Disabled"].FieldName,attendanceGroupsHome.selectedViewSetup.viewSetup.ViewId)}}</label>
+                        </div>
+                        <div class="col-sm-4">
+                            <hcms-generic ng-model="attendanceGroupsHome.dataItem.Disabled" hc-options="attendanceGroupsHome.selectedViewSetup.ViewFieldsObject['Disabled']"></hcms-generic>
+                        </div>
+                    </ng-form>
+                </div>
+
+
+            </div>
+        </div>
+    </article>
+
+
+</form>

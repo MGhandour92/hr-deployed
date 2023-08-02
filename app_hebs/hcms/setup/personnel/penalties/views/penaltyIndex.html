@@ -1,0 +1,37 @@
+﻿
+<div class="panel">
+    <div class="panel-heading">
+        <span class="panel-title">{{penaltySetup.title}}</span>
+    </div>
+    <div class="panel-body">
+        <div ng-include src="'app_hebs/hcms/setup/personnel/penalties/views/penaltyAddNew.html'" ng-show='penaltySetup.displayCreateNewTemplate || penaltySetup.displayEditTemplate'></div>
+
+        <div ng-show="penaltySetup.displayEditTemplate">
+
+            <form-nav-tabs form-id="penaltySetup.FormSetup.MyForm.FormId" parent-id-field-name="'PenaltyId'" parent-item="penaltySetup.dataItem" hc-options="penaltySetup.navTabOptions"></form-nav-tabs>
+
+            <!--<ul class="nav nav-tabs">
+                <li class="nopadding" ng-repeat="item in penaltySetup.subForms">
+                    <a href="#tab-r{{$index}}" data-toggle="tab" ng-click="penaltySetup.subFormClick(item)">{{penaltySetup.translateText(item.FormName, penaltySetup.selectedViewSetup.viewSetup.ViewId)}}</a>
+                </li>
+            </ul>
+            <div class="tab-content padding-10">
+                <div ng-repeat="item in penaltySetup.subForms" class="tab-pane nopadding" id="tab-r{{$index}}">
+                    <div ng-include src="item.StartView" ng-init="selectedSubForm=item;selectedParent=penaltySetup.dataItem" class="nopadding"></div>
+                </div>                 
+            </div>-->
+
+        </div>
+    </div>
+    <div class="panel-footer">
+        <div class="table-primary">
+            <div>
+                <a ng-click="penaltySetup.addPenaltyView()">{{penaltySetup.translateText('CreateNew', penaltySetup.selectedViewSetup.viewSetup.ViewId)}}</a>
+            </div>
+            <smart-grid id="grd" name="gridName" data="penaltySetup.dataList" options="penaltySetup.grid.gridOptions" column-defs="penaltySetup.grid.gridColumnDefs" style="height:500px;"></smart-grid>
+
+        </div>
+
+    </div>
+
+</div>

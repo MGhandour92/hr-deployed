@@ -1,0 +1,37 @@
+﻿
+<div >
+    <form name="myapplicantPhotoForm">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <div>
+                    <div ng-hide="applicantPhoto.isNewProfile()" class="btn-group" role="group">
+                        <button class="btn btn-sm center-block btn-primary" ng-disabled="!myapplicantPhotoForm.$valid"
+                                ng-click="applicantPhoto.uploadPic(applicantPhoto.picFile)">
+                            {{applicantPhoto.translateText('Save')}}
+                        </button>
+                        <button class="btn btn-sm center-block btn-danger" ng-click="applicantPhoto.clearPhoto();" ng-show="!applicantPhoto.isCleared()">{{applicantPhoto.translateText('Remove')}}</button>
+                    </div>
+                    <div class="progress" ng-show="applicantPhoto.picFile.progress >= 0">
+                        <div style="width:{{applicantPhoto.picFile.progress}}%"
+                             ng-bind="applicantPhoto.picFile.progress + '%'">
+                        </div>
+                    </div>
+                    <span ng-show="applicantPhoto.picFile.result">{{applicantPhoto.translateText('UploadSuccessfully')}}</span>
+                    <span class="err" ng-show="applicantPhoto.errorMsg">{{applicantPhoto.errorMsg}}</span>
+                </div>
+            </div>
+            <div class="panel-body">
+                <div class="empImage">
+                    <img class="img-thumbnail center-block empImage" ngf-thumbnail="applicantPhoto.picFile" ngf-select="" ngf-drop="" ngf-accept="acceptSelect" ngf-resize="{width: 1000, height: 1000, centerCrop: true}" ng-model="applicantPhoto.picFile" name="file"
+                         accept="image/*" ngf-max-size="2MB"
+                         ngf-model-invalid="applicantPhoto.errorFile">
+                    <!--<i ng-show="myapplicantPhotoForm.file.$error.maxSize">
+                        {{applicantPhoto.translateText('FileTooLarge')}}
+                        {{errorFile.size / 1000000|number:1}}MB: max 2M
+                    </i>-->
+                </div>
+            </div>
+
+        </div>
+    </form>
+</div>

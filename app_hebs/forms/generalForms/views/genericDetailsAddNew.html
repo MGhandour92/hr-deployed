@@ -1,0 +1,15 @@
+﻿<div class="widget-body view-background-color">
+    <div class="form-group  row" ng-repeat="item in generalSubForm.selectedViewSetup.ViewFields" ng-class="{ 'item-hidden': item.IsHidden }" ng-hide="{{item.IsHidden}}" hcms-view-id="{{generalSubForm.selectedViewSetup.ViewId}}">
+        <ng-form name="innerForm" ng-class="{ 'has-error': innerForm.$invalid }">
+            <div class="col-sm-2">
+                <label class="control-label" for="inputcontrol" ng-show="item.ControlTypeName !=='checkbox' && item.ControlTypeName !=='check'" hcms-view-id="generalSubForm.selectedViewSetup.ViewId" hcms-translator="item.FieldName"></label>
+            </div>
+            <div class="col-sm-6">
+                <hcms-generic ng-model="generalSubForm.dataItem[item.FieldName]" hc-options="item" hc-text="{{generalSubForm.translateText(item.FieldName, generalSubForm.selectedViewSetup.ViewId)}}">
+                </hcms-generic>
+            </div>
+        </ng-form>
+    </div>
+     
+</div>
+

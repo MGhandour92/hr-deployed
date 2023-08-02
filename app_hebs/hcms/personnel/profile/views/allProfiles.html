@@ -1,0 +1,76 @@
+﻿
+<!--div>
+    <div class="row">
+        <div class="col-md-12">
+            <ul class="nav nav-tabs ">
+                <li class="active">
+                    <a href="#profileSearch" data-toggle="tab">{{allProfiles.translateText('Home',allProfiles.selectedViewSetup.ViewId)}}</a>
+                </li>
+                <li>
+                    <a href="#selectedProfile" data-toggle="tab">{{allProfiles.translateText('Profile',allProfiles.selectedViewSetup.ViewId)}}</a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane active" id="profileSearch">
+ 
+                    <div id="widget-allProfiles" data-jarvis-widget data-widget-editbutton="false" data-widget-deletebutton="false" data-widget-colorbutton="false" class="no-margin-bottom">
+                        <header class="header-background-color">
+                            <h2><strong>{{allProfiles.translateText('Employees',allProfiles.selectedViewSetup.ViewId) }}</strong></h2>
+                            <div class="widget-toolbar">
+                                <a href-void class="btn" ng-click="allProfiles.addNewClicked()"><i class="fa fa-plus"></i> {{allProfiles.translateText('CreateNew', allProfiles.selectedViewSetup.ViewId)}} </a>
+                            </div>
+                        </header>
+                        <div class="widget-body view-background-color">
+                            <smart-grid id="grd" name="gridName" data="allProfiles.dataList" options="allProfiles.grid.gridOptions" column-defs="allProfiles.grid.gridColumnDefs" style="height:500px;"></smart-grid>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="tab-pane fade" id="selectedProfile">
+                    <div ng-include src="'app_hebs/hcms/personnel/profile/views/profile.html'"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>-->
+
+
+<div>
+    <div class="row">
+        <div class="col-md-12">
+            <uib-tabset active="allProfiles.activeTabIndex" class="nav nav-tabs">
+                <uib-tab index="0">
+                    <uib-tab-heading style="padding:2px;">
+                        <a class="btn btn-xs" style="padding:2px;margin:1px;">
+                        </a>
+                        <span style="margin:2px; padding:3px;">{{allProfiles.translateText('Home',allProfiles.selectedViewSetup.ViewId)}}</span>
+                    </uib-tab-heading>
+
+                    <div id="widget-allProfiles" data-jarvis-widget data-widget-editbutton="false" data-widget-deletebutton="false" data-widget-colorbutton="false" class="no-margin-bottom">
+                        <header class="header-background-color">
+                            <h2><strong>{{allProfiles.translateText('Employees',allProfiles.selectedViewSetup.ViewId) }}</strong></h2>
+                            <div class="widget-toolbar">
+                                <a href-void class="btn" ng-click="allProfiles.addNewClicked()"><i class="fa fa-plus"></i> {{allProfiles.translateText('CreateNew', allProfiles.selectedViewSetup.ViewId)}} </a>
+                            </div>
+                        </header>
+                        <div class="widget-body view-background-color">
+                            <smart-grid id="grd" name="gridName" data="allProfiles.dataList" options="allProfiles.grid.gridOptions" column-defs="allProfiles.grid.gridColumnDefs" style="height:500px;"></smart-grid>
+                        </div>
+                    </div>
+                </uib-tab>
+                <uib-tab index="1">
+                    <uib-tab-heading style="padding:2px;">
+                        <a class="btn btn-xs" style="padding:2px;margin:1px;">
+                        </a>
+                        <span style="margin:2px; padding:3px;">{{allProfiles.translateText('Profile',allProfiles.selectedViewSetup.ViewId)}}</span>
+                    </uib-tab-heading>
+                    <div ng-include src="'app_hebs/hcms/personnel/profile/views/profile.html'"></div>
+                </uib-tab>
+            </uib-tabset>
+
+        </div>
+    </div>
+</div>
+
+

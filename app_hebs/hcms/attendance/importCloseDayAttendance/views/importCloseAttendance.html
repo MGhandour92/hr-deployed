@@ -1,0 +1,109 @@
+﻿<div class="widget-body view-background-color">
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <div class="view">
+                <form class="form-horizontal" name="importCloseAttendanceForm" novalidate>
+
+                    <div class="form-group  row">
+                        <!--Year-->
+                        <ng-form name="PayrollYear" ng-class="{ 'has-error': PayrollYear.$invalid }">
+                            <div class="col-sm-1">
+                                <label class="control-label">{{importCloseAttendance.translateText('Year',importCloseAttendance.headerViewSetup.viewSetup.ViewId)}}</label>
+                            </div>
+                            <div class="col-sm-2">
+                                <hcms-generic ng-model="importCloseAttendance.dataItem.PayrollYear" hc-options="importCloseAttendance.headerViewSetup.ViewFieldsObject['PayrollYear']" hc-events="importCloseAttendance.yearChangeEvent"></hcms-generic>
+                            </div>
+                        </ng-form>
+
+                        <!--Month-->
+                        <ng-form name="PayrollMonth" ng-class="{ 'has-error': PayrollMonth.$invalid }">
+                            <div class="col-sm-1">
+                                <label class="control-label">{{importCloseAttendance.translateText('Month',importCloseAttendance.headerViewSetup.viewSetup.ViewId)}}</label>
+                            </div>
+                            <div class="col-sm-2">
+                                <hcms-generic ng-model="importCloseAttendance.dataItem.PayrollMonth" hc-options="importCloseAttendance.headerViewSetup.ViewFieldsObject['PayrollMonth']" hc-events="importCloseAttendance.monthChangeEvent"></hcms-generic>
+                            </div>
+                        </ng-form>
+                    </div>
+
+                    <div class="form-group  row">
+                        <!--CalculationPeriodId-->
+                        <ng-form name="EmpAssignmentId" ng-class="{ 'has-error': CalculationPeriodId.$invalid }">
+                            <div class="col-sm-1">
+                                <label class="control-label">{{importCloseAttendance.translateText('CalculationPeriodId',importCloseAttendance.headerViewSetup.viewSetup.ViewId)}}</label>
+                            </div>
+                            <div class="col-sm-5">
+                                <hcms-generic ng-model="importCloseAttendance.dataItem.CalculationPeriodId" hc-options="importCloseAttendance.headerViewSetup.ViewFieldsObject['CalculationPeriodId']" hc-events="importCloseAttendance.calculationPeriodChangeEvent"></hcms-generic>
+                            </div>
+                        </ng-form>
+                    </div>
+
+
+                    <div class="form-group  row">
+
+                        <!--FromDate-->
+                        <ng-form name="FromDate" ng-class="{ 'has-error': FromDate.$invalid }">
+                            <div class="col-sm-1">
+                                <label class="control-label">{{importCloseAttendance.translateText('FromDate',importCloseAttendance.headerViewSetup.viewSetup.ViewId)}}</label>
+                            </div>
+                            <div class="col-sm-2">
+                                <hcms-generic ng-model="importCloseAttendance.dataItem.FromDate" hc-options="importCloseAttendance.headerViewSetup.ViewFieldsObject['FromDate']"></hcms-generic>
+                            </div>
+                        </ng-form>
+
+                        <!--ToDate-->
+                        <ng-form name="ToDate" ng-class="{ 'has-error': ToDate.$invalid }">
+                            <div class="col-sm-1">
+                                <label class="control-label">{{importCloseAttendance.translateText('ToDate',importCloseAttendance.headerViewSetup.viewSetup.ViewId)}}</label>
+                            </div>
+                            <div class="col-sm-2">
+                                <hcms-generic ng-model="importCloseAttendance.dataItem.ToDate" hc-options="importCloseAttendance.headerViewSetup.ViewFieldsObject['ToDate']"></hcms-generic>
+                            </div>
+                        </ng-form>
+                    </div>
+
+
+                    <div class="form-group  row">
+                        <!--EmpAssignmentId-->
+                        <ng-form name="EmpAssignmentId" ng-class="{ 'has-error': EmpAssignmentId.$invalid }">
+                            <div class="col-sm-1">
+                                <label class="control-label">{{importCloseAttendance.translateText('EmpAssignmentId',importCloseAttendance.headerViewSetup.viewSetup.ViewId)}}</label>
+                            </div>
+                            <div class="col-sm-5">
+                                <hcms-generic ng-model="importCloseAttendance.dataItem.EmpAssignmentId" hc-options="importCloseAttendance.headerViewSetup.ViewFieldsObject['EmpAssignmentId']"></hcms-generic>
+                            </div>
+                        </ng-form>
+                    </div>
+
+                </form>
+
+                <div id="importCloseAttendanceModal" class="modal fade" role="dialog" aria-hidden="true">
+                    <hcms-progress-calc hc-options="importCloseAttendance.progressCalcOptions" progress-id="importCloseAttendance.progressId" progress-type-id="importCloseAttendance.progressTypeId"></hcms-progress-calc>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <uib-tabset active="importCloseAttendance.activeTabIndex" class="tab-animation">
+
+
+        <uib-tab index="0" active="importCloseAttendance.activeDailyActionTabIndex==0">
+            <uib-tab-heading style="padding:2px;">
+                <span style="margin:2px; padding:3px;">{{importCloseAttendance.translateText('DailyActions')}}</span>
+            </uib-tab-heading>
+            <div>
+                <div ng-include src="'app_hebs/hcms/attendance/importCloseDayAttendance/views/dailyActionsView.html'"></div>
+            </div>
+        </uib-tab>
+
+        <uib-tab index="1" active="importCloseAttendance.activeGroupActionTabIndex==1">
+            <uib-tab-heading style="padding:2px;">
+                <span style="margin:2px; padding:3px;">{{importCloseAttendance.translateText('GroupActions')}}</span>
+            </uib-tab-heading>
+            <div ng-include src="'app_hebs/hcms/attendance/importCloseDayAttendance/views/monthlyActionsView.html'"></div>
+        </uib-tab>
+
+    </uib-tabset>
+</div>

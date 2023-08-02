@@ -1,0 +1,176 @@
+﻿<div class="view">
+    <form class="form-horizontal" name="applicantAsignmentForm" ng-submit="navForm.saveItem(applicantAsignmentForm.$valid)" novalidate>
+
+        <div>
+
+            <!--<div class="form-group  row">
+                <!--AppAssignmentId-->
+              <!--  <ng-form name="AppAssignmentId" ng-class="{ 'has-error': AppAssignmentId.$invalid }" ng-hide="navForm.selectedViewSetup.ViewFieldsObject['AppAssignmentId'].IsHidden">
+                    <div class="col-sm-2">
+                        <label class="control-label">{{navForm.translateText(navForm.selectedViewSetup.ViewFieldsObject["AppAssignmentId"].FieldName,navForm.selectedViewSetup.viewSetup.ViewId)}}</label>
+                    </div>
+                    <div class="col-sm-4">
+                        <hcms-generic ng-model="navForm.dataItem.AppAssignmentId" hc-options="navForm.selectedViewSetup.ViewFieldsObject['AppAssignmentId']"></hcms-generic>
+                    </div>
+                </ng-form>-->
+                <!--ProfileId-->
+                
+                    <!--<ng-form name="ProfileId" ng-class="{ 'has-error': ProfileId.$invalid }" ng-hide="navForm.selectedViewSetup.ViewFieldsObject['ProfileId'].IsHidden">
+                        <div class="col-sm-2">
+                            <label class="control-label">{{navForm.translateText(navForm.selectedViewSetup.ViewFieldsObject["ProfileId"].FieldName,navForm.selectedViewSetup.viewSetup.ViewId)}}</label>
+                        </div>
+                        <div class="col-sm-4">
+                            <hcms-generic ng-model="navForm.dataItem.ProfileId" hc-options="navForm.selectedViewSetup.ViewFieldsObject['ProfileId']"></hcms-generic>
+                        </div>
+                    </ng-form>
+                </div>-->
+            <div class="form-group  row">
+               <!-- ApplicationStatus-->
+                <!--<ng-form name="ApplicationStatus" ng-class="{ 'has-error': ApplicationStatus.$invalid }" ng-hide="navForm.selectedViewSetup.ViewFieldsObject['ApplicationStatus'].IsHidden">
+                    <div class="col-sm-2">
+                        <label class="control-label">{{navForm.translateText(navForm.selectedViewSetup.ViewFieldsObject["ApplicationStatus"].FieldName,navForm.selectedViewSetup.viewSetup.ViewId)}}</label>
+                    </div>
+                    <div class="col-sm-4">
+                        <hcms-generic ng-model="navForm.dataItem.ApplicationStatus" hc-options="navForm.selectedViewSetup.ViewFieldsObject['ApplicationStatus']"></hcms-generic>
+                    </div>
+                </ng-form>-->
+                <!--ApplicationStart-->
+                <ng-form name="ApplicationStart" ng-class="{ 'has-error': ApplicationStart.$invalid }" ng-hide="navForm.selectedViewSetup.ViewFieldsObject['ApplicationStart'].IsHidden">
+                    <div class="col-sm-2">
+                        <label class="control-label">{{navForm.translateText(navForm.selectedViewSetup.ViewFieldsObject["ApplicationStart"].FieldName,navForm.selectedViewSetup.viewSetup.ViewId)}}</label>
+                    </div>
+                    <div class="col-sm-4">
+                        <hcms-generic ng-model="navForm.dataItem.ApplicationStart" hc-options="navForm.selectedViewSetup.ViewFieldsObject['ApplicationStart']"></hcms-generic>
+                    </div>
+                </ng-form>
+
+                <!--ApplicationEnd-->
+                <ng-form name="ApplicationEnd" ng-class="{ 'has-error': ApplicationEnd.$invalid }" ng-hide="navForm.selectedViewSetup.ViewFieldsObject['ApplicationEnd'].IsHidden">
+                    <div class="col-sm-2">
+                        <label class="control-label">{{navForm.translateText(navForm.selectedViewSetup.ViewFieldsObject["ApplicationEnd"].FieldName,navForm.selectedViewSetup.viewSetup.ViewId)}}</label>
+                    </div>
+                    <div class="col-sm-4">
+                        <hcms-generic ng-model="navForm.dataItem.ApplicationEnd" hc-options="navForm.selectedViewSetup.ViewFieldsObject['ApplicationEnd']"></hcms-generic>
+                    </div>
+                </ng-form>
+            </div>
+            <div class="form-group  row">
+                
+
+                <!--ApplicationSourceId-->
+                <ng-form name="ApplicationSourceId" ng-class="{ 'has-error': ApplicationSourceId.$invalid }" ng-hide="navForm.selectedViewSetup.ViewFieldsObject['ApplicationSourceId'].IsHidden">
+                    <div class="col-sm-2">
+                        <label class="control-label">{{navForm.translateText(navForm.selectedViewSetup.ViewFieldsObject["ApplicationSourceId"].FieldName,navForm.selectedViewSetup.viewSetup.ViewId)}}</label>
+                    </div>
+                    <div class="col-sm-4">
+                        <hcms-generic ng-model="navForm.dataItem.ApplicationSourceId" hc-options="navForm.selectedViewSetup.ViewFieldsObject['ApplicationSourceId']"></hcms-generic>
+                    </div>
+                </ng-form>
+            </div>
+            <div class="form-group  row">
+                <!--RecruitmentActivity-->
+                <ng-form name="RecruitmentActivity" ng-class="{ 'has-error': RecruitmentActivity.$invalid }" ng-hide="navForm.selectedViewSetup.ViewFieldsObject['RecruitmentActivity'].IsHidden">
+                    <div class="col-sm-2">
+                        <label class="control-label">{{navForm.translateText(navForm.selectedViewSetup.ViewFieldsObject["RecruitmentActivity"].FieldName,navForm.selectedViewSetup.viewSetup.ViewId)}}</label>
+                    </div>
+                    <div class="col-sm-4">
+                        <hcms-generic ng-model="navForm.dataItem.RecruitmentActivity" hc-options="navForm.selectedViewSetup.ViewFieldsObject['RecruitmentActivity']"></hcms-generic>
+                    </div>
+                </ng-form>
+                <!--VacancyId-->
+                <ng-form name="VacancyId" ng-class="{ 'has-error': VacancyId.$invalid }" ng-hide="navForm.selectedViewSetup.ViewFieldsObject['VacancyId'].IsHidden">
+                    <div class="col-sm-2">
+                        <label class="control-label">{{navForm.translateText(navForm.selectedViewSetup.ViewFieldsObject["VacancyId"].FieldName,navForm.selectedViewSetup.viewSetup.ViewId)}}</label>
+                    </div>
+                    <div class="col-sm-4">
+                        <hcms-generic ng-model="navForm.dataItem.VacancyId" hc-options="navForm.selectedViewSetup.ViewFieldsObject['VacancyId']"></hcms-generic>
+                    </div>
+                </ng-form>
+            </div>
+            <!--<div class="form-group  row">
+                <!--PositionId-->
+                <!--<ng-form name="PositionId" ng-class="{ 'has-error': PositionId.$invalid }" ng-hide="navForm.selectedViewSetup.ViewFieldsObject['PositionId'].IsHidden">
+                    <div class="col-sm-2">
+                        <label class="control-label">{{navForm.translateText(navForm.selectedViewSetup.ViewFieldsObject["PositionId"].FieldName,navForm.selectedViewSetup.viewSetup.ViewId)}}</label>
+                    </div>
+                    <div class="col-sm-4">
+                        <hcms-generic ng-model="navForm.dataItem.PositionId" hc-options="navForm.selectedViewSetup.ViewFieldsObject['PositionId']"></hcms-generic>
+                    </div>
+                </ng-form>-->
+
+                <!--JobId-->
+                <!--<ng-form name="JobId" ng-class="{ 'has-error': JobId.$invalid }" ng-hide="navForm.selectedViewSetup.ViewFieldsObject['JobId'].IsHidden">
+                    <div class="col-sm-2">
+                        <label class="control-label">{{navForm.translateText(navForm.selectedViewSetup.ViewFieldsObject["JobId"].FieldName,navForm.selectedViewSetup.viewSetup.ViewId)}}</label>
+                    </div>
+                    <div class="col-sm-4">
+                        <hcms-generic ng-model="navForm.dataItem.JobId" hc-options="navForm.selectedViewSetup.ViewFieldsObject['JobId']"></hcms-generic>
+                    </div>
+                </ng-form>-->
+           <!-- </div>-->
+            <!--<div class="form-group  row">-->
+                <!--UnitId-->
+                <!--<ng-form name="UnitId" ng-class="{ 'has-error': UnitId.$invalid }" ng-hide="navForm.selectedViewSetup.ViewFieldsObject['UnitId'].IsHidden">
+                    <div class="col-sm-2">
+                        <label class="control-label">{{navForm.translateText(navForm.selectedViewSetup.ViewFieldsObject["UnitId"].FieldName,navForm.selectedViewSetup.viewSetup.ViewId)}}</label>
+                    </div>
+                    <div class="col-sm-4">
+                        <hcms-generic ng-model="navForm.dataItem.UnitId" hc-options="navForm.selectedViewSetup.ViewFieldsObject['UnitId']"></hcms-generic>
+                    </div>
+                </ng-form>-->
+
+                <!--LocationId-->
+                <!--<ng-form name="LocationId" ng-class="{ 'has-error': LocationId.$invalid }" ng-hide="navForm.selectedViewSetup.ViewFieldsObject['LocationId'].IsHidden">
+                    <div class="col-sm-2">
+                        <label class="control-label">{{navForm.translateText(navForm.selectedViewSetup.ViewFieldsObject["LocationId"].FieldName,navForm.selectedViewSetup.viewSetup.ViewId)}}</label>
+                    </div>
+                    <div class="col-sm-4">
+                        <hcms-generic ng-model="navForm.dataItem.LocationId" hc-options="navForm.selectedViewSetup.ViewFieldsObject['LocationId']"></hcms-generic>
+                    </div>
+                </ng-form>
+            </div>-->
+
+            <!--<div class="form-group  row">
+                GradeId
+                <ng-form name="GradeId" ng-class="{ 'has-error': GradeId.$invalid }" ng-hide="navForm.selectedViewSetup.ViewFieldsObject['GradeId'].IsHidden">
+                    <div class="col-sm-2">
+                        <label class="control-label">{{navForm.translateText(navForm.selectedViewSetup.ViewFieldsObject["GradeId"].FieldName,navForm.selectedViewSetup.viewSetup.ViewId)}}</label>
+                    </div>
+                    <div class="col-sm-4">
+                        <hcms-generic ng-model="navForm.dataItem.GradeId" hc-options="navForm.selectedViewSetup.ViewFieldsObject['GradeId']"></hcms-generic>
+                    </div>
+                </ng-form>-->
+
+                <!--LastEffectiveDate-->
+                <ng-form name="LastEffectiveDate" ng-class="{ 'has-error': LastEffectiveDate.$invalid }" ng-hide="navForm.selectedViewSetup.ViewFieldsObject['LastEffectiveDate'].IsHidden">
+                    <div class="col-sm-2">
+                        <label class="control-label">{{navForm.translateText(navForm.selectedViewSetup.ViewFieldsObject["LastEffectiveDate"].FieldName,navForm.selectedViewSetup.viewSetup.ViewId)}}</label>
+                    </div>
+                    <div class="col-sm-4">
+                        <hcms-generic ng-model="navForm.dataItem.LastEffectiveDate" hc-options="navForm.selectedViewSetup.ViewFieldsObject['LastEffectiveDate']"></hcms-generic>
+                    </div>
+                </ng-form>
+            </div>
+            <div class="form-group  row">
+                <!--ActionComment-->
+                <ng-form name="ActionComment" ng-class="{ 'has-error': ActionComment.$invalid }" ng-hide="navForm.selectedViewSetup.ViewFieldsObject['ActionComment'].IsHidden">
+                    <div class="col-sm-2">
+                        <label class="control-label">{{navForm.translateText(navForm.selectedViewSetup.ViewFieldsObject["ActionComment"].FieldName,navForm.selectedViewSetup.viewSetup.ViewId)}}</label>
+                    </div>
+                    <div class="col-sm-4">
+                        <hcms-generic ng-model="navForm.dataItem.ActionComment" hc-options="navForm.selectedViewSetup.ViewFieldsObject['ActionComment']"></hcms-generic>
+                    </div>
+                </ng-form>
+            </div>
+            <!--Save & Cancel Buttons-->
+            <div class="row">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <input type="submit" class="btn btn-primary" value="{{navForm.translateText('Save' , navForm.selectedViewSetup.ViewId)}}" ng-disabled="empAsignmentForm.$invalid" />
+                    <button type="button" class="btn btn-default" ng-click="navForm.indexItemView()">{{navForm.translateText('Cancel' , navForm.selectedViewSetup.ViewId)}}</button>
+                </div>
+            </div>
+
+        </div>
+
+    </form>
+</div>

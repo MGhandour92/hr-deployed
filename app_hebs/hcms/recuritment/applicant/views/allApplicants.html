@@ -1,0 +1,35 @@
+﻿
+<div>
+    <div class="row">
+        <div class="col-md-12">
+            <ul class="nav nav-tabs ">
+                <li class="active">
+                    <a href="#applicantSearch" data-toggle="tab">{{allApplicants.translateText('Home',allApplicants.selectedViewSetup.ViewId)}}</a>
+                </li>
+                <li>
+                    <!-- Selected Applicant not profile like ts file -->
+                    <a href="#selectedApplicant" data-toggle="tab">{{allApplicants.translateText('Profile',allApplicants.selectedViewSetup.ViewId)}}</a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane active" id="applicantSearch">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <p>{{allApplicants.translateText('Employees',allApplicants.selectedViewSetup.ViewId)}}</p>
+                        </div>
+                        <div class="panel-body">
+                            <div>
+                                <a href="#" ng-click="allApplicants.addNewClicked()">{{allApplicants.translateText('CreateNew',allApplicants.selectedViewSetup.ViewId)}}</a>
+                            </div>
+                            <smart-grid id="grd" name="gridName" data="allApplicants.dataList" options="allApplicants.grid.gridOptions" column-defs="allApplicants.grid.gridColumnDefs" style="height:500px;"></smart-grid>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="selectedApplicant">
+                    <div ng-include src="'app_hebs/forms/recuritment/applicant/views/applicant.html'"></div>
+
+                </div>               
+            </div>
+        </div>
+    </div>
+</div>

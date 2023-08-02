@@ -1,0 +1,58 @@
+﻿<div class="row ">
+    <div class="col-md-12">
+        <div class="row">
+            <div class="col-sm-2 padding-right-2">
+                <hcms-dynamic-form controller-name="applicantPhotoController" controller-as="applicantPhoto" form-id="0" parent-id-field-name="'ProfileId'" parent-item="allApplicants.dataItem" form-template-url="'app_hebs/forms/recuritment/applicant/views/applicantPhoto/applicantPhoto.html'"></hcms-dynamic-form>
+            </div>
+            <div class="col-sm-10">
+                <!--<div ng-show="allProfiles.isProfileHeaderDisplayTemplate" ng-include src="'app_hcms/personnel/profile/profile/views/profileHeaderDisplay.html'"></div>-->
+                <div ng-include src="'app_hebs/forms/recuritment/applicant/views/applicantHeader/applicantHeader.html'"></div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-12">
+
+                <!--<ul class="nav nav-tabs">
+                    <li class="" ng-repeat="item in allProfiles.FormSetup.MyForm.SubForms">
+                        <a href="#tab-r{{$index}}" data-toggle="tab" ng-click="allProfiles.subFormClick(item)">{{allApplicants.translateText(item.FormName)}}</a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div ng-repeat="item in allProfiles.FormSetup.MyForm.SubForms" class="tab-pane" id="tab-r{{$index}}">
+                        <p>{{item.StartView}}</p>
+                        <div ng-include src="item.StartView"></div>
+                    </div>
+                </div>-->
+
+                <form-nav-tabs form-id="allApplicants.FormSetup.MyForm.FormId" parent-id-field-name="'ProfileId'" parent-item="allApplicants.dataItem"></form-nav-tabs>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!--<ul class="nav nav-tabs nav-stacked">
+    <li class="active">
+        <a href="#a" data-toggle="tab">a</a>
+    </li>
+    <li>
+        <a href="#b" data-toggle="tab">b</a>
+    </li>
+    <li>
+        <a href="#c" data-toggle="tab">c</a>
+    </li>
+</ul>
+<div class="tab-content">
+    <div id="a" class="tab-pane active">
+        Test a
+    </div>
+    <div id="b" class="tab-pane">
+        Test b
+    </div>
+    <div id="c" class="tab-pane">
+        Test c
+    </div>
+</div>-->

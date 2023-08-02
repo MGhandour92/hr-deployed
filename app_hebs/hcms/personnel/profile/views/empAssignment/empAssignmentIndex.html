@@ -1,0 +1,65 @@
+﻿<!--<div id="content">
+    <div class="row">
+        <div class="col-xs-12">
+            <section id="widget-grid" data-widget-grid>
+                <div class="row">
+                    <article class="col-xs-12">
+                        <div ng-include src="'app_hebs/hcms/personnel/profile/views/empAssignment/empAssignmentAddNew.html'" ng-show='navForm.displayCreateNewTemplate || navForm.displayEditTemplate'></div>
+
+                        <div id="widget-widget" data-jarvis-widget data-widget-editbutton="false" data-widget-deletebutton="false" data-widget-colorbutton="false">
+                            <header class="header-background-color">
+                                <h2><strong>{{navForm.FormSetup.MyForm.FormName || translate }}</strong></h2>
+                                <div class="widget-toolbar">
+                                    <a href-void class="btn" ng-click="navForm.addItemView()"><i class="fa fa-plus"></i> {{navForm.translateText('CreateNew', navForm.selectedViewSetup.ViewId)}} </a>
+                                </div>
+                            </header>
+                            <div class="widget-body view-background-color">
+
+                                <smart-grid id="grd" name="gridName" data="navForm.dataList" options="navForm.grid.gridOptions" column-defs="navForm.grid.gridColumnDefs" style="height:500px;"></smart-grid>
+
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </div>
+    </div>
+
+</div>-->
+
+<form class="form-horizontal" name="empAsignmentForm" ng-submit="navForm.saveItem(empAsignmentForm.$valid)" novalidate>
+
+    <div id="content RemovePaddingLeft">
+        <section id="widget-grid" data-widget-grid>
+            <div class="row">
+                <article class="col-xs-12">
+
+                    <div id="widget-assignment" data-jarvis-widget data-widget-editbutton="false" data-widget-deletebutton="false" data-widget-colorbutton="false" class="no-margin-bottom">
+                        <header class="header-background-color">
+                            <h2><strong>{{navForm.FormSetup.MyForm.FormName || translate }}</strong></h2>
+                            <div class="widget-toolbar">
+                                <div class="btn-group">
+                                    <button type="submit" class="btn btn-link btn-sm" data-page-id="{{navForm.selectedViewSetup.ViewId}}" data-object-id="{{'Save-' + navForm.selectedViewSetup.ViewId}}" ng-disabled="empAsignmentForm.$invalid" data-toggle="tooltip" title="{{navForm.translateText('Save', navForm.selectedViewSetup.ViewId)}}">
+                                        <i class="fa fa-save fa-lg"></i>
+                                    </button>
+                                    <a class="btn btn-sm" ng-click="navForm.indexItemView();" data-page-id="{{navForm.selectedViewSetup.ViewId}}" data-object-id="{{'Cancel-' + navForm.selectedViewSetup.ViewId}}" data-toggle="tooltip" title="{{navForm.translateText('Cancel', navForm.selectedViewSetup.ViewId)}}">
+                                        <i class="fa fa-reply fa-lg"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="widget-toolbar">
+                                <a href-void class="btn" ng-click="navForm.addNewClick()"><i class="fa fa-plus"></i> {{navForm.translateText('CreateNew', navForm.selectedViewSetup.ViewId)}} </a>
+                            </div>
+                        </header>
+                        <div class="widget-body view-background-color">
+                            <div ng-include src="'app_hebs/hcms/personnel/profile/views/empAssignment/empAssignmentAddNew.html'" ng-show='navForm.displayCreateNewTemplate || navForm.displayEditTemplate'></div>
+                            <smart-grid id="grd" name="gridName" data="navForm.dataList" options="navForm.grid.gridOptions" column-defs="navForm.grid.gridColumnDefs" style="height:500px;"></smart-grid>
+                        </div>
+                    </div>
+
+                </article>
+            </div>
+        </section>
+    </div>
+
+</form>

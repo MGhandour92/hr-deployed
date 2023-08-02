@@ -1,0 +1,325 @@
+﻿
+<div class="OrgUnit-header">
+    <div class="form-group  row">
+        <!--UnitCode-->
+        <ng-form name="UnitCode" ng-class="{ 'has-error': UnitCode.$invalid }" ng-hide="orgUnitsHome.selectedViewSetup.ViewFieldsObject['UnitCode'].IsHidden">
+            <div class="col-sm-2">
+
+                <label class="control-label">{{orgUnitsHome.translateText(orgUnitsHome.selectedViewSetup.ViewFieldsObject["UnitCode"].FieldName,orgUnitsHome.selectedViewSetup.viewSetup.ViewId)}}</label>
+            </div>
+            <div class="col-sm-4">
+
+                <hcms-generic ng-model="orgUnitsHome.dataItem.UnitCode" hc-options="orgUnitsHome.selectedViewSetup.ViewFieldsObject['UnitCode']"></hcms-generic>
+            </div>
+        </ng-form>
+
+        <!--UnitShortName-->
+        <ng-form name="UnitShortName" ng-class="{ 'has-error': UnitShortName.$invalid }" ng-hide="orgUnitsHome.selectedViewSetup.ViewFieldsObject['UnitShortName'].IsHidden">
+            <div class="col-sm-2">
+
+                <label class="control-label">{{orgUnitsHome.translateText(orgUnitsHome.selectedViewSetup.ViewFieldsObject["UnitShortName"].FieldName,orgUnitsHome.selectedViewSetup.viewSetup.ViewId)}}</label>
+            </div>
+            <div class="col-sm-4">
+
+                <hcms-generic ng-model="orgUnitsHome.dataItem.UnitShortName" hc-options="orgUnitsHome.selectedViewSetup.ViewFieldsObject['UnitShortName']"></hcms-generic>
+            </div>
+        </ng-form>
+    </div>
+    <div class="form-group  row">
+        <!--UnitName-->
+        <ng-form name="UnitName" ng-class="{ 'has-error': UnitName.$invalid }" ng-hide="orgUnitsHome.selectedViewSetup.ViewFieldsObject['UnitName'].IsHidden">
+            <div class="col-sm-2">
+
+                <label class="control-label">{{orgUnitsHome.translateText(orgUnitsHome.selectedViewSetup.ViewFieldsObject["UnitName"].FieldName,orgUnitsHome.selectedViewSetup.viewSetup.ViewId)}}</label>
+            </div>
+            <div class="col-sm-4">
+
+                <hcms-generic ng-model="orgUnitsHome.dataItem.UnitName" hc-options="orgUnitsHome.selectedViewSetup.ViewFieldsObject['UnitName']"></hcms-generic>
+            </div>
+        </ng-form>
+
+        <!--UnitName_-->
+        <ng-form name="UnitName_" ng-class="{ 'has-error': UnitName_.$invalid }" ng-hide="orgUnitsHome.selectedViewSetup.ViewFieldsObject['UnitName_'].IsHidden">
+            <div class="col-sm-2">
+
+                <label class="control-label">{{orgUnitsHome.translateText(orgUnitsHome.selectedViewSetup.ViewFieldsObject["UnitName_"].FieldName,orgUnitsHome.selectedViewSetup.viewSetup.ViewId)}}</label>
+            </div>
+            <div class="col-sm-4">
+
+                <hcms-generic ng-model="orgUnitsHome.dataItem.UnitName_" hc-options="orgUnitsHome.selectedViewSetup.ViewFieldsObject['UnitName_']"></hcms-generic>
+            </div>
+        </ng-form>
+    </div>
+    <div class="form-group  row">
+        <!--UnitHeaderId-->
+        <ng-form name="UnitHeaderId" ng-class="{ 'has-error': UnitHeaderId.$invalid }" ng-hide="orgUnitsHome.selectedViewSetup.ViewFieldsObject['UnitHeaderId'].IsHidden">
+            <div class="col-sm-2">
+
+                <label class="control-label">{{orgUnitsHome.translateText(orgUnitsHome.selectedViewSetup.ViewFieldsObject["UnitHeaderId"].FieldName,orgUnitsHome.selectedViewSetup.viewSetup.ViewId)}}</label>
+            </div>
+            <div class="col-sm-4">
+
+                <hcms-generic ng-model="orgUnitsHome.dataItem.UnitHeaderId" hc-options="orgUnitsHome.selectedViewSetup.ViewFieldsObject['UnitHeaderId']"></hcms-generic>
+            </div>
+        </ng-form>
+        <!--CostCenterId-->
+        <ng-form name="CostCenterId" ng-class="{ 'has-error': CostCenterId.$invalid }" ng-hide="orgUnitsHome.selectedViewSetup.ViewFieldsObject['CostCenterId'].IsHidden">
+            <div class="col-sm-2">
+
+                <label class="control-label">{{orgUnitsHome.translateText(orgUnitsHome.selectedViewSetup.ViewFieldsObject["CostCenterId"].FieldName,orgUnitsHome.selectedViewSetup.viewSetup.ViewId)}}</label>
+            </div>
+            <div class="col-sm-4">
+
+                <hcms-generic ng-model="orgUnitsHome.dataItem.CostCenterId" hc-options="orgUnitsHome.selectedViewSetup.ViewFieldsObject['CostCenterId']"></hcms-generic>
+            </div>
+        </ng-form>
+    </div>
+ 
+    <div class="form-group  row">
+        <!--LocationId-->
+        <ng-form name="LocationId" ng-class="{ 'has-error': LocationId.$invalid }" ng-hide="orgUnitsHome.selectedViewSetup.ViewFieldsObject['LocationId'].IsHidden">
+            <div class="col-sm-2">
+
+                <label class="control-label">{{orgUnitsHome.translateText(orgUnitsHome.selectedViewSetup.ViewFieldsObject["LocationId"].FieldName,orgUnitsHome.selectedViewSetup.viewSetup.ViewId)}}</label>
+            </div>
+            <div class="col-sm-4">
+
+                <hcms-generic ng-model="orgUnitsHome.dataItem.LocationId" hc-options="orgUnitsHome.selectedViewSetup.ViewFieldsObject['LocationId']"></hcms-generic>
+            </div>
+        </ng-form>
+
+        <!--InsuranceRuleId-->
+        <ng-form name="InsuranceRuleId" ng-class="{ 'has-error': InsuranceRuleId.$invalid }" ng-hide="orgUnitsHome.selectedViewSetup.ViewFieldsObject['InsuranceRuleId'].IsHidden">
+            <div class="col-sm-2">
+
+                <label class="control-label">{{orgUnitsHome.translateText(orgUnitsHome.selectedViewSetup.ViewFieldsObject["InsuranceRuleId"].FieldName,orgUnitsHome.selectedViewSetup.viewSetup.ViewId)}}</label>
+            </div>
+            <div class="col-sm-4">
+
+                <hcms-generic ng-model="orgUnitsHome.dataItem.InsuranceRuleId" hc-options="orgUnitsHome.selectedViewSetup.ViewFieldsObject['InsuranceRuleId']"></hcms-generic>
+            </div>
+        </ng-form>
+    </div>
+    <div class="form-group  row">
+        <!--PayrollGroupId-->
+        <ng-form name="PayrollGroupId" ng-class="{ 'has-error': PayrollGroupId.$invalid }" ng-hide="orgUnitsHome.selectedViewSetup.ViewFieldsObject['PayrollGroupId'].IsHidden">
+            <div class="col-sm-2">
+
+                <label class="control-label">{{orgUnitsHome.translateText(orgUnitsHome.selectedViewSetup.ViewFieldsObject["PayrollGroupId"].FieldName,orgUnitsHome.selectedViewSetup.viewSetup.ViewId)}}</label>
+            </div>
+            <div class="col-sm-4">
+
+                <hcms-generic ng-model="orgUnitsHome.dataItem.PayrollGroupId" hc-options="orgUnitsHome.selectedViewSetup.ViewFieldsObject['PayrollGroupId']"></hcms-generic>
+            </div>
+        </ng-form>
+
+        <!--AttendanceGroupId-->
+        <ng-form name="AttendanceGroupId" ng-class="{ 'has-error': AttendanceGroupId.$invalid }" ng-hide="orgUnitsHome.selectedViewSetup.ViewFieldsObject['AttendanceGroupId'].IsHidden">
+            <div class="col-sm-2">
+
+                <label class="control-label">{{orgUnitsHome.translateText(orgUnitsHome.selectedViewSetup.ViewFieldsObject["AttendanceGroupId"].FieldName,orgUnitsHome.selectedViewSetup.viewSetup.ViewId)}}</label>
+            </div>
+            <div class="col-sm-4">
+
+                <hcms-generic ng-model="orgUnitsHome.dataItem.AttendanceGroupId" hc-options="orgUnitsHome.selectedViewSetup.ViewFieldsObject['AttendanceGroupId']"></hcms-generic>
+            </div>
+        </ng-form>
+    </div>
+    <div class="form-group  row">
+        <!--VacationPackageId-->
+        <ng-form name="VacationPackageId" ng-class="{ 'has-error': VacationPackageId.$invalid }" ng-hide="orgUnitsHome.selectedViewSetup.ViewFieldsObject['VacationPackageId'].IsHidden">
+            <div class="col-sm-2">
+
+                <label class="control-label">{{orgUnitsHome.translateText(orgUnitsHome.selectedViewSetup.ViewFieldsObject["VacationPackageId"].FieldName,orgUnitsHome.selectedViewSetup.viewSetup.ViewId)}}</label>
+            </div>
+            <div class="col-sm-4">
+
+                <hcms-generic ng-model="orgUnitsHome.dataItem.VacationPackageId" hc-options="orgUnitsHome.selectedViewSetup.ViewFieldsObject['VacationPackageId']"></hcms-generic>
+            </div>
+        </ng-form>
+        <!--OrderNo-->
+        <ng-form name="OrderNo" ng-class="{ 'has-error': OrderNo.$invalid }" ng-hide="orgUnitsHome.selectedViewSetup.ViewFieldsObject['OrderNo'].IsHidden">
+            <div class="col-sm-2">
+
+                <label class="control-label">{{orgUnitsHome.translateText(orgUnitsHome.selectedViewSetup.ViewFieldsObject["OrderNo"].FieldName,orgUnitsHome.selectedViewSetup.viewSetup.ViewId)}}</label>
+            </div>
+            <div class="col-sm-4">
+
+                <hcms-generic ng-model="orgUnitsHome.dataItem.OrderNo" hc-options="orgUnitsHome.selectedViewSetup.ViewFieldsObject['OrderNo']"></hcms-generic>
+            </div>
+        </ng-form>
+       
+    </div>
+    <div class="form-group  row">
+        <!--StartDate-->
+        <ng-form name="StartDate" ng-class="{ 'has-error': StartDate.$invalid }" ng-hide="orgUnitsHome.selectedViewSetup.ViewFieldsObject['StartDate'].IsHidden">
+            <div class="col-sm-2">
+
+                <label class="control-label">{{orgUnitsHome.translateText(orgUnitsHome.selectedViewSetup.ViewFieldsObject["StartDate"].FieldName,orgUnitsHome.selectedViewSetup.viewSetup.ViewId)}}</label>
+            </div>
+            <div class="col-sm-4">
+
+                <hcms-generic ng-model="orgUnitsHome.dataItem.StartDate" hc-options="orgUnitsHome.selectedViewSetup.ViewFieldsObject['StartDate']"></hcms-generic>
+            </div>
+        </ng-form>
+        <!--EndDate-->
+        <ng-form name="EndDate" ng-class="{ 'has-error': EndDate.$invalid }" ng-hide="orgUnitsHome.selectedViewSetup.ViewFieldsObject['EndDate'].IsHidden">
+            <div class="col-sm-2">
+
+                <label class="control-label">{{orgUnitsHome.translateText(orgUnitsHome.selectedViewSetup.ViewFieldsObject["EndDate"].FieldName,orgUnitsHome.selectedViewSetup.viewSetup.ViewId)}}</label>
+            </div>
+            <div class="col-sm-4">
+
+                <hcms-generic ng-model="orgUnitsHome.dataItem.EndDate" hc-options="orgUnitsHome.selectedViewSetup.ViewFieldsObject['EndDate']"></hcms-generic>
+            </div>
+        </ng-form>
+       
+    </div>
+    <div class="form-group  row">
+       
+        <!--HideTreeView-->
+        <ng-form name="HideTreeView" ng-class="{ 'has-error': HideTreeView.$invalid }" ng-hide="orgUnitsHome.selectedViewSetup.ViewFieldsObject['HideTreeView'].IsHidden">
+            <div class="col-sm-2">
+
+                <label class="control-label">{{orgUnitsHome.translateText(orgUnitsHome.selectedViewSetup.ViewFieldsObject["HideTreeView"].FieldName,orgUnitsHome.selectedViewSetup.viewSetup.ViewId)}}</label>
+            </div>
+            <div class="col-sm-4">
+
+                <hcms-generic ng-model="orgUnitsHome.dataItem.HideTreeView" hc-options="orgUnitsHome.selectedViewSetup.ViewFieldsObject['HideTreeView']"></hcms-generic>
+            </div>
+        </ng-form>
+        <!--AssignEmployees-->
+        <ng-form name="AssignEmployees" ng-class="{ 'has-error': AssignEmployees.$invalid }" ng-hide="orgUnitsHome.selectedViewSetup.ViewFieldsObject['AssignEmployees'].IsHidden">
+            <div class="col-sm-2">
+
+                <label class="control-label">{{orgUnitsHome.translateText(orgUnitsHome.selectedViewSetup.ViewFieldsObject["AssignEmployees"].FieldName,orgUnitsHome.selectedViewSetup.viewSetup.ViewId)}}</label>
+            </div>
+            <div class="col-sm-4">
+
+                <hcms-generic ng-model="orgUnitsHome.dataItem.AssignEmployees" hc-options="orgUnitsHome.selectedViewSetup.ViewFieldsObject['AssignEmployees']"></hcms-generic>
+            </div>
+        </ng-form>
+    </div>
+
+    <div class="form-group  row">
+        <!--UnitComment-->
+        <ng-form name="UnitComment" ng-class="{ 'has-error': UnitComment.$invalid }" ng-hide="orgUnitsHome.selectedViewSetup.ViewFieldsObject['UnitComment'].IsHidden">
+            <div class="col-sm-2">
+
+                <label class="control-label">{{orgUnitsHome.translateText(orgUnitsHome.selectedViewSetup.ViewFieldsObject["UnitComment"].FieldName,orgUnitsHome.selectedViewSetup.viewSetup.ViewId)}}</label>
+            </div>
+            <div class="col-sm-10">
+
+                <hcms-generic ng-model="orgUnitsHome.dataItem.UnitComment" hc-options="orgUnitsHome.selectedViewSetup.ViewFieldsObject['UnitComment']"></hcms-generic>
+            </div>
+        </ng-form>
+    </div>
+    <div class="form-group  row">
+        <!--Disabled-->
+        <ng-form name="Disabled" ng-class="{ 'has-error': Disabled.$invalid }" ng-hide="orgUnitsHome.selectedViewSetup.ViewFieldsObject['Disabled'].IsHidden">
+            <div class="col-sm-2">
+
+                <label class="control-label">{{orgUnitsHome.translateText(orgUnitsHome.selectedViewSetup.ViewFieldsObject["Disabled"].FieldName,orgUnitsHome.selectedViewSetup.viewSetup.ViewId)}}</label>
+            </div>
+            <div class="col-sm-4">
+
+                <hcms-generic ng-model="orgUnitsHome.dataItem.Disabled" hc-options="orgUnitsHome.selectedViewSetup.ViewFieldsObject['Disabled']"></hcms-generic>
+            </div>
+        </ng-form>
+    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading">OrgUnits Details Assignments</div>
+    <div class="panel-body">
+        <div class="form-group  row">
+            <div class="form-group  row">
+                <!--UnitTypeId-->
+
+                <ng-form name="UnitTypeId" ng-class="{ 'has-error': UnitTypeId.$invalid }" ng-hide="orgUnitsHome.selectedViewSetup.ViewFieldsObject['UnitTypeId'].IsHidden">
+                    <div class="col-sm-2">
+
+                        <label class="control-label">{{orgUnitsHome.translateText(orgUnitsHome.selectedViewSetup.ViewFieldsObject["UnitTypeId"].FieldName,orgUnitsHome.selectedViewSetup.viewSetup.ViewId)}}</label>
+                    </div>
+
+                    <div class="col-sm-4">
+
+                        <hcms-generic ng-model="orgUnitsHome.dataItem.UnitTypeId" hc-options="orgUnitsHome.selectedViewSetup.ViewFieldsObject['UnitTypeId']"></hcms-generic>
+                    </div>
+
+                </ng-form>
+
+
+                <!--UnitParentId-->
+
+                <ng-form name="UnitParentId" ng-class="{ 'has-error': UnitParentId.$invalid }" ng-hide="orgUnitsHome.selectedViewSetup.ViewFieldsObject['UnitParentId'].IsHidden">
+                    <div class="col-sm-2">
+
+
+                        <label class="control-label">{{orgUnitsHome.translateText(orgUnitsHome.selectedViewSetup.ViewFieldsObject["UnitParentId"].FieldName,orgUnitsHome.selectedViewSetup.viewSetup.ViewId)}}</label>
+                    </div>
+
+                    <div class="col-sm-4">
+
+
+                        <hcms-generic ng-model="orgUnitsHome.dataItem.UnitParentId" hc-options="orgUnitsHome.selectedViewSetup.ViewFieldsObject['UnitParentId']"></hcms-generic>
+
+                    </div>
+
+                </ng-form>
+            </div>
+            <div class="form-group  row">
+                <!--UnitDepth-->
+
+                <ng-form name="UnitDepth" ng-class="{ 'has-error': UnitDepth.$invalid }" ng-hide="orgUnitsHome.selectedViewSetup.ViewFieldsObject['UnitDepth'].IsHidden">
+                    <div class="col-sm-2">
+
+
+                        <label class="control-label">{{orgUnitsHome.translateText(orgUnitsHome.selectedViewSetup.ViewFieldsObject["UnitDepth"].FieldName,orgUnitsHome.selectedViewSetup.viewSetup.ViewId)}}</label>
+                    </div>
+
+                    <div class="col-sm-4">
+
+
+                        <hcms-generic ng-model="orgUnitsHome.dataItem.UnitDepth" hc-options="orgUnitsHome.selectedViewSetup.ViewFieldsObject['UnitDepth']"></hcms-generic>
+
+                    </div>
+
+                </ng-form>
+
+
+                <!--RecordNo-->
+
+                <ng-form name="RecordNo" ng-class="{ 'has-error': RecordNo.$invalid }" ng-hide="orgUnitsHome.selectedViewSetup.ViewFieldsObject['RecordNo'].IsHidden">
+                    <div class="col-sm-2">
+
+
+                        <label class="control-label">{{orgUnitsHome.translateText(orgUnitsHome.selectedViewSetup.ViewFieldsObject["RecordNo"].FieldName,orgUnitsHome.selectedViewSetup.viewSetup.ViewId)}}</label>
+                    </div>
+
+                    <div class="col-sm-4">
+
+
+                        <hcms-generic ng-model="orgUnitsHome.dataItem.RecordNo" hc-options="orgUnitsHome.selectedViewSetup.ViewFieldsObject['RecordNo']"></hcms-generic>
+
+                    </div>
+
+                </ng-form>
+            </div>
+            <div class="form-group  row">
+                <!--UnitGroupId-->
+
+                <ng-form name="UnitGroupId" ng-class="{ 'has-error': UnitGroupId.$invalid }" ng-hide="orgUnitsHome.selectedViewSetup.ViewFieldsObject['UnitGroupId'].IsHidden">
+                    <div class="col-sm-2">
+
+
+                        <label class="control-label">{{orgUnitsHome.translateText(orgUnitsHome.selectedViewSetup.ViewFieldsObject["UnitGroupId"].FieldName,orgUnitsHome.selectedViewSetup.viewSetup.ViewId)}}</label>
+                    </div>
+
+                    <div class="col-sm-4">
+                        <hcms-generic ng-model="orgUnitsHome.dataItem.UnitGroupId" hc-options="orgUnitsHome.selectedViewSetup.ViewFieldsObject['UnitGroupId']"></hcms-generic>
+                    </div>
+                </ng-form>
+            </div>
+        </div>
+    </div>
+</div>
